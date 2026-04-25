@@ -15,15 +15,13 @@ class TorchModel(nn.Module):
     def __init__(self, input_size):
         super(TorchModel, self).__init__()
         self.linear = nn.Linear(input_size, 5)  # 线性层
-        self.activation = torch.sigmoid
-        self.activation2 = torch.softmax  # 多分类输出，概率和为1
+        self.activation = torch.softmax  # 多分类输出，概率和为1
         self.loss = nn.CrossEntropyLoss()  # loss函数采用交叉熵
 
     # 当输入真实标签，返回loss值；无真是标签，返回预测值
     def forward(self, x, y=None):
         x = self.linear(x)
-        x = self.activation(x)
-        y_pred = self.activation2(x, dim=0)
+        y_pred = self.activation(x, dim=1)
         if y is not None:
             return self.loss(y_pred, y)   # 预测值和真实值计算损失
         else:
