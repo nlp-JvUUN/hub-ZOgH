@@ -1,0 +1,188 @@
+"""
+5 字文本多分类任务
+任务：输入 5 个汉字，判断“你”在第几位 → 1~5 类
+支持：弹窗显示曲线图 + 无中文警告 + 无FigureCanvas报错
+"""
+import random
+import torch
+import torch.nn as nn
+import matplotlib
+
+# 🔥 关键修复：Windows 弹窗必须用 TkAgg
+matplotlib.use('TkAgg')
+
+import matplotlib.pyplot as plt
+from torch.utils.data import Dataset, DataLoader
+
+# 解决中文显示
+plt.rcParams['font.sans-serif'] = ['SimHei']
+plt.rcParams['axes.unicode_minus'] = False
+
+# ===================== 超参数 =====================
+SEED = 42
+MAX_LEN = 5
+EMBED_DIM = 16
+HIDDEN_DIM = 32
+BATCH_SIZE = 32
+EPOCHS = 15
+LR = 1e-3
+NUM_CLASS = 5
+
+random.seed(SEED)
+torch.manual_seed(SEED)
+
+# ===================== 1. 生成数据集 =====================
+CHARS = [c for c in '我他它这那好坏美丑大小高低上下前后左右开心生气东西南北风云雨雪']
+
+
+def generate_sample():
+    pos = random.randint(0, 4)
+    sent = [''] * 5
+    for i in range(5):
+        sent[i] = '你' if i == pos else random.choice(CHARS)
+    return ''.join(sent), pos
+
+
+def build_data(size=10000):
+    return [generate_sample() for _ in range(size)]
+
+
+# ===================== 2. 词表 & 编码 =====================
+def build_vocab(data):
+    vocab = {'<PAD>': 0}
+    for sent, _ in data:
+        for c in sent:
+            if c not in vocab:
+                vocab[c] = len(vocab)
+    return vocab
+
+
+def encode_sent(sent, vocab):
+    return [vocab.get(c, 0) for c in sent]
+
+
+# ===================== 3. Dataset =====================
+class TextDataset(Dataset):
+    def __init__(self, data, vocab):
+        self.x = [encode_sent(s, vocab) for s, _ in data]
+        self.y = [y for _, y in data]
+
+    def __len__(self):
+        return len(self.y)
+
+    def __getitem__(self, i):
+        return torch.tensor(self.x[i]), torch.tensor(self.y[i])
+
+
+# ===================== 4. 模型：RNN/LSTM/GRU =====================
+class TextClassifier(nn.Module):
+    def __init__(self, vocab_size, embed_dim, hidden_dim, num_class, model_type='lstm'):
+        super().__init__()
+        self.embedding = nn.Embedding(vocab_size, embed_dim)
+
+        if model_type == 'rnn':
+            self.rnn = nn.RNN(embed_dim, hidden_dim, batch_first=True)
+        elif model_type == 'lstm':
+            self.rnn = nn.LSTM(embed_dim, hidden_dim, batch_first=True)
+        elif model_type == 'gru':
+            self.rnn = nn.GRU(embed_dim, hidden_dim, batch_first=True)
+
+        self.fc = nn.Linear(hidden_dim, num_class)
+
+    def forward(self, x):
+        x = self.embedding(x)
+        out, _ = self.rnn(x)
+        last = out[:, -1, :]
+        return self.fc(last)
+
+
+# ===================== 5. 训练 & 评估 =====================
+def evaluate(model, loader):
+    model.eval()
+    correct, total = 0, 0
+    with torch.no_grad():
+        for x, y in loader:
+            pred = model(x).argmax(dim=1)
+            correct += (pred == y).sum().item()
+            total += len(y)
+    return correct / total
+
+
+def train():
+    data = build_data(10000)
+    vocab = build_vocab(data)
+    train_data, test_data = data[:8000], data[8000:]
+
+    train_loader = DataLoader(TextDataset(train_data, vocab), BATCH_SIZE, shuffle=True)
+    test_loader = DataLoader(TextDataset(test_data, vocab), BATCH_SIZE)
+
+    # ========== 切换模型：rnn / lstm / gru ==========
+    MODEL_TYPE = 'lstm'
+
+    model = TextClassifier(
+        vocab_size=len(vocab),
+        embed_dim=EMBED_DIM,
+        hidden_dim=HIDDEN_DIM,
+        num_class=NUM_CLASS,
+        model_type=MODEL_TYPE
+    )
+
+    criterion = nn.CrossEntropyLoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=LR)
+
+    loss_list = []
+    acc_list = []
+
+    print(f"模型：{MODEL_TYPE.upper()} | 词表大小：{len(vocab)}\n")
+    for ep in range(1, EPOCHS + 1):
+        model.train()
+        total_loss = 0
+        for x, y in train_loader:
+            logits = model(x)
+            loss = criterion(logits, y)
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            total_loss += loss.item()
+
+        avg_loss = total_loss / len(train_loader)
+        acc = evaluate(model, test_loader)
+        loss_list.append(avg_loss)
+        acc_list.append(acc)
+
+        print(f"Epoch {ep:2d} | loss={avg_loss:.4f} | 测试准确率={acc:.4f}")
+
+    # ===================== 弹窗显示曲线图 =====================
+    plt.figure(figsize=(10, 4))
+
+    plt.subplot(1, 2, 1)
+    plt.plot(loss_list, 'b-o', label='训练损失')
+    plt.title(f'{MODEL_TYPE.upper()} 训练损失曲线')
+    plt.grid(True)
+    plt.legend()
+
+    plt.subplot(1, 2, 2)
+    plt.plot(acc_list, 'r-o', label='测试准确率')
+    plt.title(f'{MODEL_TYPE.upper()} 测试准确率曲线')
+    plt.grid(True)
+    plt.legend()
+
+    plt.tight_layout()
+    plt.show()  # ✅ 弹窗显示
+
+    # ===================== 手动测试 =====================
+    print("\n===== 测试示例 =====")
+    test_sents = [
+        "我你他她它", "你今天真帅", "今天你开心",
+        "我非常你棒", "我非常爱你", "好你美丑大", "美丑大你好"
+    ]
+    model.eval()
+    for s in test_sents:
+        ids = torch.tensor([encode_sent(s, vocab)])
+        pred = model(ids).argmax(dim=1).item() + 1
+        true = s.index('你') + 1
+        print(f"输入：{s} | 预测：{pred} | 真实：{true}")
+
+
+if __name__ == "__main__":
+    train()
