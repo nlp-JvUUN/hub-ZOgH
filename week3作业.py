@@ -1,0 +1,197 @@
+import torch
+import torch.nn as nn
+import numpy as np
+import random
+import json
+
+"""
+
+基于pytorch框架编写模型训练
+实现一个自行构造的找规律(机器学习)任务
+规律：输入一个文本，最大文本长度为5，文本“a”出现在文本第几个位置上就是第几类，
+若未出现文本“a”则为第0类，
+若出现多个文本“a”，则两个文本“a”为第六类，三个“a”为第七类，以此类推，
+分类范围0 ~ 9
+
+"""
+
+class TorchModel(nn.Module):
+    def __init__(self, vector_dim,vocab,sentence_length,input_size,hidden_size):
+        super(TorchModel,self).__init__()
+        self.embedding = nn.Embedding(len(vocab),vector_dim,padding_idx=0) # embedding层
+        self.layer = nn.RNN(input_size,hidden_size,bias=False,batch_first=True) # RNN层
+        self.classify = nn.Linear(hidden_size, 10 ) # 线性层 ✅修正：输入维度是RNN输出维度
+        self.loss = nn.CrossEntropyLoss() # 交叉熵自带softmax
+    
+    def forward(self,x,y=None):
+        '''前向传播函数，
+        当输入真实标签时（即训练时），返回loss值
+        无真实标签，返回预测值
+        '''
+        x = self.embedding(x)#(batch_size, sen_len) -> (batch_size, sen_len, vector_dim)
+        #x = self.layer(x)
+        x, _ = self.layer(x)  # ✅修正,只取第一个值，忽略第二个隐藏态
+        x = x[:, -1, :]       # ✅取RNN最后一步（关键）
+        x = self.classify(x)
+        if y is not None:
+            return self.loss(x,y)# 如果有标签y，就计算loss
+        else:
+            return torch.softmax(x,dim=-1)# 推理时返回预测概率
+       #    return x  # ✅ 不加softmax！CE自带
+
+#字符集随便挑了一些字，实际上还可以扩充
+#为每个字生成一个标号
+#{"a":1, "b":2, "c":3...}
+#abc -> [1,2,3]
+def build_vocab():
+    chars = "abcdefgh王1"
+    vocab = {"pad":0}
+    for index, char in enumerate(chars):
+        vocab[char] = index + 1 # 每个字符对应一个序号
+    vocab["unk"] = len(vocab)
+    return vocab
+
+#随机生成一个样本
+#从所有字中选取sentence_length(5)个字
+#若未出现文本“a”则为第0类，
+#若出现多个文本“a”，则两个文本“a”为第六类，三个“a”为第七类，以此类推，
+#分类范围0 ~ 9
+def build_sample(vocab, sentence_length=5):
+    #随机从字表选取sentence_length个字，可能重复
+    x = [random.choice(list(vocab.keys())) for _ in range(sentence_length)]
+    #数文本中有几个“a”
+    count = x.count("a")
+    if count == 0:
+        y = 0 # 不存在“a”，类别为0
+    elif count == 1:
+        y = x.index("a") + 1 # 只存在一个“a”的情况下，类别为索引下标+1
+    else:
+        y = sentence_length + count - 1 # 存在多个“a”的情况下，类别为多出来的“a”的数量 + 文本长度
+    x = [vocab.get(word, vocab['unk']) for word in x]   #✅修正：将字转换成序号，为了做embedding
+    return x,y
+
+#建立数据集
+#输入需要的样本数量。需要多少生成多少
+def build_dataset(sample_length,vocab,sentence_length=5):
+    dataset_x = []
+    dataset_y = []
+    for i in range(sample_length):
+        x, y = build_sample(vocab, sentence_length)
+        dataset_x.append(x)
+        dataset_y.append([y])
+    return torch.LongTensor(dataset_x), torch.LongTensor(dataset_y)
+
+#建立模型
+def build_model(vector_dim,vocab, sentence_length,input_size,hidden_size):
+    model = TorchModel(vector_dim,vocab,sentence_length,input_size,hidden_size)
+    return model
+
+#测试代码
+#用来测试每轮模型的准确率
+def evaluate(model,vocab,sample_length):
+    model.eval()
+    x, y = build_dataset(200, vocab, sample_length)   #建立200个用于测试的样本
+    y0,y1,y2,y3,y4,y5,y6,y7,y8,y9 = 0,0,0,0,0,0,0,0,0,0
+    for y_num in y:
+        if y_num == 0:
+            y0 += 1
+        elif y_num == 1:
+            y1 += 1
+        elif y_num == 2:
+            y2 += 1
+        elif y_num == 3:
+            y3 += 1
+        elif y_num == 4:
+            y4 += 1
+        elif y_num == 5:
+            y5 += 1
+        elif y_num == 6:
+            y6 += 1
+        elif y_num == 7:
+            y7 += 1
+        elif y_num == 8:
+            y8 += 1
+        else: 
+            y9 += 1
+    print(f"本次预测集中第零类有：{y0}个,本次预测集中第一类有：{y1}个")
+    print(f"本次预测集中第二类有：{y2}个,本次预测集中第三类有：{y3}个")
+    print(f"本次预测集中第四类有：{y4}个,本次预测集中第五类有：{y5}个")
+    print(f"本次预测集中第六类有：{y6}个,本次预测集中第七类有：{y7}个")
+    print(f"本次预测集中第八类有：{y8}个,本次预测集中第九类有：{y9}个")
+    correct, wrong = 0, 0
+    with torch.no_grad():
+        output = model(x)
+        predict_class = torch.argmax(output, dim=-1) 
+        for y_pred, y_true in zip(predict_class, y):
+        # y_pred 是预测类别 0~9
+        # y_true 是真实类别 0~9
+            if y_pred == y_true:
+                correct += 1
+            else:
+                wrong += 1 
+    print("正确预测个数：%d, 正确率：%f"%(correct, correct/(correct+wrong)))
+    return correct/(correct+wrong)
+
+def main():
+    #配置参数
+    epoch_num = 10        #训练轮数
+    batch_size = 20       #每次训练样本个数
+    train_sample = 500    #每轮训练总共训练的样本总数
+    vector_dim = 10         #每个字的维度
+    input_size = vector_dim #必须等于字向量长度
+    hidden_size = 16      #小模型够用
+    sentence_length = 5   #样本文本长度
+    learning_rate = 0.005 #学习率
+    # 建立字表
+    vocab = build_vocab()
+    # 建立模型
+    model = build_model(vector_dim,vocab,sentence_length,input_size,hidden_size)
+    # 选择优化器
+    optim = torch.optim.Adam(model.parameters(), lr=learning_rate)
+    log = []
+    # 训练过程
+    for epoch in range(epoch_num):
+        model.train()
+        watch_loss = []
+        for batch in range(int(train_sample / batch_size)):
+            x, y = build_dataset(batch_size, vocab, sentence_length) #构造一组训练样本
+            optim.zero_grad()    #梯度归零
+            loss = model(x, y.squeeze())   #计算loss ✅修正：加 .squeeze() , dataset_y.append([y])这让标签变成 [[1], [2], [0]...] → 二维CrossEntropyLoss 只接受 [1,2,0...] → 一维
+            loss.backward()      #计算梯度
+            optim.step()         #更新权重
+            watch_loss.append(loss.item())
+        print("=========\n第%d轮平均loss:%f" % (epoch + 1, np.mean(watch_loss)))
+        acc = evaluate(model, vocab, sentence_length)   #测试本轮模型结果
+        log.append([acc, np.mean(watch_loss)])
+
+    #保存模型
+    torch.save(model.state_dict(), "model.pth")
+    # 保存词表
+    writer = open("vocab.json", "w", encoding="utf8")
+    writer.write(json.dumps(vocab, ensure_ascii=False, indent=2))
+    writer.close()
+    return
+
+#使用训练好的模型做预测
+def predict(model_path, vocab_path, input_strings):
+    vector_dim = 10  # 每个字的维度
+    input_size = vector_dim #必须等于字向量长度
+    hidden_size = 16      #小模型够用
+    sentence_length = 5  # 样本文本长度
+    vocab = json.load(open(vocab_path, "r", encoding="utf8")) #加载字符表
+    model = build_model(vector_dim,vocab,sentence_length,input_size,hidden_size)     #建立模型
+    model.load_state_dict(torch.load(model_path))             #加载训练好的权重
+    x = []
+    for input_string in input_strings:
+        x.append([vocab.get(char,vocab["unk"]) for char in input_string])  #将输入序列化
+    model.eval()   #测试模式
+    with torch.no_grad():  #不计算梯度
+        result = model.forward(torch.LongTensor(x))  #模型预测
+    predict_classes = torch.argmax(result, dim=-1)
+    for i, input_string in enumerate(input_strings):
+        print(f"输入：{input_string}, 预测类别：{predict_classes[i].item()}")
+
+if __name__ == "__main__":
+    main()
+    #test_strings = ["fnv我e", "wadfg", "aadeg", "n我aaw"]
+    #predict("model.pth", "vocab.json", test_strings)
