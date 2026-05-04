@@ -80,23 +80,19 @@ class TextDataset(Dataset):
 # ─── 4. 模型定义 ────────────────────────────────────────────
 class KeywordRNN(nn.Module):
     """
-    中文关键词分类器（RNN + MaxPooling 版）
-    架构：Embedding → RNN → MaxPool → BN → Dropout → Linear → Softmax → (CrossEntropyLoss)
+    中文关键词位置分类器
+    架构：Embedding → RNN → Linear(每个位置) → 输出每个位置的分数
     """
-    def __init__(self, vocab_size, num_classes=5, embed_dim=EMBED_DIM, hidden_dim=HIDDEN_DIM, dropout=0.3):
+    def __init__(self, vocab_size, embed_dim=EMBED_DIM, hidden_dim=HIDDEN_DIM):
         super().__init__()
         self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=0)
         self.rnn       = nn.RNN(embed_dim, hidden_dim, batch_first=True)
-        self.bn        = nn.BatchNorm1d(hidden_dim)
-        self.dropout   = nn.Dropout(dropout)
-        self.fc        = nn.Linear(hidden_dim, num_classes)
+        self.fc        = nn.Linear(hidden_dim, 1)
 
     def forward(self, x):
         # x: (batch, seq_len)
         e, _ = self.rnn(self.embedding(x))  # (B, L, hidden_dim)
-        pooled = e.max(dim=1)[0]            # (B, hidden_dim)  对序列做 max pooling
-        pooled = self.dropout(self.bn(pooled))
-        out = self.fc(pooled)               # (B, num_classes)
+        out = self.fc(e).squeeze(-1)        # (B, L) → 每个位置一个分数
         return out
 
 
