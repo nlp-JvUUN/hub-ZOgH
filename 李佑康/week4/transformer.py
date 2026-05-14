@@ -3,6 +3,21 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 
+
+"""
+Transformer
+输入 -> embeding+position -> encoder -> decoder -> softmax -> 输出
+
+Encoder:
+multi-head self-attention -> add & norm -> feed forward -> add & norm
+
+Decoder:
+multi-head self-attention -> add & norm -> multi-head cross attention -> add & norm -> feed forward -> add & norm
+
+Positional Encoding:
+PE(pos, 2i) = sin(pos / 10000^(2i/d_model))
+PE(pos, 2i+1) = cos(pos / 10000^(2i/d_model))
+"""
 class MultiHeadAttention(nn.Module):
     def __init__(self, d_model, num_heads):
         super().__init__()
