@@ -127,11 +127,8 @@ class TransformerDecoderLayer(nn.Module):
         return x
 
 
+# 完整的 Transformer 模型
 class Transformer(nn.Module):
-    """
-    完整的 Transformer 模型
-    """
-
     def __init__(self, src_vocab_size, tgt_vocab_size, d_model=512, n_heads=8,
                  num_layers=6, max_len=5000, dropout=0.1):
         super().__init__()
