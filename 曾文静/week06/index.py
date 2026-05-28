@@ -1,476 +1,384 @@
-# -*- coding: utf-8 -*-
-"""
-文本分类不同训练方法效果对比
-
-对比四种有代表性的文本分类方法:
-  1. TF-IDF + 逻辑回归   —— 传统统计机器学习
-  2. 自实现 TextCNN      —— 卷积神经网络
-  3. 自实现 BiLSTM       —— 双向循环神经网络
-  4. DistilBERT 微调     —— 预训练语言模型(依赖 transformers, 未安装则自动跳过)
-
-用法:
-  python index.py            # 完整实验
-  python index.py --fast     # 快速冒烟测试(减少轮次/词表, 验证整条流程)
-
-输出文件:
-  results.csv                       结果对比表
-  text_classification_compare.png   四方法对比可视化
-  best_model_confusion.png          最优模型的混淆矩阵
-"""
-import argparse
-import csv
-import re
 import time
-from collections import Counter
-
-import matplotlib
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import fetch_20newsgroups
+from sklearn.metrics import accuracy_score, f1_score
 import torch
 import torch.nn as nn
-from sklearn.datasets import fetch_20newsgroups
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import (accuracy_score, classification_report,
-                             confusion_matrix, f1_score)
+import torch.nn.functional as F
+from torch.utils.data import Dataset, DataLoader
 from torch.optim import AdamW
-from torch.utils.data import DataLoader, Dataset
 
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# 设备配置
+DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(f"[INFO] 使用设备: {DEVICE}")
 
 # ========================= 超参数配置 =========================
-DEFAULTS = dict(
-    max_len=128, batch_size=64, max_vocab=10000, min_freq=2,
-    epochs_cnn=12, epochs_lstm=12, epochs_bert=3,
-    lr_cnn=1e-3, lr_lstm=1e-3, lr_bert=2e-5,
-)
-FAST = dict(max_len=64, batch_size=32, max_vocab=3000, min_freq=1,
-            epochs_cnn=2, epochs_lstm=2, epochs_bert=1)
+BATCH_SIZE = 32
+MAX_LEN = 128
+NUM_EPOCHS_TRANSFORMER = 20
+NUM_EPOCHS_BERT = 5
+LR_TRANSFORMER = 1e-3
+LR_BERT = 2e-5
+NUM_CLASSES = 4
 
-CATEGORIES = ["rec.autos", "rec.motorcycles", "sci.space", "talk.politics.misc"]
+# ========================= 数据加载 =========================
+print("\n" + "="*50)
+print("1. 加载20 Newsgroups数据集")
+print("="*50)
 
+categories = ['alt.atheism', 'comp.graphics', 'sci.med', 'soc.religion.christian']
+news_train = fetch_20newsgroups(subset='train', categories=categories)
+news_test = fetch_20newsgroups(subset='test', categories=categories)
 
-# ========================= 文本预处理 =========================
-def clean_text(text):
-    """统一小写, 只保留字母和数字, 用空格连接"""
-    return " ".join(re.findall(r"[a-z0-9]+", text.lower()))
+print(f"训练集: {len(news_train.data)} 条")
+print(f"测试集: {len(news_test.data)} 条")
+print(f"类别: {news_train.target_names}")
 
+# ========================= 构建词汇表 =========================
+from collections import Counter
 
-def build_vocab(texts, max_vocab, min_freq):
-    """按词频构建词表, 过滤低频词, 保留<PAD>/<UNK>"""
+def build_vocab(texts, max_vocab=10000):
+    """构建词汇表"""
     counter = Counter()
-    for t in texts:
-        counter.update(t.split())
-    vocab = {"<PAD>": 0, "<UNK>": 1}
-    for word, cnt in counter.most_common():
-        if len(vocab) >= max_vocab or cnt < min_freq:
-            break
+    for text in texts:
+        counter.update(text.lower().split())
+    vocab = {'<PAD>': 0, '<UNK>': 1}
+    for word, _ in counter.most_common(max_vocab - 2):
         vocab[word] = len(vocab)
     return vocab
 
+vocab = build_vocab(news_train.data, max_vocab=10000)
+print(f"词汇表大小: {len(vocab)}")
 
-def encode_texts(texts, vocab, max_len):
-    """文本 -> (token id 矩阵, 掩码矩阵)"""
-    ids = np.zeros((len(texts), max_len), dtype=np.int64)
-    mask = np.zeros((len(texts), max_len), dtype=np.int64)
-    for i, t in enumerate(texts):
-        toks = [vocab.get(w, 1) for w in t.split()[:max_len]]
-        ids[i, :len(toks)] = toks
-        mask[i, :len(toks)] = 1
-    return ids, mask
+# ========================= 数据预处理 =========================
+def tokenize(text, vocab, max_len=MAX_LEN):
+    """将文本转换为token ID序列"""
+    tokens = [vocab.get(w, 1) for w in text.lower().split()[:max_len]]
+    mask = [1] * len(tokens) + [0] * (max_len - len(tokens))
+    tokens = tokens + [0] * (max_len - len(tokens))
+    return torch.tensor(tokens), torch.tensor(mask)
 
-
-class ClfDataset(Dataset):
-    """文本分类数据集: (ids, mask, label)"""
-
-    def __init__(self, ids, mask, labels):
-        self.ids, self.mask, self.labels = ids, mask, labels
-
+class TextDataset(Dataset):
+    """文本分类数据集类"""
+    def __init__(self, texts, labels, vocab, max_len=MAX_LEN):
+        self.texts = texts
+        self.labels = labels
+        self.vocab = vocab
+        self.max_len = max_len
+    
     def __len__(self):
-        return len(self.labels)
+        return len(self.texts)
+    
+    def __getitem__(self, idx):
+        ids, mask = tokenize(self.texts[idx], self.vocab, self.max_len)
+        return ids, mask, torch.tensor(self.labels[idx])
 
-    def __getitem__(self, i):
-        return (torch.from_numpy(self.ids[i]),
-                torch.from_numpy(self.mask[i]),
-                torch.tensor(self.labels[i], dtype=torch.long))
+# 创建数据集和数据加载器
+train_dataset = TextDataset(news_train.data, news_train.target, vocab)
+test_dataset = TextDataset(news_test.data, news_test.target, vocab)
+train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False)
 
+# ========================= 自实现Transformer模型 =========================
+print("\n" + "="*50)
+print("2. 自实现Transformer模型")
+print("="*50)
 
-# ========================= 自实现模型 =========================
-class TextCNN(nn.Module):
-    """TextCNN: 多尺寸卷积核 + 自适应最大池化"""
-
-    def __init__(self, vocab_size, embed_dim=100, n_filters=128,
-                 filter_sizes=(2, 3, 4), n_classes=4, dropout=0.3):
+class PositionalEncoding(nn.Module):
+    """位置编码层"""
+    def __init__(self, d_model, max_len=5000):
         super().__init__()
-        self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=0)
-        self.convs = nn.ModuleList([
-            nn.Sequential(nn.Conv1d(embed_dim, n_filters, k),
-                          nn.ReLU(), nn.AdaptiveMaxPool1d(1))
-            for k in filter_sizes
+        pe = torch.zeros(max_len, d_model)
+        position = torch.arange(0, max_len).unsqueeze(1).float()
+        div_term = torch.exp(torch.arange(0, d_model, 2).float() * (-np.log(10000.0) / d_model))
+        pe[:, 0::2] = torch.sin(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term)
+        self.register_buffer('pe', pe.unsqueeze(0))
+    
+    def forward(self, x):
+        return x + self.pe[:, :x.size(1), :]
+
+class MultiHeadAttention(nn.Module):
+    """多头注意力机制"""
+    def __init__(self, d_model, n_heads, dropout=0.1):
+        super().__init__()
+        self.d_k = d_model // n_heads
+        self.n_heads = n_heads
+        self.W_q = nn.Linear(d_model, d_model)
+        self.W_k = nn.Linear(d_model, d_model)
+        self.W_v = nn.Linear(d_model, d_model)
+        self.W_o = nn.Linear(d_model, d_model)
+        self.dropout = nn.Dropout(dropout)
+    
+    def forward(self, x, mask=None):
+        B, T, D = x.shape
+        Q = self.W_q(x).view(B, T, self.n_heads, self.d_k).transpose(1, 2)
+        K = self.W_k(x).view(B, T, self.n_heads, self.d_k).transpose(1, 2)
+        V = self.W_v(x).view(B, T, self.n_heads, self.d_k).transpose(1, 2)
+        
+        scores = (Q @ K.transpose(-2, -1)) / np.sqrt(self.d_k)
+        if mask is not None:
+            scores = scores.masked_fill(mask.unsqueeze(1).unsqueeze(2) == 0, -1e9)
+        
+        attn = self.dropout(F.softmax(scores, dim=-1))
+        out = (attn @ V).transpose(1, 2).contiguous().view(B, T, D)
+        return self.W_o(out)
+
+class TransformerEncoderLayer(nn.Module):
+    """Transformer编码器层"""
+    def __init__(self, d_model, n_heads, d_ff, dropout=0.1):
+        super().__init__()
+        self.attn = MultiHeadAttention(d_model, n_heads, dropout)
+        self.ffn = nn.Sequential(
+            nn.Linear(d_model, d_ff),
+            nn.GELU(),
+            nn.Dropout(dropout),
+            nn.Linear(d_ff, d_model)
+        )
+        self.norm1 = nn.LayerNorm(d_model)
+        self.norm2 = nn.LayerNorm(d_model)
+        self.dropout = nn.Dropout(dropout)
+    
+    def forward(self, x, mask=None):
+        x = self.norm1(x + self.dropout(self.attn(x, mask)))
+        x = self.norm2(x + self.dropout(self.ffn(x)))
+        return x
+
+class TransformerClassifier(nn.Module):
+    """Transformer分类器"""
+    def __init__(self, vocab_size, d_model=128, n_heads=4, d_ff=512, 
+                 n_layers=3, n_classes=NUM_CLASSES, dropout=0.1):
+        super().__init__()
+        self.embedding = nn.Embedding(vocab_size, d_model, padding_idx=0)
+        self.pos_enc = PositionalEncoding(d_model)
+        self.layers = nn.ModuleList([
+            TransformerEncoderLayer(d_model, n_heads, d_ff, dropout)
+            for _ in range(n_layers)
         ])
+        self.classifier = nn.Linear(d_model, n_classes)
         self.dropout = nn.Dropout(dropout)
-        self.classifier = nn.Linear(n_filters * len(filter_sizes), n_classes)
-
+    
     def forward(self, x, mask=None):
-        emb = self.embedding(x).transpose(1, 2)          # (B, D, L)
-        feats = [conv(emb).squeeze(-1) for conv in self.convs]  # 每个尺寸一个特征
-        out = self.dropout(torch.cat(feats, dim=1))
-        return self.classifier(out)
+        x = self.dropout(self.pos_enc(self.embedding(x)))
+        for layer in self.layers:
+            x = layer(x, mask)
+        x = x[:, 0, :]  # 使用[CLS]位置
+        return self.classifier(x)
 
-
-class BiLSTM(nn.Module):
-    """双向LSTM: 取最后一层前向/后向隐状态拼接分类"""
-
-    def __init__(self, vocab_size, embed_dim=100, hidden=128, n_layers=2,
-                 n_classes=4, dropout=0.3):
-        super().__init__()
-        self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=0)
-        self.lstm = nn.LSTM(embed_dim, hidden, num_layers=n_layers,
-                            batch_first=True, bidirectional=True,
-                            dropout=dropout if n_layers > 1 else 0.0)
-        self.dropout = nn.Dropout(dropout)
-        self.classifier = nn.Linear(hidden * 2, n_classes)
-
-    def forward(self, x, mask=None):
-        lengths = mask.sum(dim=1).clamp(min=1).cpu()     # pack需要CPU上的长度
-        emb = self.embedding(x)
-        packed = nn.utils.rnn.pack_padded_sequence(
-            emb, lengths, batch_first=True, enforce_sorted=False)
-        _, (h, _) = self.lstm(packed)
-        h = torch.cat((h[-2], h[-1]), dim=1)             # 最后的前向+后向隐状态
-        return self.classifier(self.dropout(h))
-
-
-# ========================= 训练与评估 =========================
+# ========================= 训练和评估函数 =========================
 def count_params(model):
+    """计算模型参数量"""
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
+def train_one_epoch(model, loader, optimizer, criterion):
+    """训练一个epoch"""
+    model.train()
+    total_loss, correct, total = 0, 0, 0
+    for ids, mask, labels in loader:
+        ids, mask, labels = ids.to(DEVICE), mask.to(DEVICE), labels.to(DEVICE)
+        optimizer.zero_grad()
+        logits = model(ids, mask)
+        loss = criterion(logits, labels)
+        loss.backward()
+        optimizer.step()
+        total_loss += loss.item() * ids.size(0)
+        correct += (logits.argmax(1) == labels).sum().item()
+        total += ids.size(0)
+    return total_loss / total, correct / total
 
 @torch.no_grad()
 def evaluate(model, loader):
-    """返回 (准确率, F1_macro, 推理耗时)"""
+    """评估模型性能"""
     model.eval()
-    preds, labels = [], []
+    all_preds, all_labels = [], []
     t0 = time.time()
-    for ids, mask, label in loader:
-        ids, mask = ids.to(DEVICE), mask.to(DEVICE)
-        preds.extend(model(ids, mask).argmax(1).cpu().tolist())
-        labels.extend(label.tolist())
+    for ids, mask, labels in loader:
+        ids, mask, labels = ids.to(DEVICE), mask.to(DEVICE), labels.to(DEVICE)
+        logits = model(ids, mask)
+        all_preds.extend(logits.argmax(1).cpu().tolist())
+        all_labels.extend(labels.cpu().tolist())
     infer_time = time.time() - t0
-    return (accuracy_score(labels, preds),
-            f1_score(labels, preds, average="macro"), infer_time)
-
-
-@torch.no_grad()
-def predict(model, loader):
-    """返回测试集全部预测标签(用于混淆矩阵)"""
-    model.eval()
-    preds = []
-    for ids, mask, _ in loader:
-        ids, mask = ids.to(DEVICE), mask.to(DEVICE)
-        preds.extend(model(ids, mask).argmax(1).cpu().tolist())
-    return np.array(preds)
-
+    acc = accuracy_score(all_labels, all_preds)
+    f1 = f1_score(all_labels, all_preds, average='macro')
+    return acc, f1, infer_time
 
 def train_model(model, train_loader, test_loader, epochs, lr, name=""):
-    """通用训练流程, 记录每轮损失/测试准确率历史"""
-    model.to(DEVICE)
-    optimizer = AdamW(model.parameters(), lr=lr, weight_decay=1e-4)
+    """训练模型主函数"""
+    model = model.to(DEVICE)
+    optimizer = AdamW(model.parameters(), lr=lr)
     criterion = nn.CrossEntropyLoss()
-    history = {"loss": [], "acc": []}
+    
+    best_acc = 0
     t0 = time.time()
-
-    print(f"\n>>> 训练 {name} | 参数量 {count_params(model):,} | 设备 {DEVICE}")
-    print("-" * 64)
+    
+    print(f"\n训练: {name} | 参数量: {count_params(model):,}")
+    print("-"*50)
+    
     for epoch in range(1, epochs + 1):
-        model.train()
-        total_loss, correct, total = 0.0, 0, 0
-        for ids, mask, labels in train_loader:
-            ids, mask, labels = ids.to(DEVICE), mask.to(DEVICE), labels.to(DEVICE)
-            optimizer.zero_grad()
-            logits = model(ids, mask)
-            loss = criterion(logits, labels)
-            loss.backward()
-            optimizer.step()
-            total_loss += loss.item() * ids.size(0)
-            correct += (logits.argmax(1) == labels).sum().item()
-            total += ids.size(0)
+        train_loss, train_acc = train_one_epoch(model, train_loader, optimizer, criterion)
         test_acc, test_f1, _ = evaluate(model, test_loader)
-        history["loss"].append(total_loss / total)
-        history["acc"].append(test_acc)
-        print(f"  epoch {epoch:2d}/{epochs} | loss {total_loss/total:.4f} "
-              f"| train_acc {correct/total:.4f} | test_acc {test_acc:.4f} | f1 {test_f1:.4f}")
-
+        best_acc = max(best_acc, test_acc)
+        
+        if epoch % (epochs // 5) == 0 or epoch == epochs:
+            print(f"Epoch {epoch:2d}/{epochs} | Loss={train_loss:.4f} | "
+                  f"Train Acc={train_acc:.4f} | Test Acc={test_acc:.4f} | Test F1={test_f1:.4f}")
+    
     train_time = time.time() - t0
     test_acc, test_f1, infer_time = evaluate(model, test_loader)
+    
     return {
-        "name": name, "params": count_params(model),
-        "train_time": round(train_time, 2), "infer_time": round(infer_time, 4),
-        "accuracy": round(test_acc, 4), "f1": round(test_f1, 4),
-        "epochs": epochs, "history": history, "model": model,
+        'name': name,
+        'params': count_params(model),
+        'train_time': round(train_time, 2),
+        'infer_time': round(infer_time, 4),
+        'accuracy': round(test_acc, 4),
+        'f1': round(test_f1, 4)
     }
 
+# ========================= 训练Transformer模型 =========================
+print("\n" + "="*50)
+print("3. 训练自实现Transformer")
+print("="*50)
 
-# ========================= 方法一: TF-IDF + 逻辑回归 =========================
-def run_tfidf_lr(train_texts, train_labels, test_texts, test_labels):
-    print("\n>>> 方法一: TF-IDF + 逻辑回归")
-    print("-" * 64)
-    t0 = time.time()
-    vectorizer = TfidfVectorizer(max_features=20000, ngram_range=(1, 2),
-                                 sublinear_tf=True)
-    X_train = vectorizer.fit_transform(train_texts)
-    X_test = vectorizer.transform(test_texts)
-    clf = LogisticRegression(C=1.0, max_iter=1000)
-    clf.fit(X_train, train_labels)
-    train_time = time.time() - t0
+transformer_model = TransformerClassifier(
+    vocab_size=len(vocab),
+    d_model=128,
+    n_heads=4,
+    d_ff=512,
+    n_layers=3,
+    n_classes=NUM_CLASSES
+)
 
-    t1 = time.time()
-    preds = clf.predict(X_test)
-    infer_time = time.time() - t1
+result_transformer = train_model(
+    transformer_model, train_loader, test_loader,
+    epochs=NUM_EPOCHS_TRANSFORMER, lr=LR_TRANSFORMER,
+    name="自实现Transformer"
+)
 
-    n_params = X_train.shape[1] * clf.coef_.shape[0] + clf.intercept_.size
-    acc = accuracy_score(test_labels, preds)
-    f1 = f1_score(test_labels, preds, average="macro")
-    print(f"  特征维度 {X_train.shape[1]:,} | 训练时间 {train_time:.1f}s | "
-          f"测试准确率 {acc:.4f} | F1 {f1:.4f}")
-    return {"name": "TF-IDF+逻辑回归", "params": n_params,
-            "train_time": round(train_time, 2), "infer_time": round(infer_time, 4),
-            "accuracy": round(acc, 4), "f1": round(f1, 4),
-            "epochs": 1, "history": None, "model": None, "preds": preds}
+# ========================= 微调BERT模型 =========================
+print("\n" + "="*50)
+print("4. 微调预训练BERT")
+print("="*50)
 
+try:
+    from transformers import BertTokenizer, BertForSequenceClassification
+    
+    # 加载BERT tokenizer和模型
+    bert_name = 'bert-base-uncased'
+    tokenizer_bert = BertTokenizer.from_pretrained(bert_name)
+    
+    def tokenize_bert(texts, max_len=MAX_LEN):
+        """BERT tokenize函数"""
+        enc = tokenizer_bert(
+            list(texts), padding=True, truncation=True,
+            max_length=max_len, return_tensors='pt'
+        )
+        return enc['input_ids'], enc['attention_mask']
+    
+    # 准备BERT数据
+    train_ids, train_mask = tokenize_bert(news_train.data)
+    test_ids, test_mask = tokenize_bert(news_test.data)
+    
+    train_labels = torch.tensor(news_train.target)
+    test_labels = torch.tensor(news_test.target)
+    
+    class BERTDataset(Dataset):
+        def __init__(self, ids, mask, labels):
+            self.ids = ids
+            self.mask = mask
+            self.labels = labels
+        def __len__(self):
+            return len(self.ids)
+        def __getitem__(self, idx):
+            return self.ids[idx], self.mask[idx], self.labels[idx]
+    
+    bert_train_set = BERTDataset(train_ids, train_mask, train_labels)
+    bert_test_set = BERTDataset(test_ids, test_mask, test_labels)
+    bert_train_loader = DataLoader(bert_train_set, batch_size=BATCH_SIZE, shuffle=True)
+    bert_test_loader = DataLoader(bert_test_set, batch_size=BATCH_SIZE, shuffle=False)
+    
+    # 加载BERT模型
+    bert_model = BertForSequenceClassification.from_pretrained(bert_name, num_labels=NUM_CLASSES)
+    
+    # 微调BERT
+    result_bert = train_model(
+        bert_model, bert_train_loader, bert_test_loader,
+        epochs=NUM_EPOCHS_BERT, lr=LR_BERT,
+        name="BERT(微调)"
+    )
 
-# ========================= 方法四: DistilBERT 微调 =========================
-def run_distilbert(train_texts, train_labels, test_texts, test_labels, cfg):
-    from transformers import AutoModelForSequenceClassification, AutoTokenizer
+except ImportError:
+    print("未安装transformers库，跳过BERT部分")
+    print("安装命令: pip install transformers")
+    result_bert = None
 
-    model_name = "distilbert-base-uncased"
-    print(f"\n>>> 方法四: DistilBERT 微调 ({model_name})")
-    print("-" * 64)
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    enc = tokenizer(train_texts, padding=True, truncation=True,
-                    max_length=cfg["max_len"], return_tensors="pt")
-    enc_test = tokenizer(test_texts, padding=True, truncation=True,
-                         max_length=cfg["max_len"], return_tensors="pt")
+# ========================= 结果对比 =========================
+print("\n" + "="*50)
+print("5. 结果对比")
+print("="*50)
 
-    train_set = ClfDataset(enc["input_ids"].numpy(), enc["attention_mask"].numpy(),
-                           np.asarray(train_labels))
-    test_set = ClfDataset(enc_test["input_ids"].numpy(), enc_test["attention_mask"].numpy(),
-                          np.asarray(test_labels))
-    train_loader = DataLoader(train_set, batch_size=cfg["batch_size"], shuffle=True)
-    test_loader = DataLoader(test_set, batch_size=cfg["batch_size"], shuffle=False)
+# 汇总结果
+all_results = [result_transformer]
+if result_bert:
+    all_results.append(result_bert)
 
-    model = AutoModelForSequenceClassification.from_pretrained(
-        model_name, num_labels=len(set(train_labels)))
-    return train_model(model, train_loader, test_loader,
-                       epochs=cfg["epochs_bert"], lr=cfg["lr_bert"],
-                       name="DistilBERT(微调)")
+# 打印结果表格
+print(f"\n{'模型':<20} {'参数量':>10} {'训练时间(s)':>12} {'推理时间(s)':>12} {'准确率':>10} {'F1分数':>10}")
+print("-"*80)
+for r in all_results:
+    print(f"{r['name']:<20} {r['params']:>10,} {r['train_time']:>12.1f} "
+          f"{r['infer_time']:>12.4f} {r['accuracy']:>10.4f} {r['f1']:>10.4f}")
 
-
-# ========================= 结果输出 =========================
-def save_csv(results):
-    fields = ["name", "params", "train_time", "infer_time", "accuracy", "f1", "epochs"]
-    with open("results.csv", "w", newline="", encoding="utf-8-sig") as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
-        writer.writeheader()
-        for r in results:
-            writer.writerow({k: r[k] for k in fields})
-    print(f"\n[保存] 结果表 -> results.csv")
-
-
-def print_table(results):
-    print(f"\n{'模型':<18}{'参数量':>12}{'训练时间(s)':>12}{'推理时间(s)':>12}"
-          f"{'准确率':>10}{'F1':>10}{'轮数':>6}")
-    print("-" * 80)
-    for r in results:
-        print(f"{r['name']:<18}{r['params']:>12,}{r['train_time']:>12.1f}"
-              f"{r['infer_time']:>12.4f}{r['accuracy']:>10.4f}{r['f1']:>10.4f}"
-              f"{r['epochs']:>6}")
-
-
-def make_plots(results, target_names):
-    names = [r["name"] for r in results]
-    accs = [r["accuracy"] for r in results]
-    f1s = [r["f1"] for r in results]
-    times = [r["train_time"] for r in results]
-    best = max(results, key=lambda r: r["accuracy"])
-
-    fig, axes = plt.subplots(2, 2, figsize=(13, 10))
+# ========================= 可视化结果 =========================
+if len(all_results) > 1:
+    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+    
+    names = [r['name'] for r in all_results]
+    accs = [r['accuracy'] for r in all_results]
+    f1s = [r['f1'] for r in all_results]
+    times = [r['train_time'] for r in all_results]
+    params = [r['params'] for r in all_results]
+    
+    # 准确率和F1分数对比
     x = np.arange(len(names))
-    w = 0.38
+    width = 0.35
+    axes[0,0].bar(x - width/2, accs, width, label='准确率', color='skyblue')
+    axes[0,0].bar(x + width/2, f1s, width, label='F1分数', color='lightcoral')
+    axes[0,0].set_xticks(x)
+    axes[0,0].set_xticklabels(names)
+    axes[0,0].set_ylabel('分数')
+    axes[0,0].set_title('准确率和F1分数对比')
+    axes[0,0].legend()
+    axes[0,0].set_ylim(0, 1)
+    
+    # 训练时间对比
+    axes[0,1].bar(names, times, color=['skyblue', 'lightcoral'])
+    axes[0,1].set_ylabel('训练时间(秒)')
+    axes[0,1].set_title('训练时间对比')
+    
+    # 参数量对比
+    axes[1,0].bar(names, [p/1e6 for p in params], color=['skyblue', 'lightcoral'])
+    axes[1,0].set_ylabel('参数量(百万)')
+    axes[1,0].set_title('参数量对比')
+    
+    # 综合对比雷达图
+    axes[1,1].axis('off')
+    axes[1,1].text(0.5, 0.5, '实验总结:\n' +
+                  f'1. BERT准确率: {accs[1]:.1%}\n' +
+                  f'2. Transformer准确率: {accs[0]:.1%}\n' +
+                  f'3. BERT参数量: {params[1]/1e6:.1f}M\n' +
+                  f'4. Transformer参数量: {params[0]/1e6:.1f}M',
+                  transform=axes[1,1].transAxes,
+                  verticalalignment='center',
+                  horizontalalignment='center',
+                  fontsize=12,
+                  bbox=dict(boxstyle="round,pad=0.3", facecolor="lightgray"))
+    
+    plt.tight_layout()
+    plt.savefig('transformer_vs_bert.png', dpi=150, bbox_inches='tight')
+    plt.show()
+    
+    print("\n对比图已保存为 transformer_vs_bert.png")
 
-    # (a) 准确率与F1
-    ax = axes[0, 0]
-    ax.bar(x - w / 2, accs, w, label="准确率", color="#4C72B0")
-    ax.bar(x + w / 2, f1s, w, label="F1(macro)", color="#DD8452")
-    for xi, a, f in zip(x, accs, f1s):
-        ax.text(xi - w / 2, a + 0.01, f"{a:.3f}", ha="center", fontsize=9)
-        ax.text(xi + w / 2, f + 0.01, f"{f:.3f}", ha="center", fontsize=9)
-    ax.set_xticks(x)
-    ax.set_xticklabels(names, rotation=15)
-    ax.set_ylim(0, 1.08)
-    ax.set_ylabel("分数")
-    ax.set_title("(a) 准确率与F1对比")
-    ax.legend()
-
-    # (b) 训练损失曲线
-    ax = axes[0, 1]
-    for r in results:
-        if r["history"]:
-            ax.plot(range(1, r["epochs"] + 1), r["history"]["loss"],
-                    marker="o", markersize=3, label=r["name"])
-    ax.set_xlabel("epoch")
-    ax.set_ylabel("训练损失")
-    ax.set_title("(b) 训练损失曲线")
-    ax.legend()
-
-    # (c) 训练时间
-    ax = axes[1, 0]
-    bars = ax.bar(names, times, color=["#4C72B0", "#DD8452", "#55A868", "#C44E52"])
-    for b, t in zip(bars, times):
-        ax.text(b.get_x() + b.get_width() / 2, t, f"{t:.0f}s",
-                ha="center", va="bottom", fontsize=9)
-    ax.set_xticklabels(names, rotation=15)
-    ax.set_ylabel("训练时间(秒)")
-    ax.set_title("(c) 训练时间对比")
-
-    # (d) 总结
-    ax = axes[1, 1]
-    ax.axis("off")
-    lines = ["实验总结",
-             f"最优方法: {best['name']}",
-             f"最高准确率: {best['accuracy']:.1%}",
-             f"最高F1: {max(r['f1'] for r in results):.1%}",
-             f"对比方法数: {len(results)}",
-             f"运行设备: {DEVICE}"]
-    lines += [f"{r['name']}: {r['params']/1e6:.1f}M 参数" for r in results]
-    ax.text(0.5, 0.5, "\n".join(lines), transform=ax.transAxes,
-            ha="center", va="center", fontsize=11,
-            bbox=dict(boxstyle="round,pad=0.4", facecolor="#F0F0F0"))
-
-    fig.tight_layout()
-    fig.savefig("text_classification_compare.png", dpi=150, bbox_inches="tight")
-    print("[保存] 对比图 -> text_classification_compare.png")
-    if matplotlib.get_backend().lower() not in ("agg", "pdf", "svg", "ps", "cairo"):
-        plt.show()
-    plt.close(fig)
-
-
-def plot_confusion(cm, target_names, fname="best_model_confusion.png"):
-    fig, ax = plt.subplots(figsize=(7, 6))
-    im = ax.imshow(cm, cmap="Blues")
-    ax.set_xticks(range(len(target_names)))
-    ax.set_xticklabels(target_names, rotation=30, ha="right")
-    ax.set_yticks(range(len(target_names)))
-    ax.set_yticklabels(target_names)
-    for i in range(cm.shape[0]):
-        for j in range(cm.shape[1]):
-            ax.text(j, i, cm[i, j], ha="center", va="center",
-                    color="white" if cm[i, j] > cm.max() / 2 else "black")
-    ax.set_xlabel("预测类别")
-    ax.set_ylabel("真实类别")
-    ax.set_title("最优模型混淆矩阵")
-    fig.colorbar(im, ax=ax)
-    fig.tight_layout()
-    fig.savefig(fname, dpi=150, bbox_inches="tight")
-    print(f"[保存] 混淆矩阵 -> {fname}")
-    plt.close(fig)
-
-
-# ========================= 主流程 =========================
-def main():
-    parser = argparse.ArgumentParser(description="文本分类不同训练方法效果对比")
-    parser.add_argument("--fast", action="store_true", help="快速冒烟测试模式")
-    args = parser.parse_args()
-    cfg = {**DEFAULTS, **FAST} if args.fast else dict(DEFAULTS)
-
-    torch.manual_seed(42)
-    np.random.seed(42)
-    print(f"[INFO] 设备: {DEVICE} | 模式: {'快速' if args.fast else '完整'}")
-
-    # ---------- 1. 加载数据 ----------
-    print("\n" + "=" * 56)
-    print("1. 加载 20 Newsgroups 数据集")
-    print("=" * 56)
-    news_train = fetch_20newsgroups(subset="train", categories=CATEGORIES,
-                                    remove=("headers", "footers", "quotes"))
-    news_test = fetch_20newsgroups(subset="test", categories=CATEGORIES,
-                                   remove=("headers", "footers", "quotes"))
-    train_texts = [clean_text(t) for t in news_train.data]
-    test_texts = [clean_text(t) for t in news_test.data]
-    train_labels = list(news_train.target)
-    test_labels = list(news_test.target)
-    print(f"训练集: {len(train_texts)} 条 | 测试集: {len(test_texts)} 条")
-    print(f"类别: {news_train.target_names}")
-    print(f"平均长度(词): 训练 {np.mean([len(t.split()) for t in train_texts]):.0f} | "
-          f"测试 {np.mean([len(t.split()) for t in test_texts]):.0f}")
-
-    # ---------- 2. 构建词表与数据加载器 ----------
-    print("\n" + "=" * 56)
-    print("2. 构建词表与数据加载器")
-    print("=" * 56)
-    vocab = build_vocab(train_texts, cfg["max_vocab"], cfg["min_freq"])
-    print(f"词表大小: {len(vocab)} (max_vocab={cfg['max_vocab']}, min_freq={cfg['min_freq']})")
-
-    train_ids, train_mask = encode_texts(train_texts, vocab, cfg["max_len"])
-    test_ids, test_mask = encode_texts(test_texts, vocab, cfg["max_len"])
-    train_loader = DataLoader(ClfDataset(train_ids, train_mask, train_labels),
-                              batch_size=cfg["batch_size"], shuffle=True)
-    test_loader = DataLoader(ClfDataset(test_ids, test_mask, test_labels),
-                             batch_size=cfg["batch_size"], shuffle=False)
-
-    # ---------- 3. 依次训练四种方法 ----------
-    results = []
-
-    try:
-        results.append(run_tfidf_lr(train_texts, train_labels, test_texts, test_labels))
-    except Exception as e:
-        print(f"[警告] TF-IDF+逻辑回归失败: {type(e).__name__}: {e}")
-
-    try:
-        results.append(train_model(TextCNN(len(vocab), n_classes=len(CATEGORIES)),
-                                   train_loader, test_loader,
-                                   epochs=cfg["epochs_cnn"], lr=cfg["lr_cnn"],
-                                   name="TextCNN(自实现)"))
-    except Exception as e:
-        print(f"[警告] TextCNN失败: {type(e).__name__}: {e}")
-
-    try:
-        results.append(train_model(BiLSTM(len(vocab), n_classes=len(CATEGORIES)),
-                                   train_loader, test_loader,
-                                   epochs=cfg["epochs_lstm"], lr=cfg["lr_lstm"],
-                                   name="BiLSTM(自实现)"))
-    except Exception as e:
-        print(f"[警告] BiLSTM失败: {type(e).__name__}: {e}")
-
-    try:
-        results.append(run_distilbert(train_texts, train_labels,
-                                      test_texts, test_labels, cfg))
-    except Exception as e:
-        print(f"[警告] DistilBERT微调失败: {type(e).__name__}: {e}，跳过该方法")
-
-    if not results:
-        print("[错误] 所有方法均失败, 无法对比")
-        return
-
-    # ---------- 4. 结果对比与可视化 ----------
-    print("\n" + "=" * 56)
-    print("4. 结果对比")
-    print("=" * 56)
-    print_table(results)
-    save_csv(results)
-    make_plots(results, news_train.target_names)
-
-    best = max(results, key=lambda r: r["accuracy"])
-    preds = best["preds"] if best["preds"] is not None \
-        else predict(best["model"], test_loader)
-    cm = confusion_matrix(test_labels, preds)
-    plot_confusion(cm, news_train.target_names)
-
-    print(f"\n最优方法 [{best['name']}] 的类别级指标:")
-    print(classification_report(test_labels, preds,
-                                target_names=news_train.target_names, digits=4))
-    print("\n实验完成!")
-
-
-if __name__ == "__main__":
-    main()
+print("\n实验完成!")
