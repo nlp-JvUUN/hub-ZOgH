@@ -93,7 +93,7 @@ val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
 # ===================== 8. 优化器 =====================
 optimizer = optim.AdamW(model.parameters(), lr=lr)
 
-# ===================== 9. 训练函数（已修复！） =====================
+# ===================== 9. 训练函数 =====================
 def train_epoch(model, data_loader, optimizer, device):
     model.train()
     total_loss = 0
@@ -104,11 +104,11 @@ def train_epoch(model, data_loader, optimizer, device):
         attention_mask = batch['attention_mask'].to(device)
         labels = batch['labels'].to(device)
 
-        # ✅ 修复版本兼容问题
         outputs = model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
         
+        # 兼容所有版本
         if isinstance(outputs, tuple):
-            loss = outputs[0]  # 旧版 transformers
+            loss = outputs[0]
         else:
             loss = outputs.loss
 
@@ -131,6 +131,7 @@ def evaluate(model, data_loader, device, id2label):
 
             outputs = model(input_ids=input_ids, attention_mask=attention_mask)
             
+            # 兼容所有版本
             if isinstance(outputs, tuple):
                 logits = outputs[1]
             else:
