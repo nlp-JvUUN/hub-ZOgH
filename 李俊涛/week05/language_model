@@ -1,0 +1,117 @@
+import math
+import argparse
+import glob
+import random
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, Dataset
+
+
+def load_corpus(pattern='*.txt'):
+    texts = []
+    for path in glob.glob(pattern):
+        with open(path, encoding='utf8', errors='ignore') as f:
+            texts.append(f.read())
+    return ''.join(texts)
+
+
+def build_vocab(text):
+    chars = sorted(set(text))
+    char2idx = {c: i for i, c in enumerate(chars)}
+    idx2char = {i: c for c, i in char2idx.items()}
+    return char2idx, idx2char
+
+def build_mask(size, device):
+    mask = torch.triu(torch.ones(size,size,device=device),diagonal=1)
+    mask = mask.masked_fill(mask == 1, float('-inf'))
+    return mask
+class CharDataset(Dataset):
+    def __init__(self, text, char2idx, seq_len):
+        self.seq_len = seq_len
+        ids = [char2idx[c] for c in text if c in char2idx]
+        self.data = torch.tensor(ids, dtype=torch.long)
+
+    def __len__(self):
+        return max(0, len(self.data) - self.seq_len)
+
+    def __getitem__(self, idx):
+        x = self.data[idx: idx + self.seq_len]
+        y = self.data[idx + 1: self.seq_len + 1]
+        return x, y
+
+class PositionalEncoding(nn.Module):
+    def __init__(self, d_model, dropout=0.1, max_len=5000):
+        super().__init__()
+        self.dropout = nn.Dropout(dropout)
+        pe = torch.zeros(max_len, d_model)
+        position = torch.arange(0,max_len).unsqueeze(1).float()
+        div_term = torch.exp(torch.arange(0, d_model, 2).float() * (-math.log(10000.0)/d_model))
+        pe[:, 0::2] = torch.sin(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term)
+        pe = pe.unsqueeze(0)
+        self.register_buffer('pe', pe)
+
+    def forward(self,x):
+        x = x + self.pe[:,:x.size(1), :]
+        return self.dropout(x)
+class LM(nn.Module):
+    def __init__(self, vocab_size, embed_dim, hidden_dim, num_layers, nhead, dropout):
+        super().__init__()
+        self.embed = nn.Embedding(vocab_size, embed_dim)
+        self.pos_encoder = PositionalEncoding(embed_dim,dropout)
+        decoder_layer = nn.TransformerDecoderLayer(
+            d_model=embed_dim,
+            nhead=nhead,
+            dim_feedforward=hidden_dim,
+            dropout=dropout,
+            batch_first=True
+        )
+        self.transformer_decoder = nn.TransformerDecoder(decoder_layer,num_layers=num_layers)
+        self.fc = nn.Linear(embed_dim, vocab_size)
+        self.embed_dim = embed_dim
+    def forward(self, x,tgt_mask=None):
+        seq_len = x.size(1)
+        if tgt_mask is None:
+            tgt_mask = build_mask(seq_len, x.device)
+
+        x = self.embed(x) * math.sqrt(self.embed_dim)
+        x = self.pos_encoder(x)
+        x = self.transformer_decoder(tgt=x, memory=None,tgt_mask=tgt_mask)
+        logits = self.fc(x)
+        return logits
+@torch.no_grad()
+def generate(model, start_seq, char2idx, idx2char, max_len=200, temperature=1.0,device='cpu'):
+    model.eval()
+    ids = [char2idx[c] for c in start_seq if c in char2idx]
+    generated = ids[:]
+    input_tensor = torch.tensor([generated], device=device,dtype=torch.long)
+
+    for _ in range(max_len):
+        logits = model(input_tensor)
+        next_logits = logits[0, -1, :]/temperature
+        probs = torch.softmax(next_logits, dim=-1)
+        next_id = torch.multinomial(probs, num_samples=1).item()
+        generated.append(next_id)
+        input_tensor = torch.cat([input_tensor, torch.tensor([[next_id]],device=device)],dim=1)
+    return ''.join(idx2char[i] for i in generated)
+def run_eopch(model, loader, criterion, optimizer, device, train=True):
+    model.train(train)
+    total_loss = 0.0
+    total_tokens = 0
+
+    for x, y in loader:
+        x, y = x.to(device), y.to(device)
+        logits = model(x)
+        loss = criterion(logits.reshape(-1, logits.size(-1)), y.reshape(-1))
+
+        if train:
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+
+        total_loss += loss.item() * y.numel()
+        total_tokens += y.numel()
+
+    avg_loss = total_loss / total_tokens
+    ppl = math.exp(avg_loss)
+    return avg_loss, ppl

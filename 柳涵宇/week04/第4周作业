@@ -1,0 +1,117 @@
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+
+class MultiHeadAttention(nn.Module):
+    def __init__(self, embed_dim, num_heads, dropout=0.1):
+        super(MultiHeadAttention, self).__init__()
+        self.embed_dim = embed_dim
+        self.num_heads = num_heads
+        self.head_dim = embed_dim // num_heads
+
+        assert self.head_dim * num_heads == embed_dim, "embed_dim must be divisible by num_heads"
+
+        self.q_proj = nn.Linear(embed_dim, embed_dim)
+        self.k_proj = nn.Linear(embed_dim, embed_dim)
+        self.v_proj = nn.Linear(embed_dim, embed_dim)
+        self.out_proj = nn.Linear(embed_dim, embed_dim)
+
+        self.dropout = nn.Dropout(dropout)
+
+    def scaled_dot_product_attention(self, q, k, v, mask=None):
+        d_k = q.size(-1)
+        scores = torch.matmul(q, k.transpose(-2, -1)) / torch.sqrt(torch.tensor(d_k, dtype=torch.float32))
+
+        if mask is not None:
+            scores = scores.masked_fill(mask == 0, float('-inf'))
+
+        attn_weights = F.softmax(scores, dim=-1)
+        attn_weights = self.dropout(attn_weights)
+
+        output = torch.matmul(attn_weights, v)
+        return output, attn_weights
+
+    def split_heads(self, x, batch_size):
+        x = x.view(batch_size, -1, self.num_heads, self.head_dim)
+        return x.transpose(1, 2)
+
+    def forward(self, query, key, value, mask=None):
+        batch_size = query.size(0)
+
+        q = self.q_proj(query)
+        k = self.k_proj(key)
+        v = self.v_proj(value)
+
+        q = self.split_heads(q, batch_size)
+        k = self.split_heads(k, batch_size)
+        v = self.split_heads(v, batch_size)
+
+        output, attn_weights = self.scaled_dot_product_attention(q, k, v, mask)
+
+        output = output.transpose(1, 2).contiguous().view(batch_size, -1, self.embed_dim)
+        output = self.out_proj(output)
+
+        return output, attn_weights
+
+
+class PositionWiseFeedForward(nn.Module):
+    def __init__(self, embed_dim, ff_dim, dropout=0.1):
+        super(PositionWiseFeedForward, self).__init__()
+        self.fc1 = nn.Linear(embed_dim, ff_dim)
+        self.fc2 = nn.Linear(ff_dim, embed_dim)
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, x):
+        x = self.fc1(x)
+        x = F.relu(x)
+        x = self.dropout(x)
+        x = self.fc2(x)
+        return x
+
+
+class TransformerLayer(nn.Module):
+    def __init__(self, embed_dim, num_heads, ff_dim, dropout=0.1):
+        super(TransformerLayer, self).__init__()
+        self.self_attn = MultiHeadAttention(embed_dim, num_heads, dropout)
+        self.feed_forward = PositionWiseFeedForward(embed_dim, ff_dim, dropout)
+
+        self.norm1 = nn.LayerNorm(embed_dim)
+        self.norm2 = nn.LayerNorm(embed_dim)
+
+        self.dropout1 = nn.Dropout(dropout)
+        self.dropout2 = nn.Dropout(dropout)
+
+    def forward(self, x, mask=None):
+        attn_output, attn_weights = self.self_attn(x, x, x, mask)
+        x = x + self.dropout1(attn_output)
+        x = self.norm1(x)
+
+        ff_output = self.feed_forward(x)
+        x = x + self.dropout2(ff_output)
+        x = self.norm2(x)
+
+        return x, attn_weights
+
+
+if __name__ == "__main__":
+    batch_size = 2
+    seq_len = 10
+    embed_dim = 512
+    num_heads = 8
+    ff_dim = 2048
+
+    transformer_layer = TransformerLayer(embed_dim, num_heads, ff_dim)
+
+    x = torch.randn(batch_size, seq_len, embed_dim)
+
+    output, attn_weights = transformer_layer(x)
+
+    print(f"Input shape: {x.shape}")
+    print(f"Output shape: {output.shape}")
+    print(f"Attention weights shape: {attn_weights.shape}")
+
+    assert output.shape == x.shape, "Output shape mismatch"
+    assert attn_weights.shape == (batch_size, num_heads, seq_len, seq_len), "Attention weights shape mismatch"
+
+    print("Transformer layer test passed!")

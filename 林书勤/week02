@@ -1,0 +1,141 @@
+# coding:utf8
+
+import torch
+import torch.nn as nn
+import numpy as np
+import matplotlib.pyplot as plt
+
+"""
+6分类任务：输入6维向量，最大值所在位置为类别（0-5）
+使用交叉熵损失函数
+"""
+
+# # 模型定义
+class TorchModel(nn.Module):
+    def __init__(self, input_size, num_classes):
+        super(TorchModel, self).__init__()
+        self.linear = nn.Linear(input_size, num_classes)  # 线性层，输出6个类别
+        self.loss = nn.CrossEntropyLoss()  # 交叉熵损失（自带softmax）
+        # self.loss = nn.functional.cross_entropy
+
+    def forward(self, x, y=None):
+        x = self.linear(x)  # 前向传播：(batch_size, 6)
+        if y is not None:
+            return self.loss(x, y)  # 训练模式：返回损失
+        return x  # 预测模式：返回logits
+
+# # 数据生成
+def build_sample():
+    """生成一个6维随机向量及其类别标签"""
+    x = np.random.random(6)  # 6维随机向量
+    y = np.argmax(x)  # 最大值索引作为类别（0-5）
+    return x, y
+
+def build_dataset(total_sample_num):
+    """构建数据集"""
+    X = []
+    Y = []
+    for i in range(total_sample_num):
+        x, y = build_sample()
+        X.append(x)
+        Y.append(y)
+    return torch.FloatTensor(X), torch.LongTensor(Y)  # 类别标签用LongTensor
+
+# # 模型评估
+def evaluate(model):
+    """评估模型准确率"""
+    model.eval()  # 设置为评估模式
+    test_sample_num = 100
+    x, y = build_dataset(test_sample_num)
+    
+    with torch.no_grad():  # 不计算梯度
+        y_pred_logits = model(x)  # 获取预测logits
+        y_pred = torch.argmax(y_pred_logits, dim=1)  # 取最大值的索引作为预测类别
+        correct = (y_pred == y).sum().item()  # 统计正确预测的数量
+        accuracy = correct / test_sample_num  # 计算准确率
+    
+    print("正确预测个数：%d, 正确率：%f" % (correct, accuracy))
+    return accuracy
+
+# # 主训练函数
+def main():
+    # 训练参数配置
+    epoch_num = 150      # 训练轮数
+    batch_size = 20      # 批次大小
+    train_sample = 5000  # 训练样本总数
+    input_size = 6       # 输入维度
+    learning_rate = 0.0008  # 学习率
+    
+    # 创建模型（6分类）
+    model = TorchModel(input_size, num_classes=6)
+    optim = torch.optim.Adam(model.parameters(), lr=learning_rate)  # Adam优化器
+    log = []
+    
+    # 构建训练集
+    train_x, train_y = build_dataset(train_sample)
+    
+    # 训练循环
+    for epoch in range(epoch_num):
+        model.train()  # 设置为训练模式
+        watch_loss = []  # 记录本轮损失
+        
+        # 批次训练
+        for batch_index in range(train_sample // batch_size):
+            # 获取当前批次数据
+            start = batch_index * batch_size
+            end = (batch_index + 1) * batch_size
+            x = train_x[start:end]
+            y = train_y[start:end]
+            
+            # 训练步骤
+            loss = model(x, y)  # 计算损失
+            loss.backward()      # 反向传播
+            optim.step()         # 更新参数
+            optim.zero_grad()    # 清空梯度
+            
+            watch_loss.append(loss.item())  # 记录损失值
+        
+        avg_loss = np.mean(watch_loss)
+        print("第%d轮平均loss:%f" % (epoch + 1, avg_loss))
+        
+        # 评估模型
+        acc = evaluate(model)
+        log.append([acc, avg_loss])  # 记录准确率和损失
+    
+    # 保存模型
+    torch.save(model.state_dict(), "model.pt")
+    
+    # 绘制训练曲线
+    plt.plot(range(len(log)), [l[0] for l in log], label="acc")
+    plt.plot(range(len(log)), [l[1] for l in log], label="loss")
+    plt.legend()
+    plt.show()
+    return
+
+# # 预测函数
+def predict(model_path, input_vec):
+    """使用训练好的模型进行预测"""
+    # 加载模型
+    model = TorchModel(6, num_classes=6)
+    model.load_state_dict(torch.load(model_path))
+    model.eval()  # 设置为评估模式
+    
+    with torch.no_grad():  # 不计算梯度
+        input_tensor = torch.FloatTensor(input_vec)
+        logits = model(input_tensor)  # 获取logits
+        probs = torch.softmax(logits, dim=1)  # 计算概率分布
+        preds = torch.argmax(probs, dim=1)  # 获取预测类别
+    
+    for vec, pred, prob in zip(input_vec, preds, probs):
+        print("输入：%s, 预测类别：%d, 概率值：%f" % (vec, int(pred), float(prob[int(pred)])))
+
+if __name__ == "__main__":
+    main()  # 训练模型
+    
+    test_vec = [
+        [0.07889086,0.15229675,0.31082123,0.03504317,0.88920843,0.9564866],
+        [0.74963533,0.5524256,0.95758807,0.95520434,0.84890681,0.003458451],
+        [0.90797868,0.67482528,0.13625847,0.34675372,0.19871392,0.554165546],
+        [0.99349776,0.59416669,0.92579291,0.41567412,0.1358894,0.1654644654]
+    ]
+    predict("model.pt", test_vec)

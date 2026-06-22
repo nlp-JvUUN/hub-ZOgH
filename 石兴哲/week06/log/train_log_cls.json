@@ -1,0 +1,41 @@
+[
+  {
+    "bert_path": "D:\\mydocs\\pretrained_models\\bert-base-chinese",
+    "data_dir": "D:\\mydocs\\workspace\\llm_demo1\\scratch-2026\\data\\week06\\data",
+    "output_dir": "D:\\mydocs\\workspace\\llm_demo1\\scratch-2026\\data\\week06\\outputs",
+    "pool": "cls",
+    "epochs": 3,
+    "batch_size": 32,
+    "max_length": 64,
+    "lr": 2e-05,
+    "head_lr_mult": 5.0,
+    "dropout": 0.1,
+    "warmup_ratio": 0.1,
+    "grad_accum": 1,
+    "use_class_weight": false
+  },
+  {
+    "epoch": 1,
+    "train_loss": 1.4431125113989103,
+    "train_acc": 0.50952023988006,
+    "val_acc": 0.5631,
+    "val_macro_f1": 0.5395990157986288,
+    "elapsed_s": 274.9196949005127
+  },
+  {
+    "epoch": 2,
+    "train_loss": 1.0553767514193075,
+    "train_acc": 0.6145989505247377,
+    "val_acc": 0.57,
+    "val_macro_f1": 0.5662960767297004,
+    "elapsed_s": 268.42912197113037
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.8399222358592089,
+    "train_acc": 0.6906484257871065,
+    "val_acc": 0.5667,
+    "val_macro_f1": 0.5593803824511863,
+    "elapsed_s": 270.25171184539795
+  }
+]

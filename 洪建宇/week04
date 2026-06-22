@@ -1,0 +1,221 @@
+import torch
+import torch.nn as nn
+import math
+from torch.utils.data import Dataset, DataLoader
+
+# ----------------------------
+# 1. 准备简单的训练数据
+# ----------------------------
+# 格式：(句子, 标签) -> 1代表正面, 0代表负面
+train_data = [
+    ("I love this movie", 1),
+    ("This film is amazing", 1),
+    ("What a great day", 1),
+    ("I am so happy today", 1),
+    ("The food was delicious", 1),
+    ("I hate this book", 0),
+    ("This is terrible", 0),
+    ("Very bad experience", 0),
+    ("I feel so sad", 0),
+    ("The worst thing ever", 0),
+    ("Absolutely fantastic", 1),
+    ("Totally disgusting", 0)
+]
+
+# 构建词汇表
+def build_vocab(data):
+    vocab = {"<pad>": 0, "<unk>": 1}
+    for text, _ in data:
+        for word in text.lower().split():
+            if word not in vocab:
+                vocab[word] = len(vocab)
+    return vocab
+
+vocab = build_vocab(train_data)
+vocab_size = len(vocab)
+word2idx = vocab
+
+# ----------------------------
+# 2. 自定义数据集
+# ----------------------------
+class SentimentDataset(Dataset):
+    def __init__(self, data, word2idx, max_len=10):
+        self.data = data
+        self.word2idx = word2idx
+        self.max_len = max_len
+        
+    def __len__(self):
+        return len(self.data)
+    
+    def __getitem__(self, idx):
+        text, label = self.data[idx]
+        # 将句子转为索引
+        tokens = [self.word2idx.get(word, self.word2idx["<unk>"]) for word in text.lower().split()]
+        # 截断或填充
+        if len(tokens) > self.max_len:
+            tokens = tokens[:self.max_len]
+        else:
+            tokens = tokens + [self.word2idx["<pad>"]] * (self.max_len - len(tokens))
+            
+        return torch.tensor(tokens), torch.tensor(label, dtype=torch.float)
+
+# ----------------------------
+# 3. 位置编码 & Transformer层 (沿用之前的)
+# ----------------------------
+class PositionalEncoding(nn.Module):
+    def __init__(self, embed_dim, max_len=5000):
+        super().__init__()
+        pe = torch.zeros(max_len, embed_dim)
+        position = torch.arange(0, max_len, dtype=torch.float).unsqueeze(1)
+        div_term = torch.exp(torch.arange(0, embed_dim, 2).float() * (-math.log(10000.0) / embed_dim))
+        pe[:, 0::2] = torch.sin(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term)
+        self.register_buffer('pe', pe.unsqueeze(0))
+        
+    def forward(self, x):
+        return x + self.pe[:, :x.size(1), :]
+
+class MultiHeadSelfAttention(nn.Module):
+    def __init__(self, embed_dim, num_heads):
+        super().__init__()
+        assert embed_dim % num_heads == 0
+        self.embed_dim = embed_dim
+        self.num_heads = num_heads
+        self.head_dim = embed_dim // num_heads
+        
+        self.q_proj = nn.Linear(embed_dim, embed_dim)
+        self.k_proj = nn.Linear(embed_dim, embed_dim)
+        self.v_proj = nn.Linear(embed_dim, embed_dim)
+        self.out_proj = nn.Linear(embed_dim, embed_dim)
+        
+    def forward(self, x, mask=None):
+        B, L, D = x.shape
+        Q = self.q_proj(x).view(B, L, self.num_heads, self.head_dim).transpose(1, 2)
+        K = self.k_proj(x).view(B, L, self.num_heads, self.head_dim).transpose(1, 2)
+        V = self.v_proj(x).view(B, L, self.num_heads, self.head_dim).transpose(1, 2)
+        
+        scores = torch.matmul(Q, K.transpose(-2, -1)) / math.sqrt(self.head_dim)
+        if mask is not None:
+            scores = scores.masked_fill(mask == 0, float('-inf'))
+        attn = torch.softmax(scores, dim=-1)
+        out = torch.matmul(attn, V).transpose(1, 2).contiguous().view(B, L, D)
+        return self.out_proj(out)
+
+class TransformerEncoderLayer(nn.Module):
+    def __init__(self, embed_dim, num_heads, ff_hidden_dim, dropout=0.1):
+        super().__init__()
+        self.self_attn = MultiHeadSelfAttention(embed_dim, num_heads)
+        self.norm1 = nn.LayerNorm(embed_dim)
+        self.norm2 = nn.LayerNorm(embed_dim)
+        self.ffn = nn.Sequential(
+            nn.Linear(embed_dim, ff_hidden_dim),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(ff_hidden_dim, embed_dim)
+        )
+        self.dropout = nn.Dropout(dropout)
+        
+    def forward(self, x, mask=None):
+        x = self.norm1(x + self.dropout(self.self_attn(x, mask)))
+        x = self.norm2(x + self.dropout(self.ffn(x)))
+        return x
+
+# ----------------------------
+# 4. 分类模型
+# ----------------------------
+class SentimentClassifier(nn.Module):
+    def __init__(self, vocab_size, embed_dim, num_heads, num_layers, ff_hidden_dim):
+        super().__init__()
+        self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=word2idx["<pad>"])
+        self.pos_encoding = PositionalEncoding(embed_dim)
+        self.encoder_layers = nn.ModuleList([
+            TransformerEncoderLayer(embed_dim, num_heads, ff_hidden_dim)
+            for _ in range(num_layers)
+        ])
+        # 分类头：将最后一个词的输出映射为 0 或 1
+        self.classifier = nn.Linear(embed_dim, 1)
+        self.sigmoid = nn.Sigmoid()
+        
+    def forward(self, x):
+        # x: [batch_size, seq_len]
+        mask = (x != word2idx["<pad>"]).unsqueeze(1).unsqueeze(2) # 创建 padding mask
+        
+        x = self.embedding(x) * math.sqrt(self.embedding.embedding_dim)
+        x = self.pos_encoding(x)
+        
+        # 经过多层 Transformer Encoder
+        for layer in self.encoder_layers:
+            x = layer(x, mask)
+            
+        # 取出句子中最后一个非 padding 词的特征（或者简单取第一个词 [CLS] 的思想，这里取平均）
+        # 为了简单，我们直接取整个句子的平均池化
+        x = x.mean(dim=1)  # [batch_size, embed_dim]
+        
+        x = self.classifier(x) # [batch_size, 1]
+        return self.sigmoid(x).squeeze(1)
+
+# ----------------------------
+# 5. 训练与评估
+# ----------------------------
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# 超参数
+embed_dim = 64
+num_heads = 4
+num_layers = 2
+ff_hidden_dim = 128
+batch_size = 4
+epochs = 50
+lr = 0.001
+
+# 数据加载
+dataset = SentimentDataset(train_data, word2idx, max_len=8)
+dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
+
+# 模型、损失、优化器
+model = SentimentClassifier(vocab_size, embed_dim, num_heads, num_layers, ff_hidden_dim).to(device)
+criterion = nn.BCELoss() # 二分类交叉熵
+optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+
+# 训练
+print("开始训练...")
+model.train()
+for epoch in range(epochs):
+    total_loss = 0
+    for texts, labels in dataloader:
+        texts, labels = texts.to(device), labels.to(device)
+        
+        outputs = model(texts)
+        loss = criterion(outputs, labels)
+        
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        
+        total_loss += loss.item()
+    
+    if (epoch + 1) % 10 == 0:
+        print(f"Epoch [{epoch+1}/{epochs}], Loss: {total_loss/len(dataloader):.4f}")
+
+# ----------------------------
+# 6. 推理测试
+# ----------------------------
+def predict_sentiment(model, sentence):
+    model.eval()
+    with torch.no_grad():
+        # 文本转索引
+        tokens = [word2idx.get(word, word2idx["<unk>"]) for word in sentence.lower().split()]
+        # 填充
+        tokens = tokens + [word2idx["<pad>"]] * (8 - len(tokens))
+        input_tensor = torch.tensor([tokens]).to(device)
+        
+        # 预测
+        prob = model(input_tensor).item()
+        sentiment = "正面 (Positive)" if prob > 0.5 else "负面 (Negative)"
+        return sentiment, prob
+
+print("\n--- 测试新句子 ---")
+test_sentences = ["I love coding", "This is so bad", "Amazing work", "Terrible food","love this course"]
+for sent in test_sentences:
+    sentiment, prob = predict_sentiment(model, sent)
+    print(f"句子: '{sent}' -> 预测: {sentiment} (概率: {prob:.4f})")

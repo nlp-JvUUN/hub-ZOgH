@@ -1,0 +1,319 @@
+"""
+下载 NER 数据集并保存为本地 JSON 文件
+使用方式：python src/download_data.py [--skip_cluener]
+"""
+
+import io
+import json
+import zipfile
+import argparse
+import urllib.request
+from pathlib import Path
+
+ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "data"
+
+CLUENER_URL = "https://storage.googleapis.com/cluebenchmark/tasks/cluener_public.zip"
+
+PEOPLES_DAILY_URLS = {
+    "train": "https://raw.githubusercontent.com/OYE93/Chinese-NLP-Corpus/master/NER/People%27s%20Daily/example.train",
+    "validation": "https://raw.githubusercontent.com/OYE93/Chinese-NLP-Corpus/master/NER/People%27s%20Daily/example.dev",
+    "test": "https://raw.githubusercontent.com/OYE93/Chinese-NLP-Corpus/master/NER/People%27s%20Daily/example.test",
+}
+
+PEOPLES_DAILY_LABELS = ["O", "B-PER", "I-PER", "B-ORG", "I-ORG", "B-LOC", "I-LOC"]
+
+
+def download_cluener(save_dir: Path):
+    """下载并解析 cluener2020（span 格式）"""
+    print("=" * 60)
+    print("正在下载 cluener2020...")
+    
+    save_dir.mkdir(parents=True, exist_ok=True)
+    
+    with urllib.request.urlopen(CLUENER_URL, timeout=60) as resp:
+        zip_bytes = resp.read()
+    
+    with zipfile.ZipFile(io.BytesIO(zip_bytes)) as zf:
+        names = zf.namelist()
+        split_map = {"train.json": "train", "dev.json": "validation", "test.json": "test"}
+        
+        for zip_name, split_name in split_map.items():
+            match = next((n for n in names if n.endswith(zip_name)), None)
+            if match is None:
+                continue
+            
+            raw = zf.read(match)
+            records = [json.loads(line) for line in raw.decode("utf-8").strip().splitlines() if line.strip()]
+            
+            out_path = save_dir / f"{split_name}.json"
+            with open(out_path, "w", encoding="utf-8") as f:
+                json.dump(records, f, ensure_ascii=False, indent=2)
+            print(f"  [{split_name}] {len(records)} 条 → {out_path}")
+    
+    print()
+
+
+def parse_conll(raw_text: str) -> list[dict]:
+    """解析 CoNLL 格式"""
+    records = []
+    tokens, tags = [], []
+    
+    for line in raw_text.splitlines():
+        line = line.strip()
+        if not line:
+            if tokens:
+                records.append({"tokens": tokens, "ner_tags": tags})
+                tokens, tags = [], []
+        else:
+            parts = line.split()
+            if len(parts) >= 2:
+                tokens.append(parts[0])
+                tags.append(parts[-1])
+    
+    if tokens:
+        records.append({"tokens": tokens, "ner_tags": tags})
+    
+    return records
+
+
+def download_peoples_daily(save_dir: Path):
+    """下载并解析人民日报 NER（BIO 格式）"""
+    print("=" * 60)
+    print("正在下载人民日报 NER 数据集...")
+    
+    save_dir.mkdir(parents=True, exist_ok=True)
+    
+    for split_name, url in PEOPLES_DAILY_URLS.items():
+        print(f"  下载 {split_name} ← {url}")
+        with urllib.request.urlopen(url, timeout=60) as resp:
+            raw_text = resp.read().decode("utf-8")
+        
+        records = parse_conll(raw_text)
+        out_path = save_dir / f"{split_name}.json"
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(records, f, ensure_ascii=False, indent=2)
+        print(f"  [{split_name}] {len(records)} 条 → {out_path}")
+    
+    label_path = save_dir / "label_names.json"
+    with open(label_path, "w", encoding="utf-8") as f:
+        json.dump(PEOPLES_DAILY_LABELS, f, ensure_ascii=False, indent=2)
+    
+    print(f"\n标签体系：{PEOPLES_DAILY_LABELS}\n")
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--skip_cluener", action="store_true")
+    args = parser.parse_args()
+    
+    peoples_daily_dir = DATA_DIR / "peoples_daily"
+    download_peoples_daily(peoples_daily_dir)
+    
+    if not args.skip_cluener:
+        try:
+            cluener_dir = DATA_DIR / "cluener"
+            download_cluener(cluener_dir)
+        except Exception as e:
+            print(f"cluener 下载失败: {e}")
+    
+    print("=" * 60)
+    print("下载完成！")
+    print(f"  数据目录: {DATA_DIR}")
+
+
+if __name__ == "__main__":
+    main()
+"""
+探索已下载的 NER 数据集，打印统计信息和可视化
+
+教学重点：
+  1. 人民日报 NER 的 BIO 标签分布统计
+  2. cluener2020 的 span 标注示例（对比 BIO）
+  3. 实体类型分布
+
+使用方式：
+  python src/explore_data.py
+"""
+
+import json
+import matplotlib.pyplot as plt
+from pathlib import Path
+from collections import Counter, defaultdict
+import matplotlib.pyplot as plt
+import matplotlib
+ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "data"
+matplotlib.rcParams["font.sans-serif"] = ["SimHei", "Microsoft YaHei", "Arial Unicode MS"]
+matplotlib.rcParams["axes.unicode_minus"] = False
+
+def explore_peoples_daily():
+    """探索人民日报 NER 数据集"""
+    print("=" * 60)
+    print("人民日报 NER 数据集统计（BIO 格式）")
+    print("=" * 60)
+
+    peoples_daily_dir = DATA_DIR / "peoples_daily"
+    label_path = peoples_daily_dir / "label_names.json"
+
+    if not label_path.exists():
+        print(f"  标签文件不存在：{label_path}")
+        return
+
+    with open(label_path, "r", encoding="utf-8") as f:
+        labels = json.load(f)
+    print(f"\n标签体系：{labels}\n")
+
+    for split in ["train", "validation", "test"]:
+        file_path = peoples_daily_dir / f"{split}.json"
+        if not file_path.exists():
+            print(f"  警告：文件不存在 {file_path}")
+            continue
+
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        print(f"\n[{split}] 总样本数：{len(data)}")
+
+        tag_counter = Counter()
+        for record in data:
+            tag_counter.update(record.get("ner_tags", []))
+
+        print(f"  标签分布：")
+        for label, count in sorted(tag_counter.items()):
+            print(f"    {label}: {count}")
+
+        entity_counts = {"PER": 0, "ORG": 0, "LOC": 0}
+        for record in data:
+            tags = record.get("ner_tags", [])
+            current_type = None
+            for tag in tags:
+                if tag.startswith("B-"):
+                    current_type = tag[2:]
+                    if current_type in entity_counts:
+                        entity_counts[current_type] += 1
+                elif not tag.startswith("B-") and not tag.startswith("I-"):
+                    current_type = None
+
+        print(f"\n  实体数量：PER={entity_counts['PER']}, ORG={entity_counts['ORG']}, LOC={entity_counts['LOC']}")
+
+        print("\n  样本示例（前30字符）：")
+        sample = data[0]
+        tokens = sample.get("tokens", [])
+        tags = sample.get("ner_tags", [])
+        display_len = min(30, len(tokens))
+        print("    字符  :", " ".join(tokens[:display_len]))
+        print("    BIO标签:", " ".join(tags[:display_len]))
+        print()
+
+
+def explore_cluener():
+    """探索 cluener2020 数据集"""
+    print("=" * 60)
+    print("cluener2020 数据集统计（Span 格式）")
+    print("=" * 60)
+
+    cluener_dir = DATA_DIR / "cluener"
+    if not cluener_dir.exists():
+        print("  cluener 数据集未下载，跳过")
+        return
+
+    for split in ["train", "validation", "test"]:
+        file_path = cluener_dir / f"{split}.json"
+        if not file_path.exists():
+            print(f"  警告：文件不存在 {file_path}")
+            continue
+
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        print(f"\n[{split}] 总样本数：{len(data)}")
+
+        entity_counter = Counter()
+        for record in data:
+            labels = record.get("label", {})
+            for entity_type in labels:
+                entity_counter[entity_type] += len(labels[entity_type])
+
+        print(f"  实体类型分布：")
+        for entity_type, count in sorted(entity_counter.items()):
+            print(f"    {entity_type}: {count}")
+
+        print("\n  样本示例：")
+        sample = data[0]
+        text = sample.get("text", "")
+        print(f"    文本：{text[:80]}...")
+        print(f"    标注：{sample.get('label', {})}")
+        print()
+
+
+def visualize_statistics():
+    """可视化统计信息"""
+    print("=" * 60)
+    print("生成可视化图表...")
+    print("=" * 60)
+
+    figures_dir = ROOT / "outputs" / "figures"
+    figures_dir.mkdir(parents=True, exist_ok=True)
+
+    peoples_daily_dir = DATA_DIR / "peoples_daily"
+
+    train_file = peoples_daily_dir / "train.json"
+    if not train_file.exists():
+        print("  训练数据不存在，跳过可视化")
+        return
+
+    with open(train_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    tag_counter = Counter()
+    for record in data:
+        tag_counter.update(record.get("ner_tags", []))
+
+    plt.figure(figsize=(10, 6))
+    labels = sorted(tag_counter.keys())
+    counts = [tag_counter[label] for label in labels]
+    plt.bar(labels, counts)
+    plt.title("人民日报 NER 训练集 - BIO 标签分布")
+    plt.xlabel("标签")
+    plt.ylabel("出现次数")
+    plt.xticks(rotation=45, ha="right")
+    plt.tight_layout()
+    plt.savefig(figures_dir / "peoples_daily_tag_distribution.png", dpi=150)
+    print(f"  标签分布图保存到：{figures_dir / 'peoples_daily_tag_distribution.png'}")
+
+    entity_counts = {"PER": 0, "ORG": 0, "LOC": 0}
+    for record in data:
+        tags = record.get("ner_tags", [])
+        current_type = None
+        for tag in tags:
+            if tag.startswith("B-"):
+                current_type = tag[2:]
+                if current_type in entity_counts:
+                    entity_counts[current_type] += 1
+            elif not tag.startswith("B-") and not tag.startswith("I-"):
+                current_type = None
+
+    plt.figure(figsize=(8, 6))
+    plt.bar(entity_counts.keys(), entity_counts.values())
+    plt.title("人民日报 NER 训练集 - 实体数量分布")
+    plt.xlabel("实体类型")
+    plt.ylabel("实体数量")
+    plt.tight_layout()
+    plt.savefig(figures_dir / "peoples_daily_entity_distribution.png", dpi=150)
+    print(f"  实体分布图保存到：{figures_dir / 'peoples_daily_entity_distribution.png'}")
+
+    plt.close("all")
+    print()
+
+
+def main():
+    explore_peoples_daily()
+    print()
+    explore_cluener()
+    print()
+    visualize_statistics()
+
+
+if __name__ == "__main__":
+    main()
