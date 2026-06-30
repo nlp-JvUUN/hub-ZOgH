@@ -1,0 +1,25 @@
+{
+  "dataset": "bq_corpus",
+  "method": "biencoder_cosine",
+  "train_loss": 0.2596305004119873,
+  "val_acc": 0.7544083526682135,
+  "val_f1": 0.7541350518496825,
+  "threshold": 0.66,
+  "train_time_s": 6218.848707199097,
+  "train_samples": 20000,
+  "val_samples": 8620,
+  "config": {
+    "num_hidden_layers": 4,
+    "epochs": 1,
+    "batch_size": 32,
+    "max_length_bi": 64,
+    "max_length_cross": 128,
+    "lr": 2e-05,
+    "head_lr_mult": 5.0,
+    "warmup_ratio": 0.1,
+    "grad_accum": 1,
+    "margin": 0.3,
+    "pool": "mean",
+    "num_train": 20000
+  }
+}
