@@ -1,0 +1,6 @@
+第八周作业:
+ bq_corpus和lcqmc两个文本匹配数据集试验不同方法效果
+ 基座模型：pretrain_models/目录下
+ 包含下载的生成的模型，生成预训练模型，分别在outputs/bq_corpus和outputs/lcqmc目录下，有日志、数据分析图还有不同训练方法的模型
+ 并生成文本匹配项目/目录下：bq_corpus_对比报告.md和lcqmc_对比报告.md
+

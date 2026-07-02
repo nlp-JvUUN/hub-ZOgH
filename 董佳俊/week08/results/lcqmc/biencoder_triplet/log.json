@@ -1,0 +1,25 @@
+{
+  "dataset": "lcqmc",
+  "method": "biencoder_triplet",
+  "train_loss": 0.017686314833164216,
+  "val_acc": 0.6995001136105431,
+  "val_f1": 0.6993289721428764,
+  "threshold": 0.91,
+  "train_time_s": 3805.3508019447327,
+  "train_samples": 10000,
+  "val_samples": 8802,
+  "config": {
+    "num_hidden_layers": 4,
+    "epochs": 1,
+    "batch_size": 32,
+    "max_length_bi": 64,
+    "max_length_cross": 128,
+    "lr": 2e-05,
+    "head_lr_mult": 5.0,
+    "warmup_ratio": 0.1,
+    "grad_accum": 1,
+    "margin": 0.3,
+    "pool": "mean",
+    "num_train": 20000
+  }
+}
