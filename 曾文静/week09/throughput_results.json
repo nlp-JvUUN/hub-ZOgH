@@ -1,0 +1,26 @@
+{
+  "n_prompts": 50,
+  "max_new_tokens": 100,
+  "batch_size": 8,
+  "source": "REFERENCE — 老师标准数据（RTX 4060 8GB / WSL2），非本机实测；本机可跑后请用 bench_throughput.py 实测替换",
+  "results": {
+    "serial": {
+      "time": 60.98,
+      "gen_tokens": 3650,
+      "qps": 0.82,
+      "tps": 60.0
+    },
+    "batch": {
+      "time": 12.85,
+      "gen_tokens": 3700,
+      "qps": 3.89,
+      "tps": 289.0
+    },
+    "vllm": {
+      "time": 1.03,
+      "gen_tokens": 3500,
+      "qps": 48.59,
+      "tps": 3394.0
+    }
+  }
+}
