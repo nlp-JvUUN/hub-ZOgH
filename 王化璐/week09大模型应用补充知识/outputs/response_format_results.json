@@ -1,0 +1,19 @@
+{
+  "n": 5,
+  "stats": {
+    "raw": {
+      "json": 5,
+      "sentiment": 5,
+      "valid_sent": 5,
+      "conf": 5,
+      "keywords": 5
+    },
+    "json_object": {
+      "json": 5,
+      "sentiment": 5,
+      "valid_sent": 5,
+      "conf": 5,
+      "keywords": 5
+    }
+  }
+}

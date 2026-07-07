@@ -1,0 +1,18 @@
+{
+  "sections": [
+    {
+      "title": "任务 1：日期标准化 → YYYY-MM-DD",
+      "regex": "\\d{4}-\\d{2}-\\d{2}",
+      "n": 6,
+      "raw_ok": 5,
+      "guided_ok": 6
+    },
+    {
+      "title": "任务 2：A 股代码抽取 → 6 位数字",
+      "regex": "\\d{6}",
+      "n": 5,
+      "raw_ok": 2,
+      "guided_ok": 5
+    }
+  ]
+}

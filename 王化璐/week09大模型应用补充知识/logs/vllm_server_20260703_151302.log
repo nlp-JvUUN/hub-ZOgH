@@ -1,0 +1,19 @@
+INFO 07-03 15:13:08 [__init__.py:244] Automatically detected platform cuda.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 39, in <module>
+    from vllm.config import VllmConfig
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/config.py", line 37, in <module>
+    from vllm.transformers_utils.config import (
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/transformers_utils/config.py", line 33, in <module>
+    from vllm.transformers_utils.configs import (ChatGLMConfig, Cohere2Config,
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/transformers_utils/configs/__init__.py", line 26, in <module>
+    from vllm.transformers_utils.configs.ovis import OvisConfig
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/transformers_utils/configs/ovis.py", line 76, in <module>
+    AutoConfig.register("aimv2", AIMv2Config)
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/models/auto/configuration_auto.py", line 441, in register
+    CONFIG_MAPPING.register(model_type, config, exist_ok=exist_ok)
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/models/auto/configuration_auto.py", line 140, in register
+    raise ValueError(f"'{key}' is already used by a Transformers config, pick another name.")
+ValueError: 'aimv2' is already used by a Transformers config, pick another name.

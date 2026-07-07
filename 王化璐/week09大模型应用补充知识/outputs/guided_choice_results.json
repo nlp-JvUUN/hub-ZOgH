@@ -1,0 +1,8 @@
+{
+  "n": 12,
+  "raw_in_choices": 10,
+  "raw_correct": 3,
+  "guided_correct": 3,
+  "raw_avg_latency": 0.079017440478007,
+  "guided_avg_latency": 0.22605574131011963
+}

@@ -1,0 +1,63 @@
+INFO 07-03 15:17:38 [__init__.py:244] Automatically detected platform cuda.
+INFO 07-03 15:17:42 [api_server.py:1395] vLLM API server version 0.9.2
+INFO 07-03 15:17:42 [cli_args.py:325] non-default args: {'host': '0.0.0.0', 'model': '/root/autodl-fs/vllm_deployment/Qwen2-0.5B-Instruct', 'dtype': 'float16', 'max_model_len': 2048, 'enforce_eager': True, 'served_model_name': ['qwen2-0.5b'], 'gpu_memory_utilization': 0.6}
+INFO 07-03 15:17:51 [config.py:841] This model supports multiple tasks: {'embed', 'generate', 'classify', 'reward'}. Defaulting to 'generate'.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+WARNING 07-03 15:17:51 [config.py:3371] Casting torch.bfloat16 to torch.float16.
+INFO 07-03 15:17:51 [config.py:1472] Using max model len 2048
+INFO 07-03 15:17:51 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=2048.
+WARNING 07-03 15:17:51 [cuda.py:102] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 1495, in <module>
+    uvloop.run(run_server(args))
+  File "/root/miniconda3/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+    return __asyncio.run(
+           ^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/root/miniconda3/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+    return await main
+           ^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 1431, in run_server
+    await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 1451, in run_server_worker
+    async with build_async_engine_client(args, client_config) as engine_client:
+  File "/root/miniconda3/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 158, in build_async_engine_client
+    async with build_async_engine_client_from_engine_args(
+  File "/root/miniconda3/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 194, in build_async_engine_client_from_engine_args
+    async_llm = AsyncLLM.from_vllm_config(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 162, in from_vllm_config
+    return cls(
+           ^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 106, in __init__
+    self.tokenizer = init_tokenizer_from_configs(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/transformers_utils/tokenizer_group.py", line 111, in init_tokenizer_from_configs
+    return TokenizerGroup(
+           ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/transformers_utils/tokenizer_group.py", line 24, in __init__
+    self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/transformers_utils/tokenizer.py", line 265, in get_tokenizer
+    tokenizer = get_cached_tokenizer(tokenizer)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/vllm/transformers_utils/tokenizer.py", line 95, in get_cached_tokenizer
+    tokenizer.all_special_tokens_extended)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 1316, in __getattr__
+    raise AttributeError(f"{self.__class__.__name__} has no attribute {key}")
+AttributeError: Qwen2Tokenizer has no attribute all_special_tokens_extended. Did you mean: 'num_special_tokens_to_add'?
