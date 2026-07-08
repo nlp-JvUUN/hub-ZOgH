@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>上市公司年报 RAG 问答系统</title>
+<style>
+/* ══════════════════════════════════════════════════════
+   Variables & Reset
+   ══════════════════════════════════════════════════════ */
+:root {
+  --bg:         #f5f5f5;
+  --card-bg:    #ffffff;
+  --text:       #1e293b;
+  --text-dim:   #64748b;
+  --text-muted: #94a3b8;
+  --border:     #e5e7eb;
+  --blue:       #2563eb;
+  --blue-hov:   #1d4ed8;
+  --radius:     10px;
+  --shadow:     0 1px 4px rgba(0,0,0,.06);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+               "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 14px;
+  min-height: 100vh;
+}
+
+/* ══════════════════════════════════════════════════════
+   Header
+   ══════════════════════════════════════════════════════ */
+.app-header {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 0 1.5rem;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.app-header .logo { font-size: 1.2rem; }
+.app-header h1 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.app-header .header-spacer { flex: 1; }
+.app-header .header-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+.app-header .header-links a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+.app-header .header-links a:hover { text-decoration: underline; }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+.status-dot.ok { background: #22c55e; }
+.status-dot.err { background: #ef4444; }
+
+/* ══════════════════════════════════════════════════════
+   Main Container
+   ══════════════════════════════════════════════════════ */
+.main-container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+}
+
+/* ══════════════════════════════════════════════════════
+   Input Card
+   ══════════════════════════════════════════════════════ */
+.input-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border);
+}
+.input-card .section-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: 0.6rem;
+}
+
+.question-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 56px;
+  outline: none;
+  color: var(--text);
+  background: #fafbfc;
+  transition: border-color .18s, box-shadow .18s;
+  line-height: 1.55;
+}
+.question-input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37,99,235,.1);
+  background: #fff;
+}
+.question-input::placeholder { color: var(--text-muted); }
+
+/* Filter row */
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+  flex-wrap: wrap;
+}
+.filter-row label {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.filter-input {
+  width: 130px;
+  padding: 0.45rem 0.7rem;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  outline: none;
+  background: #fafbfc;
+  transition: border-color .15s;
+}
+.filter-input:focus { border-color: var(--blue); }
+.filter-input::placeholder { color: #c0c5cc; }
+
+/* Examples row */
+.examples-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+.examples-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.example-chip {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #475569;
+  transition: all .15s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+.example-chip:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+
+/* Submit button */
+.btn-submit {
+  padding: 0.5rem 1.6rem;
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background .15s, transform .1s, box-shadow .15s;
+  box-shadow: 0 1px 3px rgba(37,99,235,.25);
+  white-space: nowrap;
+}
+.btn-submit:hover  { background: var(--blue-hov); box-shadow: 0 2px 8px rgba(37,99,235,.35); }
+.btn-submit:active { transform: scale(.97); }
+.btn-submit:disabled { background: #93c5fd; box-shadow: none; cursor: not-allowed; }
+
+/* ══════════════════════════════════════════════════════
+   Pipeline
+   ══════════════════════════════════════════════════════ */
+.pipeline { display: flex; flex-direction: column; gap: 0; }
+
+.arrow-down {
+  text-align: center;
+  color: #c0c5cc;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: -1px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Step card */
+.step {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid transparent;
+  transition: box-shadow .2s;
+}
+.step:hover { box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+.step-header:hover { filter: brightness(.96); }
+
+.step-number {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.72rem; font-weight: 800;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.step-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+.step-tech {
+  font-size: 0.7rem;
+  opacity: .7;
+  font-family: "SF Mono", "Consolas", "Menlo", monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.step-stat {
+  margin-left: auto;
+  font-size: 0.7rem;
+  opacity: .75;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.step-chevron {
+  font-size: 0.5rem;
+  opacity: .5;
+  transition: transform .2s;
+  flex-shrink: 0;
+}
+.step.collapsed .step-chevron { transform: rotate(-90deg); }
+
+.step-body {
+  padding: 0.6rem 0.9rem 0.85rem;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,.05);
+}
+.step.collapsed .step-body { display: none; }
+
+/* ── Step color themes ── */
+.s-vec  { border-color: #bfdbfe; } .s-vec  .step-header { background: #eff6ff; color: #1e40af; } .s-vec  .step-number { background: #2563eb; }
+.s-bm25 { border-color: #a7f3d0; } .s-bm25 .step-header { background: #ecfdf5; color: #065f46; } .s-bm25 .step-number { background: #059669; }
+.s-rrf  { border-color: #fcd34d; } .s-rrf  .step-header { background: #fffbeb; color: #78350f; } .s-rrf  .step-number { background: #d97706; }
+.s-ctx  { border-color: #c4b5fd; } .s-ctx  .step-header { background: #f5f3ff; color: #4c1d95; } .s-ctx  .step-number { background: #7c3aed; }
+.s-ans  { border-color: #99f6e4; } .s-ans  .step-header { background: #f0fdfa; color: #134e4a; } .s-ans  .step-number { background: #0d9488; }
+
+/* ══════════════════════════════════════════════════════
+   Chunk cards inside steps
+   ══════════════════════════════════════════════════════ */
+.chunk {
+  border: 1px solid #f1f5f9;
+  border-radius: 7px;
+  margin-bottom: 0.4rem;
+  overflow: hidden;
+  background: #fff;
+}
+.chunk:last-child { margin-bottom: 0; }
+
+.chunk-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.7rem;
+  background: #fafbfc;
+  cursor: pointer;
+  min-width: 0;
+}
+.chunk-header:hover { background: #f1f5f9; }
+
+.chunk-body {
+  display: none;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.8rem;
+  color: #334155;
+  border-top: 1px solid #f1f5f9;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.75;
+  max-height: 240px;
+  overflow-y: auto;
+}
+.chunk.open .chunk-body { display: block; }
+.chunk.open .chunk-caret { transform: rotate(90deg); }
+
+.chunk-caret {
+  font-size: 0.5rem;
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: transform .18s;
+}
+.chunk-source {
+  font-size: 0.75rem;
+  color: #475569;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+/* Badges */
+.badge {
+  flex-shrink: 0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.b-rank-vec  { background: #dbeafe; color: #1d4ed8; }
+.b-rank-bm25 { background: #d1fae5; color: #065f46; }
+.b-rank-rrf  { background: #fef3c7; color: #92400e; }
+.b-rank-ctx  { background: #ede9fe; color: #5b21b6; }
+.b-score     { background: #f1f5f9; color: #475569; font-family: "SF Mono","Consolas",monospace; }
+.b-src-vec   { background: #dbeafe; color: #1e40af; }
+.b-src-bm25  { background: #d1fae5; color: #065f46; }
+.b-only      { background: #fef9c3; color: #713f12; }
+
+/* ══════════════════════════════════════════════════════
+   Answer section
+   ══════════════════════════════════════════════════════ */
+.answer-text {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #0f172a;
+  padding: 0.1rem 0 0.5rem;
+  white-space: pre-wrap;
+}
+
+.citations-block {
+  border-top: 1px solid #ccfbf1;
+  padding-top: 0.5rem;
+  margin-top: 0.1rem;
+}
+.citations-title {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.cit-item {
+  font-size: 0.78rem;
+  color: #0f766e;
+  padding: 0.1rem 0;
+}
+
+/* ══════════════════════════════════════════════════════
+   States: empty / loading / error
+   ══════════════════════════════════════════════════════ */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--text-muted);
+}
+.empty-icon { font-size: 3rem; margin-bottom: 0.6rem; }
+.empty-state h3 { font-size: 1rem; font-weight: 600; color: var(--text-dim); margin-bottom: 0.3rem; }
+.empty-state p { font-size: 0.85rem; }
+
+.loading-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 2rem;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+}
+.dot-pulse {
+  display: flex; gap: 4px; align-items: center;
+}
+.dot-pulse span {
+  width: 7px; height: 7px;
+  background: #93c5fd;
+  border-radius: 50%;
+  animation: dotBounce 1.2s infinite ease;
+}
+.dot-pulse span:nth-child(2) { animation-delay: .2s; }
+.dot-pulse span:nth-child(3) { animation-delay: .4s; }
+@keyframes dotBounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40%           { transform: translateY(-7px); }
+}
+
+.error-banner {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.error-banner .close-err {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: .6;
+  line-height: 1;
+}
+.error-banner .close-err:hover { opacity: 1; }
+
+.hidden { display: none !important; }
+
+/* ══════════════════════════════════════════════════════
+   Responsive
+   ══════════════════════════════════════════════════════ */
+@media (max-width: 700px) {
+  .main-container { padding: 0.75rem 0.5rem 2rem; }
+  .input-card { padding: 1rem; }
+  .step-tech { display: none; }
+  .step-title { font-size: 0.8rem; }
+  .step-header { padding: 0.5rem 0.7rem; }
+  .filter-row { gap: 0.4rem; }
+  .filter-input { width: 100px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     Header
+     ═══════════════════════════════════════════════════ -->
+<header class="app-header">
+  <span class="logo">📊</span>
+  <h1>上市公司年报 RAG 问答系统</h1>
+  <span class="header-spacer"></span>
+  <span class="header-links">
+    <span class="status-dot ok" id="status-dot"></span>
+    <span id="header-status">就绪</span>
+    <span style="color:#64748b" id="header-stats"></span>
+    <a href="/docs" target="_blank">API 文档 ↗</a>
+  </span>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     Main Content
+     ═══════════════════════════════════════════════════ -->
+<div class="main-container">
+
+  <!-- ── Input Card ── -->
+  <div class="input-card" id="input-card">
+    <div class="section-label">📝 输入问题</div>
+    <textarea
+      class="question-input"
+      id="question"
+      placeholder="用自然语言提问，例如：贵州茅台2023年营业收入是多少？"
+      rows="2"
+    ></textarea>
+
+    <div class="filter-row">
+      <label>股票代码</label>
+      <input class="filter-input" id="filter-stock" placeholder="如 600519" list="stock-list">
+      <datalist id="stock-list"></datalist>
+
+      <label>年份</label>
+      <input class="filter-input" id="filter-year" placeholder="如 2023" list="year-list">
+      <datalist id="year-list"></datalist>
+
+      <button class="btn-submit" id="btn-submit" onclick="doSearch()">🔍 提问</button>
+    </div>
+
+    <div class="examples-row" id="examples-row">
+      <span class="examples-label">示例：</span>
+      <button class="example-chip" onclick="quickAsk('贵州茅台2023年营业收入是多少？')">茅台2023营收</button>
+      <button class="example-chip" onclick="quickAsk('宁德时代2021年研发费用是多少？占营收比例？')">宁德时代研发费用</button>
+      <button class="example-chip" onclick="quickAsk('比亚迪和宁德时代2023年毛利率分别是多少？')">比亚迪 vs 宁德时代</button>
+      <button class="example-chip" onclick="quickAsk('贵州茅台2021到2025年营业收入变化趋势是怎样的？')">茅台五年营收趋势</button>
+      <button class="example-chip" onclick="quickAsk('招商银行不良贷款率是多少？')">招商银行不良率</button>
+    </div>
+  </div>
+
+  <!-- ── Error ── -->
+  <div id="error-container"></div>
+
+  <!-- ── Empty State ── -->
+  <div id="empty-state" class="empty-state">
+    <div class="empty-icon">🔍</div>
+    <h3>输入问题，查看 RAG 流水线每一步的中间结果</h3>
+    <p>向量检索 → BM25检索 → RRF融合 → 上下文组装 → LLM生成</p>
+  </div>
+
+  <!-- ── Loading ── -->
+  <div id="loading" class="loading-bar hidden">
+    <div class="dot-pulse"><span></span><span></span><span></span></div>
+    <span>正在检索与生成，通常需要 3～8 秒…</span>
+  </div>
+
+  <!-- ── Pipeline ── -->
+  <div id="pipeline-container" class="hidden">
+    <div class="pipeline" id="pipeline"></div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     JavaScript
+     ═══════════════════════════════════════════════════ -->
+<script>
+// ── Escaping ──────────────────────────────────────────
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// ── Quick ask from example chip ───────────────────────
+function quickAsk(q) {
+  document.getElementById('question').value = q;
+  doSearch();
+}
+
+// ── Step toggle ───────────────────────────────────────
+function toggleStep(el) {
+  el.closest('.step').classList.toggle('collapsed');
+}
+
+// ── Chunk toggle ──────────────────────────────────────
+function toggleChunk(el) {
+  el.closest('.chunk').classList.toggle('open');
+}
+
+// ── Ctrl+Enter ────────────────────────────────────────
+document.getElementById('question').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) doSearch();
+});
+
+// ── Chunk card builder ────────────────────────────────
+function chunkCard(badgesHtml, src, contentPreview, openDefault=false) {
+  const id = 'ck-' + Math.random().toString(36).slice(2, 8);
+  return `
+    <div class="chunk${openDefault ? ' open' : ''}" id="${id}">
+      <div class="chunk-header" onclick="toggleChunk(this)">
+        ${badgesHtml}
+        <span class="chunk-source" title="${esc(src)}">${esc(src)}</span>
+        <span class="chunk-caret">▶</span>
+      </div>
+      <div class="chunk-body">${esc(contentPreview)}</div>
+    </div>`;
+}
+
+function emptyMsg() {
+  return '<p style="color:#94a3b8;font-size:.8rem;padding:.15rem 0">（无结果）</p>';
+}
+
+// ── Render pipeline from debug API response ───────────
+function renderPipeline(data) {
+  const ts = Date.now();
+
+  // ① Vector
+  const vecItems = data.vec_results.map(d => {
+    const badges = `<span class="badge b-rank-vec">#${d.rank}</span>
+      <span class="badge b-score">cos=${d.vec_score.toFixed(3)}</span>`;
+    return chunkCard(badges, d.source, d.content_preview);
+  }).join('') || emptyMsg();
+
+  // ② BM25
+  const bmItems = data.bm25_results.map(d => {
+    const badges = `<span class="badge b-rank-bm25">#${d.rank}</span>
+      <span class="badge b-score">BM25=${d.bm25_score.toFixed(2)}</span>`;
+    return chunkCard(badges, d.source, d.content_preview);
+  }).join('') || emptyMsg();
+
+  // ③ RRF
+  const rrfItems = data.rrf_results.map(d => {
+    let fromBadges = '';
+    if (d.vec_rank  != null) fromBadges += `<span class="badge b-src-vec">向量#${d.vec_rank}</span>`;
+    if (d.bm25_rank != null) fromBadges += `<span class="badge b-src-bm25">BM25#${d.bm25_rank}</span>`;
+    if (!fromBadges)         fromBadges  = `<span class="badge b-only">单路</span>`;
+    const badges = `<span class="badge b-rank-rrf">#${d.rank}</span>
+      <span class="badge b-score">RRF=${d.rrf_score.toFixed(4)}</span>${fromBadges}`;
+    return chunkCard(badges, d.source, d.content_preview);
+  }).join('') || emptyMsg();
+
+  // ④ Context
+  const ctxItems = data.context_chunks.map(d => {
+    const badges = `<span class="badge b-rank-ctx">[${d.index}]</span>`;
+    return chunkCard(badges, d.source, d.content, true);
+  }).join('') || emptyMsg();
+
+  // ⑤ Answer
+  const citItems = data.citations.length
+    ? data.citations.map((c, i) =>
+        `<div class="cit-item">[${i+1}] ${esc(c.source)}</div>`).join('')
+    : '<span style="color:#94a3b8;font-size:.75rem">（无引用来源）</span>';
+
+  const html = `
+    <!-- ① 向量检索 -->
+    <div class="step s-vec" id="s1-${ts}">
+      <div class="step-header" onclick="toggleStep(this)">
+        <span class="step-number">①</span>
+        <span class="step-title">向量检索</span>
+        <span class="step-tech">text-embedding-v3 → FAISS IndexFlatIP（余弦相似度）</span>
+        <span class="step-stat">Top ${data.vec_results.length} · 按余弦相似度排序</span>
+        <span class="step-chevron">▼</span>
+      </div>
+      <div class="step-body">${vecItems}</div>
+    </div>
+
+    <div class="arrow-down">↓</div>
+
+    <!-- ② BM25 -->
+    <div class="step s-bm25" id="s2-${ts}">
+      <div class="step-header" onclick="toggleStep(this)">
+        <span class="step-number">②</span>
+        <span class="step-title">BM25 关键词检索</span>
+        <span class="step-tech">jieba 分词 → BM25Okapi 打分</span>
+        <span class="step-stat">Top ${data.bm25_results.length} · 按 BM25 分数排序</span>
+        <span class="step-chevron">▼</span>
+      </div>
+      <div class="step-body">${bmItems}</div>
+    </div>
+
+    <div class="arrow-down">↓</div>
+
+    <!-- ③ RRF -->
+    <div class="step s-rrf" id="s3-${ts}">
+      <div class="step-header" onclick="toggleStep(this)">
+        <span class="step-number">③</span>
+        <span class="step-title">RRF 融合排名</span>
+        <span class="step-tech">score(d) = Σ 1 / (60 + rankᵢ(d))，两路互补</span>
+        <span class="step-stat">融合后 Top ${data.rrf_results.length}</span>
+        <span class="step-chevron">▼</span>
+      </div>
+      <div class="step-body">${rrfItems}</div>
+    </div>
+
+    <div class="arrow-down">↓</div>
+
+    <!-- ④ Context -->
+    <div class="step s-ctx" id="s4-${ts}">
+      <div class="step-header" onclick="toggleStep(this)">
+        <span class="step-number">④</span>
+        <span class="step-title">输入 LLM 的上下文</span>
+        <span class="step-tech">Top-4 chunks 拼接为 Prompt · 以下内容均原文可见</span>
+        <span class="step-stat">${data.context_chunks.length} 个 chunk → LLM</span>
+        <span class="step-chevron">▼</span>
+      </div>
+      <div class="step-body">${ctxItems}</div>
+    </div>
+
+    <div class="arrow-down">↓</div>
+
+    <!-- ⑤ Answer -->
+    <div class="step s-ans" id="s5-${ts}">
+      <div class="step-header" onclick="toggleStep(this)">
+        <span class="step-number">⑤</span>
+        <span class="step-title">LLM 生成答案</span>
+        <span class="step-tech">DashScope qwen-plus · temperature=0.1</span>
+        <span class="step-chevron">▼</span>
+      </div>
+      <div class="step-body">
+        <div class="answer-text">${esc(data.answer)}</div>
+        <div class="citations-block">
+          <div class="citations-title">📎 来源引用</div>
+          ${citItems}
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('pipeline').innerHTML = html;
+}
+
+// ── Show error ────────────────────────────────────────
+function showError(msg) {
+  const container = document.getElementById('error-container');
+  const id = 'err-' + Date.now();
+  container.innerHTML = `
+    <div class="error-banner" id="${id}">
+      ⚠️ ${esc(msg)}
+      <button class="close-err" onclick="document.getElementById('${id}').remove()">×</button>
+    </div>`;
+  setTimeout(() => { const el = document.getElementById(id); if (el) el.remove(); }, 10000);
+}
+
+// ── Main search ───────────────────────────────────────
+async function doSearch() {
+  const question = document.getElementById('question').value.trim();
+  if (!question) return;
+
+  const stock = document.getElementById('filter-stock').value.trim() || null;
+  const year  = document.getElementById('filter-year').value.trim()  || null;
+
+  // UI state
+  document.getElementById('btn-submit').disabled = true;
+  document.getElementById('empty-state').classList.add('hidden');
+  document.getElementById('pipeline-container').classList.add('hidden');
+  document.getElementById('error-container').innerHTML = '';
+  document.getElementById('loading').classList.remove('hidden');
+
+  try {
+    const resp = await fetch('/query/debug', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question, stock_code: stock, year }),
+    });
+
+    if (!resp.ok) {
+      const errBody = await resp.json().catch(() => ({}));
+      throw new Error(errBody.detail || `HTTP ${resp.status}`);
+    }
+
+    const data = await resp.json();
+
+    // Render the pipeline
+    renderPipeline(data);
+
+    // Show pipeline
+    document.getElementById('loading').classList.add('hidden');
+    document.getElementById('pipeline-container').classList.remove('hidden');
+    document.getElementById('pipeline-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  } catch (e) {
+    document.getElementById('loading').classList.add('hidden');
+    document.getElementById('empty-state').classList.remove('hidden');
+    showError(e.message);
+  } finally {
+    document.getElementById('btn-submit').disabled = false;
+  }
+}
+
+// ── Init ──────────────────────────────────────────────
+(async function init() {
+  // Health check
+  try {
+    const r = await fetch('/health');
+    const h = await r.json();
+    if (h.pipeline_ready) {
+      document.getElementById('status-dot').className = 'status-dot ok';
+      document.getElementById('header-status').textContent = '就绪';
+    }
+  } catch (e) {
+    document.getElementById('status-dot').className = 'status-dot err';
+    document.getElementById('header-status').textContent = '离线';
+  }
+
+  // Load companies
+  try {
+    const r = await fetch('/companies');
+    const data = await r.json();
+
+    // Populate datalists
+    const stockList = document.getElementById('stock-list');
+    data.stocks.forEach(s => {
+      const opt = document.createElement('option');
+      opt.value = `${s.stock_code} ${s.company_name}`;
+      stockList.appendChild(opt);
+    });
+
+    const yearList = document.getElementById('year-list');
+    data.years.forEach(y => {
+      const opt = document.createElement('option');
+      opt.value = y;
+      yearList.appendChild(opt);
+    });
+
+    document.getElementById('header-stats').textContent =
+      `${data.stocks.length} 家公司 · ${data.years.length} 个年份`;
+  } catch (e) {
+    console.warn('加载公司列表失败', e);
+  }
+})();
+</script>
+
+</body>
+</html>
