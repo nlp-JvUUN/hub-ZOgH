@@ -1,0 +1,21 @@
+﻿id,type,question,answer_len,context_count
+1,simple_fact,Cathodic Protection 对应的中文术语是什么...,39,4
+2,simple_fact,Bulkhead Deck 的定义是什么？...,38,4
+3,simple_fact,船舶建造过程中，焊接工作量占船体建造总工程量的比例是多少？...,37,4
+4,simple_fact,船用金属材料的抗拉强度、屈服强度、伸长率以及断面收缩率应通过...,44,4
+5,simple_fact,国际载重线公约不适用于哪些从事国际航行的船舶类型？...,95,4
+6,precise_number,半自动CO2气体保护焊单面焊在风速达到多少时应采取防风措施？...,39,4
+7,precise_number,船体焊缝布置要求中，对接焊缝之间的平行距离应不小于多少毫米？...,34,4
+8,precise_number,低氢碱性焊条打开密封容器后，应存放于不低于多少摄氏度的烘箱中...,35,4
+9,precise_number,对于规定最小屈服强度为420 N/mm²至690 N/mm²...,67,4
+10,precise_number,载重线标志中的圆圈外径是多少毫米？...,22,4
+11,cross_doc_compare,请区分'艏向'和'航迹角'的定义差异。...,220,4
+12,cross_doc_compare,'排泄口（Discharges）'与'深舱（Deep Tan...,258,4
+13,cross_doc_compare,请区分'航向自动稳定性'和'航向控制稳定性'。...,254,4
+14,cross_doc_compare,比较'海水长尺腐蚀试验'与'海水干湿交替腐蚀试验'的区别。...,503,4
+15,time_trend,MARPOL公约中，油类记录簿第I部分和第II部分分别适用于...,186,4
+16,time_trend,根据MARPOL Annex IV，未经处理生活污水集污舱容...,63,4
+17,time_trend,MARPOL Annex VI规定，船上使用燃油的硫含量在特...,45,4
+18,should_refuse,目前贵州茅台的股价是多少？...,15,4
+19,should_refuse,请告诉我今天上海的天气怎么样？...,50,4
+20,should_refuse,船舶检验行业未来的发展趋势是什么？...,135,4
