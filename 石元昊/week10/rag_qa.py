@@ -318,3 +318,44 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""
+python rag_qa.py --query "我想验证新产品名称与版本号组合创建成功且状态初始化为待提测这个功能我需要执行哪个用例"
+
+2026-07-10 14:40:22,480 [INFO] Loading faiss.
+2026-07-10 14:40:22,487 [INFO] Successfully loaded faiss.
+2026-07-10 14:40:24,918 [INFO] FAISS 索引加载完成，共 138 条向量
+2026-07-10 14:40:24,918 [INFO] 加载本地 embedding 模型: /Users/zidonghua/badou/week10 检索增强生成RAG/rag_annual_report/models/bge-small-zh-v1.5
+2026-07-10 14:40:24,928 [INFO] No device provided, using mps
+2026-07-10 14:40:24,928 [INFO] Loading SentenceTransformer model from /Users/zidonghua/badou/week10 检索增强生成RAG/rag_annual_report/models/bge-small-zh-v1.5.
+Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 71/71 [00:00<00:00, 18794.29it/s]
+/Users/zidonghua/badou/.venv/lib/python3.12/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+2026-07-10 14:40:25,091 [INFO] 构建 BM25 索引（分词中，请稍候）...
+Building prefix dict from the default dictionary ...
+2026-07-10 14:40:25,091 [DEBUG] Building prefix dict from the default dictionary ...
+Loading model from cache /var/folders/8z/1ss50sld43xcctqm1wj7cj1w0000gn/T/jieba.cache
+2026-07-10 14:40:25,091 [DEBUG] Loading model from cache /var/folders/8z/1ss50sld43xcctqm1wj7cj1w0000gn/T/jieba.cache
+Loading model cost 0.222 seconds.
+2026-07-10 14:40:25,313 [DEBUG] Loading model cost 0.222 seconds.
+Prefix dict has been built successfully.
+2026-07-10 14:40:25,313 [DEBUG] Prefix dict has been built successfully.
+2026-07-10 14:40:25,351 [INFO] BM25 索引构建完成
+Batches: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  5.04it/s]
+2026-07-10 14:40:25,814 [INFO] 向量召回: 10 条，最高分=0.824
+2026-07-10 14:40:25,814 [INFO] BM25 召回: 10 条，RRF 后: 13 条
+2026-07-10 14:40:25,814 [INFO] 最终使用 4 条上下文
+2026-07-10 14:40:32,336 [INFO] HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+
+============================================================
+问题：我想验证新产品名称与版本号组合创建成功且状态初始化为待提测这个功能我需要执行哪个用例
+============================================================
+
+要验证“新产品名称与版本号组合创建成功且状态初始化为待提测”功能，您需要执行用例 **TC-0004**[1]。
+
+── 参考来源 ──
+  [1] test_cases.xlsx · TC-0004 · 产品管理
+  [2] test_cases.xlsx · TC-0006 · 产品管理
+  [3] test_cases.xlsx · TC-0002 · 产品管理
+  [4] test_cases.xlsx · TC-0005 · 产品管理
+"""
