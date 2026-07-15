@@ -1,0 +1,4 @@
+﻿id,type,question,answer_len,context_count
+1,simple_fact,中际旭创2023年的营业收入和归属于上市公司股东的净利润分别...,262,4
+2,precise_number,中际旭创2022年光通信收发模块的毛利率是多少？研发费用是多...,223,4
+3,time_trend,中际旭创2021年至2023年基本每股收益的变化趋势如何？请...,311,4
