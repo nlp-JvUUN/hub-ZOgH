@@ -49,7 +49,7 @@
 
 ### 3.1 共享后端 `src/`（选型原因：公平对比的前提）
 - `rag_backend.py`：AI 技术面试知识检索，模块级加载 FAISS 索引一次，进程内复用。支持按论文标题和主题过滤。
-- `weather_backend.py`：天气查询，采用链式调用设计，拆成 `geocode_city`/`query_weather_by_coords`/`format_weather` 三个原子函数，为后续 Agent 扩展做准备。
+- `weather_backend.py`：天气查询，采用循环调用设计，拆成 `geocode_city`/`query_weather_by_coords`/`format_weather` 三个原子函数，通过 `select_next_tool`/`execute_tool`/`update_state` 循环执行，为后续 Agent 扩展做准备。
 - **为何抽后端**：三种方式必须调同一份逻辑，对比才公平——否则差异里混进了业务逻辑差异，掩盖了"接入方式"本身的差异。
 
 ### 3.2 方式一 Function Call（选型原因：最低接入成本，最直观）
@@ -120,7 +120,7 @@ LLM provider=`deepseek`，4 个问题 × 4 种方式。完整表见 `output/comp
 function_call_mcp_cli/
 ├── src/                              # 共享业务后端（三方式都复用）
 │   ├── rag_backend.py                # FAISS 检索：search_ai_knowledge / list_papers
-│   └── weather_backend.py            # Open-Meteo：get_weather（链式调用设计）
+│   └── weather_backend.py            # Open-Meteo：get_weather（循环调用设计）
 ├── mode_function_call/
 │   └── run_function_call.py          # 方式一：手写 schema + 单轮闭环
 ├── mode_mcp/
