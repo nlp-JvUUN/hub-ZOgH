@@ -155,11 +155,11 @@ def get_weather(city: str) -> str:
     """
     查询指定城市的当前天气及未来3天预报。
 
-    采用链式调用循环模式（参考 Agent 通用循环）：
-    while resp.has_tool_call():
-        result = run(resp.tool_call)
-        msgs.append(result)
-        resp = model.chat(msgs, tools)
+    采用 Agent 循环调用模式：
+    while state has next step:
+        tool = select_next_tool(state)
+        result = execute_tool(tool, state)
+        state = update_state(state, result)
 
     Args:
         city: 城市名称，支持中文，例如 "宁德"、"北京"、"上海"
@@ -167,25 +167,58 @@ def get_weather(city: str) -> str:
     Returns:
         包含温度、湿度、风速、天气状况和3天预报的文字描述
     """
+    def select_next_tool(state: dict) -> str | None:
+        """根据当前状态选择下一个要执行的工具"""
+        if "coords" not in state:
+            return "geocode_city"
+        elif "weather_data" not in state:
+            return "query_weather_by_coords"
+        elif "formatted" not in state:
+            return "format_weather"
+        return None
+
+    def execute_tool(tool_name: str, state: dict, client: httpx.Client) -> dict:
+        """执行指定工具"""
+        if tool_name == "geocode_city":
+            return geocode_city(client, state["city"])
+        elif tool_name == "query_weather_by_coords":
+            return query_weather_by_coords(client, state["coords"]["lat"], state["coords"]["lon"])
+        elif tool_name == "format_weather":
+            return {"result": format_weather(
+                state["coords"]["city_name"],
+                state["coords"]["country"],
+                state["coords"]["admin1"],
+                state["weather_data"],
+            )}
+        return {"error": f"未知工具：{tool_name}"}
+
+    def update_state(state: dict, tool_name: str, result: dict) -> dict:
+        """根据工具执行结果更新状态"""
+        if "error" in result:
+            state["error"] = result["error"]
+            return state
+        if tool_name == "geocode_city":
+            state["coords"] = result
+        elif tool_name == "query_weather_by_coords":
+            state["weather_data"] = result["weather_data"]
+        elif tool_name == "format_weather":
+            state["formatted"] = result["result"]
+        return state
+
     with httpx.Client(timeout=10.0) as client:
-        # 链式调用步骤定义：模拟 Agent 工具调用链
-        # Step 1: geocode_city → 获取坐标
-        step1_result = geocode_city(client, city)
-        if "error" in step1_result:
-            return step1_result["error"]
+        state = {"city": city}
 
-        # Step 2: query_weather_by_coords → 获取天气数据
-        step2_result = query_weather_by_coords(client, step1_result["lat"], step1_result["lon"])
-        if "error" in step2_result:
-            return step2_result["error"]
+        while True:
+            tool_name = select_next_tool(state)
+            if tool_name is None or "error" in state:
+                break
 
-        # Step 3: format_weather → 格式化输出
-        return format_weather(
-            step1_result["city_name"],
-            step1_result["country"],
-            step1_result["admin1"],
-            step2_result["weather_data"],
-        )
+            result = execute_tool(tool_name, state, client)
+            state = update_state(state, tool_name, result)
+
+        if "error" in state:
+            return state["error"]
+        return state.get("formatted", "天气查询失败")
 
 
 if __name__ == "__main__":
