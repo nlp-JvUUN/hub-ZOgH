@@ -1,0 +1,21 @@
+﻿id,type,question,answer_len,context_count
+1,simple_fact,Transformer模型是哪一年提出的？...,362,4
+2,simple_fact,BERT模型使用了什么预训练任务？...,325,4
+3,simple_fact,GPT-3模型有多少参数？...,292,4
+4,simple_fact,LLaMA模型是哪个公司发布的？...,900,4
+5,simple_fact,RAG技术的全称是什么？...,56,4
+6,concept_explanation,什么是自注意力机制（Self-Attention）？...,601,4
+7,concept_explanation,InstructGPT是如何使用人类反馈进行训练的？...,702,4
+8,concept_explanation,BERT中的Transformer encoder由哪些部分...,913,4
+9,concept_explanation,GPT-3的训练数据包含哪些来源？...,723,4
+10,concept_explanation,RAG相比纯LLM有哪些优势？...,1314,4
+11,compare_contrast,BERT和GPT有什么主要区别？...,2164,4
+12,compare_contrast,Transformer相比RNN有哪些改进？...,1043,4
+13,compare_contrast,LLaMA和GPT-3有什么区别？...,876,4
+14,compare_contrast,InstructGPT和ChatGPT有什么关系？...,826,4
+15,principle_analysis,Transformer中的多头注意力机制是如何工作的？...,978,4
+16,principle_analysis,GPT-3的few-shot学习能力是指什么？...,1091,4
+17,principle_analysis,RAG系统通常包含哪些关键组件？...,1077,4
+18,should_refuse,2023年最好的大语言模型是哪个？...,738,4
+19,should_refuse,如何实现一个完整的大语言模型训练流程？...,2568,4
+20,should_refuse,GPT-4的技术架构是什么？...,492,4
