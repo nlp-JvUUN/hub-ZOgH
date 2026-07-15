@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>WAF 知识助手</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/static/vendor/quill.snow.css" />
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo">📚</span>
+    <span class="title">知识助手</span>
+    <span id="modelTag" class="muted-tag"></span>
+  </div>
+  <nav class="tabs">
+    <button class="tab active" data-tab="chat">💬 问答</button>
+    <button class="tab" data-tab="kb">📚 知识库</button>
+  </nav>
+  <div class="actions">
+    <span id="userTag" class="muted-tag" style="display:none"></span>
+    <button id="btnLogout" class="ghost-mini" style="display:none" title="退出登录">登出</button>
+    <select id="kbSwitcher" class="kb-switcher" title="切换知识库"></select>
+    <button id="btnDeleteKb" class="icon-btn danger-icon" title="删除当前知识库">🗑</button>
+    <button id="btnTheme" title="切换主题">🌓</button>
+  </div>
+</header>
+
+<!-- 登录遮罩 -->
+<div id="loginOverlay" class="modal-overlay" style="display:none">
+  <div class="login-card">
+    <h2>知识助手</h2>
+    <form id="loginForm">
+      <input id="loginUsername" type="text" placeholder="用户名" autocomplete="username" required />
+      <input id="loginPassword" type="password" placeholder="密码" autocomplete="current-password" required />
+      <div id="loginError" class="err" style="display:none"></div>
+      <button type="submit" class="primary fullw">登录</button>
+    </form>
+  </div>
+</div>
+
+<!-- ===== 问答页 ===== -->
+<main id="page-chat" class="page active">
+  <section class="chat-area">
+    <div class="chat-toolbar">
+      <span id="convTitle" class="conv-title">新对话</span>
+      <span class="spacer"></span>
+      <button id="btnNewConv" class="ghost-mini" title="新对话">➕ 新对话</button>
+      <button id="btnHistory" class="ghost-mini" title="查看历史会话">📜 历史</button>
+      <button id="btnClear" class="ghost-mini" title="清空当前对话">🗑 清空</button>
+    </div>
+    <div id="messages" class="messages"></div>
+    <div class="composer">
+      <textarea id="input" rows="2" placeholder="问题（Enter 发送，Shift+Enter 换行）"></textarea>
+      <div class="composer-actions">
+        <label class="topk">
+          召回 <select id="topk">
+            <option value="3">3</option>
+            <option value="5" selected>5</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+          </select> 条
+        </label>
+        <label class="topk">
+          <input type="checkbox" id="decompose" title="将问题分解为多路查询后再检索，提升召回率" />
+          分解
+        </label>
+        <button id="btnSend" class="primary">发送</button>
+      </div>
+    </div>
+  </section>
+  <aside class="refs-panel">
+    <div class="refs-title">引用片段</div>
+    <div id="refs" class="refs">
+      <div class="muted small">回答出来后这里会显示用到的知识条目，点开可以看原文。</div>
+    </div>
+  </aside>
+
+  <!-- 历史抽屉 -->
+  <aside id="historyDrawer" class="history-drawer hidden">
+    <div class="history-head">
+      <span>历史会话</span>
+      <button class="close" data-close-history>×</button>
+    </div>
+    <div class="history-tip muted small">仅当前选中的知识库 · 数据存本机浏览器</div>
+    <ul id="historyList" class="history-list"></ul>
+  </aside>
+</main>
+
+<!-- ===== 知识库页 ===== -->
+<main id="page-kb" class="page">
+  <aside class="kb-side">
+    <div class="kb-search">
+      <input id="kbSearch" placeholder="搜索条目…" />
+    </div>
+    <div class="kb-stat" id="kbStat"></div>
+    <ul id="kbList" class="kb-list"></ul>
+    <div class="kb-side-actions">
+      <button id="btnNew" class="primary fullw">＋ 新增条目</button>
+      <div class="row">
+        <button id="btnImport" class="ghost flex1" title="上传 Word 整库覆盖">⇡ 导入 Word</button>
+        <button id="btnExport" class="ghost flex1" title="把当前知识库导出为 Word">⇣ 导出 Word</button>
+      </div>
+      <button id="btnReindex" class="ghost fullw" title="重建语义检索索引（向量）">⟳ 重建索引</button>
+    </div>
+    <input type="file" id="fileImport" accept=".docx" style="display:none" />
+  </aside>
+  <section class="kb-detail" id="kbDetail">
+    <div class="empty">从左侧选一条，或点"＋ 新增条目"</div>
+  </section>
+</main>
+
+<!-- 编辑弹层（富文本） -->
+<div id="editModal" class="modal hidden">
+  <div class="modal-card big">
+    <div class="modal-head">
+      <h3 id="editTitle">新增条目</h3>
+      <button class="close" data-close-modal>×</button>
+    </div>
+    <div class="modal-body">
+      <label>标题</label>
+      <input id="editTitleInput" placeholder="一句话概括，如：WebSocket 协议支持情况" />
+      <label>正文（支持粘贴/拖拽图片）</label>
+      <div id="editor" class="rich-editor"></div>
+      <label>标签（逗号分隔）</label>
+      <input id="editTags" placeholder="性能, 部署, 售前" />
+    </div>
+    <div class="modal-foot">
+      <button id="btnDelete" class="danger" style="margin-right:auto;display:none">删除</button>
+      <button data-close-modal>取消</button>
+      <button id="btnSave" class="primary">保存</button>
+    </div>
+  </div>
+</div>
+
+<!-- 导入确认弹层 -->
+<div id="confirmModal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3>整库覆盖确认</h3>
+      <button class="close" data-close-confirm>×</button>
+    </div>
+    <div class="modal-body">
+      <p style="line-height:1.7">
+        你即将上传 <b id="cfFileName">？</b>，将
+        <b style="color:var(--danger)">完全替换</b> 现有知识库（含所有条目和图片）。
+      </p>
+      <p class="muted small">建议先点"导出 Word"备份当前知识库，再继续上传。</p>
+      <div class="row" style="gap:8px;align-items:center;">
+        <input id="cfTyping" placeholder='输入"覆盖"二字以确认' />
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button data-close-confirm>取消</button>
+      <button id="btnConfirmImport" class="danger" disabled>确认覆盖</button>
+    </div>
+  </div>
+</div>
+
+<script src="/static/vendor/quill.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
