@@ -1,0 +1,65 @@
+[
+  {
+    "strategy": "fixed",
+    "retrieval_mode": "vector_only",
+    "hit_rate": 1.0,
+    "mrr": 1.0,
+    "n_questions": 10
+  },
+  {
+    "strategy": "fixed",
+    "retrieval_mode": "bm25_only",
+    "hit_rate": 0.7,
+    "mrr": 0.625,
+    "n_questions": 10
+  },
+  {
+    "strategy": "fixed",
+    "retrieval_mode": "hybrid",
+    "hit_rate": 1.0,
+    "mrr": 0.95,
+    "n_questions": 10
+  },
+  {
+    "strategy": "semantic",
+    "retrieval_mode": "vector_only",
+    "hit_rate": 1.0,
+    "mrr": 1.0,
+    "n_questions": 10
+  },
+  {
+    "strategy": "semantic",
+    "retrieval_mode": "bm25_only",
+    "hit_rate": 0.7,
+    "mrr": 0.6,
+    "n_questions": 10
+  },
+  {
+    "strategy": "semantic",
+    "retrieval_mode": "hybrid",
+    "hit_rate": 1.0,
+    "mrr": 1.0,
+    "n_questions": 10
+  },
+  {
+    "strategy": "hierarchical",
+    "retrieval_mode": "vector_only",
+    "hit_rate": 1.0,
+    "mrr": 0.9333333333333332,
+    "n_questions": 10
+  },
+  {
+    "strategy": "hierarchical",
+    "retrieval_mode": "bm25_only",
+    "hit_rate": 0.7,
+    "mrr": 0.525,
+    "n_questions": 10
+  },
+  {
+    "strategy": "hierarchical",
+    "retrieval_mode": "hybrid",
+    "hit_rate": 1.0,
+    "mrr": 0.95,
+    "n_questions": 10
+  }
+]
