@@ -1,0 +1,17 @@
+[project]
+name = "weather-query"
+version = "0.1.0"
+description = "天气查询 — Function Call / MCP 两种方式对比（循环交互）"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.0.0",
+    "httpx>=0.25.0",
+    "mcp>=1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["src", "mode_mcp", "mode_mcp.servers", "mode_function_call"]
