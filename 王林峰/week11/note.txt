@@ -1,0 +1,35 @@
+作业：把天气查询的工具调用改造为循环调用。
+
+完整改造方案
+需求汇总
+删除顶层统一入口 get_weather() 函数；
+拆分为两个独立底层方法，各自内置独立 httpx.Client：
+_geocode_city(city_name)：城市→坐标（独立 Client）
+_fetch_weather_by_latlng(lat, lon)：经纬度查天气（独立 Client）
+上层调用处（main.py、weather_server.py、run_function_call.py、run_cli.py）删除对 get_weather 的调用，改为分步调用两个函数 + 循环重试；
+保留原有重试、地名修正、格式化逻辑；
+所有对外调用链路全部重构，不再依赖封装好的统一入口。
+修改文件清单
+src/weather_backend.py：移除 get_weather，仅保留两个独立底层工具函数
+mode_cli/cli/main.py（fincli 命令入口）：重写 weather 子命令逻辑，分步调用两个函数
+mode_mcp/servers/weather_server.py：重写 MCP tool，分步调用两个函数
+mode_function_call/run_function_call.py：重写 get_weather 工具执行逻辑
+mode_cli/run_cli.py：上层无改动（仅转发参数，业务逻辑下沉到 cli/main）
+
+1、src/weather_backend.py（修改后完整代码）
+删除 get_weather，只保留两个独立底层函数，各自持有独立 httpx.Client
+2、mode_cli/cli/main.py（fincli CLI 入口 修改）
+原代码：from src.weather_backend import get_weather 直接调用
+改造：移除导入 get_weather，手动分步调用两个底层函数、循环重试、拼接输出文本
+3、mode_mcp/servers/weather_server.py（MCP 天气服务 修改）
+原逻辑直接调用 get_weather，改造为分步调用底层函数、上层处理重试与格式化
+4、mode_function_call/run_function_call.py（Function Call 层 修改）
+改动点：
+删除 from src.weather_backend import get_weather
+TOOL_DISPATCH 中 get_weather 不再直接映射后端函数，改为内部手动串联两个底层接口
+
+核心改造总结
+底层 backend 彻底移除统一封装 get_weather，只保留两个原子化网络函数，各自独立创建 httpx.Client，网络资源完全隔离；
+所有上层调用入口（CLI/MCP/FunctionCall）不再直接调用单一封装方法，改为手动分步调用地理编码、循环调用天气接口；
+重试逻辑、文本格式化全部上移至业务调用层，底层仅负责原始 HTTP 请求；
+完全满足需求：Step1、Step2 拆分为独立方法、各自独立 Client、删除统一入口、上层改造调用逻辑。
