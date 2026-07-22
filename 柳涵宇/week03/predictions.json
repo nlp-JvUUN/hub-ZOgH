@@ -1,0 +1,108 @@
+{
+  "task": "五字文本中'你'的位置分类，类别为1到5",
+  "vocab": "你我他她它们的是在有和中学天气好坏爱看听说走跑吃喝玩猫狗山水火木金土日月星",
+  "rnn_examples": [
+    {
+      "text": "月你天天日",
+      "true_class": 2,
+      "pred_class": 2
+    },
+    {
+      "text": "好走星你水",
+      "true_class": 4,
+      "pred_class": 4
+    },
+    {
+      "text": "星学火喝你",
+      "true_class": 5,
+      "pred_class": 5
+    },
+    {
+      "text": "好你狗我看",
+      "true_class": 2,
+      "pred_class": 2
+    },
+    {
+      "text": "在火你看金",
+      "true_class": 3,
+      "pred_class": 3
+    },
+    {
+      "text": "你猫们月木",
+      "true_class": 1,
+      "pred_class": 1
+    },
+    {
+      "text": "和火月你火",
+      "true_class": 4,
+      "pred_class": 4
+    },
+    {
+      "text": "走的在你山",
+      "true_class": 4,
+      "pred_class": 4
+    },
+    {
+      "text": "月好的你说",
+      "true_class": 4,
+      "pred_class": 4
+    },
+    {
+      "text": "和是她火你",
+      "true_class": 5,
+      "pred_class": 5
+    }
+  ],
+  "lstm_examples": [
+    {
+      "text": "你它星猫爱",
+      "true_class": 1,
+      "pred_class": 1
+    },
+    {
+      "text": "你和月是有",
+      "true_class": 1,
+      "pred_class": 1
+    },
+    {
+      "text": "听你有土是",
+      "true_class": 2,
+      "pred_class": 2
+    },
+    {
+      "text": "走你听看猫",
+      "true_class": 2,
+      "pred_class": 2
+    },
+    {
+      "text": "听猫和你跑",
+      "true_class": 4,
+      "pred_class": 4
+    },
+    {
+      "text": "吃星走看你",
+      "true_class": 5,
+      "pred_class": 5
+    },
+    {
+      "text": "的日你土中",
+      "true_class": 3,
+      "pred_class": 3
+    },
+    {
+      "text": "土他木你和",
+      "true_class": 4,
+      "pred_class": 4
+    },
+    {
+      "text": "跑爱喝你星",
+      "true_class": 4,
+      "pred_class": 4
+    },
+    {
+      "text": "好你爱喝猫",
+      "true_class": 2,
+      "pred_class": 2
+    }
+  ]
+}
