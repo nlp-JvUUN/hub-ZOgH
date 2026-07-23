@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "patent_id": "WO2023187451A1",
+    "title": "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+    "assignee": "Kongsberg Maritime AS",
+    "patent_office": "WIPO (PCT)",
+    "publication_date": "2023-10-05",
+    "inventors": [
+      "Arne Rødsjø",
+      "Øyvind Løvhaugen"
+    ]
+  },
+  "source": "WO2023187451A1",
+  "blocks": [
+    {
+      "block_type": "title",
+      "content": "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+      "page_num": 0,
+      "section_path": [
+        "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "abstract",
+      "content": "A hybrid underwater wireless communication system combines acoustic and optical (blue-green LED/laser) communication modalities within a single transceiver. When two underwater nodes are within optical range (typically 10-50 meters depending on water clarity), the system communicates via high-bandwidth optical link achieving 1-10 Mbps. When optical communication fails due to water turbidity, misalignment, or range exceeding the optical attenuation length, the system automatically and seamlessly switches to acoustic communication providing 1-10 kbps over kilometer-scale ranges. A link quality monitor continuously evaluates optical signal-to-noise ratio and acoustic packet error rate, triggering mode transitions with less than 200 ms switching latency.",
+      "page_num": 0,
+      "section_path": [
+        "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+        "摘要"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Acoustic communication is the dominant underwater wireless technology, offering kilometer-scale range but limited bandwidth (typically 1-20 kbps). Optical communication using blue-green wavelengths (the \"underwater optical window\" with minimum attenuation) can achieve Mbps data rates but is severely range-limited by absorption and scattering, typically reaching only 10-50 meters in clear ocean water and much less in turbid coastal or harbor environments. No single underwater communication modality simultaneously satisfies the needs for both long range and high bandwidth.",
+      "page_num": 0,
+      "section_path": [
+        "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+        "BACKGROUND"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The invention provides a single transceiver integrating both acoustic and optical modems with an intelligent link controller. The controller continuously evaluates both link qualities and routes data streams according to their bandwidth requirements and latency tolerance. The key innovation is the seamless automatic switching mechanism: applications using the communication link are unaware of which physical layer is active, as the controller maintains a consistent network-layer interface through mode transitions.",
+      "page_num": 0,
+      "section_path": [
+        "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+        "SUMMARY"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The optical subsystem uses an array of 16 high-power blue LEDs (Luminus CBT-120, peak wavelength 465 nm) with total optical output of 40 watts. A Fresnel lens collimator produces a 10-degree full-angle beam. The receiver uses a Hamamatsu H10721-210 photomultiplier tube with a bandwidth of 20 MHz and a collection lens of 100 mm aperture. The acoustic subsystem uses a Teledyne Reson TC4013 hydrophone and an omnidirectional projector operating at 25 kHz center frequency with 10 kHz bandwidth.",
+      "page_num": 0,
+      "section_path": [
+        "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The link controller maintains a state machine with four states: OPTICAL_ACTIVE, ACOUSTIC_ACTIVE, DUAL_ACTIVE, and TRANSITIONING. State transitions are triggered when link quality metrics cross configurable thresholds. Hysteresis is applied to prevent rapid oscillation between states in marginal conditions. In DUAL_ACTIVE mode, video and sonar data streams are routed through the optical path while command/telemetry and navigation data use the acoustic path.",
+      "page_num": 0,
+      "section_path": [
+        "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "claim",
+      "content": "A hybrid underwater wireless communication transceiver comprising: an acoustic modem operating in the 20-40 kHz frequency band; an optical transmitter comprising an array of blue-green LEDs with peak wavelength between 450-520 nm; an optical receiver comprising a photomultiplier tube or silicon photomultiplier; and a link controller that monitors optical SNR and acoustic packet error rate, and switches between optical-only, acoustic-only, and simultaneous dual-mode operation based on link quality metrics and application quality-of-service requirements.",
+      "page_num": 0,
+      "section_path": [
+        "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+        "权利要求"
+      ],
+      "claim_num": 1
+    },
+    {
+      "block_type": "claim",
+      "content": "The transceiver of claim 1, wherein the link controller preferentially routes high-bandwidth sensor data (video, sonar imagery) through the optical link and routes low-bandwidth telemetry and command data through the acoustic link when both links are available.",
+      "page_num": 0,
+      "section_path": [
+        "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+        "权利要求"
+      ],
+      "claim_num": 2
+    },
+    {
+      "block_type": "claim",
+      "content": "The transceiver of claim 1, wherein the optical transmitter uses orbital angular momentum (OAM) multiplexing to increase data throughput beyond the LED modulation bandwidth.",
+      "page_num": 0,
+      "section_path": [
+        "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+        "权利要求"
+      ],
+      "claim_num": 3
+    },
+    {
+      "block_type": "claim",
+      "content": "The transceiver of claim 1, wherein the automatic mode switching latency does not exceed 200 milliseconds.",
+      "page_num": 0,
+      "section_path": [
+        "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+        "权利要求"
+      ],
+      "claim_num": 4
+    },
+    {
+      "block_type": "claim",
+      "content": "An underwater communication network comprising a plurality of the transceivers of claim 1, wherein the network self-organizes into a mesh topology with acoustic links providing long-range backbone connectivity and optical links providing high-bandwidth local cluster connectivity.",
+      "page_num": 0,
+      "section_path": [
+        "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+        "权利要求"
+      ],
+      "claim_num": 5
+    }
+  ]
+}

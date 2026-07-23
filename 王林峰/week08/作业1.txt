@@ -1,0 +1,2 @@
+DATA_DIR   = ROOT / "data" / "afqmc"
+只需修改数据文件路径即可，afqmc改为lcqmc或bq_corpus

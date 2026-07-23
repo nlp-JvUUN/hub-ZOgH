@@ -1,0 +1,188 @@
+{
+  "version": "1.0",
+  "description": "水下机器人专利 RAG 系统标准评测题集（20题）",
+  "note": "覆盖技术事实检索、跨专利对比、精确术语匹配、拒答场景四类。ground_truth 基于水下机器人领域公开专利技术知识，运行评估前建议对照实际专利文本核实。",
+  "questions": [
+
+    {
+      "id": 1,
+      "type": "simple_fact",
+      "difficulty": 1,
+      "question": "水下自主航行器（AUV）在水下导航中，除了惯性导航系统（INS）外，最常组合使用的传感器是什么？",
+      "target_docs": ["navigation", "IMU", "DVL"],
+      "ground_truth": "多普勒测速仪（DVL，Doppler Velocity Log）是AUV最常与INS组合使用的传感器，用于修正惯导系统的累积漂移误差。部分高级方案还会融合声学定位系统（LBL/USBL）和深度传感器。"
+    },
+
+    {
+      "id": 2,
+      "type": "simple_fact",
+      "difficulty": 1,
+      "question": "水下声学通信相比陆上无线电通信，面临的核心物理层挑战是什么？",
+      "target_docs": ["acoustic", "communication", "underwater"],
+      "ground_truth": "水下声学通信面临低带宽、高延迟、多径效应严重、可用频段有限、以及环境噪声（船舶噪声、海洋生物噪声）干扰等核心挑战。声波在水中传播速度约为1500m/s，远低于电磁波在空气中的速度。"
+    },
+
+    {
+      "id": 3,
+      "type": "simple_fact",
+      "difficulty": 1,
+      "question": "侧扫声纳（Side-scan Sonar）和多波束测深仪（Multibeam Echosounder）在海底测绘中各有什么用途？",
+      "target_docs": ["sonar", "seabed", "mapping"],
+      "ground_truth": "侧扫声纳主要用于获取海底地貌的高分辨率图像（声学图像），识别海底物体和底质类型；多波束测深仪主要用于精确测量海底地形（水深数据），生成海底数字高程模型（DEM）。"
+    },
+
+    {
+      "id": 4,
+      "type": "simple_fact",
+      "difficulty": 1,
+      "question": "水下机器人常用的推进方式有哪些？螺旋桨推进和仿生推进各有什么优缺点？",
+      "target_docs": ["propulsion", "thruster", "biomimetic"],
+      "ground_truth": "螺旋桨推进效率高、技术成熟、控制简单，但噪声大、隐蔽性差；仿生推进（如仿鱼鳍、仿鳐鱼）隐蔽性好、机动性强、对海洋生物干扰小，但效率较低、控制复杂。矢量推进（导管桨+可调喷口）则在两者之间提供了折中方案。"
+    },
+
+    {
+      "id": 5,
+      "type": "simple_fact",
+      "difficulty": 1,
+      "question": "AUV的能源系统通常使用什么类型？水下无线充电（docking）技术解决了什么问题？",
+      "target_docs": ["power", "battery", "docking", "charging"],
+      "ground_truth": "AUV通常使用锂离子电池或锂聚合物电池（部分大深度AUV使用银锌电池或燃料电池）。水下无线充电/对接（docking）技术解决了AUV需要定期回收至母船充电的痛点，使AUV能够长期在水下工作，实现真正的长期自主作业。"
+    },
+
+    {
+      "id": 6,
+      "type": "precise_number",
+      "difficulty": 2,
+      "question": "水下视觉系统在浑浊水域中，通常采用什么图像增强技术？基于物理模型的方法和基于深度学习的方法各有何特点？",
+      "target_docs": ["underwater", "image", "vision", "enhancement"],
+      "ground_truth": "水下图像增强包括：基于物理模型的方法（如暗通道先验DCP的变体、水下成像模型UWIM），利用光在水中衰减和散射的物理原理进行颜色校正和去雾；基于深度学习的方法（如UWCNN、Water-Net、FUnIE-GAN），通过训练数据学习端到端的增强映射。深度学习方法通常在主观质量上更好，但泛化到不同水域条件时可能退化。"
+    },
+
+    {
+      "id": 7,
+      "type": "precise_number",
+      "difficulty": 2,
+      "question": "在水下SLAM（同步定位与建图）系统中，声学SLAM和视觉SLAM各自适用于什么场景？两者的误差来源有何不同？",
+      "target_docs": ["SLAM", "underwater", "localization", "mapping"],
+      "ground_truth": "声学SLAM（使用声纳/侧扫声纳）适用于远距离、浑浊水域，但分辨率低、帧率低、点云稀疏；视觉SLAM（使用水下相机）适用于近距离、清澈水域，分辨率高、特征丰富，但对水质和光照敏感。声学SLAM的主要误差来源于声速剖面不确定性；视觉SLAM的主要误差来源于图像退化（色彩失真、对比度低、悬浮颗粒散射）。"
+    },
+
+    {
+      "id": 8,
+      "type": "precise_number",
+      "difficulty": 2,
+      "question": "用于水下管道巡检的ROV（遥控潜器）通常配备哪些传感器和作业工具？",
+      "target_docs": ["ROV", "inspection", "pipeline", "subsea"],
+      "ground_truth": "水下管道巡检ROV通常配备：光学摄像头+LED照明、成像声纳（用于浑浊水）、阴极保护电位测量探头（CP probe）、管道跟踪器（Pipe Tracker）、多波束测深仪或激光扫描仪、5功能或7功能机械手，以及可能需要的超声波测厚仪等无损检测工具。"
+    },
+
+    {
+      "id": 9,
+      "type": "precise_number",
+      "difficulty": 2,
+      "question": "水下无线通信中，除了声学通信外，还有哪些替代方案？它们各自的通信距离和数据速率范围是多少？",
+      "target_docs": ["communication", "underwater", "wireless", "optical"],
+      "ground_truth": "替代方案包括：水下光学通信（蓝绿光LED/激光），可在几十米内实现Mbps级数据传输；水下电磁波通信（极低频/超低频），数据率极低但能穿透水-空气界面；水下声学通信仍是远距离（公里级）的主流方案。混合方案（声学+光学）可兼顾距离和带宽。"
+    },
+
+    {
+      "id": 10,
+      "type": "precise_number",
+      "difficulty": 2,
+      "question": "AUV的路径规划算法在水下环境中面临哪些独特挑战？基于采样的方法（如RRT*）和基于优化的方法各有何适用性？",
+      "target_docs": ["path", "planning", "AUV", "navigation", "algorithm"],
+      "ground_truth": "水下路径规划的独特挑战：三维空间中的流场（洋流）需作为能量约束纳入规划（利用顺流节省能源）；地形回避（海山、峡谷）；声学通信盲区约束；以及时间变化的海洋环境（温跃层、内波）。RRT*类方法适合高维配置空间和复杂障碍物；基于优化的方法（模型预测控制MPC）适合需要精确跟踪和能效最优的场景。"
+    },
+
+    {
+      "id": 11,
+      "type": "cross_doc_compare",
+      "difficulty": 3,
+      "question": "比较螺旋桨推进和仿生推进在水下机器人中的应用：两种方案在推进效率、机动性、噪声水平和隐蔽性方面的差异是什么？",
+      "target_docs": ["propeller", "thruster", "biomimetic", "propulsion"],
+      "ground_truth": "螺旋桨推进：推进效率高（敞水效率60-75%）、技术成熟、推力大；但噪声大（空泡和叶片通过频率噪声）、隐蔽性差。仿生推进：推进效率中等、机动性极强（零半径转弯）、几乎无空泡噪声、隐蔽性好；但结构复杂、密封困难、控制难度高。混合方案（导管桨+仿生鳍或可变形翼）试图融合两者优势。"
+    },
+
+    {
+      "id": 12,
+      "type": "cross_doc_compare",
+      "difficulty": 3,
+      "question": "水下SLAM中，声学SLAM和视觉SLAM在深海和浅海两种环境中的适用性和准确度有何差异？",
+      "target_docs": ["SLAM", "sonar", "vision", "deep", "shallow"],
+      "ground_truth": "深海环境（>200m）：无自然光、视野范围大、地形特征稀疏，声学SLAM几乎是唯一选择，视觉SLAM需要大功率主动照明且有效距离极短。浅海环境（<50m）：有自然光穿透、地形特征丰富、但悬浮物多，视觉SLAM在清澈水域有优势，声学SLAM的分辨率不足以捕捉精细特征。混合方案使用声学做全局定位、视觉做局部精细建图是当前主流。"
+    },
+
+    {
+      "id": 13,
+      "type": "cross_doc_compare",
+      "difficulty": 3,
+      "question": "水下无线充电（感应式）和水下对接充电（接触式）各有什么优缺点？哪种更适合深海长期部署？",
+      "target_docs": ["wireless", "charging", "docking", "underwater", "power"],
+      "ground_truth": "水下无线充电（感应式/磁共振）：无裸露触点、耐腐蚀、免维护、对准容差大；但效率较低（通常60-85%）、电磁干扰影响声学设备。水下对接充电（接触式/湿插拔连接器）：效率高（>95%）、功率大；但触点易腐蚀、需要精确机械对准、维护频繁。深海长期部署推荐感应式（密封可靠性高），但大功率场景（如ROV作业）仍需接触式。"
+    },
+
+    {
+      "id": 14,
+      "type": "cross_doc_compare",
+      "difficulty": 3,
+      "question": "用于海洋科学调查的AUV和用于军事/防御的AUV，在传感器配置、通信需求和隐蔽性方面的设计差异是什么？",
+      "target_docs": ["AUV", "survey", "military", "sensor", "communication"],
+      "ground_truth": "科学AUV：传感器负载大（CTD、ADCP、水质传感器、水听器阵列）、数据存储优先于实时传输、牺牲隐蔽性换取传感器覆盖。军事AUV：传感器多为被动式（被动声纳阵列）、通信严格无线电静默（仅极低频接收）、电池和推进系统噪声控制至最低（泵喷推进、磁流体推进）。科学AUV可以浮出水面使用卫星通信回传数据；军事AUV尽量减少任何暴露位置的行为。"
+    },
+
+    {
+      "id": 15,
+      "type": "cross_doc_compare",
+      "difficulty": 3,
+      "question": "大疆（DJI）和传统海洋机器人公司（如Kongsberg、Teledyne）在水下机器人领域的专利布局和技术方向有什么差异？",
+      "target_docs": ["DJI", "Kongsberg", "Teledyne", "underwater", "drone", "AUV"],
+      "ground_truth": "大疆（DJI）专利方向：偏消费级和专业级小型水下无人机（如潜鲛系列）、强调实时图传、手机App操控、便携性和易用性、仿消费级无人机产品线。Kongsberg/Teledyne专利方向：偏工业/军事级大型AUV（如HUGIN、Gavia系列）、强调长航程、深海能力、高精度声学传感器集成、军用标准可靠性。大疆侧重人机交互和消费体验；传统厂商侧重传感器融合和极端环境可靠性。"
+    },
+
+    {
+      "id": 16,
+      "type": "time_trend",
+      "difficulty": 3,
+      "question": "近年来水下机器人领域，深度学习技术（特别是计算机视觉和强化学习）的应用趋势是怎样的？从专利中能观察到什么变化？",
+      "target_docs": ["deep", "learning", "neural", "network", "underwater", "vision", "reinforcement"],
+      "ground_truth": "趋势：2015年前后少量专利开始将CNN用于水下图像增强和目标识别；2018-2020年深度学习在水下目标检测（YOLO/SSD水下变体）和图像增强（GAN-based）方面爆发；2020年后强化学习（RL）开始用于水下路径规划和AUV自主决策，端到端学习（从传感器到控制指令）成为前沿方向。整体趋势：从传统信号处理→浅层机器学习→深度学习特征提取→端到端自主决策。"
+    },
+
+    {
+      "id": 17,
+      "type": "time_trend",
+      "difficulty": 3,
+      "question": "水下通信技术（声学、光学、电磁）的专利发展趋势：哪种技术在近年增长最快？",
+      "target_docs": ["underwater", "communication", "acoustic", "optical", "wireless"],
+      "ground_truth": "水下光学通信（LED/激光）的专利增长率最高，受LED效率和蓝绿光水下窗口研究的推动。声学通信仍在总量上领先（因为目前无可替代的远距离方案），但增量趋缓。水下电磁波通信（磁感应通信）由于浅水近场通信的应用（如水下物联网节点间通信）近年增长明显。混合通信方案（声学远距离+光学近距离高速+电磁近场）的专利开始出现。"
+    },
+
+    {
+      "id": 18,
+      "type": "should_refuse",
+      "difficulty": 1,
+      "question": "目前市场上一台Blue Robotics公司的BlueROV2售价是多少？在哪里可以购买？",
+      "target_docs": [],
+      "ground_truth": "此题应拒绝回答。专利文献不包含产品售价和购买渠道信息。正确答案应类似：'根据专利资料无法提供产品售价和购买信息，专利文献仅包含技术方案和法律保护范围。'"
+    },
+
+    {
+      "id": 19,
+      "type": "should_refuse",
+      "difficulty": 1,
+      "question": "中国海军最新服役的潜艇型号和性能参数是什么？",
+      "target_docs": [],
+      "ground_truth": "此题应拒绝回答。专利数据库中的水下航行器专利为公开的技术方案，不包含现役军事装备信息。正确答案应类似：'根据可用的专利文献无法提供现役军事装备信息，此类信息不属于公开专利数据库的覆盖范围。'"
+    },
+
+    {
+      "id": 20,
+      "type": "should_refuse",
+      "difficulty": 2,
+      "question": "哪个国家在水下机器人领域的技术实力最强？请给出排名。",
+      "target_docs": [],
+      "ground_truth": "此题应拒绝回答或仅基于检索到的专利数量做客观统计。主观的技术实力排名需要综合评估论文、专利、产品、市场份额等多维度，专利检索可以统计各国专利数量，但不能直接等同于技术实力排名。正确答案应类似：'根据检索到的专利文献，可以统计各专利局的申请数量，但技术实力的综合排名需要更广泛的评估。'"
+    }
+
+  ]
+}

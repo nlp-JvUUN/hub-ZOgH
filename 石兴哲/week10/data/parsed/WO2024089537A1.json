@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "patent_id": "WO2024089537A1",
+    "title": "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+    "assignee": "Japan Agency for Marine-Earth Science and Technology (JAMSTEC)",
+    "patent_office": "WIPO (PCT)",
+    "publication_date": "2024-05-10",
+    "inventors": [
+      "Ken Takagi",
+      "Toshihiro Maki",
+      "Tamaki Ura"
+    ]
+  },
+  "source": "WO2024089537A1",
+  "blocks": [
+    {
+      "block_type": "title",
+      "content": "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "abstract",
+      "content": "A soft robotic gripper for non-destructive collection of deep-sea biological specimens employs granular jamming for variable stiffness control. The gripper fingers are fabricated from silicone elastomer with pneumatic actuation chambers, providing gentle, conformable grasping. Each finger contains an internal chamber filled with coffee-ground-sized particles that can be vacuum-hardened after grasping to lock the finger shape around the captured specimen. This enables the gripper to be soft and compliant during approach and grasp (minimizing damage to delicate organisms such as jellyfish, sea cucumbers, and soft corals), then rigid during transport to the sample container. The gripper operates at full ocean depth (11,000 meters) using hydraulic actuation with pressure-compensated valves.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "摘要"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Collecting biological specimens from the deep sea is essential for biodiversity research, pharmaceutical discovery, and environmental monitoring. Traditional deep-sea sampling tools include slurp guns (suction samplers), mechanical grabbers, and sediment corers. Mechanical grippers with rigid metal jaws frequently damage or destroy soft-bodied organisms such as jellyfish, salps, ctenophores, and holothurians (sea cucumbers), which constitute a large fraction of midwater and benthic biomass. Suction samplers can be gentler but lack selectivity and often mix specimens from different species in a single catch.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "BACKGROUND"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Recent advances in soft robotics offer an alternative: compliant grippers that conform to object shape and distribute force over a large contact area. However, existing soft grippers designed for laboratory or shallow-water use cannot operate at deep-sea pressures and lack the ability to lock grasp shape after initial contact.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "BACKGROUND"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The invention provides a soft gripper combining pneumatic/hydraulic actuation for compliance with granular jamming for variable stiffness. During approach and grasp, the fingers are soft (unjammed), conforming to the specimen's shape with minimal contact pressure (<5 kPa). After the specimen is secured, vacuum applied to the granular jamming chamber causes the particle bed to transition from a fluid-like to a solid-like state, locking the finger in its grasped configuration. The locked fingers then provide rigid support during transport to the sample container or collection box.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "SUMMARY"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Each finger body is cast from Ecoflex 00-30 platinum-cure silicone (Smooth-On Inc.) in a 3D-printed mold, with three longitudinal pneumatic chambers arranged around the central granular jamming chamber. The finger measures 120 mm long, 20 mm wide, and 15 mm thick. The granular jamming chamber (internal volume approximately 15 mL) is filled with 0.7 mm alumina beads (Ceroglass Technologies) to 60% fill fraction.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "For deep-sea operation (demonstrated to 10,900 m in the Mariana Trench), all pneumatic functions are converted to hydraulic using filtered seawater as the working fluid. A titanium positive-displacement piston pump (custom-built, 5 mL displacement per revolution) driven by a brushless DC motor through a 100:1 planetary gearbox generates the required actuation pressure differential. All valves are direct-operated solenoid valves with seawater-compatible wetted materials (titanium, PEEK, EPDM). Pressure compensation is achieved through flexible PTFE bellows that transmit ambient pressure to the hydraulic reservoir.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "claim",
+      "content": "A deep-sea soft robotic gripper comprising: at least two opposed fingers, each finger comprising a silicone elastomer body with internal pneumatic or hydraulic actuation chambers; a granular jamming chamber within each finger, containing a packed bed of granules and a vacuum port; and a pressure-compensated hydraulic control system that provides actuation fluid at a pressure equal to ambient hydrostatic pressure plus a controlled differential pressure, enabling operation at any ocean depth.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "权利要求"
+      ],
+      "claim_num": 1
+    },
+    {
+      "block_type": "claim",
+      "content": "The gripper of claim 1, wherein the granules have a mean particle diameter of 0.5-1.0 mm, are composed of alumina ceramic, and are packed to a fill fraction of 55-65% within the jamming chamber.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "权利要求"
+      ],
+      "claim_num": 2
+    },
+    {
+      "block_type": "claim",
+      "content": "The gripper of claim 1, wherein the pressure-compensated hydraulic control system uses seawater as the hydraulic fluid, drawn from the ambient environment, filtered to 10 microns, and pressurized by a positive displacement pump with a titanium piston and ceramic cylinder liner.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "权利要求"
+      ],
+      "claim_num": 3
+    },
+    {
+      "block_type": "claim",
+      "content": "The gripper of claim 1, wherein the silicone elastomer is platinum-cure silicone with Shore A hardness 10-20, reinforced with a nylon mesh for tear resistance.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "权利要求"
+      ],
+      "claim_num": 4
+    },
+    {
+      "block_type": "claim",
+      "content": "The gripper of claim 1, further comprising a force sensing system based on detecting pressure changes in the actuation chambers, enabling estimation of grasping force without requiring external force sensors in the deep-sea environment.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "权利要求"
+      ],
+      "claim_num": 5
+    },
+    {
+      "block_type": "claim",
+      "content": "A method for non-destructive collection of deep-sea organisms using the gripper of claim 1, comprising: approaching the target organism with fingers in the soft (unjammed) state; closing fingers around the organism using low-pressure actuation (<50 kPa above ambient); applying vacuum to the jamming chambers to rigidize the fingers in the conformed shape; and transferring the grasped organism to a sample container while maintaining jamming vacuum.",
+      "page_num": 0,
+      "section_path": [
+        "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+        "权利要求"
+      ],
+      "claim_num": 6
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "patent_id": "WO2024100623A1",
+    "title": "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+    "assignee": "Norwegian University of Science and Technology (NTNU)",
+    "patent_office": "WIPO (PCT)",
+    "publication_date": "2024-05-16",
+    "inventors": [
+      "Martin Ludvigsen",
+      "Asgeir J. Sørensen",
+      "Thor I. Fossen"
+    ]
+  },
+  "source": "WO2024100623A1",
+  "blocks": [
+    {
+      "block_type": "title",
+      "content": "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "abstract",
+      "content": "A digital twin framework for autonomous underwater vehicles maintains a real-time virtual replica of the physical AUV and its operating environment, continuously synchronized via the vehicle's acoustic telemetry link. The digital twin runs on a surface vessel or shore-based server and simulates multiple possible future trajectories using an ensemble of ocean forecast models. When the physical AUV's behavior deviates from the digital twin's predictions beyond a statistical threshold, an anomaly alert is generated, and the mission plan is automatically revised. The framework supports both pre-mission Monte Carlo simulation for risk assessment and real-time monitoring and intervention during active missions. An application to under-ice AUV operations in the Arctic demonstrated a 73% reduction in mission-aborting anomalies through proactive re-planning triggered by digital twin predictions.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "摘要"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "AUV missions, particularly long-endurance under-ice or deep-sea missions, are characterized by limited communication bandwidth (acoustic telemetry at < 1 kbps), high latency (seconds to minutes), and an operating environment that is poorly observed and dynamically changing. Vehicle operators typically receive only sparse, delayed status updates and have minimal ability to intervene when the vehicle encounters unanticipated conditions. Under-ice missions, where the vehicle cannot surface for GPS fixes or satellite communication, are especially high-risk—a single navigation error can result in permanent loss of the vehicle beneath the ice canopy.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "BACKGROUND"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Digital twin technology, which creates a synchronized virtual replica of a physical system, has been successfully applied in manufacturing, aerospace, and offshore energy. Extending the concept to AUV operations requires addressing the unique challenges of low-bandwidth delayed telemetry, uncertain environmental forecasts, and the need for physically accurate simulation of vehicle-environment interactions.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "BACKGROUND"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The invention provides a digital twin framework for AUVs that runs on a surface platform and maintains real-time synchronization via acoustic telemetry. The key capabilities are: (1) state estimation under sparse observations using ensemble Kalman filtering; (2) probabilistic trajectory prediction using multi-model oceanographic forecast ensembles; (3) anomaly detection based on statistical deviation of physical AUV behavior from digital twin predictions; and (4) automated mission re-planning when anomalies threaten mission objectives or vehicle safety.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "SUMMARY"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The AUV dynamics model includes 6-DOF rigid-body equations with hydrodynamic coefficients derived from CFD and validated through tank tests. Sensor models include realistic noise characteristics for the INS/DVL navigation suite, acoustic modem packet loss patterns, and battery discharge curves as a function of temperature and load. The environmental model ingests operational oceanographic forecast products (HYCOM global, ROMS regional) at 1/12° and 1/36° resolution respectively, linearly interpolated to the AUV position. Bathymetry uses the GEBCO 2023 grid at 15 arc-second resolution.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The ensemble prediction module runs 64 ensemble members, each using a perturbed ocean forecast field generated by sampling from the forecast error covariance (assumed diagonal with variance proportional to forecast lead time). Each ensemble member simulates 6 hours into the future at 10x real-time speed. The ensemble spread naturally quantifies trajectory uncertainty due to environmental forecast uncertainty.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Field validation was conducted during an Arctic AUV deployment north of Svalbard in 2023. A Kongsberg HUGIN 6000 AUV executed a 48-hour under-ice survey mission with acoustic telemetry updates every 15 minutes via a surface-deployed ice-tethered modem. The digital twin predicted an imminent strong counter-current at a waypoint 90 minutes ahead (identified from a HYCOM forecast ensemble member), triggered a re-plan that routed the AUV into a parallel track exploiting a favorable along-track current, and avoided what would have been a 3.2-hour delay with associated risk of battery depletion before the recovery rendezvous.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "claim",
+      "content": "A digital twin system for an autonomous underwater vehicle (AUV) comprising: a physics-based simulation model of the AUV including its dynamics, sensor models, and energy consumption model; an environmental model incorporating oceanographic forecasts (current, temperature, salinity) and bathymetric data; a data assimilation module that periodically receives telemetry from the physical AUV and updates the digital twin state to maintain synchronization; an ensemble prediction module that simulates multiple future trajectories using perturbed environmental forecasts; an anomaly detector that compares physical AUV telemetry against the ensemble predictions and triggers alerts when deviations exceed a statistical threshold; and a re-planning module that generates an updated mission plan when an anomaly is detected and transmits the revised plan to the AUV via acoustic communication.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "权利要求"
+      ],
+      "claim_num": 1
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, wherein the data assimilation module uses an ensemble Kalman filter to incorporate sparse, delayed acoustic telemetry updates into the continuous-time digital twin simulation.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "权利要求"
+      ],
+      "claim_num": 2
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, wherein the ensemble prediction module runs 50-100 perturbed ensemble members using ocean forecast data from at least two independent forecast models.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "权利要求"
+      ],
+      "claim_num": 3
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, wherein the anomaly detector computes the Mahalanobis distance of each telemetry update relative to the ensemble prediction distribution and triggers an alert when the distance exceeds a chi-squared threshold corresponding to a 99.7% confidence interval.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "权利要求"
+      ],
+      "claim_num": 4
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, further comprising a pre-mission risk assessment module that runs Monte Carlo simulations of the planned mission using historical oceanographic data to identify high-risk mission segments.",
+      "page_num": 0,
+      "section_path": [
+        "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+        "权利要求"
+      ],
+      "claim_num": 5
+    }
+  ]
+}

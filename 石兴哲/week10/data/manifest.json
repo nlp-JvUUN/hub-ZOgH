@@ -1,0 +1,265 @@
+[
+  {
+    "patent_id": "US11592299B2",
+    "title": "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+    "assignee": "Woods Hole Oceanographic Institution",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2023-06-15",
+    "inventors": [
+      "James C. Kinsey",
+      "Dana R. Yoerger",
+      "Michael V. Jakuba"
+    ],
+    "filename": "US11592299B2.json"
+  },
+  {
+    "patent_id": "CN114859362A",
+    "title": "面向深海AUV的声学-光学融合SLAM系统及方法",
+    "assignee": "中国科学院沈阳自动化研究所",
+    "patent_office": "CNIPA (中国)",
+    "publication_date": "2022-07-15",
+    "inventors": [
+      "王晓辉",
+      "李一平",
+      "张奇峰"
+    ],
+    "filename": "CN114859362A.json"
+  },
+  {
+    "patent_id": "US11824567B2",
+    "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+    "assignee": "Teledyne Benthos",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2023-11-08",
+    "inventors": [
+      "Milica Stojanovic",
+      "Lee Freitag",
+      "Pierre-Philippe Beaujean"
+    ],
+    "filename": "US11824567B2.json"
+  },
+  {
+    "patent_id": "WO2023187451A1",
+    "title": "Hybrid Acoustic-Optical Underwater Wireless Communication System with Automatic Medium Switching",
+    "assignee": "Kongsberg Maritime AS",
+    "patent_office": "WIPO (PCT)",
+    "publication_date": "2023-10-05",
+    "inventors": [
+      "Arne Rødsjø",
+      "Øyvind Løvhaugen"
+    ],
+    "filename": "WO2023187451A1.json"
+  },
+  {
+    "patent_id": "US11708199B2",
+    "title": "Magnetic Coupling Vector Thrust Propulsion Unit for Underwater Vehicles",
+    "assignee": "Blue Robotics Inc.",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2023-07-25",
+    "inventors": [
+      "Rustom Jehangir",
+      "Jacob H. Miller"
+    ],
+    "filename": "US11708199B2.json"
+  },
+  {
+    "patent_id": "US10974803B2",
+    "title": "Biomimetic Undulating Fin Propulsion System for Underwater Robots",
+    "assignee": "Massachusetts Institute of Technology",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2021-03-15",
+    "inventors": [
+      "Michael S. Triantafyllou",
+      "John J. Leonard"
+    ],
+    "filename": "US10974803B2.json"
+  },
+  {
+    "patent_id": "US11688078B2",
+    "title": "Deep Learning-Based Underwater Image Enhancement Using Physics-Informed Neural Networks",
+    "assignee": "SZ DJI Technology Co., Ltd.",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2023-06-20",
+    "inventors": [
+      "Liu Weifeng",
+      "Zhang Zhiwei",
+      "Chen Yu"
+    ],
+    "filename": "US11688078B2.json"
+  },
+  {
+    "patent_id": "CN112509034A",
+    "title": "基于生成对抗网络的水下图像颜色校正与去模糊联合方法",
+    "assignee": "哈尔滨工程大学",
+    "patent_office": "CNIPA (中国)",
+    "publication_date": "2021-03-16",
+    "inventors": [
+      "张伟",
+      "李明",
+      "王强"
+    ],
+    "filename": "CN112509034A.json"
+  },
+  {
+    "patent_id": "US11407115B2",
+    "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+    "assignee": "Oceaneering International Inc.",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2022-08-09",
+    "inventors": [
+      "Matthew A. Greytak",
+      "Franz Hover"
+    ],
+    "filename": "US11407115B2.json"
+  },
+  {
+    "patent_id": "US11930085B2",
+    "title": "Resonant Inductive Underwater Wireless Power Transfer System with Automatic Impedance Matching for AUV Docking",
+    "assignee": "Kongsberg Maritime AS",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2024-02-14",
+    "inventors": [
+      "Torgeir Wahl",
+      "Stig A. Viken"
+    ],
+    "filename": "US11930085B2.json"
+  },
+  {
+    "patent_id": "CN115857028A",
+    "title": "小型化多波束合成孔径声纳及其在AUV上的集成方法",
+    "assignee": "中国科学院声学研究所",
+    "patent_office": "CNIPA (中国)",
+    "publication_date": "2023-03-28",
+    "inventors": [
+      "刘波",
+      "孙超",
+      "张仁和"
+    ],
+    "filename": "CN115857028A.json"
+  },
+  {
+    "patent_id": "CN114442634A",
+    "title": "基于深度强化学习的AUV三维路径规划方法",
+    "assignee": "西北工业大学航海学院",
+    "patent_office": "CNIPA (中国)",
+    "publication_date": "2022-05-06",
+    "inventors": [
+      "潘光",
+      "宋保维",
+      "黄桥高"
+    ],
+    "filename": "CN114442634A.json"
+  },
+  {
+    "patent_id": "US11124288B2",
+    "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+    "assignee": "General Dynamics Mission Systems",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2021-09-14",
+    "inventors": [
+      "Thomas C. Henderson",
+      "Ryan N. Smith"
+    ],
+    "filename": "US11124288B2.json"
+  },
+  {
+    "patent_id": "CN113608537A",
+    "title": "深海着陆器自主姿态调节与坐底防陷控制系统",
+    "assignee": "中国科学院深海科学与工程研究所",
+    "patent_office": "CNIPA (中国)",
+    "publication_date": "2021-11-05",
+    "inventors": [
+      "彭晓彤",
+      "杜梦然"
+    ],
+    "filename": "CN113608537A.json"
+  },
+  {
+    "patent_id": "US11292562B2",
+    "title": "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+    "assignee": "Woods Hole Oceanographic Institution",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2022-04-05",
+    "inventors": [
+      "Andrew D. Bowen",
+      "Louis L. Whitcomb"
+    ],
+    "filename": "US11292562B2.json"
+  },
+  {
+    "patent_id": "CN115685185A",
+    "title": "水下结构物缺陷检测的多传感器融合系统及方法",
+    "assignee": "中海油研究总院有限责任公司",
+    "patent_office": "CNIPA (中国)",
+    "publication_date": "2023-02-03",
+    "inventors": [
+      "陈荣旗",
+      "朱耀辉",
+      "刘书杰"
+    ],
+    "filename": "CN115685185A.json"
+  },
+  {
+    "patent_id": "WO2024089537A1",
+    "title": "Soft Robotic Gripper for Deep-Sea Biological Sample Collection with Variable Stiffness Jamming Mechanism",
+    "assignee": "Japan Agency for Marine-Earth Science and Technology (JAMSTEC)",
+    "patent_office": "WIPO (PCT)",
+    "publication_date": "2024-05-10",
+    "inventors": [
+      "Ken Takagi",
+      "Toshihiro Maki",
+      "Tamaki Ura"
+    ],
+    "filename": "WO2024089537A1.json"
+  },
+  {
+    "patent_id": "WO2022151470A1",
+    "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+    "assignee": "SZ DJI Technology Co., Ltd.",
+    "patent_office": "WIPO (PCT)",
+    "publication_date": "2022-07-21",
+    "inventors": [
+      "Wang Tao",
+      "Li Wei",
+      "Zhang Hao"
+    ],
+    "filename": "WO2022151470A1.json"
+  },
+  {
+    "patent_id": "US11352113B2",
+    "title": "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+    "assignee": "Teledyne RESON A/S",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2022-06-07",
+    "inventors": [
+      "David A. Mann",
+      "Peter H. Dahl"
+    ],
+    "filename": "US11352113B2.json"
+  },
+  {
+    "patent_id": "CN115057463A",
+    "title": "水下连接器湿插拔光电复合密封结构及其可靠性测试方法",
+    "assignee": "中航光电科技股份有限公司",
+    "patent_office": "CNIPA (中国)",
+    "publication_date": "2022-09-16",
+    "inventors": [
+      "郭涛",
+      "张晓明"
+    ],
+    "filename": "CN115057463A.json"
+  },
+  {
+    "patent_id": "WO2024100623A1",
+    "title": "Digital Twin Framework for Autonomous Underwater Vehicle Mission Planning and Real-Time Anomaly Detection",
+    "assignee": "Norwegian University of Science and Technology (NTNU)",
+    "patent_office": "WIPO (PCT)",
+    "publication_date": "2024-05-16",
+    "inventors": [
+      "Martin Ludvigsen",
+      "Asgeir J. Sørensen",
+      "Thor I. Fossen"
+    ],
+    "filename": "WO2024100623A1.json"
+  }
+]

@@ -1,0 +1,188 @@
+{
+  "version": "1.0",
+  "description": "船舶术语 RAG 系统标准评测题集（20题）",
+  "note": "ground_truth 基于训练资料整理",
+  "questions": [
+
+    {
+      "id": 1,
+      "type": "simple_fact",
+      "difficulty": 1,
+      "question": "Cathodic Protection 对应的中文术语是什么？",
+      "target_docs": ["术语类120个随机问题评分"],
+      "ground_truth": "Cathodic Protection 对应'阴极防护'。"
+    },
+
+    {
+      "id": 2,
+      "type": "simple_fact",
+      "difficulty": 1,
+      "question": "Bulkhead Deck 的定义是什么？",
+      "target_docs": ["术语类120个随机问题评分"],
+      "ground_truth": "Bulkhead Deck 指承载横向水密舱壁和船壳的最上面连续甲板。"
+    },
+
+    {
+      "id": 3,
+      "type": "simple_fact",
+      "difficulty": 1,
+      "question": "船舶建造过程中，焊接工作量占船体建造总工程量的比例是多少？",
+      "target_docs": ["问答对"],
+      "ground_truth": "30%到40%。"
+    },
+
+    {
+      "id": 4,
+      "type": "simple_fact",
+      "difficulty": 1,
+      "question": "船用金属材料的抗拉强度、屈服强度、伸长率以及断面收缩率应通过哪种材料性能试验测定？",
+      "target_docs": ["问答对"],
+      "ground_truth": "拉伸试验。"
+    },
+
+    {
+      "id": 5,
+      "type": "simple_fact",
+      "difficulty": 1,
+      "question": "国际载重线公约不适用于哪些从事国际航行的船舶类型？",
+      "target_docs": ["问答对"],
+      "ground_truth": "军舰；长度小于24米（79英尺）的新船；小于150总吨的现有船舶；非营业游艇；渔船。"
+    },
+
+    {
+      "id": 6,
+      "type": "precise_number",
+      "difficulty": 2,
+      "question": "半自动CO2气体保护焊单面焊在风速达到多少时应采取防风措施？",
+      "target_docs": ["问答对"],
+      "ground_truth": "2米/秒。"
+    },
+
+    {
+      "id": 7,
+      "type": "precise_number",
+      "difficulty": 2,
+      "question": "船体焊缝布置要求中，对接焊缝之间的平行距离应不小于多少毫米？",
+      "target_docs": ["问答对"],
+      "ground_truth": "100mm。"
+    },
+
+    {
+      "id": 8,
+      "type": "precise_number",
+      "difficulty": 2,
+      "question": "低氢碱性焊条打开密封容器后，应存放于不低于多少摄氏度的烘箱中贮存？",
+      "target_docs": ["问答对"],
+      "ground_truth": "120℃。"
+    },
+
+    {
+      "id": 9,
+      "type": "precise_number",
+      "difficulty": 2,
+      "question": "对于规定最小屈服强度为420 N/mm²至690 N/mm²的焊接结构用高强度钢，焊接完成后多少小时内不得进行无损检测？",
+      "target_docs": ["问答对"],
+      "ground_truth": "48小时内。"
+    },
+
+    {
+      "id": 10,
+      "type": "precise_number",
+      "difficulty": 2,
+      "question": "载重线标志中的圆圈外径是多少毫米？",
+      "target_docs": ["问答对"],
+      "ground_truth": "300 mm。"
+    },
+
+    {
+      "id": 11,
+      "type": "cross_doc_compare",
+      "difficulty": 3,
+      "question": "请区分'艏向'和'航迹角'的定义差异。",
+      "target_docs": ["术语类120个随机问题评分"],
+      "ground_truth": "艏向（heading）是船舶或船模的艏艉线在水平面上的投影朝向船首的方向；航迹角（track angle）是船舶在水平面内运动时，其重心的瞬时速度矢量与基准方向之间的水平夹角。"
+    },
+
+    {
+      "id": 12,
+      "type": "cross_doc_compare",
+      "difficulty": 3,
+      "question": "'排泄口（Discharges）'与'深舱（Deep Tank）'有什么区别？",
+      "target_docs": ["术语类120个随机问题评分"],
+      "ground_truth": "'排泄口（Discharges）'是穿过船侧的管道系统，用于输送舭部污水、循环污水、排水等；'深舱（Deep Tank）'是从船底或内船底向上延伸至或高于最低层甲板的液舱。"
+    },
+
+    {
+      "id": 13,
+      "type": "cross_doc_compare",
+      "difficulty": 3,
+      "question": "请区分'航向自动稳定性'和'航向控制稳定性'。",
+      "target_docs": ["术语类120个随机问题评分"],
+      "ground_truth": "'航向自动稳定性'是指船舶作直线航行时，受到风浪流等外界小扰动作用而偏离航向，当此扰动力去除后，船舶能够自动回到原来的航向的性能；'航向控制稳定性'是指船舶作直线航行时，受到风浪流等外界小扰动作用而偏离航向，当此扰动力去除后，船舶通过不断操舵或自动驾驶能够保持航向的性能。"
+    },
+
+    {
+      "id": 14,
+      "type": "cross_doc_compare",
+      "difficulty": 3,
+      "question": "比较'海水长尺腐蚀试验'与'海水干湿交替腐蚀试验'的区别。",
+      "target_docs": ["术语类120个随机问题评分"],
+      "ground_truth": "'海水长尺腐蚀试验'是利用长串电连接材料及构件组成的长尺试验样品，研究多区带海洋环境对其整体腐蚀行为影响的试验方法；'海水干湿交替腐蚀试验'是材料在海水干湿交替环境下暴露一定时间，以检测其耐蚀性能的试验。"
+    },
+
+    {
+      "id": 15,
+      "type": "time_trend",
+      "difficulty": 3,
+      "question": "MARPOL公约中，油类记录簿第I部分和第II部分分别适用于哪些船舶，保存时间分别是多长？",
+      "target_docs": ["问答对"],
+      "ground_truth": "油类记录簿第I部分适用于任何150总吨及以上的油轮和400总吨及以上的其他船舶，记录有关机舱的作业，保存3年；第II部分适用于150总吨及以上的油轮，记录货油和压载作业，保存3年。"
+    },
+
+    {
+      "id": 16,
+      "type": "time_trend",
+      "difficulty": 3,
+      "question": "根据MARPOL Annex IV，未经处理生活污水集污舱容量确定时，当航行时间超过24小时，应按每人每昼夜多少升计算？",
+      "target_docs": ["问答对"],
+      "ground_truth": "70L。"
+    },
+
+    {
+      "id": 17,
+      "type": "time_trend",
+      "difficulty": 3,
+      "question": "MARPOL Annex VI规定，船上使用燃油的硫含量在特殊区域不得超过多少？",
+      "target_docs": ["问答对"],
+      "ground_truth": "0.1%。"
+    },
+
+    {
+      "id": 18,
+      "type": "should_refuse",
+      "difficulty": 1,
+      "question": "目前贵州茅台的股价是多少？",
+      "target_docs": [],
+      "ground_truth": "此题应拒绝回答。术语知识库不包含股价信息。"
+    },
+
+    {
+      "id": 19,
+      "type": "should_refuse",
+      "difficulty": 1,
+      "question": "请告诉我今天上海的天气怎么样？",
+      "target_docs": [],
+      "ground_truth": "此题应拒绝回答。术语知识库不包含天气信息。"
+    },
+
+    {
+      "id": 20,
+      "type": "should_refuse",
+      "difficulty": 2,
+      "question": "船舶检验行业未来的发展趋势是什么？",
+      "target_docs": [],
+      "ground_truth": "此题应拒绝回答或仅基于已有资料回答。术语知识库不包含未来预测信息。"
+    }
+
+  ]
+}

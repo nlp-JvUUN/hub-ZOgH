@@ -1,0 +1,55 @@
+一、整体改造说明
+原项目仅支持PDF 年报解析，改造目标：
+兼容多格式文件：PDF、Word (.docx)、Markdown (.md)、纯文本 (.txt)
+统一输出结构化 blocks 数据结构，和原 PDF 解析输出完全兼容，下游分块 / 建索引 / RAG 无需改动
+新增文件类型自动识别分发解析器，保留原有 PDF 全部能力（表格、标题、OCR、章节）
+新增依赖：python-docx 解析 Word，统一入口 parse_file.py 替代原 parse_pdf.py
+修改 download_reports.py、parse_pdf.py、新增通用解析入口、调整主流程调用逻辑
+改造范围清单
+废弃原 parse_pdf.py，新建通用解析文件 parse_file.py（支持多文件）
+修改 chunk_documents.py：读取任意解析文件，兼容新解析输出
+修改 download_reports.py：仅下载 PDF 不变，新增注释区分下载 / 通用解析
+其余文件（build_index、rag_pipeline、serve）完全无需改动，底层数据结构无变化
+二、修改前后对比
+1. parse_pdf.py → 废弃，替换为 parse_file.py
+表格
+原 parse_pdf.py	新 parse_file.py（通用文件解析）
+仅处理 PDF	支持 .pdf/.docx/.md/.txt
+仅 pdfplumber+pymupdf	新增 python-docx 解析 Word，原生读取 md/txt
+仅年报 PDF 专用章节识别	通用标题识别，保留 PDF 表格 / OCR 能力
+输出固定年报 meta	通用文件 meta：文件名、后缀、来源路径、创建时间
+只能读取 raw_pdf 目录	支持自定义文件目录，自动遍历所有可解析文件
+2. chunk_documents.py 修改点
+读取解析目录不再限定 PDF 导出 json，兼容所有文件解析产出 json
+元信息兼容通用文件字段，缺失 stock_code/year 自动填充unknown不报错
+日志区分文件类型，统计 txt/docx/pdf 块数量
+3. download_reports.py 无逻辑改动，仅加注释说明：仅下载 PDF，通用解析用 parse_file.py
+三、所有修改后完整代码文件
+文件 1：新建 parse_file.py（通用多文件解析，替代原 parse_pdf.py）
+文件 2：修改后 chunk_documents.py（适配通用解析文件）
+文件 3：修改后 download_reports.py（仅注释 + 目录名适配，逻辑不变）
+文件 4：其余文件无修改（直接沿用原代码）
+build_index.py 完全不变
+rag_pipeline.py 完全不变
+serve.py 完全不变
+四、目录结构变更
+原目录：
+data/
+├─ raw_pdf/    # 仅存放PDF
+├─ parsed/
+└─ chunks/
+新目录：
+data/
+├─ raw_files/  # 存放所有文件：pdf/docx/md/txt
+├─ parsed/
+└─ chunks/
+五、运行流程更新
+下载年报 PDF（可选）：python download_reports.py，文件自动存入 data/raw_files
+放入自定义文件：将 docx/txt/md/pdf 直接丢入 data/raw_files
+通用解析：python parse_file.py → 输出结构化 json 到 data/parsed
+分块：python chunk_documents.py → 生成统一 chunks
+构建向量库：python build_index.py
+问答 / 服务：python rag_pipeline.py / uvicorn serve:app --port 8000
+六、新增依赖安装命令
+pip install faiss-cpu openai numpy pdfplumber pymupdf pytesseract pillow python-docx rank_bm25 jieba sentence-transformers fastapi uvicorn
+Windows 额外安装：tesseract-ocr（用于 PDF 扫描件 OCR）

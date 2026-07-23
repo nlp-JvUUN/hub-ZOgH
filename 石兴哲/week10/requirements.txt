@@ -1,0 +1,24 @@
+# 专利文本解析
+requests>=2.31.0
+
+# 向量检索
+faiss-cpu>=1.7.4
+
+# 关键词检索
+rank_bm25>=0.2.2
+jieba>=0.42.1
+
+# LLM 接口（兼容阿里云 DashScope）
+openai>=1.30.0
+
+# Embedding + 可选 Reranker
+sentence-transformers>=2.6.0
+
+# HTTP 服务
+fastapi>=0.110.0
+uvicorn>=0.29.0
+
+# 工具
+numpy>=1.24.0
+tqdm>=4.66.0
+pandas>=2.0.0

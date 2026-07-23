@@ -1,0 +1,919 @@
+[
+  {
+    "content": "报告提供的任何内容（包括但不限于数据、文字、图表、图像等）均\n系头豹研究院独有的高度机密性文件（在报告中另行标明出处者除外\n）。未经头豹研究院事先书面许可，任何人不得以任何方式擅自复制\n、再造、传播、出版、引用、改编、汇编本报告内容，若有违反上述\n约定的行为发生，头豹研究院保留采取法律措施，追究相关人员责任\n的权利。头豹研究院开展的所有商业活动均使用“头豹研究院”或“头豹\n”的商号、商标，头豹研究院无任何前述名称之外的其他分支机构，\n也未授权或聘用其他任何第三方代表头豹研究院开展商业活动。",
+    "metadata": {
+      "page_num": 1,
+      "section": "",
+      "block_types": [
+        "text"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00000"
+  },
+  {
+    "content": "| 01：音乐大模型核心架构及发展现状如何？ |\n| --- |\n| ➢ 音乐大模型核心技术架构采用“三层架构”模式，即数据层、模 型层、应用层。2025年以来，音乐大模型技术主要实现以下 突破：一是模型稳定性显著增强，AI音乐作品达商用发布标准； 二是上线参考生成能力，升级为可复用、可迭代的专业创作系 统；三是打造出即时响应的演奏级应用新模式。 |",
+    "metadata": {
+      "page_num": 2,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 概览标签：音乐大模型、多模态融合生成、Suno、Mureka",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00001"
+  },
+  {
+    "content": "| 02：主流音乐大模型有哪些？各模型有什么优势？ |\n| --- |\n| ➢ 目前，主流音乐大模型包括：以Suno、Udio、Stability Audio 为代表的海外厂商；以昆仑万维、MiniMax、趣玩科技等为代 表的中国厂商。从生成能力看，Suno和Stability Audio功能相 对全面；Udio音质质感顶尖；Mureka在分轨导出方面表现突 出；天谱乐风格覆盖广、MV生成链路较成熟；MiniMax Music 对多元歌曲结构变体支持度高。从商业化现状看，针对个人用 户，除MiniMax Music外，其它模型均采用订阅制，价格集中 在$10-30/月，针对企业/专业开发者，国产模型提供标准化 API服务，海外仅有Stability Audio提供定制模型服务，Suno等 尚未推出官方API接口。 |",
+    "metadata": {
+      "page_num": 2,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 概览标签：音乐大模型、多模态融合生成、Suno、Mureka",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00002"
+  },
+  {
+    "content": "| 03：音乐大模型核心应用场景有哪些？市场规模有多大？ |\n| --- |\n| ➢ 目前，C端用户主要借助模型生成短视频BGM、产出参考旋律、 制作广告Demo、创作活动主题歌/知识记忆歌等。在B端，音 乐大模型主要应用于：（1）为AI音乐、AI MV等AI创作平台提 供各类功能；（2）为影视制作公司快速生成符合剧情氛围的 音乐；（3）为游戏开发企业生成背景音乐或特效音乐。 ➢ 2025年，全球音乐大模型市场规模约30.8亿元，预计到2030 年，随着B、C端持续渗透，该市场有望增至171.4亿元， 2025-2030年CAGR达40.9%。 |",
+    "metadata": {
+      "page_num": 2,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 概览标签：音乐大模型、多模态融合生成、Suno、Mureka",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00003"
+  },
+  {
+    "content": "01：音乐大模型核心架构及发展现状如何？\n\n➢音乐大模型核心技术架构采用“三层架构”模式，即数据层、模\n型层、应用层。2025年以来，音乐大模型技术主要实现以下\n突破：一是模型稳定性显著增强，AI音乐作品达商用发布标准；\n二是上线参考生成能力，升级为可复用、可迭代的专业创作系\n统；三是打造出即时响应的演奏级应用新模式。",
+    "metadata": {
+      "page_num": 2,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 01：音乐大模型核心架构及发展现状如何？",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00004"
+  },
+  {
+    "content": "02：主流音乐大模型有哪些？各模型有什么优势？\n\n➢目前，主流音乐大模型包括：以Suno、Udio、Stability Audio\n为代表的海外厂商；以昆仑万维、MiniMax、趣玩科技等为代\n表的中国厂商。从生成能力看，Suno和Stability Audio功能相\n对全面；Udio音质质感顶尖；Mureka在分轨导出方面表现突\n出；天谱乐风格覆盖广、MV生成链路较成熟；MiniMax Music\n对多元歌曲结构变体支持度高。从商业化现状看，针对个人用\n户，除MiniMax Music外，其它模型均采用订阅制，价格集中\n在$10-30/月，针对企业/专业开发者，国产模型提供标准化\nAPI服务，海外仅有Stability Audio提供定制模型服务，Suno等\n尚未推出官方API接口。",
+    "metadata": {
+      "page_num": 2,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 02：主流音乐大模型有哪些？各模型有什么优势？",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00005"
+  },
+  {
+    "content": "03：音乐大模型核心应用场景有哪些？市场规模有多大？\n\n➢目前，C端用户主要借助模型生成短视频BGM、产出参考旋律、\n制作广告Demo、创作活动主题歌/知识记忆歌等。在B端，音\n乐大模型主要应用于：（1）为AI音乐、AI MV等AI创作平台提\n供各类功能；（2）为影视制作公司快速生成符合剧情氛围的\n音乐；（3）为游戏开发企业生成背景音乐或特效音乐。\n➢2025年，全球音乐大模型市场规模约30.8亿元，预计到2030\n年，随着B、C端持续渗透，该市场有望增至171.4亿元，\n2025-2030年CAGR达40.9%。",
+    "metadata": {
+      "page_num": 2,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 03：音乐大模型核心应用场景有哪些？市场规模有多大？",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00006"
+  },
+  {
+    "content": "◆海内外主流音乐大模型及其对比\n\n----------------------------------------\n音乐大模型市场参与者\n海外主流音乐大模型\n中国主流音乐大模型\n海内外主流音乐大模型对比",
+    "metadata": {
+      "page_num": 3,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > ◆海内外主流音乐大模型及其对比",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00007"
+  },
+  {
+    "content": "|  | Chapter 1 音乐大模型行业 发展概述 |  |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 4,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > CONTENTS",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00008"
+  },
+  {
+    "content": "| 数 据 层 | 01 数据采集 02 数据预处理 03 数据增强 主要包括：①音频数据：涵盖不同曲风/语种/年代的歌曲/ 核心任务：①音频降噪：通过信号处理技术去除音频中环境 为解决数据集规模不足、多样性不够问题，采用数据增强技 纯音乐/音效等，是模型核心训练数据；②文本数据：歌词/ /设备噪声；②格式标准化：将不同格式音频数据转换为统 术，对原始数据进行变换，生成更多训练数据，提升模型的 音乐描述/曲风标签/情感标签等，用于实现音频与文本对齐； 一格式，统一采样率和声道数；③特征提取：将音频数据转 泛化能力。常用方法包括：音频变速、音调调整、时域翻转、 ③乐谱数据：用于模型理解音乐旋律/和声结构；④跨模态 换为模型可识别的特征表示；④数据清洗：剔除低质量、重 频谱增强等，部分模型采用“跨模态数据增强”技术，通过文 辅助数据：图像/视频等，用于多模态音乐生成与个性推荐。 复、违规数据，确保数据集纯度与合规性。 本生成音频、音频生成乐谱等方式，进一步扩大数据集规模。 |\n| --- | --- |",
+    "metadata": {
+      "page_num": 5,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 发展概述",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00009"
+  },
+  {
+    "content": "| 模 型 层 | 关键技术1：自监督学习与预训练策略 关键技术2：思维链推理与可控性生成 关键技术3：音频合成与音质优化 • Transformer架构凭借强大的长序列建模能力与并行计算 自监督学习是音乐大模型训练核心技 思维链技术的引入提升音乐生成的结 音频合成负责将模型生成的音乐特征 效率，成为音乐大模型核心架构。当前，主流音乐大模 术，核心是利用数据自身内在结构与 构完整性与可控性，核心原理为：通 转换为可聆听的音频信号，其性能直 型采用“多模态融合Transformer架构”，实现音频、文本、 规律，构建监督信号，让模型自主学 过“生成——批判——优化”循环机制， 接决定音乐生成的音质与自然度，当 乐谱等不同模态对齐与融合，核心原理为：通过不同模 习通用音乐特征。常见的预训练策略 逐步完善音乐作品；可控性生成核心 前主要包括基于波形合成与基于频谱 态编码器，将不同模态的数据转换为统一的特征向量， 包括单模态预训练与多模态预训练， 目标是让用户精准控制音乐生成结果， 合成；音质优化是提升用户体验的保 再通过跨模态注意力机制，实现不同模态特征的交互融 常见自监督学习任务包括音频掩码重 满足个性化需求，包括文本驱动控制、 障，主要包括提升采样率与比特深度、 合，使模型能够理解不同模态之间的关联。 建、文本音频匹配、旋律预测等。 参数调节控制、交互编辑控制等。 优化发音准确率、降低生成延迟等。 |\n| --- | --- |",
+    "metadata": {
+      "page_num": 5,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 发展概述",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00010"
+  },
+  {
+    "content": "| 应 用 层 | 音乐理解类任务 音乐生成类任务 音乐编辑类任务 音乐交互类任务 核心是让模型“听懂”音乐，包括曲风识 核心是让模型“创作”音乐，包括旋律生 核心是让模型“优化”音乐，包括音乐旋 核心是实现人与音乐的智能化交互， 别、情感分析、歌词识别、乐谱识别、 成、编曲生成、歌词生成、完整歌曲 律修改、和声调整、混音优化、风格 包括个性化推荐、实时伴奏、人声合 音频分离等，主要用于音乐检索、版 生成、多模态音乐生成，主要用于专 转换等，主要用于专业音乐创作、大 成、音乐问答等，主要用于音乐APP、 权监测、音频编辑等场景。 业创作辅助、广告/游戏配乐等场景。 众音乐编辑等场景。 智能音箱、在线K歌等场景。 |\n| --- | --- |",
+    "metadata": {
+      "page_num": 5,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 发展概述",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00011"
+  },
+  {
+    "content": "频谱增强等，部分模型采用“跨模态数据增强”技术，通过文\n\n本生成音频、音频生成乐谱等方式，进一步扩大数据集规模。\nTransformer架构凭借强大的长序列建模能力与并行计算\n效率，成为音乐大模型核心架构。当前，主流音乐大模",
+    "metadata": {
+      "page_num": 5,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 频谱增强等，部分模型采用“跨模态数据增强”技术，通过文",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00012"
+  },
+  {
+    "content": "供企业内容创作者使用的端到端AI作曲平台——\n\nAmper ScoreTM，客户可将Amper的API与企业\n自身创作平台、发行平台及其它音乐创作软件结\n合（期间QQ音乐与Amper达成API合作）。",
+    "metadata": {
+      "page_num": 7,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 供企业内容创作者使用的端到端AI作曲平台——",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00013"
+  },
+  {
+    "content": "❑可发布标准→一键MV生成分发：SunoMV原生支持Suno链接转为AI MV，整\n\n个流程从粘贴链接到导出成品，通常不超5min；Tunee智能体支持“智能解读\n需求→用户选择方案→MV生成→一键分享”全流程。",
+    "metadata": {
+      "page_num": 8,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > ❑可发布标准→一键MV生成分发：SunoMV原生支持Suno链接转为AI MV，整",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00014"
+  },
+  {
+    "content": "创作从“基础生成”→“可发布标准”→“一键MV生成分发”\n\n①音质质感显著改善（录音棚级音质），拼接感、噪声与不稳定片段减少，支持自动调整混\n音等，使得输出内容更易进入后期制作与发布流程\n②作品结构完整性明显提升，支持多种歌曲结构变体和段落式风格设定，主歌——副歌——\n桥段的段落组织更自然，段落对比与情绪推进更具可预期性\n③提示词遵循率持续提升，对情绪、配器、跨流派等指令的响应更稳定，实现更强的提示词\n遵循能力与更丰富的表达能力",
+    "metadata": {
+      "page_num": 8,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 创作从“基础生成”→“可发布标准”→“一键MV生成分发”",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00015"
+  },
+  {
+    "content": "种创作模式深度融合。通过音频参照、时间线编辑、版本管理等，创作者\n\n可精准定义音乐风格与整体结构，推动AI音创作从单次灵感输出，转向工\n程化、可迭代的生产模式。例如：Suno推出Personas、Covers、Extend等\n工具，强化全流程可控创作链路；Udio新增Styles、Sessions、Voice功能，",
+    "metadata": {
+      "page_num": 8,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 种创作模式深度融合。通过音频参照、时间线编辑、版本管理等，创作者",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00016"
+  },
+  {
+    "content": "❑与版权拥有方合作推出全新授权平台：Suno与华纳音乐达成合作\n\n协议，推出全新授权AI模型，使用经过正式授权的音乐数据进行\n训练，所有用户统一迁移至授权体系；Udio与环球音乐达成合作\n推出全新授权平台，环球音乐将提供部分曲库数据用于模型训练，\n并共享未来商业化收益。",
+    "metadata": {
+      "page_num": 9,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > ❑与版权拥有方合作推出全新授权平台：Suno与华纳音乐达成合作",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00017"
+  },
+  {
+    "content": "|  | Chapter 2 海内外主流音乐 大模型及其对比 |  |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 10,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 内容版权归属明确",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00018"
+  },
+  {
+    "content": "| 海 外 厂 商 |  |\n| --- | --- |",
+    "metadata": {
+      "page_num": 11,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 大模型及其对比",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00019"
+  },
+  {
+    "content": "| 中 国 厂 商 | 大模型厂商 | 垂类厂商 |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 11,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 大模型及其对比",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00020"
+  },
+  {
+    "content": "| 版本 | 定价 | 权益 |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 13,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 商业化方向深化，整体呈现从基",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00021"
+  },
+  {
+    "content": "| Udio新版本 | 定价 | 权益 |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 14,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 达78%，约25%的订阅用户在30天后仍保持活跃。",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00022"
+  },
+  {
+    "content": "每月6,000积分（不累积），最多同时生成10首歌曲，其它权益通标准版\n\n❑2024年6月，Udio和Suno遭环球音乐、索尼音乐、华纳音乐三大唱片公司联合起诉，被指控其AI系统在未\n经授权的情况下，使用受版权保护的音乐作品进行训练，导致生成的歌曲与原创作品高度相似。2025年10",
+    "metadata": {
+      "page_num": 14,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 每月6,000积分（不累积），最多同时生成10首歌曲，其它权益通标准版",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00023"
+  },
+  {
+    "content": "| 服务 | 定价 | 权益 |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 15,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 音乐，这种模式满足用户个性化音乐需求的同时，又保护音乐艺术家的权益。",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00024"
+  },
+  {
+    "content": "曲、音效及乐器采样完成训练；2024年4月，Stability Audio 2.0推出，可商用、支\n\n持44.1kHz无损音质、最长3min完整曲目创作；2024年6月，Stability.ai开源文生音",
+    "metadata": {
+      "page_num": 15,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 曲、音效及乐器采样完成训练；2024年4月，Stability Audio 2.0推出，可商用、支",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00025"
+  },
+  {
+    "content": "| 会员服务 | 定价 | 权益 |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 17,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > • Remix（内测）：在",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00026"
+  },
+  {
+    "content": "| API服务内容：【1】音乐生成：歌曲/背景音乐/配乐/歌词/单轨生成、音色克隆、分 轨音频、歌曲续写、局部编辑、音乐理解（每项功能单价不同）；【2】模型微调 （自定义模型）：用户只需提供200首具有一致特征的曲目，API即可为其微调专属 模型，此后生成所有歌曲均遵循该风格，适合拥有大型歌曲数据集、并需要批量生 成相似风格音乐的企业；【3】内容服务：对于音乐内容有需求，但不想投入开发资 源接入API的客户提供成品音乐内容。 |  |\n| --- | --- |\n| Studio API定价 | 权益 |",
+    "metadata": {
+      "page_num": 17,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > • Remix（内测）：在",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00027"
+  },
+  {
+    "content": "权益\n\n入门版（￥200）\n12个月有效；1个并发；每个账户仅限购买一次\n基础版（￥10,000）\n12个月有效；5个并发\n标准版（￥30,000）\n12个月有效；15个并发\n商业版（￥50,000）\n12个月有效；25个并发",
+    "metadata": {
+      "page_num": 17,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 权益",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00028"
+  },
+  {
+    "content": "❑在商业化方面，针对个人用户，Mureka采用会员订阅制，分为基础会员和尊享\n\n会员，月费分别为￥88和￥168，年费分别为￥398和￥598。自Mureka O1和V6\n发布，截至2025年11月，平台新增注册用户近700万，用户遍布全球超100个国",
+    "metadata": {
+      "page_num": 17,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > ❑在商业化方面，针对个人用户，Mureka采用会员订阅制，分为基础会员和尊享",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00029"
+  },
+  {
+    "content": "全球超8,000家客户，是全球率先推出官方AI音乐API开放服务的平台服务商。\n\n未来，Mureka坚持ToB和ToC并行策略，ToC的APP可能采用类似短剧的免费广\n告模式，以吸引海量用户，计划在3-5年内，海外月活达3-5亿。\n来源：公司官网、头豹研究院",
+    "metadata": {
+      "page_num": 17,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 全球超8,000家客户，是全球率先推出官方AI音乐API开放服务的平台服务商。",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00030"
+  },
+  {
+    "content": "| 2025年9月，AI音乐智能体Tunee上线：从需求理解到一键生成MV，对话式创作全流程 |\n| --- |\n| 创作流程（创作→制作→分发全链路闭环）：用户通过自然语言提出创作需求→Tunee智能解读需求，快速生成多套不 同风格、旋律的创作方案→用户选择对应方案或持续对话调整方案→Tunee一键生成MV，画面与音乐节奏自动匹配→生 成作品可直接发布至抖音、TikTok等短视频平台。例如：用户可直接输入“创作一首适配XX场景的XX风格歌曲”。 Tunee MV Agent主要功能：（1）对话式创作：用自然语言描述画面，直接驱动MV生成，减少复杂参数设置；（2）音 乐理解：上传音乐后，系统智能分析节奏、情绪和关键时刻，辅助生成创作方向；（3）@角色上镜：在对话框中@指 定角色，最多支持5个角色同时参与，精准控制角色在镜头中的位置；（4）分镜级调整：支持调整剧本、分镜和单个镜 头；（5）画布直接编辑：在画布中预览、修改和替换素材。 |",
+    "metadata": {
+      "page_num": 18,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 全球超8,000家客户，是全球率先推出官方AI音乐API开放服务的平台服务商。",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00031"
+  },
+  {
+    "content": "2025年9月，AI音乐智能体Tunee上线：从需求理解到一键生成MV，对话式创作全流程\n\n创作流程（创作→制作→分发全链路闭环）：用户通过自然语言提出创作需求→Tunee智能解读需求，快速生成多套不\n同风格、旋律的创作方案→用户选择对应方案或持续对话调整方案→Tunee一键生成MV，画面与音乐节奏自动匹配→生\n成作品可直接发布至抖音、TikTok等短视频平台。例如：用户可直接输入“创作一首适配XX场景的XX风格歌曲”。\nTunee MV Agent主要功能：（1）对话式创作：用自然语言描述画面，直接驱动MV生成，减少复杂参数设置；（2）音\n乐理解：上传音乐后，系统智能分析节奏、情绪和关键时刻，辅助生成创作方向；（3）@角色上镜：在对话框中@指\n定角色，最多支持5个角色同时参与，精准控制角色在镜头中的位置；（4）分镜级调整：支持调整剧本、分镜和单个镜",
+    "metadata": {
+      "page_num": 18,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 2025年9月，AI音乐智能体Tunee上线：从需求理解到一键生成MV，对话式创作全流程",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00032"
+  },
+  {
+    "content": "头；（5）画布直接编辑：在画布中预览、修改和替换素材。\n\n❑作为多模态AI音乐生成模型，天谱乐支\n持文本生曲（最长可生成3.5min歌曲/音\n乐）、图片生曲（上传图片，生成30s\n音乐视频）以及视频生曲（上传10-60s\n视频，生成音乐视频）。为进一步降低\nAI音乐制作门槛，2025年9月，音乐智\n能体Tunee上线，实现“需求理解→音乐\n视频MV生成→分发”全链路闭环。截至\n2025年12月，Tunee产品页面浏览量与\n日活均突破100万。\n来源：公司官网、头豹研究院",
+    "metadata": {
+      "page_num": 18,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 头；（5）画布直接编辑：在画布中预览、修改和替换素材。",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00033"
+  },
+  {
+    "content": "| Tempolor | 定价 | 权益 |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 19,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 头；（5）画布直接编辑：在画布中预览、修改和替换素材。",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00034"
+  },
+  {
+    "content": "| Tunee | 定价 | 权益 |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 19,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 头；（5）画布直接编辑：在画布中预览、修改和替换素材。",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00035"
+  },
+  {
+    "content": "除官方水印、商业用途\n\n❑ToC端，Tempolor和Tunee均采用订阅制收费，Tempolor定价为每月$9.79-$29.99，最长支\n持生成4min的曲目，各版本商业授权范围不同；Tunee定价为每月$0-$89，其中免费版不可\n商用，Basic版仅生成音乐可商用，生成MV不支持商用，Plus版和Pro版均支持MV商用。针\n对企业客户与专业开发者，Tempolor开放平台提供标准化API服务，采用充值制，价格为\n￥1/100积分，各项功能定价不同，如使用Tempolor v4.6生成一首歌曲为￥0.35（最长支持\n5min人声音乐）、使用Tempolor v3生成一首歌曲为￥0.2（最长支持2min人声音乐）。截至",
+    "metadata": {
+      "page_num": 19,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 除官方水印、商业用途",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00036"
+  },
+  {
+    "content": "| 版本 | 定价 | 权益 |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 20,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 2026年1月，已有超5,600万用户使用过天谱乐大模型，累计创作音乐2,300万首。",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00037"
+  },
+  {
+    "content": "MiniMax Music发展现状\n\n来源：公司官网、头豹研究院\n❑2026年4月，MiniMax发布最新音乐生成模型MiniMax Music 2.6，支持最长生成4min歌曲，音包延迟降\n至20s以内，新增AI翻唱和歌词优化器等功能，同时开源3个Music Skill，降低音乐生成门槛。商业化层\n面，针对个人用户，MiniMax采用充值制，1积分可生成一首完整歌曲，积分充值后永久有效。针对企\n业客户和专业开发者，提供标准API服务，按量计费，Music 2.5、Music 2.5+、Music 2.6均为￥1/首。",
+    "metadata": {
+      "page_num": 20,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > MiniMax Music发展现状",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00038"
+  },
+  {
+    "content": "开源3个Music Skill：minimax-\n\nmusic-agent具备完整音乐生成\n能力、minimax-music-playlist\n生成整份定制歌单、buddy-\nsings构建专属声音身份，以角\n色第一人称为用户即兴创作",
+    "metadata": {
+      "page_num": 20,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 开源3个Music Skill：minimax-",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00039"
+  },
+  {
+    "content": "| 维度 | Suno | Udio | Stability Audio | Mureka | 天谱乐 | MiniMax Music |\n| --- | --- | --- | --- | --- | --- | --- |\n| 最长支持时长 | 8min | 130s | 6min | 5.5min | 3.5min | 4min |\n| 音乐参考 | （人声/伴奏/音乐） | （现有音乐） |  |  |  |  |\n| 支持风格 | 10+ | 11+ | —— | —— | 25+ | —— |\n| Studio |  |  |  |  |  |  |\n| 结构变体 | 6 | —— | —— | —— | —— | 14+ |\n| 采样率 | 48kHz | 48kHz | 44.1kHz | —— | 48kHz | 44.1kHz |\n| 优化歌词 |  |  |  |  |  |  |\n| 音乐拓展 |  |  |  |  |  |  |\n| AI翻唱 |  |  |  |  |  |  |\n| Remix（混音） | （可控制偏离程度） |  | （可控制偏离程度） | （内测阶段） | （精准改写） |  |\n| 声音克隆 |  |  |  |  |  |  |\n| 局部编辑 |  |  |  |  |  |  |\n| 一键MV生成 |  |  |  |  |  |  |\n| 分轨导出 | 12 | 4 | 2 | 12 | 6 | 多轨 |\n| 自定义模型 |  |  |  |  |  |  |",
+    "metadata": {
+      "page_num": 21,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 积分充值后永久有效，所有版本生成音乐均可商用",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00040"
+  },
+  {
+    "content": "MiniMax Music\n\n最长支持时长\n8min\n130s\n6min\n5.5min\n3.5min\n4min\n音乐参考\n（人声/伴奏/音乐）\n（现有音乐）\n支持风格\n10+\n11+\n——\n——\n25+\n——\nStudio\n结构变体\n——\n——\n——\n——\n14+\n采样率\n48kHz\n48kHz\n44.1kHz\n——\n48kHz\n44.1kHz\n优化歌词\n音乐拓展\nAI翻唱\nRemix（混音）\n（可控制偏离程度）\n（可控制偏离程度）\n（内测阶段）\n（精准改写）\n声音克隆\n局部编辑\n一键MV生成\n分轨导出\n多轨\n自定义模型",
+    "metadata": {
+      "page_num": 21,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > MiniMax Music",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00041"
+  },
+  {
+    "content": "| 维度 | Suno | Udio | Stability Audio | Mureka | 天谱乐 | MiniMax Music |\n| --- | --- | --- | --- | --- | --- | --- |\n| 商业化模式 |  |  |  |  |  |  |\n| 个人用户（按月） | 订阅制（$0/10/30） | 订阅制（$0/10/30） | 订阅制 （$0/11.99/29.99/89.99） | 订阅制（￥0/88/168） | 订阅制 （$9.79/13.99/29.99） | 充值制（充值后，积 分永久有效） |\n| 企业或专业开发者 | 暂无官方API | —— | 定制模型服务 | 标准API服务（V8、V9 歌曲生成为￥0.33/首） | 标准API服务（V4.6 歌曲生成为￥0.35/ 首；V3为￥0.2/首） | 标准API服务（Music 2.5、Music 2.5+、 Music 2.6均为￥1/首） |\n| 免费版商业使用权 |  |  |  |  |  | 无免费版（测试阶段 除外） |\n| 充值后，历史歌曲商业 使用权 | （除平台给予特 殊作品许可） |  |  |  | （可领取历史歌曲 版权证明） | —— |\n| 生成歌曲自由下载 | （付费用户） |  |  |  |  |  |\n| 版权问题解决方式 | 与华纳音乐达成合作 推出授权AI模型 | 与环球音乐达成合作 推出授权平台 | 开源，授权数据训练+ 企业定制模型 | —— | —— | —— |\n| 商业化现状 | 截至2026年2月，付 费用户达200万， ARR达3亿美元 | 2026年4月，网站访 问量约为140万 | —— | 2025.03-2025.11，新增 注册用户数700万，服 务企业/专业开发者客户 数超8,000家 | 截至2026年1月，超 5,600万用户使用过 | —— |",
+    "metadata": {
+      "page_num": 22,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > MiniMax Music",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00042"
+  },
+  {
+    "content": "MiniMax Music\n\n商业化模式\n个人用户（按月）\n订阅制（$0/10/30）\n订阅制（$0/10/30）\n订阅制\n（$0/11.99/29.99/89.99）\n订阅制（￥0/88/168）\n订阅制\n（$9.79/13.99/29.99）\n充值制（充值后，积\n分永久有效）\n企业或专业开发者\n暂无官方API\n——\n定制模型服务",
+    "metadata": {
+      "page_num": 22,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > MiniMax Music",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00043"
+  },
+  {
+    "content": "标准API服务（Music\n\n2.5、Music 2.5+、\nMusic 2.6均为￥1/首）\n免费版商业使用权\n无免费版（测试阶段\n除外）\n充值后，历史歌曲商业\n使用权\n（除平台给予特\n殊作品许可）\n（可领取历史歌曲\n版权证明）\n——\n生成歌曲自由下载\n（付费用户）\n版权问题解决方式\n与华纳音乐达成合作\n推出授权AI模型\n与环球音乐达成合作\n推出授权平台\n开源，授权数据训练+\n企业定制模型\n——\n——\n——\n商业化现状\n截至2026年2月，付\n费用户达200万，\nARR达3亿美元\n2026年4月，网站访\n问量约为140万\n——\n2025.03-2025.11，新增\n注册用户数700万，服\n务企业/专业开发者客户\n数超8,000家\n截至2026年1月，超\n5,600万用户使用过\n——",
+    "metadata": {
+      "page_num": 22,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 标准API服务（Music",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00044"
+  },
+  {
+    "content": "|  | Chapter 3 音乐大模型市场 应用洞察 |  |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 23,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 标准API服务（Music",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00045"
+  },
+  {
+    "content": "|  |\n| --- |\n| C端 B端 60%+ |",
+    "metadata": {
+      "page_num": 24,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 应用洞察",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00046"
+  },
+  {
+    "content": "容创作者。\n\n❑目前，音乐大模型用户群体以C端个人为核心，该类用户整体占比达60%以上。其中Suno作为最热门的C端音乐大模型（Suno暂不提供官方API服务），2025年平台\n日均生成音乐数可达700万首，2026年4月单月访问量达7,857万，用户活跃度保持较高水平。结合实际使用需求与应用场景，Suno用户可以分为5类，不同群体的使\n用方向各有侧重。（1）短视频团队、自媒体创作者、电商卖家，主要借助模型快速打造具备原创属性的背景音乐，视频剪辑、店铺宣传等；（2）专业音乐制作人\n和编曲师将其作为创作辅助工具，用来敲定歌曲整体风格、产出参考旋律与核心Hook段落，提升创作效率；（3）品牌方、创意代理商多用于制作品牌口号曲、广\n告旋律初稿，缩短营销音乐的创作周期；（4）企业活动策划人员、社区运营者依托平台定制活动主题曲、栏目片头片尾曲，满足线下活动与线上栏目配乐需求；\n（5）音乐教育从事者、亲子内容创作者等主要创作知识记忆歌曲、趣味儿歌等作品。",
+    "metadata": {
+      "page_num": 24,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 容创作者。",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00047"
+  },
+  {
+    "content": "➢AI音乐创作平台：例如①中国快歌作为自助写歌平台，其技\n\n术栈同时集成海内外多家模型，其海外版音乐大模型合作方\n为Mureka；②北美AI音乐创作平台Sondo将Mureka声音克隆、\nRemix等功能接入产品后，两者合作体量增长超70%。",
+    "metadata": {
+      "page_num": 25,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > ➢AI音乐创作平台：例如①中国快歌作为自助写歌平台，其技",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00048"
+  },
+  {
+    "content": "|  |\n| --- |\n| CAGR=40.9% |",
+    "metadata": {
+      "page_num": 26,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 分布",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00049"
+  },
+  {
+    "content": "音乐大模型市场规模（按营收计）\n\n来源：头豹研究院\n❑2025年，全球音乐大模型市场规模约为30.8亿\n元，预计2030年将增至171.4亿元，2025-2030\n年期间CAGR约为40.9%。这一增长主要得益于：",
+    "metadata": {
+      "page_num": 26,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 音乐大模型市场规模（按营收计）",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00050"
+  },
+  {
+    "content": "❑C端付费用户持续增长。AI音乐应用使用门槛\n\n极低，普通用户仅凭文字描述就能创作专属音\n乐，轻松满足大众的创作意愿与表达需求。同\n时，音轨分离、专业工作站、自定义模型等进\n阶功能的落地，也让音乐大模型逐步获得半专\n业及职业音乐人的青睐，进一步推动用户规模\n扩张。据调研，50%的音乐消费者对AI音乐应\n用高度感兴趣。",
+    "metadata": {
+      "page_num": 26,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > ❑C端付费用户持续增长。AI音乐应用使用门槛",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00051"
+  },
+  {
+    "content": "乐大模型不断渗透B端领域。凭借降本增效的\n\n突出优势，AI音乐快速渗透至商业领域，已成\n为影视配乐、广告音乐、游戏音效制作的重要\n工具。未来，随着《关于深入实施“人工智能+”\n行动的意见》、《北京市促进“人工智能+视听”\n产业高质量发展行动方案（2025-2029年）》\n等政策出台，将持续推动音乐大模型与各产业\n深度融合。\n30.8\n40.7\n60.2\n86.3\n124.0\n171.4\n2026E\n2027E\n2028E\n2029E\n2030E",
+    "metadata": {
+      "page_num": 26,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 乐大模型不断渗透B端领域。凭借降本增效的",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00052"
+  },
+  {
+    "content": "| 当前AI音乐生成存在问题 |\n| --- |\n| • 音质与声学瓶颈导致“AI味”无法根除，复杂乐器的音色处 15 理、瑕疵修复仍是算法盲区 80% 95% • 创作逻辑存在缺陷，算法擅长模仿却缺乏深度情感转折， 2 中大型作品难以实现结构化叙事，丧失个性 2025 2026 • 算法黑盒与伦理问题突出，内容生成不可控、训练数据 某平台日均发行歌曲（万首） 新发行歌曲中AI歌曲占比 基于AI提示词批量生成的比例 版权确权难，挤压原创音乐生存空间 |",
+    "metadata": {
+      "page_num": 27,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > CAGR=40.9%",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00053"
+  },
+  {
+    "content": "| 解决方式：人机协同创作+动态AI音乐生成服务 |\n| --- |\n| 一次性 局部精修重绘 多轨分轨生成 MIDI 分段生成 时间线编辑 循环交 输出 互输出 参考创作 AI虚拟人声 版本管理 定制模型 …… • 2025年以来，音乐大模型在音轨分离、局部生成重构、参考创作、定制模型等功能上迭代升级，AI音乐生成从算法“一键生成”被重塑为一种开放、动态且高度协同 的机制，AI从执行者转向执行+协作者，参与到创作决策与音乐结构建构全过程。 • AI驱动的个性化音乐推荐引擎已成为流媒体平台核心竞争力，推动动态生成式音乐服务逐渐崛起。即结合实时数据和实时场景，生成符合用户需求、独一无二的音 乐。例如：Mubert可根据用户场景适配需求（工作、运动、睡眠等）或实时情绪响应，生成无限时长、无缝衔接的个性化音乐流。 |",
+    "metadata": {
+      "page_num": 27,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > CAGR=40.9%",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00054"
+  },
+  {
+    "content": "的机制，AI从执行者转向执行+协作者，参与到创作决策与音乐结构建构全过程。\n\n• AI驱动的个性化音乐推荐引擎已成为流媒体平台核心竞争力，推动动态生成式音乐服务逐渐崛起。即结合实时数据和实时场景，生成符合用户需求、独一无二的音\n乐。例如：Mubert可根据用户场景适配需求（工作、运动、睡眠等）或实时情绪响应，生成无限时长、无缝衔接的个性化音乐流。",
+    "metadata": {
+      "page_num": 27,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 的机制，AI从执行者转向执行+协作者，参与到创作决策与音乐结构建构全过程。",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00055"
+  },
+  {
+    "content": "收益共享” 的良性生态。行业主流合作分\n\n为授权训练、版权分成、联合创作、确权\n赋能四大类型，均遵循版权合规、利益共\n享、风险共担的核心原则。调研数据显示，\n全球超80%的头部AI音乐平台已与主流唱片\n公司或版权机构开展授权合作；65%的独\n立音乐人借助AI工具辅助创作，并依托各\n类合作模式完成作品商业化变现。",
+    "metadata": {
+      "page_num": 28,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 收益共享” 的良性生态。行业主流合作分",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00056"
+  },
+  {
+    "content": "业务咨询\n\n客服电话：400-072-5588\n官方网站：www.leadleo.com\n专业研究  赋能决策  驱动增长\n\n头豹研究院布局中国市场，深入研究19大行业，532个垂直行业的市场变化，已经积累了近100万行业研究样本，完成近10,000多个独立的研究咨询项目。\n研究院依托中国活跃的经济环境，研究内容覆盖整个行业的发展周期，伴随着行业中企业的创立，发展，扩张，到企业走向上市及上市后的成熟期，研究院的各行业研\n究员探索和评估行业中多变的产业模式，企业的商业模式和运营模式，以专业的视野解读行业的沿革。\n研究院融合传统与新型的研究方法，采用自主研发的算法，结合行业交叉的大数据，以多元化的调研方法，挖掘定量数据背后的逻辑，分析定性内容背后的观点，客观\n和真实地阐述行业的现状，前瞻性地预测行业未来的发展趋势，在研究院的每一份研究报告中，完整地呈现行业的过去，现在和未来。\n研究院密切关注行业发展最新动向，报告内容及数据会随着行业发展、技术革新、竞争格局变化、政策法规颁布、市场调研深入，保持不断更新与优化。\n研究院秉承匠心研究，砥砺前行的宗旨，从战略的角度分析行业，从执行的层面阅读行业，为每一个行业的报告阅读者提供值得品鉴的研究报告。",
+    "metadata": {
+      "page_num": 29,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 业务咨询",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00057"
+  },
+  {
+    "content": "方法论\n\n本报告著作权归头豹所有，未经书面许可，任何机构或个人不得以任何形式翻版、复刻、发表或引用。若征得头豹同意进行引用、刊发的，需在允许的范围内使用，并\n注明出处为“头豹研究院”，且不得对本报告进行任何有悖原意的引用、删节或修改。\n本报告分析师具有专业研究能力，保证报告数据均来自合法合规渠道，观点产出及数据分析基于分析师对行业的客观理解，本报告不受任何第三方授意或影响。\n本报告所涉及的观点或信息仅供参考，不构成任何证券或基金投资建议。本报告仅在相关法律许可的情况下发放，并仅为提供信息而发放，概不构成任何广告或证券研\n究报告。在法律许可的情况下，头豹可能会为报告中提及的企业提供或争取提供投融资或咨询等相关服务。\n本报告的部分信息来源于公开资料，头豹对该等信息的准确性、完整性或可靠性不做任何保证。本报告所载的资料、意见及推测仅反映头豹于发布本报告当日的判断，\n过往报告中的描述不应作为日后的表现依据。在不同时期，头豹可发出与本报告所载资料、意见及推测不一致的报告或文章。头豹均不保证本报告所含信息保持在最新\n状态。同时，头豹对本报告所含信息可在不发出通知的情形下做出修改，读者应当自行关注相应的更新或修改。任何机构或个人应对其利用本报告的数据、分析、研究、\n部分或者全部内容所进行的一切活动负责并承担该等活动所导致的任何损失或伤害。",
+    "metadata": {
+      "page_num": 30,
+      "section": "www.leadleo.com > 2026年 > 音乐大模型行业研究：从“基础生成”到“成品级输 > 方法论",
+      "block_types": [
+        "text",
+        "title"
+      ],
+      "is_ocr": false,
+      "industry": "AI音乐",
+      "strategy": "semantic",
+      "source_file": "音乐大模型研究报告.json"
+    },
+    "chunk_id": "AI音乐_00058"
+  }
+]

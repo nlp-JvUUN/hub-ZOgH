@@ -1,0 +1,185 @@
+[
+  {
+    "content": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+    "metadata": {
+      "section": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "block_types": [
+        "title"
+      ],
+      "claim_num": 0,
+      "patent_id": "US11124288B2",
+      "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "assignee": "General Dynamics Mission Systems",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11124288B2.json"
+    },
+    "chunk_id": "US11124288B2_00000"
+  },
+  {
+    "content": "A system for coordinating a swarm of autonomous underwater vehicles (AUVs) uses an underwater acoustic mesh network with distributed consensus algorithms. Each AUV in the swarm maintains a local copy of the swarm state estimate, which is updated via periodic acoustic broadcasts using a Time Division Multiple Access (TDMA) schedule synchronized to GPS-disciplined chip-scale atomic clocks. When an AUV loses acoustic connectivity with the swarm (e.g., due to shadow zones or high ambient noise), it continues to execute its assigned mission segment and re-integrates upon reconnection using a gossip protocol. The consensus algorithm ensures all AUVs converge to consistent formation geometry, search pattern phasing, and task allocation without requiring a central controller or surface relay.",
+    "metadata": {
+      "section": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks > 摘要",
+      "block_types": [
+        "abstract"
+      ],
+      "claim_num": 0,
+      "patent_id": "US11124288B2",
+      "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "assignee": "General Dynamics Mission Systems",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11124288B2.json"
+    },
+    "chunk_id": "US11124288B2_00001"
+  },
+  {
+    "content": "Single-AUV missions are limited by sensor coverage rate, endurance, and single-point failure risk. Multi-AUV operations can dramatically increase area coverage rate, enable simultaneous multi-sensor measurements, and provide redundancy. However, underwater communication constraints make swarm coordination far more difficult than in air or on land. Acoustic communication bandwidth is limited to at most tens of kbps, latency is measured in seconds rather than milliseconds, and communication reliability varies dramatically with range, bathymetry, and environmental conditions.",
+    "metadata": {
+      "section": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks > BACKGROUND",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11124288B2",
+      "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "assignee": "General Dynamics Mission Systems",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11124288B2.json"
+    },
+    "chunk_id": "US11124288B2_00002"
+  },
+  {
+    "content": "The invention provides a swarm coordination architecture that operates within the severe constraints of underwater acoustic communication. The key enablers are: (1) chip-scale atomic clocks for precise TDMA slot synchronization without GPS; (2) a distributed consensus algorithm that reaches agreement on swarm state with minimal communication overhead; (3) auction-based task allocation that is robust to intermittent communication; and (4) graceful degradation behaviors for temporarily isolated AUVs.",
+    "metadata": {
+      "section": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks > SUMMARY",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11124288B2",
+      "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "assignee": "General Dynamics Mission Systems",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11124288B2.json"
+    },
+    "chunk_id": "US11124288B2_00003"
+  },
+  {
+    "content": "Each AUV carries a Woods Hole Oceanographic Institution Micromodem-2 acoustic modem, a Microsemi CSAC (volume 17 cc, power 120 mW), and an embedded Linux processor. The TDMA frame is 10 seconds long with 20 time slots of 500 ms each, supporting up to 20 AUVs in the swarm. Each slot carries a 64-byte data packet containing: AUV ID, position, velocity, battery status, task status, and a 16-bit CRC. Slot timing is maintained by the CSAC with GPS discipline upon each surfacing event.",
+    "metadata": {
+      "section": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks > DETAILED DESCRIPTION",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11124288B2",
+      "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "assignee": "General Dynamics Mission Systems",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11124288B2.json"
+    },
+    "chunk_id": "US11124288B2_00004"
+  },
+  {
+    "content": "The consensus algorithm uses a push-sum gossip protocol: each AUV periodically (every TDMA frame) selects a random neighbor from the swarm member list and exchanges state summaries. Convergence to consensus within 0.1 m position error for a 10-AUV swarm is achieved within 5 TDMA frames under typical acoustic conditions. The auction-based task allocator runs a combinatorial auction every 30 seconds, with bids computed as a function of travel distance, remaining battery capacity, and sensor payload suitability for the task type.",
+    "metadata": {
+      "section": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks > DETAILED DESCRIPTION",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11124288B2",
+      "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "assignee": "General Dynamics Mission Systems",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11124288B2.json"
+    },
+    "chunk_id": "US11124288B2_00005"
+  },
+  {
+    "content": "An underwater swarm coordination system comprising: a plurality of AUVs each equipped with an acoustic modem, an atomic clock, and a local processor; a TDMA-based acoustic communication protocol wherein time slots are pre-allocated to each AUV based on its unique identifier; a distributed consensus algorithm that fuses locally-sensed data with reception of neighbor state broadcasts to maintain a consistent swarm-wide state estimate; and a mission planner that dynamically reallocates search areas and task assignments based on the consensus state estimate and individual AUV health status.",
+    "metadata": {
+      "section": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 1,
+      "patent_id": "US11124288B2",
+      "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "assignee": "General Dynamics Mission Systems",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11124288B2.json"
+    },
+    "chunk_id": "US11124288B2_00006"
+  },
+  {
+    "content": "The system of claim 1, wherein the atomic clock is a chip-scale atomic clock (CSAC) providing frequency stability of +/- 5E-11 over a 24-hour period, enabling TDMA slot synchronization without continuous acoustic ranging.",
+    "metadata": {
+      "section": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 2,
+      "patent_id": "US11124288B2",
+      "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "assignee": "General Dynamics Mission Systems",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11124288B2.json"
+    },
+    "chunk_id": "US11124288B2_00007"
+  },
+  {
+    "content": "The system of claim 1, wherein the consensus algorithm uses a weighted average of neighbor states with weights proportional to the inverse of the estimated acoustic communication reliability between each pair of AUVs.",
+    "metadata": {
+      "section": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 3,
+      "patent_id": "US11124288B2",
+      "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "assignee": "General Dynamics Mission Systems",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11124288B2.json"
+    },
+    "chunk_id": "US11124288B2_00008"
+  },
+  {
+    "content": "The system of claim 1, wherein the mission planner uses an auction-based task allocation algorithm where each AUV bids on unallocated tasks based on its estimated travel time, remaining energy, and sensor suitability.",
+    "metadata": {
+      "section": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 4,
+      "patent_id": "US11124288B2",
+      "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "assignee": "General Dynamics Mission Systems",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11124288B2.json"
+    },
+    "chunk_id": "US11124288B2_00009"
+  },
+  {
+    "content": "The system of claim 1, further comprising an emergence behavior module that detects when an AUV has been isolated from the swarm for more than a timeout period and commands it to surface for satellite communication to receive updated mission parameters.",
+    "metadata": {
+      "section": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 5,
+      "patent_id": "US11124288B2",
+      "title": "Autonomous Underwater Vehicle Swarm Coordination System Using Underwater Acoustic Mesh Networks",
+      "assignee": "General Dynamics Mission Systems",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11124288B2.json"
+    },
+    "chunk_id": "US11124288B2_00010"
+  }
+]

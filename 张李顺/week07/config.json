@@ -1,0 +1,28 @@
+{
+  "seed": 42,
+  "datasets": {
+    "lcqmc": "lcqmc",
+    "bq_corpus": "bq_corpus"
+  },
+  "models": {
+    "encoder": "BAAI/bge-small-zh-v1.5",
+    "llm": "Qwen/Qwen2-0.5B-Instruct"
+  },
+  "train": {
+    "max_train_seconds": 240,
+    "max_length": 64,
+    "bi_train_size": 8192,
+    "cross_train_size": 32768,
+    "llm_train_size": 512,
+    "bi_batch_size": 64,
+    "triplet_batch_size": 32,
+    "cross_batch_size": 64,
+    "llm_batch_size": 2,
+    "bi_max_steps": 160,
+    "cross_max_steps": 1000,
+    "llm_max_steps": 200
+  },
+  "eval": {
+    "bm25_train_docs": 20000
+  }
+}

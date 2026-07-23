@@ -1,0 +1,7 @@
+{
+  "dataset": "bq_corpus",
+  "loss": "cosine",
+  "steps": 160,
+  "seconds": 8.781999999999243,
+  "mean_loss": 0.24308252949267625
+}

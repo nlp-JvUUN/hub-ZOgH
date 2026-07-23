@@ -1,0 +1,5650 @@
+[
+  {
+    "content": "问题：船用金属材料的抗拉强度、屈服强度、伸长率以及断面收缩率应通过哪种材料性能试验测定？\n答案：拉伸试验",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "01 材料与焊接（船用金属材料检验）（张强）",
+      "row_num": 2,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "01 材料与焊接（船用金属材料检验）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0002_c0000"
+  },
+  {
+    "content": "问题：对极地船舶、LNG运输船等特殊船舶，低温冲击试验可采用哪些温度来验证材料低温韧性并防止冷脆失效？\n答案：-20℃、-40℃",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "01 材料与焊接（船用金属材料检验）（张强）",
+      "row_num": 3,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "01 材料与焊接（船用金属材料检验）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0003_c0001"
+  },
+  {
+    "content": "问题：钢材表面缺陷采用局部打磨方法消除后，任何部位的厚度、单个修磨面积和总修磨面积分别应满足哪些限制要求？\n答案：任何部位的厚度应不小于公称厚度的93%，且减薄量应不大于3mm；单个修磨面积不能大于0.25 m2；总修磨面积不能大于钢板总面积的2%。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "01 材料与焊接（船用金属材料检验）（张强）",
+      "row_num": 4,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "01 材料与焊接（船用金属材料检验）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0004_c0002"
+  },
+  {
+    "content": "问题：铸钢件现场检验中，验船师应核查哪些无损检测已经进行？\n答案：超声波检测、磁粉检测、着色检测等。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "01 材料与焊接（船用金属材料检验）（张强）",
+      "row_num": 5,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "01 材料与焊接（船用金属材料检验）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0005_c0003"
+  },
+  {
+    "content": "问题：锻钢件表面轻微缺陷采用鈚凿或修磨去除时，凿削或修磨宽度与深度的比例要求是什么？\n答案：凿削或修磨的宽度应不小于深度的3倍",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "01 材料与焊接（船用金属材料检验）（张强）",
+      "row_num": 6,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "01 材料与焊接（船用金属材料检验）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0006_c0004"
+  },
+  {
+    "content": "问题：船舶建造过程中，焊接工作量占船体建造总工程量的比例是多少？\n答案：30%到40%",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+      "row_num": 7,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "02 材料与焊接（焊接基础知识）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0007_c0005"
+  },
+  {
+    "content": "问题：半自动CO2气体保护焊单面焊在风速达到多少时应采取防风措施？\n答案：2米/秒",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+      "row_num": 8,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "02 材料与焊接（焊接基础知识）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0008_c0006"
+  },
+  {
+    "content": "问题：船体焊缝布置要求中，对接焊缝之间的平行距离应不小于多少毫米？\n答案：100mm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+      "row_num": 9,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "02 材料与焊接（焊接基础知识）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0009_c0007"
+  },
+  {
+    "content": "问题：低氢碱性焊条打开密封容器后，应存放于不低于多少摄氏度的烘箱中贮存？\n答案：120℃",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+      "row_num": 10,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "02 材料与焊接（焊接基础知识）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0010_c0008"
+  },
+  {
+    "content": "问题：焊接环境要求中，严禁在环境温度低于多少摄氏度时进行任何焊接工作？\n答案：-20°C",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+      "row_num": 11,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "02 材料与焊接（焊接基础知识）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0011_c0009"
+  },
+  {
+    "content": "问题：未熔合缺陷是指焊缝金属与母材或焊道之间出现什么情况？\n答案：没有熔合",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+      "row_num": 12,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "02 材料与焊接（焊接基础知识）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0012_c0010"
+  },
+  {
+    "content": "问题：未焊透缺陷的定义是什么，其在表格中列出的主要产生原因有哪些？\n答案：未焊透：熔敷金属未能到达应焊到的部位。主要产生原因：热输入过小、接头设计不合理。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+      "row_num": 13,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "02 材料与焊接（焊接基础知识）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0013_c0011"
+  },
+  {
+    "content": "问题：气孔缺陷产生的主要原因是什么，避免气孔的主要措施包括哪些？\n答案：气孔产生的主要原因：凝固过程中过剩气体从金属中析出，但未排出。\n\n避免气孔的主要措施包括：\n1. 清理工件表面\n2. 按规定烘焊条\n3. 气保护焊应保证送气通畅并注意防风",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+      "row_num": 14,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "02 材料与焊接（焊接基础知识）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0014_c0012"
+  },
+  {
+    "content": "问题：对于需要焊补的焊接缺陷，焊补前应如何确认缺陷已彻底清除？\n答案：必要时可用无损检测的方法进行检查以证实缺陷确已清除。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+      "row_num": 15,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "02 材料与焊接（焊接基础知识）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0015_c0013"
+  },
+  {
+    "content": "问题：焊缝经修补后应进行哪些检查，焊缝质量应满足什么要求？\n答案：焊缝经修补后应对该处进行外观检查和相应的无损检测，焊缝质量应符合验收标准的要求。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+      "row_num": 16,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "02 材料与焊接（焊接基础知识）（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0016_c0014"
+  },
+  {
+    "content": "问题：根据GB/T 20737-2006《无损检测 通用术语和定义》，无损检测的目的包括探测、定位、测量和评价伤，以及评价哪些内容和测量哪些特性？\n答案：评价完整性、性质和构成；测量几何特性",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "03 船舶无损检测简介（张强）",
+      "row_num": 17,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "03 船舶无损检测简介（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0017_c0015"
+  },
+  {
+    "content": "问题：船体结构中的全熔透对接焊缝、全熔透角焊缝和T形焊缝分别宜采用哪些无损检测方法？\n答案：船体结构中的全熔透对接焊缝宜用射线方法或超声波方法进行检测，全熔透的角焊缝和T形焊缝宜用超声波方法进行检测。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "03 船舶无损检测简介（张强）",
+      "row_num": 18,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "03 船舶无损检测简介（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0018_c0016"
+  },
+  {
+    "content": "问题：对于规定最小屈服强度为420 N/mm²至690 N/mm²的焊接结构用高强度钢，焊接完成后多少小时内不得进行无损检测？\n答案：48小时内",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "03 船舶无损检测简介（张强）",
+      "row_num": 19,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "03 船舶无损检测简介（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0019_c0017"
+  },
+  {
+    "content": "问题：对于LNG和LPG船舶的整体液货舱或独立液货舱的全焊透焊缝，当采用CB或JIS标准时，其无损检测验收等级应为何级？\n答案：I级",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "03 船舶无损检测简介（张强）",
+      "row_num": 20,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "03 船舶无损检测简介（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0020_c0018"
+  },
+  {
+    "content": "问题：TOFD技术和PAUT技术分别适用于母材厚度不小于多少毫米的全熔透焊缝质量检测？\n答案：TOFD技术适用于母材厚度≥10mm的全熔透焊缝质量检测；PAUT技术适用于母材厚度≥6mm的全熔透焊缝质量检测。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "03 船舶无损检测简介（张强）",
+      "row_num": 21,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "03 船舶无损检测简介（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0021_c0019"
+  },
+  {
+    "content": "问题：国际载重线公约不适用于哪些从事国际航行的船舶类型？\n答案：军舰；长度小于24米（79英尺）的新船；小于150总吨的现有船舶；非营业游艇；渔船。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "04 船舶载重线检验（张强）",
+      "row_num": 22,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "04 船舶载重线检验（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0022_c0020"
+  },
+  {
+    "content": "问题：核定的干舷在船中处应如何测量？\n答案：从甲板线的上边缘向下量至相关载重线的上边缘的垂直距离。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "04 船舶载重线检验（张强）",
+      "row_num": 23,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "04 船舶载重线检验（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0023_c0021"
+  },
+  {
+    "content": "问题：载重线标志中的圆圈外径、圆圈宽度、水平线长度和水平线宽度分别是多少？\n答案：300 mm、25 mm、450 mm、25 mm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "04 船舶载重线检验（张强）",
+      "row_num": 24,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "04 船舶载重线检验（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0024_c0022"
+  },
+  {
+    "content": "问题：在位置1和位置2的舱口围板，其在甲板上的最小高度分别应为多少？\n答案：位置1为600 mm，位置2为450 mm。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "04 船舶载重线检验（张强）",
+      "row_num": 25,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "04 船舶载重线检验（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0025_c0023"
+  },
+  {
+    "content": "问题：所有露天甲板四周装设的栏杆或舷墙，其高度应至少离甲板多少？\n答案：1 m",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "04 船舶载重线检验（张强）",
+      "row_num": 26,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "04 船舶载重线检验（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0026_c0024"
+  },
+  {
+    "content": "问题：装设在上层建筑和干舷甲板上的栏杆至少应有几档，且最低一档以下开口和其他各档间隙分别不得超过多少毫米？\n答案：至少三档；最低一档以下开口不超过230 mm，其他各档间隙不超过380 mm。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "04 船舶载重线检验（张强）",
+      "row_num": 27,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "04 船舶载重线检验（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0027_c0025"
+  },
+  {
+    "content": "问题：油船通往船首的固定步桥应提供的连续平台最小宽度是多少，且两侧栏杆最低高度是多少？\n答案：连续平台至少宽1 m，两侧栏杆至少高1 m。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "04 船舶载重线检验（张强）",
+      "row_num": 28,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "04 船舶载重线检验（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0028_c0026"
+  },
+  {
+    "content": "问题：当固定步桥横穿的露天甲板长度超过70 m时，遮蔽设施的设置间距不得超过多少米，且每个遮蔽设施至少应满足什么防护要求？\n答案：间距不超过45 m；每个遮蔽设施应至少能容纳一人，且其结构应能在前部、左舷和右舷提供风雨防护。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "04 船舶载重线检验（张强）",
+      "row_num": 29,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "04 船舶载重线检验（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0029_c0027"
+  },
+  {
+    "content": "问题：国际载重线公约中船舶类型具体分为哪几类？\n答案：A型船舶、B型船舶、增加干舷的B型船舶、减小干舷的B-60型船舶、减小干舷的B-100型船舶",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "04 船舶载重线检验（张强）",
+      "row_num": 30,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "04 船舶载重线检验（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0030_c0028"
+  },
+  {
+    "content": "问题：最小夏季干舷公式F = F0 + F1 + F2 + F3 + F4 + F5中，A型、B型、B-60型船舶的F最小值不得小于多少毫米？\n答案：50mm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "04 船舶载重线检验（张强）",
+      "row_num": 31,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "04 船舶载重线检验（张强）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0031_c0029"
+  },
+  {
+    "content": "问题：管子及附件装船前液压试验中，哪些Ⅰ级、Ⅱ级管系以及设计压力超过多少MPa的系统及附件应进行液压试验？\n答案：所有Ⅰ级和Ⅱ级管系以及设计压力>0.35MPa的蒸汽、给水、压缩空气、滑油和燃油管系及其附件均应进行液压试验。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 32,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0032_c0030"
+  },
+  {
+    "content": "问题：管系液压试验的试验压力一般应按什么公式确定，且管子应在试验压力下保持多长时间？\n答案：Ps＝1.5P；10-30min",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 33,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0033_c0031"
+  },
+  {
+    "content": "问题：用于Ⅰ级和Ⅱ级管系且与管系非一体式的阀和附件，装船前液压试验压力不应小于设计压力的多少倍？\n答案：1.5倍",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 34,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0034_c0032"
+  },
+  {
+    "content": "问题：距离高温热表面多少摄氏度及以上、750mm以内及上方的燃油和滑油油管法兰，应采取哪些防飞溅保护措施？\n答案：距离高温热表面（220℃及以上）750mm以内及上方的燃油、滑油油管法兰，应使用钢质罩壳或使用经本社认可的防护胶带。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 35,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0035_c0033"
+  },
+  {
+    "content": "问题：轴系安装和校中检验原则中，尾轴与艉轴管后轴承的相对倾角大于多少rad的轴系属于需重点关注和控制的船舶轴系？\n答案：2.0x10-4rad",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 36,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0036_c0034"
+  },
+  {
+    "content": "问题：轴系安装和校中检验原则中，尾轴与轴承的相对倾角应与哪一份计算书保持一致，其目的是什么？\n答案：尾轴与轴承的相对倾角应同轴系校中计算书保持一致，以减轻螺旋桨对尾轴的悬臂梁作用。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 37,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0037_c0035"
+  },
+  {
+    "content": "问题：对于螺旋桨与螺旋桨轴安装，采用键安装时螺旋桨轴端锥度应不大于多少？采用油压无键安装时桨轴安装处锥度应不大于多少？\n答案：采用键安装时，螺旋桨轴端的锥度应不大于1/10；采用油压无键安装时，桨轴安装处的锥度应不大于1/15。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 38,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0038_c0036"
+  },
+  {
+    "content": "问题：轴系找中应在哪些工程完成后进行？\n答案：（1）机舱前舱壁以后主甲板以下分段装焊结束，船体结构性验收结束、火工结束\n（2）机舱双层底部、艉部相邻各舱室密性试验结束\n（3）双层底上方的大管子及主要设备就位，特殊情况下无法安装到位的大型设备可用重块代替\n（4）主机基座焊接完毕\n（5）船体局部临时支撑已撤除",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 39,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0039_c0037"
+  },
+  {
+    "content": "问题：尾轴管和舵钮镗孔检查中，通过检查圆检查轴系中心线是否发生变化时，允差要求是多少？\n答案：允差≤0.01mm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 40,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0040_c0038"
+  },
+  {
+    "content": "问题：CCS钢规第3篇第9章对柴油机低速、中速和高速的额定转速范围分别是如何划分的？\n答案：低速：no＜300 r/min；中速：300 r/min≤no＜1400 r/min；高速：no≥1400 r/min。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 41,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0041_c0039"
+  },
+  {
+    "content": "问题：根据CCS钢规第3篇第9章附录6，驱动发电机或重要辅机的柴油机应进行至少多长时间的运行试验？\n答案：至少4h",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 42,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0042_c0040"
+  },
+  {
+    "content": "问题：应急柴油发电机组负荷试验中，100%额定功率和110%额定功率分别要求运行多长时间？\n答案：100%额定功率：1h；110%额定功率：10min",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 43,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0043_c0041"
+  },
+  {
+    "content": "问题：主推进柴油机驱动定螺距螺旋桨时，在额定转速n0下和对应正常持续功率转速下分别至少应运行多长时间？\n答案：在柴油机额定转速n0下至少4h；在对应于正常持续功率下的转速至少2h。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 44,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0044_c0042"
+  },
+  {
+    "content": "问题：舵机试验中，对舵角的偏差要求是什么？\n答案：0°时无偏差，其他角度时偏差不超过±1°",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 45,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0045_c0043"
+  },
+  {
+    "content": "问题：锅炉蓄压试验中，烟管锅炉和水管锅炉在安全阀开启后分别多少分钟内压力最高值不得超过锅炉设计压力的110%？\n答案：烟管锅炉15min内，水管锅炉7min内。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.1 船舶管系与动力装置建造中检验与案例",
+      "row_num": 46,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.1 船舶管系与动力装置建造中检验与案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0046_c0044"
+  },
+  {
+    "content": "问题：轮机保持船级检验的种类中，除年度检验、中间检验/期间检验、坞内检验外，还列出了哪些与轴系、锅炉或附加标志相关的检验？\n答案：螺旋桨轴和尾管轴检验；锅炉和热油加热器检验；船级附加标志的检验：SCM、ECM、PMS、CMS、IGS、AUT-0；蒸汽管检验",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.2 船舶管系与动力装置营运检验及案例",
+      "row_num": 47,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.2 船舶管系与动力装置营运检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0047_c0045"
+  },
+  {
+    "content": "问题：根据年度检验要求，所有船舶的年度检验应在初次入级检验日期或上次特别检验日期的每周年日前后多长时间内进行？\n答案：3个月内",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.2 船舶管系与动力装置营运检验及案例",
+      "row_num": 48,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.2 船舶管系与动力装置营运检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0048_c0046"
+  },
+  {
+    "content": "问题：A.1156(32)《HSSC检验导则》介绍中，检验一般包括哪4部分内容？\n答案：船舶证书、船上文件和其他记录\n设备及检查\n特别的附加设备要求（如液货船）\n检验完成后的证书处理以及缺陷处理",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.2 船舶管系与动力装置营运检验及案例",
+      "row_num": 49,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.2 船舶管系与动力装置营运检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0049_c0047"
+  },
+  {
+    "content": "问题：应急电源操作检查中，断开主配电板向应急配电板的供电开关或主发电机开关后，应急发电机组应在多少秒内自动起动，并需检查哪些参数？\n答案：45秒内自动起动，并检查电压和频率。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.2 船舶管系与动力装置营运检验及案例",
+      "row_num": 50,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.2 船舶管系与动力装置营运检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0050_c0048"
+  },
+  {
+    "content": "问题：IACS URZ21（Rev.3）中列出的螺旋桨轴和尾管轴润滑方式包括哪三类？\n答案：油润滑轴系统、闭式淡水润滑轴系统、开式水润滑轴系统",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.2 船舶管系与动力装置营运检验及案例",
+      "row_num": 51,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.2 船舶管系与动力装置营运检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0051_c0049"
+  },
+  {
+    "content": "问题：炉龄小于10年的主锅炉在5年特检周期内内部检验不少于几次，且两次最大间隔期应不超过多少年？\n答案：不少于2次，最大间隔期不超过3年。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.2 船舶管系与动力装置营运检验及案例",
+      "row_num": 52,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.2 船舶管系与动力装置营运检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0052_c0050"
+  },
+  {
+    "content": "问题：所有锅炉和热油加热器的外部检验，包括安全装置检验，应按什么周期进行？\n答案：每年进行1次",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.2 船舶管系与动力装置营运检验及案例",
+      "row_num": 53,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.2 船舶管系与动力装置营运检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0053_c0051"
+  },
+  {
+    "content": "问题：直径超过76mm且工作温度超过450℃的蒸汽管，自制造或安装之日起多少年以后每5年进行一次检验？\n答案：5年以后",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.2 船舶管系与动力装置营运检验及案例",
+      "row_num": 54,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.2 船舶管系与动力装置营运检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0054_c0052"
+  },
+  {
+    "content": "问题：授予SCM附加标志的船舶，螺旋桨轴润滑油油样分析报告至少应每几个月进行1次，且至少包括哪些分析内容？\n答案：至少每6个月1次，且至少应包括：水分、氯化物、轴承材料和金属粒子含量、润滑油抗氧化能力。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.2 船舶管系与动力装置营运检验及案例",
+      "row_num": 55,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.2 船舶管系与动力装置营运检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0055_c0053"
+  },
+  {
+    "content": "问题：CMS轮机循环检验中，每一项目的最长检查间隔期不应超过多少年？\n答案：5年",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "1.2 船舶管系与动力装置营运检验及案例",
+      "row_num": 56,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "1.2 船舶管系与动力装置营运检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0056_c0054"
+  },
+  {
+    "content": "问题：根据MARPOL Annex I，Form COP适用于哪些总吨位条件的油船和其他船舶？\n答案：GT≥150的油船和GT≥400的其他船舶",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 57,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0057_c0055"
+  },
+  {
+    "content": "问题：污油标准排放接头的外径、螺栓圈直径和法兰厚度分别是多少？\n答案：215 mm、183 mm、20 mm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 58,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0058_c0056"
+  },
+  {
+    "content": "问题：根据MEPC107(49) 6.2.2，油份计排放管路取样布置应满足什么压力、流量和样品代表性要求？\n答案：排放管路提取样品的布置应以足够的压力和流量，提供有真实代表性的流出物样品",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 59,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0059_c0057"
+  },
+  {
+    "content": "问题：原油洗舱系统初次检验时，压力试验应按多少倍工作压力进行？\n答案：1.5倍工作压力",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 60,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0060_c0058"
+  },
+  {
+    "content": "问题：油轮上通常称为UTI尺的油水界面仪中，U、T、I分别代表测量什么内容？\n答案：U：测量液面空档；T：测量货物温度；I：测量油水界面",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 61,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0061_c0059"
+  },
+  {
+    "content": "问题：实施原油洗舱必须配备哪些设备？\n答案：惰性气体系统(IGS)、固定式洗舱机、原油洗舱泵、扫舱系统、洗舱管路系统、油位测量装置、通信联络设备",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 62,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0062_c0060"
+  },
+  {
+    "content": "问题：油类记录簿第I部分适用于哪些船舶记录机舱作业，第II部分适用于哪些船舶记录货油和压载作业？\n答案：任何150总吨及以上的油轮和400总吨及以上的其他船舶应使用油类记录簿第I部分记录有关机舱的作业；150总吨及以上的油轮还应使用油类记录簿第II部分记录货油和压载作业。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 63,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0063_c0061"
+  },
+  {
+    "content": "问题：船上电子记录簿使用时，油类记录簿第I和II部分、货物记录簿、垃圾记录簿第I和II部分分别要求保存多长时间？\n答案：油类记录簿第I和II部分：3年；货物记录簿：3年；垃圾记录簿第I和II部分：2年",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 64,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0064_c0062"
+  },
+  {
+    "content": "问题：非油船设有用于装载散装油类的货物处所且散装油类总容量≥200m³时，应满足MARPOL Annex I哪些条款要求？\n答案：第16条（油类与压载水的分隔和首尖舱内载油）\n第26.4条（货油舱的尺度限制和布置）\n第29条（污油水舱）\n第30条（泵吸、管路和排放布置）\n第31条（排油监控系统）\n第32条（油/水界面探测器）\n第34条（排油的控制）\n第36条（《油类记录簿》第II部分）",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 65,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0065_c0063"
+  },
+  {
+    "content": "问题：MARPOL Annex IV中未经处理生活污水集污舱最大允许排放速率DRmax的计算公式是什么，各参数含义是什么？\n答案：DRmax = 0.00926 VxDx B\n\nDrmax--- 最大允许排放速率(m3/h)\nV --- 船舶在该段时间的平均速度(节)\nD --- 吃水(m)\nB --- 船宽(m)",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 66,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0066_c0064"
+  },
+  {
+    "content": "问题：未经处理生活污水集污舱容量确定时，当航行时间超过24小时，应按每人每昼夜多少升计算？\n答案：70L",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 67,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0067_c0065"
+  },
+  {
+    "content": "问题：根据BWM.2/Circ.82，在压载舱临时储存灰水或经处理生活污水期间，压载舱应如何重新定义并与压载系统如何处理？\n答案：压载舱应临时重新定义为灰水/经处理的生活污水储存舱，并应与压载系统断开并隔离。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 68,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0068_c0066"
+  },
+  {
+    "content": "问题：MARPOL Annex V中，垃圾管理计划适用于哪些非极地航行船舶及平台？\n答案：非极地航行100总吨及以上的船舶和核准载运15人或以上的船舶以及固定或浮动平台",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 69,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0069_c0067"
+  },
+  {
+    "content": "问题：MARPOL Annex VI规定，船上使用燃油的硫含量在特殊区域不得超过多少？\n答案：0.1%",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 70,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0070_c0068"
+  },
+  {
+    "content": "问题：MEPC.1/Circ.864/Rev.1中，在用燃油硫含量验证的取样位置应位于哪里，并应尽可能靠近什么设备？\n答案：取样位置位于在用燃油日用柜下游，并应尽可能靠近燃油燃烧机械设备。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 71,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0071_c0069"
+  },
+  {
+    "content": "问题：现有船舶安装EGCS进行技术可行性研究时，片段中列出了哪些施工和处理要求？\n答案：按图施工、特殊焊接、防腐处理",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 72,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0072_c0070"
+  },
+  {
+    "content": "问题：方案B EGCS船上验证需特别注意哪些事项？\n答案：1）试验负荷点的选取\n2）试验用油\n3）最大废气流量效用\n4）洗涤水硝酸盐浓度报告\n5）燃油设备的背压与运行参数。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 73,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0073_c0071"
+  },
+  {
+    "content": "问题：VOCS系统组成中包括哪些与货舱液位和报警相关的系统或装置？\n答案：货舱液位测量系统、货舱高位报警、货舱溢出报警系统、蒸气压力过高和过低报警",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 74,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0074_c0072"
+  },
+  {
+    "content": "问题：对于2000年1月1日或以后安装的焚烧炉，检验时应确认哪些项目？\n答案：确认操作员已按要求进行培训；\n通过外部检查确认每一焚烧炉处于总体合格状态且无气体或烟的泄漏；\n确认已按要求保持燃烧室气体出口温度；\n确认每一焚烧炉按其认可的布置予以维护保养。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 75,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0075_c0073"
+  },
+  {
+    "content": "问题：BWMS营运检验中，滤器故障或失效会造成哪一类不符合率高的问题？\n答案：≥ 50 µm 不符合率高",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "2. MARPOL公约检验及案例",
+      "row_num": 76,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "2. MARPOL公约检验及案例"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0076_c0074"
+  },
+  {
+    "content": "问题：根据《中华人民共和国海上交通安全法》（2021年修订），海上设施的定义是什么，且不包括哪些港口设施？\n答案：海上设施，是指水上水下各种固定或者浮动建筑、装置和固定平台，但是不包括码头、防波堤等港口设施。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 77,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0077_c0075"
+  },
+  {
+    "content": "问题：座底式平台的适用水深一般不超过多少米，其对海底地形和土壤基础有什么要求？\n答案：一般不超过20米；软泥面，对海底地形和土壤基础有一定的要求。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 78,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0078_c0076"
+  },
+  {
+    "content": "问题：自升式平台常用的升降装置有哪两种，平台升到指定高度后锁紧装置如何提高作业安全度？\n答案：液压插销式和电动齿轮齿条式两种。当平台升到指定高度后，锁紧装置锁住桩腿，将平台重量和载荷由升降系统转移到锁紧装置上，提高作业安全度。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 79,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0079_c0077"
+  },
+  {
+    "content": "问题：自升式钻井平台精确就位时，平台尾部距离导管架平台一般为多少米，最近可达到多少米，精就位通常需要多长时间？\n答案：平台尾部距离导管架平台一般在1到5米，最近可达到0.5米；精就位所需时间一般需要2到6天不等。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 80,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0080_c0078"
+  },
+  {
+    "content": "问题：第七代半潜式钻井平台的作业水深、钻井深度、动力定位等级和顶驱能力分别是多少？\n答案：作业水深达3600米，钻井深度50000英尺，DP3动力定位，顶驱达1500吨或以上。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 81,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0081_c0079"
+  },
+  {
+    "content": "问题：半潜平台的主体结构由哪四部分组成？\n答案：下浮体、立柱、横撑和上船体",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 82,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0082_c0080"
+  },
+  {
+    "content": "问题：深水半潜式平台作业水深超过多少米后，锚链定位会变得非常复杂并需要辅助船舶预抛锚、组合锚链和尼龙缆等？\n答案：1，000米",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 83,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0083_c0081"
+  },
+  {
+    "content": "问题：动力定位系统DP-2在规定环境条件下，出现单个故障后可保持船位和首向的故障范围是否包括舱室进水和失火？\n答案：不包括舱室进水和失火",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 84,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0084_c0082"
+  },
+  {
+    "content": "问题：半潜式钻井平台卸载升船作业中，需要在压载室进行什么操作以将平台升到拖航吃水？\n答案：在压载室操作排除压载舱内的压载水",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 85,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0085_c0083"
+  },
+  {
+    "content": "问题：转塔式单点系泊适用的水深范围是多少？\n答案：80米~1500米",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 86,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0086_c0084"
+  },
+  {
+    "content": "问题：SPAR平台为什么具有恒稳性？\n答案：因其重心位于浮心下方。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 87,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0087_c0085"
+  },
+  {
+    "content": "问题：“海基二号”超大型深水导管架的建造总高度、建造用时、关键尺寸精度控制范围和总重分别是多少？\n答案：338.5米、26个月、5毫米内、37000吨",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 88,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0088_c0086"
+  },
+  {
+    "content": "问题：荔湾3-1深水气田开发项目中，荔湾3-1气田水下生产设施的水深范围是多少？\n答案：1350m至1500m",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 89,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0089_c0087"
+  },
+  {
+    "content": "问题：框架式（桁架式）养殖设施主要承受哪些非线性载荷，并宜采用什么分析方法？\n答案：主要承受小尺度构件的莫里森（Morison）力和渔网水动力载荷等非线性载荷，宜采用时域分析的方法。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 90,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0090_c0088"
+  },
+  {
+    "content": "问题：“南鲲”号漂浮式波浪能发电装置的排水量、工作水深以及满负荷条件下每日发电量分别是多少？\n答案：15000吨、30~100米、2.4万度电",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 91,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0091_c0089"
+  },
+  {
+    "content": "问题：海上设施营运入级检验完成后，执行检验单位应在多少小时内将基本参数、检验信息表、证书或符合证明、报告面页等上载SSMIS？\n答案：72小时内",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 92,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0092_c0090"
+  },
+  {
+    "content": "问题：海上生产设施发证检验中，建造检验项目完成后或初次检验完成后多少个工作日内，应在OEMIS系统上传证书、报告、记录及其它必要检验文件？\n答案：30个工作日内",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 93,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0093_c0091"
+  },
+  {
+    "content": "问题：移动平台重大改建检验涉及海上移动平台安全证书签发时，龙骨安放日期或改建日期一栏应填写什么日期？\n答案：重大改建开始日期",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 94,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0094_c0092"
+  },
+  {
+    "content": "问题：发证检验产品依据《海上固定平台安全规则》《浮式生产储油装置安全规则》和CCS（2021年）通函第1号总第564号时，证书类型和检验标识分别是什么？\n答案：海上设施产品检验证书，V",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 95,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0095_c0093"
+  },
+  {
+    "content": "问题：对于机器处所和FPSO货油区域防止油污染设备、取得国际防止生活污水污染证书的FPSO生活污水处理设备，片段规定的证书/认可要求和检验标识是什么？\n答案：型式认可B+船用产品证书，检验标识为P",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 96,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0096_c0094"
+  },
+  {
+    "content": "问题：海洋石油生产设施产品检验中，检验机构证书A类要求设计和施工文件在开工前分别履行哪些审查批准程序？\n答案：设计要经检验机构审查批准；开工前送审有关施工文件，经批准后方可开工，平台作业者和检验机构派人参加开工会。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 97,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0097_c0095"
+  },
+  {
+    "content": "问题：海洋石油生产设施产品检验中，I类产品需由本社进行哪些检验和发证工作？\n答案：设计图纸审查、制造检验、性能试验和颁发产品证书。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 98,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0098_c0096"
+  },
+  {
+    "content": "问题：海洋石油生产设施产品检验中，III类产品需取得哪两类机构颁发的产品证书？\n答案：制造厂所在国政府主管机关或IACS成员",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 99,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0099_c0097"
+  },
+  {
+    "content": "问题：API RP 2A在检验依据中被描述为哪一系列规范的核心，以及哪类固定式钢结构规范的母本？\n答案：API 2系列规范的核心，ISO等固定式钢结构规范的母本",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 100,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0100_c0098"
+  },
+  {
+    "content": "问题：建造检验服务项目中，项目验船师对产品证书的备注要求是什么？\n答案：项目验船师应严格核对产品证书",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "3-2025年P级班-海工概论（郑南）",
+      "row_num": 101,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "3-2025年P级班-海工概论（郑南）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0101_c0099"
+  },
+  {
+    "content": "问题：GTT NO96平面墙区域包含哪些主要组成部分？\n答案：主、次层绝缘箱；主、次层殷瓦薄膜",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "GTT NO 96薄膜型货物围护系统安装与检验[郭显亭]",
+      "row_num": 102,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "GTT NO 96薄膜型货物围护系统安装与检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0102_c0100"
+  },
+  {
+    "content": "问题：殷瓦（Invar）的含Ni比例约为多少，常温线膨胀系数低于多少？\n答案：含Ni约36%，常温线膨胀系数低于1.6×10-6 K-1",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "GTT NO 96薄膜型货物围护系统安装与检验[郭显亭]",
+      "row_num": 103,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "GTT NO 96薄膜型货物围护系统安装与检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0103_c0101"
+  },
+  {
+    "content": "问题：GTT NO96建造与安装流程中，安装连接基座（Coupler base socket）之后的下一步是什么？\n答案：确定基准面、安装调平垫片（Reference wedge）",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "GTT NO 96薄膜型货物围护系统安装与检验[郭显亭]",
+      "row_num": 104,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "GTT NO 96薄膜型货物围护系统安装与检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0104_c0102"
+  },
+  {
+    "content": "问题：次层绝缘箱强度试验（Strength test）规定的负压值是多少？\n答案：-800 mbar",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "GTT NO 96薄膜型货物围护系统安装与检验[郭显亭]",
+      "row_num": 105,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "GTT NO 96薄膜型货物围护系统安装与检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0105_c0103"
+  },
+  {
+    "content": "问题：次层殷瓦薄膜相关试验中，机械试验和氦气试验分别采用多少压力？\n答案：机械试验：3x20 mbar；氦气试验：20 mbar",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "GTT NO 96薄膜型货物围护系统安装与检验[郭显亭]",
+      "row_num": 106,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "GTT NO 96薄膜型货物围护系统安装与检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0106_c0104"
+  },
+  {
+    "content": "问题：GTT NO 96薄膜型LNG运输船的定义中，船长、船体结构、机舱位置、最大蒸气压力和航区分别有什么要求？\n答案：船长150 m及以上；具有双舷侧、双层底、双层甲板和双层横舱壁；机舱位于尾部；最大蒸气压力小于0.07MPa；无限航区。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]",
+      "row_num": 107,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0107_c0105"
+  },
+  {
+    "content": "问题：根据IGC Code 3.1.6，当货物温度低于-10℃和低于-55℃时，货物舱处所与船体结构分别应设置哪些保护结构？\n答案：货物温度低于-10℃时，货物舱处所与海水之间应设置双层底；货物温度低于-55℃时，货物舱处所还须设置构成边舱的纵舱壁。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]",
+      "row_num": 108,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0108_c0106"
+  },
+  {
+    "content": "问题：根据IGC Code（2016）2.4.1，单个液货舱总设计容积Vc不同时，液货舱距舷侧外板的最小距离d如何确定？\n答案：Vc≤1,000m3，d=0.8 m；\n1,000m3<Vc<5,000m3，d=0.75+Vc×0.2/4000 m；\n5,000m3≤Vc<30,000m3，d=0.8+Vc/25000 m；\nVc≥30,000m3，d=2 m。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]",
+      "row_num": 109,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0109_c0107"
+  },
+  {
+    "content": "问题：根据IGC Code 4.19.1，为确定船体结构中板和型材等级，当货物温度低于-10℃时，温度计算应采用哪些假定条件？\n答案：所有液货舱的主屏壁处于货物温度；\n如要求设置完整的或部分次屏壁，仅对任一液货舱（假定一舱失效，对横隔舱来说就是一侧深冷）假定其处于大气压力下的货物温度；\n对于全球航线，环境温度取空气为5℃，海水为0℃（适装证书内注明）；\n空气和海水都是静止的，即无强制对流调节；\n可进行船体加热 etc.",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]",
+      "row_num": 110,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0110_c0108"
+  },
+  {
+    "content": "问题：根据IGC Code 3.6.1和3.6.3，空气闸的门、门间距、通风过压状态以及声光报警系统有哪些具体要求？\n答案：空气闸应由两扇能确保气密的钢质门组成，此类门应是自闭式的，无任何门背扣装置，能保持过压，它们之间距离至少为1.5m，但不大于2.5m。空气闸处所应从非危险区域机械通风并相对露天开敞甲板上的危险区域保持过压状态。空气闸处所的两端应配备声光报警系统。当一侧门开启时，应发出光报警。当空气闸两侧的门从关闭位置开启时应发出声报警。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]",
+      "row_num": 111,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0111_c0109"
+  },
+  {
+    "content": "问题：根据IGC Code 4.20.3，首次满载及卸货期间应验证货物围护系统的哪项性能，并要求其符合什么参数？\n答案：货物围护系统的整体性能，符合设计参数。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]",
+      "row_num": 112,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0112_c0110"
+  },
+  {
+    "content": "问题：CCS解释中，验船师参加货物围护系统初次验证试验时，需要证明该系统在哪些操作方面令人满意且所有安全装置功能良好？\n答案：惰化、制冷和装卸",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]",
+      "row_num": 113,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0113_c0111"
+  },
+  {
+    "content": "问题：货舱区域船体分段划分为纵缝时，内底划分线应尽量避开什么位置？\n答案：围护系统脚手架支撑腿位置",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]",
+      "row_num": 114,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0114_c0112"
+  },
+  {
+    "content": "问题：液穹小分段制作中，为什么要将液穹片段与相邻甲板分段在同一胎架上制造？\n答案：保证接缝平整度和结构对中精度。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]",
+      "row_num": 115,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0115_c0113"
+  },
+  {
+    "content": "问题：殷瓦钢在常温下接触水或油后多长时间以内会生锈，其板厚仅为多少毫米？\n答案：8h以内会生锈，板厚仅0.7mm。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]",
+      "row_num": 116,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "LNG新造船检验（船体）GTT NO 96薄膜型[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0116_c0114"
+  },
+  {
+    "content": "问题：CCS检验文件体系主要分为哪两个部分，各自包含哪些报告、记录或清单？\n答案：CCS检验文件体系主要分为船级部分和法定部分。船级部分包括GSS、CMc、RH、RM等；法定部分包括SSc、SFc、LLr、SEr等。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "业务英语(昝彬彬)",
+      "row_num": 117,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "业务英语(昝彬彬)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0117_c0115"
+  },
+  {
+    "content": "问题：RA报告中“Damage & Repair”结构应包括哪些主要内容？\n答案：Ship particular、Background、Current ship status、Description of damage、Class Rules & Conventions、Repairing requirements、COC&SOR imposed、Solution and conclusion、Flag & HQ instructions、Certificate issued",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "业务英语(昝彬彬)",
+      "row_num": 118,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "业务英语(昝彬彬)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0118_c0116"
+  },
+  {
+    "content": "问题：在RA报告的损伤描述中，受损位置应如何进行三维定位？\n答案：受损位置应准确定位，按X/Y/Z方向进行三维定位，例如：shell plate, portside, Fr.10-Fr.18, 2.6m above baseline。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "业务英语(昝彬彬)",
+      "row_num": 119,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "业务英语(昝彬彬)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0119_c0117"
+  },
+  {
+    "content": "问题：对于船体修理要求，RA报告中应明确哪些与换板、资质预检和焊后试验相关的内容？\n答案：换板尺寸；焊工、材料等资质预检；焊后试验，如UT、TT、ST等。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "业务英语(昝彬彬)",
+      "row_num": 120,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "业务英语(昝彬彬)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0120_c0118"
+  },
+  {
+    "content": "问题：Sample 2底板裂纹案例中，临时修理采取了哪些具体措施？\n答案：在裂纹两端钻止裂孔；对裂纹进行焊接；在外底板裂纹区域贴敷尺寸为300 x 300 x 8 mm、500 x 500 x 8 mm、400 x 400 x 8 mm的钢质覆板；在内底板裂纹区域贴敷尺寸为750 x 300 x 8 mm的钢质覆板2块。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "业务英语(昝彬彬)",
+      "row_num": 121,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "业务英语(昝彬彬)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0121_c0119"
+  },
+  {
+    "content": "问题：《1969年国际船舶吨位丈量公约》规定，总吨位和净吨位分别用于反映船舶的什么特性？\n答案：总吨位反映船舶大小，净吨位反映船舶营运舱容。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "国际吨位丈量公约 周耀华",
+      "row_num": 122,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "国际吨位丈量公约 周耀华"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0122_c0120"
+  },
+  {
+    "content": "问题：在吨位计算的一般规定中，丈量以什么为计算单位，取几位小数，计算所得总吨位及净吨位如何取值？\n答案：丈量以米(m)为计算单位，取2位小数；计算所得总吨位及净吨位的数值只取整数，不用小数点以下的数值。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "国际吨位丈量公约 周耀华",
+      "row_num": 123,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "国际吨位丈量公约 周耀华"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0123_c0121"
+  },
+  {
+    "content": "问题：总吨位GT的计算公式是什么，公式中V和K1分别代表什么？\n答案：GT=K1V。V为船舶所有围蔽处所的总容积；K1=0.2+0.02log10V（或由表查得）。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "国际吨位丈量公约 周耀华",
+      "row_num": 124,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "国际吨位丈量公约 周耀华"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0124_c0122"
+  },
+  {
+    "content": "问题：载货处所应在易于看到的地方用什么字母作永久性标志，且字母高度应不小于多少？\n答案：CC（货舱），字母高度应不小于100mm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "国际吨位丈量公约 周耀华",
+      "row_num": 125,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "国际吨位丈量公约 周耀华"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0125_c0123"
+  },
+  {
+    "content": "问题：根据敞口集装箱船吨位的特殊规定，货舱口净开口总面积达到多少比例可定义为敞口集装箱船，其减少后的总吨位GTR如何计算？\n答案：货舱口的净开口总面积不少于66.7%开敞可定义为敞口集装箱船。减少后的总吨位：GTR=0.9GT。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "国际吨位丈量公约 周耀华",
+      "row_num": 126,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "国际吨位丈量公约 周耀华"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0126_c0124"
+  },
+  {
+    "content": "问题：申请方在船舶建造开工前向CCS指定审图单位提交申请书和图纸资料时，应提交几份图纸资料？\n答案：一式3份",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造入级检验[于得会]",
+      "row_num": 127,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造入级检验[于得会]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0127_c0125"
+  },
+  {
+    "content": "问题：船舶建造过程中的完工检验，船厂质检部门预检合格后应提前多少小时书面通知验船师检验？\n答案：24小时",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造入级检验[于得会]",
+      "row_num": 128,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造入级检验[于得会]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0128_c0126"
+  },
+  {
+    "content": "问题：CCS船舶建造检验中，产品证书类别分为哪三类？\n答案：产品证书（CCS签发）、等效证明文件（制造厂出具，经CCS盖章和签署）、制造厂证明",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造入级检验[于得会]",
+      "row_num": 129,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造入级检验[于得会]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0129_c0127"
+  },
+  {
+    "content": "问题：焊接工艺认可中，对于未曾批准过的工艺，工厂应在什么条件满足后方可使用？\n答案：经工艺认可试验合格后方可使用。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造入级检验[于得会]",
+      "row_num": 130,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造入级检验[于得会]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0130_c0128"
+  },
+  {
+    "content": "问题：开工会议中需要确认试验用仪器、设备具备什么证明？\n答案：法定的或公认的权威机构的检测证明",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造入级检验[于得会]",
+      "row_num": 131,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造入级检验[于得会]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0131_c0129"
+  },
+  {
+    "content": "问题：液货泵舱除应急照明外，照明与风机联锁时，开启照明的通风前提是什么，通常延时继电器延时多少秒后照明系统正常工作？\n答案：开启照明的前提是通风机已经运行或照明同风机同时运行；一般延时继电器延时30S，风机运行30S后照明系统正常工作。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造检验要求",
+      "row_num": 132,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造检验要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0132_c0130"
+  },
+  {
+    "content": "问题：柴油发电机组安全保护装置中，超速保护的速度传感器通常应设置在额定转速的什么范围内作为设定值？\n答案：110%-115%额定转速之间的任意值",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造检验要求",
+      "row_num": 133,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造检验要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0133_c0131"
+  },
+  {
+    "content": "问题：配电板主开关的长延时过载保护一般设定为发电机组额定电流的多少比例，并延时多久后跳闸？\n答案：125%-135%，延时15-30S后跳闸",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造检验要求",
+      "row_num": 134,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造检验要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0134_c0132"
+  },
+  {
+    "content": "问题：发电机组单机负荷试验通常按照哪些负荷比例进行，各阶段运行时间如何规定？\n答案：通常按25%、50%、75%、110%负荷分别运行30分钟，100%负荷阶段运行2小时；对于非共同基座的发电机组，100%阶段需进行4小时单机负荷试验。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造检验要求",
+      "row_num": 135,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造检验要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0135_c0133"
+  },
+  {
+    "content": "问题：滑动水密门在失电情况下，蓄能器应能够保证水密门完成什么操作任务？\n答案：关-开-关任务",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造检验要求",
+      "row_num": 136,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造检验要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0136_c0134"
+  },
+  {
+    "content": "问题：舵机手动操作检查中，应通过安装在泵上的什么部件使舵机动作以检查其工作可靠性？\n答案：液压阀",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造检验要求",
+      "row_num": 137,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造检验要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0137_c0135"
+  },
+  {
+    "content": "问题：桥楼舵角指示器与舵机实际舵角一致性检查的角度范围和校对间隔分别是多少？\n答案：-35°到35°；每5°校对一次",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造检验要求",
+      "row_num": 138,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造检验要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0138_c0136"
+  },
+  {
+    "content": "问题：舵角指示器每10°校对时允许的最大误差是多少？\n答案：±1°",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造检验要求",
+      "row_num": 139,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造检验要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0139_c0137"
+  },
+  {
+    "content": "问题：舵机安全阀的设定压力应确认为多少？\n答案：230bar",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造检验要求",
+      "row_num": 140,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造检验要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0140_c0138"
+  },
+  {
+    "content": "问题：船舶电梯在横摇和纵摇分别达到多少角度时会停止运行？\n答案：横摇±10°、纵摇±5°",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "建造检验要求",
+      "row_num": 141,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "建造检验要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0141_c0139"
+  },
+  {
+    "content": "问题：HZ“G1长青”系列1st Generation薄膜型LNGC采用的货物围护系统、BOR值以及绝缘箱填充材料分别是什么？\n答案：GTT NO 96；BOR：0.15%；绝缘箱内填充珍珠岩（Perlite）",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "我社入级LNG船船型介绍[郭显亭]",
+      "row_num": 142,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "我社入级LNG船船型介绍[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0142_c0140"
+  },
+  {
+    "content": "问题：HZ“G2长健”系列2nd Generation LNGC的推进方式和蒸发气处理方式分别是什么？\n答案：推进方式：低速柴油机，双机双桨双舵；蒸发气处理：再液化单元+GCU",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "我社入级LNG船船型介绍[郭显亭]",
+      "row_num": 143,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "我社入级LNG船船型介绍[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0143_c0141"
+  },
+  {
+    "content": "问题：CESI系列3rd Generation（HZ“G3长安”系列）DFDE LNG运输船的货舱容积、总长、型宽和设计吃水分别是多少？\n答案：货舱容积：174,059 cbm；总长：290.00 m；型宽：45.60 m；设计吃水：11.70 m",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "我社入级LNG船船型介绍[郭显亭]",
+      "row_num": 144,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "我社入级LNG船船型介绍[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0144_c0142"
+  },
+  {
+    "content": "问题：GTT NO 96 L03+系统在HZ“G4长兴”系列中标明的BOR值是多少，其主层绝缘箱填充材料和标准次层结构是什么？\n答案：BOR：0.1%；主层绝缘箱填充玻璃棉（Glass Wool）；标准次层：P-RUF Panel+Intermediate Box",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "我社入级LNG船船型介绍[郭显亭]",
+      "row_num": 145,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "我社入级LNG船船型介绍[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0145_c0143"
+  },
+  {
+    "content": "问题：HZ-14,000 cbm LNG Bunkering Vessel的货舱数量、设计密度、蒸汽压力和推进方式分别是什么？\n答案：货舱数量2个，设计密度0.5t/m3，蒸汽压力0.07 Mpa，推进方式双燃料全回转推进",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "我社入级LNG船船型介绍[郭显亭]",
+      "row_num": 146,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "我社入级LNG船船型介绍[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0146_c0144"
+  },
+  {
+    "content": "问题：根据IBC规则定义，化学品船是指建造或改建成用于散装运输哪一章节所列液体化学品货物的货船？\n答案：规则第17章所列任何液体化学品货物",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "散装危险化学品运输[钱建魁]",
+      "row_num": 147,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "散装危险化学品运输[钱建魁]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0147_c0145"
+  },
+  {
+    "content": "问题：重力液货舱“G”的舱顶设计压力（表压）不得大于多少MPa？\n答案：0.07MPa",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "散装危险化学品运输[钱建魁]",
+      "row_num": 148,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "散装危险化学品运输[钱建魁]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0148_c0146"
+  },
+  {
+    "content": "问题：IMO 1型化学品船液货舱距舷侧外板、距中心线船底外板型线以及距船体外板的最小距离要求分别是什么？\n答案：距舷侧外板应不小于B/5或11.5m（取小者）；距中心线的船底外板型线应不小于B/15或6m（取小者）；任何部位距船体外板都应不小于760mm。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "散装危险化学品运输[钱建魁]",
+      "row_num": 149,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "散装危险化学品运输[钱建魁]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0149_c0147"
+  },
+  {
+    "content": "问题：当载运IBC类有毒货物时，船上应至少配备几套符合IBC 14.2.2要求的安全设备，且至少几套应存放在货泵舱附近易到达处？\n答案：至少3套，其中至少1套存放在货泵舱附近易到达处。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "散装危险化学品运输[钱建魁]",
+      "row_num": 150,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "散装危险化学品运输[钱建魁]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0150_c0148"
+  },
+  {
+    "content": "问题：控制式液货舱透气系统中，如果设有型式认可的高速透气阀，其蒸气/空气混合物向上自由喷射的出口速度至少应达到多少m/s，透气口高度可减至多少m？\n答案：30m/s，3m",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "散装危险化学品运输[钱建魁]",
+      "row_num": 151,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "散装危险化学品运输[钱建魁]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0151_c0149"
+  },
+  {
+    "content": "问题：通风管道贯穿A级分隔且横截面积≤0.02m²时，开口处钢套管的厚度、长度以及舱壁两侧长度分别应满足什么要求？\n答案：厚度≥3mm，长度≥200mm，舱壁两侧长度≥100mm。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "散装危险化学品运输[钱建魁]",
+      "row_num": 152,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "散装危险化学品运输[钱建魁]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0152_c0150"
+  },
+  {
+    "content": "问题：根据SOLAS II-2/9.3.1，其他管道贯穿B级防火分隔时，套管与管道之间的空隙不得超过多少毫米，或应采取什么替代措施？\n答案：2.5mm；或者管道和管间的任何空隙用不燃材料或其他合适的材料填实。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "散装危险化学品运输[钱建魁]",
+      "row_num": 153,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "散装危险化学品运输[钱建魁]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0153_c0151"
+  },
+  {
+    "content": "问题：防止热传递时，隔热应至少延伸至超过贯穿处、接头处或终止点多少毫米？\n答案：450mm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "散装危险化学品运输[钱建魁]",
+      "row_num": 154,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "散装危险化学品运输[钱建魁]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0154_c0152"
+  },
+  {
+    "content": "问题：500总吨及以上化学品船货泵舱可燃气体探测系统在易燃蒸气浓度达到不高于可燃气体爆炸下限多少时，应自动激发连续声光报警？\n答案：10%",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "散装危险化学品运输[钱建魁]",
+      "row_num": 155,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "散装危险化学品运输[钱建魁]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0155_c0153"
+  },
+  {
+    "content": "问题：化学品船货物操作期间经常进入的货泵舱机械通风系统，应具有每小时不小于多少次的空气交换能力；对于IBC规则15.17要求的某些货物，通风率应增加到每小时多少次？\n答案：30次；45次",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "散装危险化学品运输[钱建魁]",
+      "row_num": 156,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "散装危险化学品运输[钱建魁]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0156_c0154"
+  },
+  {
+    "content": "问题：2023年7月MEPC第80次会议明确的国际航运温室气体减排核心目标中，2030年和2040年分别要求较2008年减少多少比例？\n答案：2030年减少20%（力争30%），2040年减少70%（力争80%）",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "新能源：绿色甲醇混合动力船舶技术研究 【王忠诚】",
+      "row_num": 157,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "新能源：绿色甲醇混合动力船舶技术研究 【王忠诚】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0157_c0155"
+  },
+  {
+    "content": "问题：甲醇燃料的密度、沸点、熔点、闪点和爆炸范围分别是多少？\n答案：密度：0.79g/cm³、沸点：64.7℃、熔点：-97℃、闪点：11℃、爆炸范围：6%-44%V/V",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "新能源：绿色甲醇混合动力船舶技术研究 【王忠诚】",
+      "row_num": 158,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "新能源：绿色甲醇混合动力船舶技术研究 【王忠诚】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0158_c0156"
+  },
+  {
+    "content": "问题：甲醇中毒应急处理中，皮肤接触、眼睛接触、吸入和食入分别应采取哪些处理措施？\n答案：皮肤接触：脱去污染的衣着，用肥皂水和清水彻底冲洗皮肤。\n眼睛接触：提起眼睑，用流动清水或生理盐水冲洗，并尽快就医。\n吸入：迅速撤离现场至空气新鲜处。保持呼吸道通畅。如呼吸困难，可及时送氧。如呼吸停止，立即进行人工呼吸并就医。\n食入：饮足量温水，催吐。用清水或 1%硫代硫酸钠溶液洗胃并尽快就医。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "新能源：绿色甲醇混合动力船舶技术研究 【王忠诚】",
+      "row_num": 159,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "新能源：绿色甲醇混合动力船舶技术研究 【王忠诚】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0159_c0157"
+  },
+  {
+    "content": "问题：缸内直喷甲醇+缸内直喷柴油方案最高能实现多少柴油替代率，在87%替代率时指示热效率达到多少？\n答案：最高能实现87%的柴油替代率；在87%替代率时，指示热效率达到53.78%。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "新能源：绿色甲醇混合动力船舶技术研究 【王忠诚】",
+      "row_num": 160,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "新能源：绿色甲醇混合动力船舶技术研究 【王忠诚】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0160_c0158"
+  },
+  {
+    "content": "问题：甲醇混合动力新能源船舶由哪些主要动力组成，其综合能耗可降低多少以上？\n答案：甲醇发电机和锂电池电机组成，综合能耗降低15%以上。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "新能源：绿色甲醇混合动力船舶技术研究 【王忠诚】",
+      "row_num": 161,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "新能源：绿色甲醇混合动力船舶技术研究 【王忠诚】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0161_c0159"
+  },
+  {
+    "content": "问题：法定检验由哪些机构或人员执行？\n答案：船旗国主管机关，或由其授权的认可组织或验船师",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "法定检验[唐磊平]",
+      "row_num": 162,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "法定检验[唐磊平]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0162_c0160"
+  },
+  {
+    "content": "问题：国际航行船舶和国内航行船舶分别签发哪些类型的法定证书？\n答案：国际航行：公约证书\n国内航行：安全与环保证书",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "法定检验[唐磊平]",
+      "row_num": 163,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "法定检验[唐磊平]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0163_c0161"
+  },
+  {
+    "content": "问题：货船所有证书和客船安全证书的最长有效期分别是多少？\n答案：货船所有证书最长有效期5年。客船安全证书最长有效期12个月。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "法定检验[唐磊平]",
+      "row_num": 164,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "法定检验[唐磊平]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0164_c0162"
+  },
+  {
+    "content": "问题：年度检验应在证书每一周年日期前后多长时间窗口内进行？\n答案：前、后各3个月内",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "法定检验[唐磊平]",
+      "row_num": 165,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "法定检验[唐磊平]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0165_c0163"
+  },
+  {
+    "content": "问题：哪些情况会导致船舶证书失效？\n答案：未按公约和规范规定进行各种法定和船级的定期检验；\n证书未按公约和规范规定予以签署；\n证书中内容变更影响其有效性时。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "法定检验[唐磊平]",
+      "row_num": 166,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "法定检验[唐磊平]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0166_c0164"
+  },
+  {
+    "content": "问题：根据《中华人民共和国海上交通安全法》（2021年修订），海上设施的定义是什么，且不包括哪些港口设施？\n答案：海上设施，是指水上水下各种固定或者浮动建筑、装置和固定平台，但是不包括码头、防波堤等港口设施。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 167,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0167_c0165"
+  },
+  {
+    "content": "问题：座底式平台的浅水适用范围一般不超过多少米？\n答案：20米",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 168,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0168_c0166"
+  },
+  {
+    "content": "问题：自升式平台常用的升降装置有哪两种？\n答案：液压插销式和电动齿轮齿条式",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 169,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0169_c0167"
+  },
+  {
+    "content": "问题：自升式钻井平台压载完成后一般需要观察多长时间？\n答案：3小时",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 170,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0170_c0168"
+  },
+  {
+    "content": "问题：第七代半潜式钻井平台的作业水深和钻井深度分别达到多少？\n答案：作业水深达3600米，钻井深度50000英尺",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 171,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0171_c0169"
+  },
+  {
+    "content": "问题：动力定位系统分级中，DP-2在出现单个故障后自动保持船位和首向时，不包括哪些故障情形？\n答案：舱室进水和失火",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 172,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0172_c0170"
+  },
+  {
+    "content": "问题：半潜式钻井平台卸载升船作业中，需要在压载室进行哪些操作以将平台升到拖航吃水？\n答案：在压载室操作排除压载舱内的压载水，卸掉船上多余的物资，将平台升到拖航吃水。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 173,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0173_c0171"
+  },
+  {
+    "content": "问题：井位抛锚作业中，平台被拖到离井位约多少海里左右时准备进场？\n答案：5海里左右",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 174,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0174_c0172"
+  },
+  {
+    "content": "问题：转塔式单点系泊适用的水深范围是多少？\n答案：80米~1500米",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 175,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0175_c0173"
+  },
+  {
+    "content": "问题：“海葵一号”圆筒型FPSO的设计寿命是多少年，且可连续海上运行多少年不回坞？\n答案：设计寿命30年，可连续海上运行15年不回坞",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 176,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0176_c0174"
+  },
+  {
+    "content": "问题：“海基二号”超大型深水导管架集成了哪些系统，建造总高度、建造用时、关键尺寸精度控制和总重分别是多少？\n答案：“海基二号”集数字孪生系统、外加电流阴极保护系统、海洋环境检测系统、海底环境监测系统为一体；建造总高度为338.5米，建造用时26个月，关键尺寸精度控制在5毫米内，导管架总重37000吨。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 177,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0177_c0175"
+  },
+  {
+    "content": "问题：荔湾3-1深水气田开发项目中，水下生产设施的水深范围是多少，并配置了哪些规格和长度的海底管线？\n答案：水下生产设施水深为1350m至1500m；配置1条30”×275km浅水海底管线、2条22”×75km深水海底管线，以及1条14”从PY来的海底管线。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 178,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0178_c0176"
+  },
+  {
+    "content": "问题：固定式导管架平台在建造与安装过程中，片段列出了哪些分析项目？\n答案：静力分析、动力分析、疲劳分析、地震分析、装船分析、海上运输分析、下水运动及结构分析、扶正分析",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 179,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0179_c0177"
+  },
+  {
+    "content": "问题：水下生产系统可回接到哪些类型的设施或平台？\n答案：导管架平台、FPSO、SPAR或TLP平台、岸上设施",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 180,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0180_c0178"
+  },
+  {
+    "content": "问题：“海油观澜号”浮式风机的基础型式、作业水深、风电机组容量、设计寿命、离岸距离和主尺度参数分别是什么？\n答案：基础型式：半潜式；作业水深：120m；风电机组：7.25MW；设计寿命：25年；离岸距离：136公里；主尺度：整体高度200米，平台边长80米，高约35米，重量近4000吨。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 181,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0181_c0179"
+  },
+  {
+    "content": "问题：海上设施营运入级检验完成后，执行检验单位应在多长时间内将基本参数、检验信息表、证书或符合证明、报告面页等上载SSMIS？\n答案：检验完成后72小时内",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 182,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0182_c0180"
+  },
+  {
+    "content": "问题：海上设施建造入级检验中，完工签发临时证书后的72小时内，执行检验单位需在SSMIS系统上传哪些文件或信息至主库？\n答案：签发的证书（包括附件）、检验报告面页、检验信息、Ship Particular等",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 183,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0183_c0181"
+  },
+  {
+    "content": "问题：海上生产设施发证检验中，建造检验项目完成后或初次检验完成后的多少个工作日内，应在OEMIS系统上传证书、报告、记录及其它必要检验文件？\n答案：30个工作日内",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 184,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0184_c0182"
+  },
+  {
+    "content": "问题：移动平台重大改建检验涉及海上移动平台安全证书签发时，龙骨安放日期或改建日期一栏应填写什么日期？\n答案：重大改建开始日期",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 185,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0185_c0183"
+  },
+  {
+    "content": "问题：对于机器处所和FPSO货油区域防止油污染设备、取得国际防止生活污水污染证书的FPSO生活污水处理设备，片段规定其证书要求和检验标识分别是什么？\n答案：型式认可B+船用产品证书；检验标识为P",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 186,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0186_c0184"
+  },
+  {
+    "content": "问题：移动平台产品入级、法定检验可依据哪些CCS规范或指南，如《材料与焊接规范》《海上移动平台入级规范》《钢质海船入级规范》的年份分别是什么？\n答案：《材料与焊接规范》（2023）\n《海上移动平台入级规范》（2023）\n《钢质海船入级规范》（2022）\n《海上浮动设施入级规范》（2023）\n《海上钻井装置检验指南》（2017）\n《海上油气处理系统规范》（2020）\n《船舶与海上设施起重设备规范》（2007）\n《产品检验指南》",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 187,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0187_c0185"
+  },
+  {
+    "content": "问题：海洋石油生产设施产品发证、指定四项检验可采用哪些法规、业主或设计采标及国际行业技术标准作为检验依据？\n答案：经贸委《海上固定平台安全规则》（2000）\n安监总局《浮式生产储油装置（FPSO）安全规则》（2010）\nISO、API、AWS、ASME、ASTM、NACE、SSPC、ANSI、TEMA、IEC、NFPA等国际行业技术标准\nCCS《海上生产设施救生设备、无线电通信设备、航行信号设备法定检验指南》\nCCS《海上生产设施防污染法定检验指南》\n技术规格书",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 188,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0188_c0186"
+  },
+  {
+    "content": "问题：API RP 2A在海洋工程标准化体系中的定位包括哪四个方面？\n答案：海洋工程标准化的起点\nAPI 2系列规范的核心\n行业认知的集中体现\nISO等固定式钢结构规范的母本",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 189,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0189_c0187"
+  },
+  {
+    "content": "问题：海上石油生产设施发证检验产品应依据海工〔2023〕59号通知由哪些角色明确持证要求并准确签发证书？\n答案：项目检验验船师明确持证要求，产品检验单位准确签发证书。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 190,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0190_c0188"
+  },
+  {
+    "content": "问题：对于钻井设备持证要求讨论中，片段列出了哪四种按船旗和是否申请DRILL可选附加标志划分的移动平台情形？\n答案：挂中国旗、不申请DRILL可选附加标志的移动平台；\n挂中国旗、申请DRILL可选附加标志的移动平台；\n挂外旗、不申请DRILL可选附加标志的移动平台；\n挂外旗、申请DRILL可选附加标志的移动平台。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "海工概论[郑南]",
+      "row_num": 191,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "海工概论[郑南]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0191_c0189"
+  },
+  {
+    "content": "问题：根据IGC Code（2016）2.4.1，当单个液货舱总设计容积Vc≤1,000m3时，液货舱距舷侧外板的最小距离d应为多少？\n答案：0.8 m",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 192,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0192_c0190"
+  },
+  {
+    "content": "问题：八边形（Octagonal Shape）横剖面的折角布置为多少度，其设计目的是什么？\n答案：折角均布置为135°；横截面上下收缩达一定高度，以减少LNG液货对船体内壳的晃荡冲击以及自由液面的影响。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 193,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0193_c0191"
+  },
+  {
+    "content": "问题：LNG的主要成分是什么，其大气沸点和液体密度分别是多少？\n答案：LNG的主要成分是甲烷（CH4），大气沸点为-161.5℃，液体密度为458 kg/m3。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 194,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0194_c0192"
+  },
+  {
+    "content": "问题：A型独立液货舱若主要由平面构成（重力液货舱），其设计蒸气压力Po应满足什么要求？\n答案：应小于0.07MPa",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 195,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0195_c0193"
+  },
+  {
+    "content": "问题：全冷式气体液化方式是在什么压力条件下将气体冷却至液态温度以下进行运输，船上需设置哪些控制装置？\n答案：在大气压力下，将气体冷却至液态的温度以下进行运输。船上设有温度和压力控制装置。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 196,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0196_c0194"
+  },
+  {
+    "content": "问题：货物围护系统邻接结构（内壳）在最低温度为-10°C及以下但高于-25°C、钢厚度T≤12.5mm时，应选用什么钢级？\n答案：B级钢",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 197,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0197_c0195"
+  },
+  {
+    "content": "问题：C型独立液货舱的设计压力、最低设计温度、制作材料和隔热厚度分别是多少？\n答案：3.5 bar g；-164℃；9%镍钢；340 mm PE材料",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 198,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0198_c0196"
+  },
+  {
+    "content": "问题：薄膜型LNG运输船货物围护系统建造检验步骤中，主层绝缘箱安装之后的下一步是什么？\n答案：主层薄膜的安装与焊接",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 199,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0199_c0197"
+  },
+  {
+    "content": "问题：氦气试验主要用于检测泄漏量大于多少、氦气浓度为多少时的泄漏点？\n答案：9.3X10-6Pa.m3sec-1，氦气浓度为20%",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 200,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0200_c0198"
+  },
+  {
+    "content": "问题：液货泵的检验要点包括哪些内容？\n答案：泵的绝缘值符合设计要求;\n低温电缆相位连接要正确；\n泵和主启动箱之间的电缆绝缘；\n排放管路的止回阀安装要正确；\n泵的安装满足GTT工艺文件要求。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 201,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0201_c0199"
+  },
+  {
+    "content": "问题：压缩机室被定义为危险区时，压缩机驱动马达应布置在什么位置，且驱动轴贯穿处应满足什么要求？\n答案：压缩机的驱动马达在隔壁的电动马达室内，驱动轴贯穿处保持气密。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 202,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0202_c0200"
+  },
+  {
+    "content": "问题：气化器和加热器的检验要点中，管路及设备的密性试验目的是什么？\n答案：确保可燃气体或蒸汽不外泄。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 203,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0203_c0201"
+  },
+  {
+    "content": "问题：根据 IGC Code（2016）4.19.1.6.2，横向船体结构材料加热系统中至少一个系统的所有电气部件应由什么电源供电？\n答案：应急电源",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 204,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0204_c0202"
+  },
+  {
+    "content": "问题：氮气发生器系统中的薄膜或吸附件额定容量至少应达到以体积表示的船的最大排气量的多少？\n答案：125％",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 205,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0205_c0203"
+  },
+  {
+    "content": "问题：根据 IGC Code（2016）13.3.5，交船后和每次干坞后第一次满载时，高液位报警试验应如何进行？\n答案：应通过提升液货舱中的货物液位至报警点进行高位报警试验。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 206,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0206_c0204"
+  },
+  {
+    "content": "问题：美孚LNG项目柴油主机推进系统采用的两台6S70ME-C8.2主机，其单机功率和转速分别是多少？\n答案：16,000 kW，85.0 rpm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 207,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0207_c0205"
+  },
+  {
+    "content": "问题：AP LNG项目双燃料电力推进系统包含哪些主要设备？\n答案：双燃料主发电机、电推马达、减速齿轮箱、燃气双壁管",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 208,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0208_c0206"
+  },
+  {
+    "content": "问题：PULNG船双倾斜轴系中，轴线与船体中心线呈多少度夹角？\n答案：2.4°",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 209,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0209_c0207"
+  },
+  {
+    "content": "问题：液氮试验中，分别使用什么介质对扫舱/喷淋管、液货主管和挥发气主管进行冷却？\n答案：用液氮对扫舱/喷淋管冷却；用低温的氮气对液货主管和挥发气主管冷却。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 210,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0210_c0208"
+  },
+  {
+    "content": "问题：首次卸货检验时，卸载开始阶段优先的时间范围是多少，并且在卸载开始前需要见证哪项系统试验？\n答案：卸载开始阶段优先（大约最初 4-6 小时）；在卸载开始前见证应急截止系统试验。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "液化气体船建造检验[郭显亭]",
+      "row_num": 211,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "液化气体船建造检验[郭显亭]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0211_c0209"
+  },
+  {
+    "content": "问题：MF/HF设备属于GMDSS系统的主要组成设备，其峰包功率范围和发射频率范围分别是多少？\n答案：150-400W左右；2-27.5MHZ",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验1",
+      "row_num": 212,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验1"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0212_c0210"
+  },
+  {
+    "content": "问题：VHF设备的作用距离约为多少海里，且16频道在设备中被规定为什么用途？\n答案：25海里左右；16频道为国际遇险通话频道",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验1",
+      "row_num": 213,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验1"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0213_c0211"
+  },
+  {
+    "content": "问题：NAVTEX设备的工作频率是多少，2005年7月1日之后安装上船的设备要求具备什么工作能力？\n答案：工作频率是518KHz；2005年7月1日之后安装上船的设备要求能够双频工作。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验1",
+      "row_num": 214,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验1"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0214_c0212"
+  },
+  {
+    "content": "问题：EPIRB每隔多少秒发射一次包含数字编码信息的RF突发信号，且试验时按住按钮时间为什么不能超过该时间？\n答案：每隔50秒发射一次；因为EPIRB每隔50秒会发射包含数字编码信息的RF突发信号，系统可据此确定船舶识别号等信息，遇险性质定义为失事。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验1",
+      "row_num": 215,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验1"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0215_c0213"
+  },
+  {
+    "content": "问题：自动操舵仪根据什么信号控制舵机转动舵，且决议要求其能在多少秒内由自动舵转为手动舵？\n答案：根据罗经显示的船舶航向和规定的航向比较后所得的航向误差信号（即偏航信号）控制舵机转动舵；决议要求能在3秒内由自动舵转为手动舵。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验1",
+      "row_num": 216,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验1"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0216_c0214"
+  },
+  {
+    "content": "问题：A1、A2、A3、A4无线电海区在SOLAS第Ⅳ章中分别如何定义？\n答案：A1海区系指至少由一个具有连续DSC报警能力的甚高频（VHF）海岸电台的无线电话所覆盖的区域，该区域可由各缔约国政府规定。基本是25公里的范围，是按照海岸电台为中心画园。\nA2海区系指除A1海区以外，至少由一个具有连续DSC报警能力的中频（MF）海岸电台的无线电话所覆盖的区域，该区域可由各缔约国政府规定。基本是200公里的范围，是按照海岸电台为中心画园。\nA3海区系指除A1和A2海区以外，由具有连续报警能力的船载船舶地面站支持的经认可的移动卫星业务。\nA4海区系指A1、A2和A3海区以外的区域。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验2",
+      "row_num": 217,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验2"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0217_c0215"
+  },
+  {
+    "content": "问题：每艘船舶按第7条要求应配备的VHF无线电装置需要在哪些频率和频道上实现DSC或无线电话功能？\n答案：DSC：156.525 MHz（70频道）；\n无线电话：156.300 MHz（6频道）、156.650 MHz（13频道）、156.800 MHz（16频道）。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验2",
+      "row_num": 218,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验2"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0218_c0216"
+  },
+  {
+    "content": "问题：在A2海区航行的船舶，MF无线电装置应在哪些频率上分别使用DSC和无线电话进行遇险和安全通信？\n答案：在2,187.5 kHz频率上使用DSC；在2,182 kHz频率上使用无线电话。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验2",
+      "row_num": 219,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验2"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0219_c0217"
+  },
+  {
+    "content": "问题：A4海区船舶的MF/HF无线电装置进行DSC值班时，必须保持哪些频率的连续值班，并至少还需选择哪些频率中的一个？\n答案：2,187.5 kHz和8,414.5 kHz；并至少在4,207.5 kHz、6,312 kHz、12,577 kHz或16,804.5 kHz中的一个频率上保持连续值班。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验2",
+      "row_num": 220,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验2"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0220_c0218"
+  },
+  {
+    "content": "问题：EPIRB的年度测试和岸基维护分别应按什么时间间隔进行，客船和货船年度测试的时间窗口分别是什么？\n答案：EPIRB应进行年度测试；岸基维护应按不超过5年的间隔期在经认可的岸基维护站进行。\n\n年度测试时间窗口：\n客船：《客船安全证书》到期之前3个月内。\n货船：《货船无线电安全证书》到期之前3个月内，或周年日之前或之后的3个月内。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验2",
+      "row_num": 221,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验2"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0221_c0219"
+  },
+  {
+    "content": "问题：电缆离蒸汽管及其法兰、电阻器、锅炉等热源的空间距离一般应不小于多少毫米？\n答案：150mm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验3",
+      "row_num": 222,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验3"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0222_c0220"
+  },
+  {
+    "content": "问题：电缆管中电缆的总面积（含绝缘层）应不超过电缆管截面积的百分之多少？\n答案：40％",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验3",
+      "row_num": 223,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验3"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0223_c0221"
+  },
+  {
+    "content": "问题：本质安全电路电缆的外护套应采用什么颜色或具有什么颜色条纹标识？\n答案：蓝色或具有蓝色条纹标识",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验3",
+      "row_num": 224,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验3"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0224_c0222"
+  },
+  {
+    "content": "问题：ROXTEC密封模块的检验应在完成安装多少小时以后进行？\n答案：24小时",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验3",
+      "row_num": 225,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验3"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0225_c0223"
+  },
+  {
+    "content": "问题：爆炸性气体危险场所按中国防爆标准和IEC标准划分为哪三个区域？\n答案：0区、1区和2区",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "电气检验3",
+      "row_num": 226,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "电气检验3"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0226_c0224"
+  },
+  {
+    "content": "问题：根据《中华人民共和国保守国家秘密法》第二条，国家秘密的定义是什么？\n答案：国家秘密是关系国家的安全和利益，依照法定程序确定，在一定时间内只限一定范围的人员知悉的事项。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "职业责任和从业要求、BM要求 （庄琳璐）",
+      "row_num": 227,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "职业责任和从业要求、BM要求 （庄琳璐）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0227_c0225"
+  },
+  {
+    "content": "问题：国家秘密分为哪三个密级，且其保密基本期限分别是多少年？\n答案：绝密（30年）、机密（20年）、秘密（10年）",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "职业责任和从业要求、BM要求 （庄琳璐）",
+      "row_num": 228,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "职业责任和从业要求、BM要求 （庄琳璐）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0228_c0226"
+  },
+  {
+    "content": "问题：中国船级社“内控A级”文件在办理、传递和存储方面有哪些管理要求？\n答案：纸质传阅，物理隔离内控A级计算机办理，通过机要线或邮政快递传递；不得在互联网计算机存储，不得通过互联网、微信等方式传递，不得通过其他快递传递。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "职业责任和从业要求、BM要求 （庄琳璐）",
+      "row_num": 229,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "职业责任和从业要求、BM要求 （庄琳璐）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0229_c0227"
+  },
+  {
+    "content": "问题：中国船级社“内控B级”文件可以通过哪些系统或方式办理和传递，且禁止通过哪种方式拍照、传递、存储？\n答案：可在我社内网办公或业务系统（OA、MIS）办理，加密并脱密存储在互联网工作计算机或通过我社工作邮箱传递；不得通过微信拍照、传递、存储等。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "职业责任和从业要求、BM要求 （庄琳璐）",
+      "row_num": 230,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "职业责任和从业要求、BM要求 （庄琳璐）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0230_c0228"
+  },
+  {
+    "content": "问题：《反不正当竞争法》第九条规定，经营者不得实施哪些侵犯商业秘密的行为？\n答案：（一）以盗窃、贿赂、欺诈、胁迫、电子侵入或者其他不正当手段获取权利人的商业秘密；\n（二）披露、使用或者允许他人使用以前项手段获取的权利人的商业秘密；\n（三）违反保密义务或者违反权利人有关保守商业秘密的要求，披露、使用或者允许他人使用其所掌握的商业秘密；\n（四）教唆、引诱、帮助他人违反保密义务或者违反权利人有关保守商业秘密的要求，获取、披露、使用或者允许他人使用权利人的商业秘密。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "职业责任和从业要求、BM要求 （庄琳璐）",
+      "row_num": 231,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "职业责任和从业要求、BM要求 （庄琳璐）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0231_c0229"
+  },
+  {
+    "content": "问题：国际船舶检验业务中，高级技术服务人员需具备多少年以上新造船建造、监理或检验相关工作经历，并至少从事过哪些船型之一的新造船工作？\n答案：8年以上；大型LNG运输船、矿砂船、大型散货船、大型油轮、万箱及以上集装箱船其中之一以上的新造船工作。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船海业务研讨 （戴臣福）",
+      "row_num": 232,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船海业务研讨 （戴臣福）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0232_c0230"
+  },
+  {
+    "content": "问题：进入密闭舱室前，验船师必须采取哪两项自身安全措施？\n答案：强制通风并检测气体",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船海业务研讨 （戴臣福）",
+      "row_num": 233,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船海业务研讨 （戴臣福）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0233_c0231"
+  },
+  {
+    "content": "问题：片段中列举的无损检测方法包括哪些缩写形式？\n答案：UT/RT/MT/PT",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船海业务研讨 （戴臣福）",
+      "row_num": 234,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船海业务研讨 （戴臣福）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0234_c0232"
+  },
+  {
+    "content": "问题：海工检验业务中，中级技术服务人员应达到取得检验资质多少年及以上验船师的能力，其编写的证书报告需由谁审核？\n答案：3年及以上；编写的证书报告需经正式验船师审核。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船海业务研讨 （戴臣福）",
+      "row_num": 235,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船海业务研讨 （戴臣福）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0235_c0233"
+  },
+  {
+    "content": "问题：国际船舶新造船检验业务要求技术服务人员熟悉哪些核心国际公约示例？\n答案：SOLAS、MARPOL、LOAD LINE",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船海业务研讨 （戴臣福）",
+      "row_num": 236,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船海业务研讨 （戴臣福）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0236_c0234"
+  },
+  {
+    "content": "问题：船舶检验的定义是什么，包括哪些主要工作和结果？\n答案：船舶检验系指船舶检验机构对船舶进行审图和检验，并签发相应证书或证明的过程。主要工作包括审图和检验，结果是签发相应证书或证明。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 237,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0237_c0235"
+  },
+  {
+    "content": "问题：入级服务流程包括从规范编制开始到船舶生命周期内哪些主要环节？\n答案：规范编制、船舶图纸审查、船舶及其相关产品的建造检验、签发证书、营运期验证船舶继续符合保持船级的相关条件和信息反馈。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 238,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0238_c0236"
+  },
+  {
+    "content": "问题：CCS对建造后船舶进行年度、中间、特别检验并签署或重新签发入级证书的周期一般为几年？\n答案：5年",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 239,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0239_c0237"
+  },
+  {
+    "content": "问题：CCS《钢质海船入级规范》中定义的“规范”或“规范体系”包括哪些内容？\n答案：入级规范、专门规范、指南、计算软件",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 240,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0240_c0238"
+  },
+  {
+    "content": "问题：COMPASS船舶规范校核和审图计算软件系统中，针对LNG船或LNG相关设备列举了哪些计算评估软件或船型？\n答案：C型LNG罐体规范计算软件；LNG船泵塔晃荡载荷加载及强度评估软件；薄膜型LNG船；C型LNG船；棱柱型LNG船",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 241,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0241_c0239"
+  },
+  {
+    "content": "问题：CCS入级规范的编制原则中，规范（入级规范、专门规范、指南、计算软件）应符合质量体系规定的哪些过程？\n答案：起草、发放、评议、审定、批准、颁布",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 242,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0242_c0240"
+  },
+  {
+    "content": "问题：《钢质海船入级规范》（2006）首次全部纳入了IACS的哪一类共同结构规范？\n答案：共同结构规范（CSR）",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 243,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0243_c0241"
+  },
+  {
+    "content": "问题：CCS海船入级规范体系覆盖的船舶类型中，片段列举的液化天然气运输船（LNG）的舱容是多少立方米？\n答案：174000m3",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 244,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0244_c0242"
+  },
+  {
+    "content": "问题：入级服务的目标是验证船体及附属物主要部件的哪些性能，以及推进系统、操舵系统、发电系统和其他辅助系统的哪些性能？\n答案：船体及附属物主要部件的结构强度和完整性；推进系统、操舵系统、发电系统以及船上装配的其他特征或辅助系统的可靠性和功能，能维持船上基本服务。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 245,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0245_c0243"
+  },
+  {
+    "content": "问题：建造后检验机制包括船体、机械设备和电气装置的哪些检验种类？\n答案：年度检验、中间检验、特别/换证检验、船底外部及有关项目检验、螺旋桨轴与尾管轴检验、锅炉检验、附加标志检验。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 246,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0246_c0244"
+  },
+  {
+    "content": "问题：美国海岸警卫队（USCG）和巴黎备忘录（PARIS MOU）等地区性港口当局监督组织使用什么制度作为选择船舶监督检查优先顺序的辅助手段？\n答案：计分制",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 247,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0247_c0245"
+  },
+  {
+    "content": "问题：巴黎备忘录对上次监督检查“未发现缺陷”的船舶采取什么奖励方式，该奖励正分可抵消哪些负分？\n答案：给予奖励记正分奖励方式；奖励正分可以抵消船旗国或船级社的负分。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 248,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0248_c0246"
+  },
+  {
+    "content": "问题：港口当局检查官登船进行监督检查时，首先会对船舶形成什么印象，随后检查哪些相关证书和文件？\n答案：首先会对船舶概况有一总体印象；随后检查船舶相关证书和文件，包括船员资质证件。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 249,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0249_c0247"
+  },
+  {
+    "content": "问题：当港口当局检查官发现有“明显理由”认为船舶及其设备或船员资质不满足相关公约要求时，应进行何种检查，并应依据哪项IMO决议指南？\n答案：应进行“更为详细的检查”，并应按IMO A.787(19)决议《港口当局监督程序》中的“更为详细的检查”指南进行。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 250,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0250_c0248"
+  },
+  {
+    "content": "问题：CCS验船师受港口当局主管机关要求进行检查和检验时，无论单独进行还是与主管机关检查官一起进行，检查结果应向谁报告？\n答案：主管机关",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船级社与入级概论[杨志勇]",
+      "row_num": 251,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船级社与入级概论[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0251_c0249"
+  },
+  {
+    "content": "问题：《船舶和海上设施检验条例》从检验角度如何定义“船舶”和“海上设施”？\n答案：船舶：各类排水或非排水船艇、水上飞机、潜水器和移动平台；\n海上设施：水上水下各种固定或浮动建筑、装置和固定平台。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 252,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0252_c0250"
+  },
+  {
+    "content": "问题：按航区分类时，海船和河船分别包含哪些航区等级或类别？\n答案：海船：无限、有限（R1/2/3）；河船：A、B、C、J",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 253,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0253_c0251"
+  },
+  {
+    "content": "问题：按公约划分时，构造/设备、无线电、航行、载重线、散化液化和载客项目的公约与非公约界限分别是什么？\n答案：构造/设备：公约≥500GT，非公约<500GT；无线电：公约≥300GT，非公约<300GT；航行：公约≥150GT，非公约<150GT；载重线：公约>24m，非公约≤24m；散化液化：公约所有吨位，非公约无；载客：公约>12人，非公约≤12人。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 254,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0254_c0252"
+  },
+  {
+    "content": "问题：客船的定义中，载运乘客人数超过多少人时被认定为客船？\n答案：12人",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 255,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0255_c0253"
+  },
+  {
+    "content": "问题：邮轮设计在结构和布置方面列出了哪些主要技术难点？\n答案：基于母型船的概念设计和基本设计(关键性指标的准确性)；\n多层甲板布置，结构受力复杂；\n结构不连续，应力分布不均匀（贯通多层甲板的开口、游泳池/门窗大开口、救生艇存放位置缩进）；\n舱壁甲板以下舱室布置及破舱稳性(渐进式浸水模拟)；\n脱险通道布置及撤离分析(考虑紧急情况下船舶浮态)；\n替代设计等效性分析(超长/超宽主竖区、大容量救生艇)；\n安全返港和安全区域；",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 256,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0256_c0254"
+  },
+  {
+    "content": "问题：液货船的定义是什么，其按货物类型包括哪些主要船舶类型？\n答案：运输散装液体货物的货船。按货物类型包括：油船，原油油船、原油/成品油油船、成品油油船、矿砂/散货/油类兼用船（O/B/O）、矿砂/油类兼用船（O/O）、穿梭油船和沥青船；液化气体船，LNG、LPG、LEG；化学品液货船。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 257,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0257_c0255"
+  },
+  {
+    "content": "问题：双舷侧散货船的所有货舱边界均为双舷侧结构时，其内、外壳之间的最小距离应满足什么要求？\n答案：大于或等于1000mm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 258,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0258_c0256"
+  },
+  {
+    "content": "问题：对船长90m及以上、全球不限航区的单舷侧或双壳结构散货船，应符合哪项共同结构规范？\n答案：IACS散货船共同结构规范（CSR）",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 259,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0259_c0257"
+  },
+  {
+    "content": "问题：液化气体船在片段中列举了哪三种类型？\n答案：LNG、LPG、LEG",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 260,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0260_c0258"
+  },
+  {
+    "content": "问题：石油沥青运输船货物操作温度一般在多少以上，且对货物舱边界与海水接触有何限制？\n答案：一般在1800C以上，不允许货物舱的边界直接与海水接触。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 261,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0261_c0259"
+  },
+  {
+    "content": "问题：液化气船中，2PG型（Type 2PG）适用的船长限制、释放阀最大调定值和设计温度要求分别是什么？\n答案：适用L≤150m；释放阀最大调定值至少为0.7MPa；设计温度为－55℃或以上。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 262,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0262_c0260"
+  },
+  {
+    "content": "问题：对于1986年7月1日之前建造并符合GC规则的液化气船，1G型、2G型、2PG型和3G型分别由哪些型式替代？\n答案：IG型、IIG型、IIPG型、IIIG型",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 263,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0263_c0261"
+  },
+  {
+    "content": "问题：LNG运输船（LNG Carrier）的主要特征或用途是什么？\n答案：从事载运液化天然气（LNG）的船舶。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 264,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0264_c0262"
+  },
+  {
+    "content": "问题：LPG运输船适用于载运哪种货物，并由哪一规范对其构造与设备作出具体规定？\n答案：液化石油气（LPG）；《散装运输液化气体船舶构造与设备规范》有具体规定。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 265,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0265_c0263"
+  },
+  {
+    "content": "问题：液化气船中，1G型、2G型和3G型分别对应采取何种防漏保护措施的货物？\n答案：1G型：采用最严格防漏保护措施的货物；2G型：采用中等防漏保护措施的货物；3G型：采用中等防漏保护措施的货物。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 266,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0266_c0264"
+  },
+  {
+    "content": "问题：A类高速客船的主要特征中，载客人数不得超过多少人？\n答案：450人",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 267,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0267_c0265"
+  },
+  {
+    "content": "问题：全垫升气垫船的船底四周采用什么结构封闭，并使用什么推进方式？\n答案：柔性围裙封闭，用空气螺旋桨推进",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 268,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0268_c0266"
+  },
+  {
+    "content": "问题：地效翼船的航速可达到多少以上？\n答案：200km/h以上",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 269,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0269_c0267"
+  },
+  {
+    "content": "问题：工程船舶按水上工程作业要求装备专用设备，主要从事哪些工程技术作业？\n答案：水面、水下各种工程技术作业",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 270,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0270_c0268"
+  },
+  {
+    "content": "问题：近海供应船的破损稳性由哪项IMO决议作出专门规定？\n答案：IMO 决议 A.469",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 271,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0271_c0269"
+  },
+  {
+    "content": "问题：第43页表格1的主题是大型船舶的哪一方面内容？\n答案：受力情况",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 272,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0272_c0270"
+  },
+  {
+    "content": "问题：第44页表格1涉及大型船舶的哪项设计内容？\n答案：优化设计",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 273,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0273_c0271"
+  },
+  {
+    "content": "问题：第45页表格1的主题与哪种船舶建造材料的使用有关？\n答案：高强度钢",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶与海上设施类型[杨志勇]",
+      "row_num": 274,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶与海上设施类型[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0274_c0272"
+  },
+  {
+    "content": "问题：船舶和海上设施技术规范体系从哪两个维度制定，并分别划分为哪些类别或模块？\n答案：船舶和海上设施技术规范体系从适用对象、技术功能两个维度制定。从适用对象维度，划分为商船、渔船、水上设施、船运集装箱、船用产品及特殊船舶等类别；从技术功能维度，划分为安全、绿色、智能三大模块。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶技术法规体系2024(1)",
+      "row_num": 275,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶技术法规体系2024(1)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0275_c0273"
+  },
+  {
+    "content": "问题：海域航区等级、内河水域航区等级以及河海交界区水域航区等级分别如何划分？\n答案：海域的航区等级分为远海航区、近海航区、沿海航区和遮蔽航区。内河水域的航区等级分为A、B、C三级，依据水流速度又分为J1级、J2级急流航段；对于超过A级航区的湖区划分为H1、H2两个航区等级。河海交界区水域的航区等级为内河相当A级航区。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶技术法规体系2024(1)",
+      "row_num": 276,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶技术法规体系2024(1)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0276_c0274"
+  },
+  {
+    "content": "问题：在绿色技术类低碳零碳的新能源清洁能源应用中，《天然气燃料动力船舶法定检验暂行规则（2018）》和《液化天然气燃料加注船舶法定检验暂行规则（2016）》的实施日期分别是什么？\n答案：2018年6月1日；2017年3月1日",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶技术法规体系2024(1)",
+      "row_num": 277,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶技术法规体系2024(1)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0277_c0275"
+  },
+  {
+    "content": "问题：液化天然气燃料内河加注趸船法定检验暂行规则（2018）的实施日期是什么？\n答案：2018年6月1日",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶技术法规体系2024(1)",
+      "row_num": 278,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶技术法规体系2024(1)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0278_c0276"
+  },
+  {
+    "content": "问题：船舶消防包括哪四个方面的要求，船舶灭火要求涵盖哪些灭火系统或设备？\n答案：船舶消防包括防火、探火、灭火、逃生四个方面的要求。船舶灭火要求涵盖水灭火系统、固定式气体灭火系统、固定式泡沫灭火系统、便携式灭火器等。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶技术法规体系2024(1)",
+      "row_num": 279,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶技术法规体系2024(1)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0279_c0277"
+  },
+  {
+    "content": "问题：《内河船舶法定检验技术规则（2008年修改通报）》的实施日期是什么？\n答案：2008年 3月 1日",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶技术法规体系2024(1)",
+      "row_num": 280,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶技术法规体系2024(1)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0280_c0278"
+  },
+  {
+    "content": "问题：《船长5～10m内河C级航区客船稳性的简易计算（1997）》适用于哪一船长范围和航区等级的客船？\n答案：船长5～10m、内河C级航区客船",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶技术法规体系2024(1)",
+      "row_num": 281,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶技术法规体系2024(1)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0281_c0279"
+  },
+  {
+    "content": "问题：《钢质国内海洋渔船建造规范（船长大于或等于24m但小于或等于90m）（2019）》的实施日期是什么？\n答案：2019年 1月 15日",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶技术法规体系2024(1)",
+      "row_num": 282,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶技术法规体系2024(1)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0282_c0280"
+  },
+  {
+    "content": "问题：《浮式储存和再气化装置法定检验暂行规则（2020）》属于水上设施中的哪一类设施，其实施日期是什么？\n答案：浮动设施，2020年4月1日",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶技术法规体系2024(1)",
+      "row_num": 283,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶技术法规体系2024(1)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0283_c0281"
+  },
+  {
+    "content": "问题：标注“*”的检验技术要求在制定技术规范方面有什么说明？\n答案：标注“ * ”的检验技术要求可不制定单独的技术规范，一般属于适用对象技术规范的组成部分。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶技术法规体系2024(1)",
+      "row_num": 284,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶技术法规体系2024(1)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0284_c0282"
+  },
+  {
+    "content": "问题：自2026年1月1日起，含PFOS灭火介质中PFOS浓度超过多少时被定义为“containing PFOS”？\n答案：10mg/kg（0.001% by weight）",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 285,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0285_c0283"
+  },
+  {
+    "content": "问题：高压二氧化碳灭火系统中，集合管至分配阀箱的总管上压力表最大量程应为工作压力的多少倍？\n答案：1.5倍",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 286,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0286_c0284"
+  },
+  {
+    "content": "问题：油柜速闭阀若不直接装设于油柜，按规范可装设在焊于油柜舱壁上的刚性短管上，该短管长度计算公式是什么？\n答案：L=0.8D+80mm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 287,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0287_c0285"
+  },
+  {
+    "content": "问题：液货船驾驶室外部门窗按MSC/Circ.1120进行冲水气密试验时，喷嘴直径、水压和喷嘴至门窗距离分别应满足什么要求？\n答案：喷嘴直径：不小于12mm；喷嘴前水压：不小于0.2N/mm2；喷嘴至门窗距离：不大于1.5m。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 288,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0288_c0286"
+  },
+  {
+    "content": "问题：惰性气体系统向液货舱输送惰性气体时，其输送能力至少应达到船舶最大卸货速率（按体积计）的多少？\n答案：125%",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 289,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0289_c0287"
+  },
+  {
+    "content": "问题：惰性气体系统中，含氧量超过多少时应触发听觉和视觉报警？\n答案：5%",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 290,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0290_c0288"
+  },
+  {
+    "content": "问题：氮气发生器单独舱室的独立机械抽吸通风系统每小时应换气多少次？\n答案：6次",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 291,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0291_c0289"
+  },
+  {
+    "content": "问题：固定式探火和失火报警系统中，起居处所梯道、走廊和脱险通道的感烟探测器应在烟密度超过每米多少减光率前动作？\n答案：12.5％的减光率",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 292,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0292_c0290"
+  },
+  {
+    "content": "问题：防火结构中，A级分隔背火面的平均温度较初始温度升高不得超过多少摄氏度？\n答案：140℃",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 293,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0293_c0291"
+  },
+  {
+    "content": "问题：水灭火系统中，对于液货船，液货舱甲板上消防总管隔离阀的间距不得超过多少米？\n答案：40m",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 294,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0294_c0292"
+  },
+  {
+    "content": "问题：客船上的消防泵所要求总排量应不少于各舱底泵用于舱底水泵送时所要求排量的多少比例？\n答案：三分之二",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 295,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0295_c0293"
+  },
+  {
+    "content": "问题：货船上除任何应急泵以外的消防泵要求总排量在无特别规定时是否需要超过180m3/h？\n答案：不需要。除非特别规定，货船消防泵要求总排量不必超过180m3/h。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 296,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0296_c0294"
+  },
+  {
+    "content": "问题：每台所要求的消防泵在任何情况下的排量最低不得少于多少m3/h，并且至少应能提供几股水柱？\n答案：25m3/h，两股水柱",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 297,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0297_c0295"
+  },
+  {
+    "content": "问题：应急消防泵的排量应不少于SOLAS公约第II-2/10.2.2.4.1条所要求消防泵排量的多少比例？\n答案：40%",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 298,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0298_c0296"
+  },
+  {
+    "content": "问题：消防水带的长度至少为多少米，在机器处所内、其他处所和开敞甲板上、以及最大型宽大于30m船舶的开敞甲板上分别不得超过多少米？\n答案：消防水带的长度至少为10m；在机器处所内不得超过15m；在其他处所内和开敞甲板上不得超过20m；在最大型宽大于30m船舶的开敞甲板上不得超过25m。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶消防(现场检验介绍)【范云】",
+      "row_num": 299,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶消防(现场检验介绍)【范云】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0299_c0297"
+  },
+  {
+    "content": "问题：船舶稳性按船舶倾斜方向可分为哪两类，分别对应绕哪个轴倾斜时的稳性？\n答案：横稳性：船舶绕纵向轴（x轴）横倾时的稳性；纵稳性：船舶绕横向轴（y轴）纵倾时的稳性。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶稳性-2025(周耀华)",
+      "row_num": 300,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶稳性-2025(周耀华)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0300_c0298"
+  },
+  {
+    "content": "问题：国际海事组织在1985年通过的海大A.562(14)决议，其制定目的是什么？\n答案：弥补海大A.167决议的不足",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶稳性-2025(周耀华)",
+      "row_num": 301,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶稳性-2025(周耀华)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0301_c0299"
+  },
+  {
+    "content": "问题：《2008年国际完整稳性规则》分为哪两个部分，其强制性属性分别是什么？\n答案：强制性的Part A和非强制性的Part B",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶稳性-2025(周耀华)",
+      "row_num": 302,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶稳性-2025(周耀华)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0302_c0300"
+  },
+  {
+    "content": "问题：影响船舶稳性的因素包括哪四项？\n答案：几何形状\n装载状态\n船内重物移动，悬挂重物\n自由液面",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶稳性-2025(周耀华)",
+      "row_num": 303,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶稳性-2025(周耀华)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0303_c0301"
+  },
+  {
+    "content": "问题：国内航行客船等级划分中，Ⅱ级沿海客船在黄海、东海、北部湾、渤海湾、琼州海峡、雷州半岛东海岸和西海岸航行时，航程距庇护地距离要求是多少？\n答案：≥10 n mile",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶稳性-2025(周耀华)",
+      "row_num": 304,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶稳性-2025(周耀华)"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0304_c0302"
+  },
+  {
+    "content": "问题：入级过程由哪些阶段组成？\n答案：（1）规范的制订；\n（2）通过审图、建造中检验，确认其符合这些规范的要求；\n（3）当确认符合后，授予船级和签发入级证书；\n（4）通过建造后检验，确认其符合这些规范的要求，签署或签发入级证书；\n（5）信息的应用。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶结构检验授课讲义-（王海雄）",
+      "row_num": 305,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶结构检验授课讲义-（王海雄）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0305_c0303"
+  },
+  {
+    "content": "问题：船体建造中由验船师直接介入的检验方式包括哪三种类型？\n答案：巡检、审查、现场见证",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶结构检验授课讲义-（王海雄）",
+      "row_num": 306,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶结构检验授课讲义-（王海雄）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0306_c0304"
+  },
+  {
+    "content": "问题：开工前检查中，哪些图纸应经验船师认可？\n答案：焊接规格表\n密性试验图\n无损探伤布置图\n相关的试验大纲",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶结构检验授课讲义-（王海雄）",
+      "row_num": 307,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶结构检验授课讲义-（王海雄）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0307_c0305"
+  },
+  {
+    "content": "问题：焊工资格确认中，焊工通过的资格认可与哪些焊接变量有关？\n答案：焊接方法；焊接接头型式；母材材质；板厚（管子包括壁厚和管径）；焊接材料类型；焊接位置。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶结构检验授课讲义-（王海雄）",
+      "row_num": 308,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶结构检验授课讲义-（王海雄）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0308_c0306"
+  },
+  {
+    "content": "问题：气密试验检查前，建议将被试验液舱内的空气压力升到多少并保持多长时间，随后降低到多少进行检查？\n答案：0.02MPa，并保持1h；随后降低到0.015MPa进行检查。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶结构检验授课讲义-（王海雄）",
+      "row_num": 309,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶结构检验授课讲义-（王海雄）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0309_c0307"
+  },
+  {
+    "content": "问题：船体大合拢焊缝的无损探伤一般应以哪种探伤方法为主？\n答案：射线探伤",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶结构检验授课讲义-（王海雄）",
+      "row_num": 310,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶结构检验授课讲义-（王海雄）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0310_c0308"
+  },
+  {
+    "content": "问题：对分段和骨材对接焊缝，在经验船师同意后可部分采用超声波探伤时，为什么仍需使用适当数量的射线探伤？\n答案：以查验超声波探伤结果。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶结构检验授课讲义-（王海雄）",
+      "row_num": 311,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶结构检验授课讲义-（王海雄）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0311_c0309"
+  },
+  {
+    "content": "问题：磁粉探伤适用于检测焊缝哪些部位的焊接缺陷，并且不能确定缺陷的哪一项参数？\n答案：焊缝表面或近表面的焊接缺陷；不能确定缺陷的深度。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶结构检验授课讲义-（王海雄）",
+      "row_num": 312,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶结构检验授课讲义-（王海雄）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0312_c0310"
+  },
+  {
+    "content": "问题：渗透探伤的操作步骤依次包括哪些环节？\n答案：清洗、渗透、再清洗、干燥、显影",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶结构检验授课讲义-（王海雄）",
+      "row_num": 313,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶结构检验授课讲义-（王海雄）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0313_c0311"
+  },
+  {
+    "content": "问题：验收探伤片时，如发现缺陷可能向一端或两端延伸，应采取什么检验措施？\n答案：在可能延伸的方向上增加探伤范围。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "船舶结构检验授课讲义-（王海雄）",
+      "row_num": 314,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "船舶结构检验授课讲义-（王海雄）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0314_c0312"
+  },
+  {
+    "content": "问题：CCS规范体系框架根据主要服务分为哪三大块？\n答案：入级规则和规范；其他技术标准；软件",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "规范体系框架纲要",
+      "row_num": 315,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "规范体系框架纲要"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0315_c0313"
+  },
+  {
+    "content": "问题：检验规则对哪些检验周期和项目作出规定，其通用检验规则主要包括哪些检验类型？\n答案：检验规则对检验周期和项目等作出规定。其通用检验规则主要包括建造中检验、建造后检验、产品检验、附加标志检验和非入级检验的具体检验要求。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "规范体系框架纲要",
+      "row_num": 316,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "规范体系框架纲要"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0316_c0314"
+  },
+  {
+    "content": "问题：基础规范按哪些类别分类，并规定船舶和海上设施设计建造的什么要求？\n答案：基础规范按海船、河船、海工、渔船、特种船、支持所有基础规范的通用规范等分类，规定船舶和海上设施设计建造最基本的技术要求。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "规范体系框架纲要",
+      "row_num": 317,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "规范体系框架纲要"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0317_c0315"
+  },
+  {
+    "content": "问题：专用规范通常依据哪些对象进行分类，并应与哪一类规范配套使用？\n答案：专用规范通常依据船舶类型、海上设施类型、专业技术进行分类，并应与基础规范配套使用。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "规范体系框架纲要",
+      "row_num": 318,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "规范体系框架纲要"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0318_c0316"
+  },
+  {
+    "content": "问题：CCS计算软件的计算结果在什么条件下方可作为规范或指南相应技术要求实施的依据？\n答案：经 CCS审核后方可作为规范或指南相应技术要求实施的依据。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "规范体系框架纲要",
+      "row_num": 319,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "规范体系框架纲要"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0319_c0317"
+  },
+  {
+    "content": "问题：第4篇建造后检验第1章通则中列明的检验种类与周期包括哪些检验类型？\n答案：初次入级检验、年度检验、中间检验、特别检验、船底外部及有关项目的检验、螺旋桨轴与尾管轴检验、锅炉检验、循环检验、机械计划保养系统检验、搁置检验、临时检验",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "规范体系框架纲要",
+      "row_num": 320,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "规范体系框架纲要"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0320_c0318"
+  },
+  {
+    "content": "问题：第4篇第2章海船的一般规定中，检验前准备之外还包括哪些与测厚、近观检验和远程检查技术相关的内容？\n答案：测厚程序、测厚与近观检验、远程检查技术(RIT)",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "规范体系框架纲要",
+      "row_num": 321,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "规范体系框架纲要"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0321_c0319"
+  },
+  {
+    "content": "问题：海船建造后检验章节中，针对液化气体船列出了哪一项船体与设备检验补充要求？\n答案：液化气体船的船体与设备检验补充要求",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "规范体系框架纲要",
+      "row_num": 322,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "规范体系框架纲要"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0322_c0320"
+  },
+  {
+    "content": "问题：第6篇非入级检验第1章通则中，检验种类与周期包括哪些定期或专项检验项目？\n答案：建造检验、初次检验、定期检验（年度检验、中间检验、换证检验）、船底外部检查、螺旋桨轴与尾管轴检验、锅炉检验、特别定期检验、临时检验等",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "规范体系框架纲要",
+      "row_num": 323,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "规范体系框架纲要"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0323_c0321"
+  },
+  {
+    "content": "问题：《散装运输液化气体船舶入级规范》是以哪一部规范中的附加标志和技术内容为基础进行调整的？\n答案：《散装运输液化气体船舶构造与设备规范》",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "规范体系框架纲要",
+      "row_num": 324,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "规范体系框架纲要"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0324_c0322"
+  },
+  {
+    "content": "问题：船舶起重设备规范适用于船舶和海上设施用的哪些类型起重设备？\n答案：吊杆装置，包括吊杆式起重机；\n船舶起重机；\n潜水器吊放系统；\n船舶乘客与船员用升降机；\n船舶货物、车辆升降机",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "起重设备案例 【龚泓】",
+      "row_num": 325,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "起重设备案例 【龚泓】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0325_c0323"
+  },
+  {
+    "content": "问题：吊杆装置中轻型吊杆和重型吊杆分别按安全工作负荷SWL如何划分？\n答案：轻型吊杆：SWL≤98kN；重型吊杆：SWL≥98kN。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "起重设备案例 【龚泓】",
+      "row_num": 326,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "起重设备案例 【龚泓】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0326_c0324"
+  },
+  {
+    "content": "问题：起重设备初次检验时，安装完毕后应按规范第7章进行试验并确认哪些功能和结构状态？\n答案：确认整个设备有效地和安全地工作，任何停车、控制和类似装置的功能应正确。试验后，装置及其支承结构均应经检验确信无变形或扭曲。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "起重设备案例 【龚泓】",
+      "row_num": 327,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "起重设备案例 【龚泓】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0327_c0325"
+  },
+  {
+    "content": "问题：规范7.4中，起重设备或货物、车辆升降机在SWL≤196kN、196＜SWL≤490kN、SWL＞490kN三种情况下的试验负荷分别是多少？\n答案：SWL≤196kN：1.25×SWL\n196＜SWL≤490kN：SWL+49\nSWL＞490kN：1.1×SWL",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "起重设备案例 【龚泓】",
+      "row_num": 328,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "起重设备案例 【龚泓】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0328_c0326"
+  },
+  {
+    "content": "问题：船用电梯在船舶摇摆工况下运行时，横摇和纵摇的角度及周期要求分别是多少？\n答案：横摇：±10°，周期10s；纵摇：±7.5°，周期7s。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "起重设备案例 【龚泓】",
+      "row_num": 329,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "起重设备案例 【龚泓】"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0329_c0327"
+  },
+  {
+    "content": "问题：管子及附件装船前液压试验中，哪些管系及其附件必须进行液压试验？\n答案：所有Ⅰ级和Ⅱ级管系以及设计压力>0.35MPa的蒸汽、给水、压缩空气、滑油和燃油管系及其附件。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 330,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0330_c0328"
+  },
+  {
+    "content": "问题：管系液压试验的一般试验压力如何确定，当温度超过多少摄氏度时需参见规范特殊要求？\n答案：一般为Ps＝1.5P或按批准的图纸的要求；当温度超过300℃时需参见规范特殊要求。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 331,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0331_c0329"
+  },
+  {
+    "content": "问题：液压强度试验时，排除管内空气的方法和加压、泄压要求是什么？\n答案：低处进水，高处排气，直到水溢出高端管口为止。加压和泄压应平缓。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 332,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0332_c0330"
+  },
+  {
+    "content": "问题：用于Ⅰ级和Ⅱ级管系且与管系非一体式的阀和附件，装船前液压试验压力不得小于设计压力的多少倍？\n答案：1.5倍",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 333,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0333_c0331"
+  },
+  {
+    "content": "问题：安装在载重线之下舷侧的阀件、旋塞和接管，其液压试验压力应不小于多少MPa？\n答案：0.5MPa",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 334,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0334_c0332"
+  },
+  {
+    "content": "问题：轴系安装和校中检验原则中，轴系部件的材质、尺寸应与哪些技术文件保持一致？\n答案：轴系强度计算书、轴件图及尾管总图",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 335,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0335_c0333"
+  },
+  {
+    "content": "问题：对于螺旋桨与螺旋桨轴采用键安装时，螺旋桨轴端的锥度应不大于多少？\n答案：1/10",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 336,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0336_c0334"
+  },
+  {
+    "content": "问题：尾轴管在船上安装以前，片段中要求进行多大压力的液压试验？\n答案：0.2MPa",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 337,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0337_c0335"
+  },
+  {
+    "content": "问题：柴油机按额定转速分类时，低速、中速和高速柴油机的转速范围分别是什么？\n答案：低速：no<300r/min；中速：300r/min≤no<1400r/min；高速：no≥1400r/min",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 338,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0338_c0336"
+  },
+  {
+    "content": "问题：应急发电机组自动起动时，起动装置应配备至少能供几次连续起动的能源？\n答案：3次",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 339,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0339_c0337"
+  },
+  {
+    "content": "问题：应急柴油发电机组负荷试验中，100%额定功率和110%额定功率分别应持续多长时间？\n答案：100%额定功率：1h；110%额定功率：10min",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 340,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0340_c0338"
+  },
+  {
+    "content": "问题：根据CCS钢规第3篇第9章附录6，驱动定螺距螺旋桨或叶轮的主推进柴油机在额定转速n0下至少应试验多长时间？\n答案：至少4h",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 341,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0341_c0339"
+  },
+  {
+    "content": "问题：热态轴承负荷测量过程中，对船舶吃水状态有什么要求？\n答案：测量过程中，保持船舶吃水状态不变。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 342,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0342_c0340"
+  },
+  {
+    "content": "问题：舵机试验中，对舵角指示偏差的要求是什么？\n答案：0°时无偏差，其他角度时偏差不超过±1°",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 343,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0343_c0341"
+  },
+  {
+    "content": "问题：锅炉蓄压试验中，烟管锅炉在安全阀开启后15min内压力最高值不得超过锅炉设计压力的多少？\n答案：110%",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "轮机检验（陈卫华）",
+      "row_num": 344,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "轮机检验（陈卫华）"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0344_c0342"
+  },
+  {
+    "content": "问题：VHF设备检验时，关断GPS接收机后大约等待多长时间应出现位置信息丢失报警？\n答案：5分钟左右",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "通讯导航设备要求",
+      "row_num": 345,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "通讯导航设备要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0345_c0343"
+  },
+  {
+    "content": "问题：MF/HF设备的驾驶台遥控器必须能在哪六个DSC遇险呼叫频率上选择或扫描发射遇险报警？\n答案：2187.5、4207.5、6312、8414.5、12577、16804.5kHz",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "通讯导航设备要求",
+      "row_num": 346,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "通讯导航设备要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0346_c0344"
+  },
+  {
+    "content": "问题：NAVTEX设备在2024年1月1日之后安装上船时，第一个接收机应工作在哪个国际NAVTEX系统频率上？\n答案：518kHz",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "通讯导航设备要求",
+      "row_num": 347,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "通讯导航设备要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0347_c0345"
+  },
+  {
+    "content": "问题：VDR备用电源容量试验中，断开外部电源后备用电源应能记录多长时间并在何时自动停止？\n答案：大于1小时55分钟，并且在小于2小时5分钟时自动停止",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "通讯导航设备要求",
+      "row_num": 348,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "通讯导航设备要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0348_c0346"
+  },
+  {
+    "content": "问题：散货船货舱浸水探测报警系统中，压力式传感器的1级报警和2级报警高度分别设置为多少？\n答案：1级报警设置高度为0.5m，2级报警高度设置为2m",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "通讯导航设备要求",
+      "row_num": 349,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "通讯导航设备要求"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0349_c0347"
+  },
+  {
+    "content": "问题：检验人员进入封闭处所前，封闭处所内氧气含量应符合什么范围，哪些氧气含量条件下不应进入？\n答案：封闭处所内氧气含量应为20.6%-22%；氧气含量低于20.6%或高于22%时不应进入。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "验船师人身职业健康安全[杨志勇]",
+      "row_num": 350,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "验船师人身职业健康安全[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0350_c0348"
+  },
+  {
+    "content": "问题：复合式气体测量仪对O2、LEL、CO和H2S的低报警值和高报警值分别设定为多少？\n答案：O2：低报警值19.5%，高报警值23.5%\nLEL：低报警值10%LEL，高报警值20%LEL\nCO：低报警值16PPM，高报警值24PPM\nH2S：低报警值5PPM，高报警值10PPM",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "验船师人身职业健康安全[杨志勇]",
+      "row_num": 351,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "验船师人身职业健康安全[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0351_c0349"
+  },
+  {
+    "content": "问题：进入封闭处所前，应通过哪些程序或确认措施后方可进入？\n答案：进入封闭处所之前应先通风，确保现场的作业许可/安全确认证明文件有效；只有在签发了进入许可证，并经气体检测仪确认后再进入。进入前应证实封闭处所中空气符合：氧气含量20.6%-22%；可燃气体小于爆炸下限（LFL）的1%；有毒气体测试仪读数不超过职业暴露极限（OEL）的50%。如复合式气量仪报警，必须马上撤离。",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "验船师人身职业健康安全[杨志勇]",
+      "row_num": 352,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "验船师人身职业健康安全[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0352_c0350"
+  },
+  {
+    "content": "问题：高处作业中，当验船师位于可能坠落高度多少米及以上的未经保护边缘位置时，应采取栏杆、安全网或个人防跌落装备防护？\n答案：1.8米及以上",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "验船师人身职业健康安全[杨志勇]",
+      "row_num": 353,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "验船师人身职业健康安全[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0353_c0351"
+  },
+  {
+    "content": "问题：梯子安全使用方法中，爬梯应伸至高出其上平台至少多少米，且每1.2米垂直距离其底部应伸出多少毫米？\n答案：1米，300mm",
+    "metadata": {
+      "source_file": "问答对.csv",
+      "category": "问答类",
+      "doc_source": "验船师人身职业健康安全[杨志勇]",
+      "row_num": 354,
+      "block_type": "qa_pair",
+      "section_path": [
+        "问答类",
+        "验船师人身职业健康安全[杨志勇]"
+      ],
+      "strategy": "semantic"
+    },
+    "chunk_id": "问答对_r0354_c0352"
+  }
+]
