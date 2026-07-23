@@ -1,6 +1,0 @@
-{
-  "dataset": "bq_corpus",
-  "steps": 200,
-  "seconds": 41.0779999999977,
-  "mean_loss": 0.42031196515948976
-}

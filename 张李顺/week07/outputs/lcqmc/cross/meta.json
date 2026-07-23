@@ -1,7 +1,0 @@
-{
-  "dataset": "lcqmc",
-  "loss": "binary_cross_entropy",
-  "steps": 1000,
-  "seconds": 40.125,
-  "mean_loss": 0.3313300446048379
-}

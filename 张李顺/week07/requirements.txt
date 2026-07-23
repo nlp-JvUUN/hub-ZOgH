@@ -1,8 +1,0 @@
-torch>=2.2
-transformers>=4.37
-peft>=0.10
-scikit-learn>=1.3
-pandas>=2.0
-matplotlib>=3.7
-seaborn>=0.13
-safetensors>=0.4

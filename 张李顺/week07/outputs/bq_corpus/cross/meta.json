@@ -1,7 +1,0 @@
-{
-  "dataset": "bq_corpus",
-  "loss": "binary_cross_entropy",
-  "steps": 1000,
-  "seconds": 39.875,
-  "mean_loss": 0.505549454331398
-}

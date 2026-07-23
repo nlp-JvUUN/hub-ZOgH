@@ -1,6 +1,0 @@
-torch
-transformers
-pytorch-crf==0.7.2
-matplotlib
-tqdm
-requests

@@ -1,7 +1,0 @@
-﻿method,false_negative,false_positive,errors,error_rate
-BiEncoder + BM25,812,1243,2055,0.1644
-CrossEncoder,277,2330,2607,0.20856
-LLM SFT LoRA,469,2285,2754,0.22032
-LLM Zero-shot,607,2321,2928,0.23424
-bi_cosine,419,2361,2780,0.2224
-bi_triplet,575,1594,2169,0.17352

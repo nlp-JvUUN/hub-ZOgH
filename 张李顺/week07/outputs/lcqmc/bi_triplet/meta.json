@@ -1,7 +1,0 @@
-{
-  "dataset": "lcqmc",
-  "loss": "triplet",
-  "steps": 160,
-  "seconds": 10.014999999999418,
-  "mean_loss": 0.07080650184070691
-}

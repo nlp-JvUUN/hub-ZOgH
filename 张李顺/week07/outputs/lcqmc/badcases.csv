@@ -1,5 +1,0 @@
-﻿method,error,label,prediction,score,threshold,wrong_confidence,sentence1,sentence2
-BiEncoder + BM25,false_negative,1,0,-1.8315992804971648,0.0297878393630188,1.8613871198601837,她的面相如何,面相如何？奸门和痣，怎么解？
-BiEncoder + BM25,false_negative,1,0,-1.7609845740029897,0.0297878393630188,1.7907724133660086,酶的特征是什么？,属羊的有什么特征
-BiEncoder + BM25,false_negative,1,0,-1.6520412752713307,0.0297878393630188,1.6818291146343496,请问这个是什么植物,急。请问【朱迪】是个什么植物？
-BiEncoder + BM25,false_negative,1,0,-1.561478108420903,0.0297878393630188,1.591265947783922,怎么知道对方有没有上微信,微信上怎么看别人是否在线
