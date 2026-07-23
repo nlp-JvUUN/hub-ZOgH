@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>水下机器人专利 RAG 问答 · 教学演示</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+               "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  background: #0f1a2e;
+  color: #d1dbe8;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* ── 顶部导航 ─────────────────────────────────────────── */
+header {
+  background: #060d18;
+  color: #7dd3fc;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 12px rgba(0,160,200,.25);
+  border-bottom: 1px solid #1e3a5f;
+}
+header h1 { font-size: 1.05rem; font-weight: 700; }
+header .sub {
+  font-size: 0.78rem;
+  color: #7a9ec4;
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+}
+header .sub a { color: #38bdf8; text-decoration: none; }
+header .sub a:hover { text-decoration: underline; }
+
+.container { max-width: 900px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+
+/* ── 输入卡片 ─────────────────────────────────────────── */
+.input-card {
+  background: #13233d;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.35);
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid #1e3a5f;
+}
+.input-card h2 { font-size: 0.85rem; color: #7a9ec4; margin-bottom: 0.6rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+
+textarea#question {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #1e3a5f;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 68px;
+  outline: none;
+  color: #d1dbe8;
+  background: #0c1929;
+  transition: border-color .15s;
+}
+textarea#question:focus { border-color: #38bdf8; }
+
+.row { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.7rem; flex-wrap: wrap; }
+.row label { font-size: 0.78rem; color: #7a9ec4; white-space: nowrap; }
+.filter-input {
+  width: 120px;
+  padding: 0.38rem 0.65rem;
+  border: 1.5px solid #1e3a5f;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color .15s;
+  background: #0c1929;
+  color: #d1dbe8;
+}
+.filter-input:focus { border-color: #38bdf8; }
+
+.btn-submit {
+  margin-left: auto;
+  padding: 0.45rem 1.4rem;
+  background: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s, transform .1s;
+}
+.btn-submit:hover  { background: #0369a1; }
+.btn-submit:active { transform: scale(.97); }
+.btn-submit:disabled { background: #164e63; cursor: not-allowed; }
+
+.examples { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; align-items: center; }
+.examples-label { font-size: 0.75rem; color: #506480; }
+.eg {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  background: #0c1929;
+  border: 1px solid #1e3a5f;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #7a9ec4;
+  transition: all .15s;
+}
+.eg:hover { background: #0c4a6e; border-color: #38bdf8; color: #7dd3fc; }
+
+/* ── 提示 / 加载 / 错误 ───────────────────────────────── */
+.hint { text-align: center; padding: 3rem 1rem; color: #506480; font-size: 0.875rem; }
+.hint p:first-child { font-size: 2rem; margin-bottom: 0.5rem; }
+
+.loading { display: flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 2.5rem; color: #7a9ec4; font-size: 0.875rem; }
+.spinner {
+  width: 18px; height: 18px;
+  border: 2px solid #1e3a5f;
+  border-top-color: #38bdf8;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.error-box {
+  background: #2d1215;
+  border: 1px solid #7f1d1d;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  color: #fca5a5;
+  font-size: 0.875rem;
+}
+
+.hidden { display: none !important; }
+
+.pipeline { display: flex; flex-direction: column; gap: 0; }
+.arrow { text-align: center; color: #364c6e; font-size: 1.1rem; line-height: 1; margin: 0.1rem 0; }
+
+/* ── 步骤卡片通用 ────────────────────────────────────── */
+.step { border-radius: 10px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,.3); }
+.step-hd { display: flex; align-items: center; gap: 0.6rem; padding: 0.65rem 1rem; cursor: pointer; user-select: none; }
+.step-hd:hover { filter: brightness(1.1); }
+
+.step-num {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 800; flex-shrink: 0;
+}
+.step-name { font-weight: 700; font-size: 0.92rem; }
+.step-tech { font-size: 0.72rem; opacity: .7; font-family: "Consolas","SF Mono",monospace; }
+.step-stat { margin-left: auto; font-size: 0.72rem; opacity: .75; font-weight: 500; }
+.collapse-icon { font-size: 0.55rem; opacity: .6; transition: transform .2s; }
+.step.collapsed .collapse-icon { transform: rotate(-90deg); }
+
+.step-bd { padding: 0.6rem 0.9rem 0.8rem; background: #13233d; }
+.step.collapsed .step-bd { display: none; }
+
+/* ── 步骤主题色 — 深海蓝 ─────────────────────────────── */
+.s-vec { border: 1px solid #1e3a5f; }
+.s-vec .step-hd { background: #0a1628; color: #7dd3fc; }
+.s-vec .step-num { background: #0284c7; color: white; }
+
+.s-bm25 { border: 1px solid #14532d; }
+.s-bm25 .step-hd { background: #0a1a10; color: #86efac; }
+.s-bm25 .step-num { background: #16a34a; color: white; }
+
+.s-rrf { border: 1px solid #713f12; }
+.s-rrf .step-hd { background: #1a1006; color: #fcd34d; }
+.s-rrf .step-num { background: #d97706; color: white; }
+
+.s-ctx { border: 1px solid #4338ca; }
+.s-ctx .step-hd { background: #0f0c2e; color: #c4b5fd; }
+.s-ctx .step-num { background: #6366f1; color: white; }
+
+.s-ans { border: 1px solid #0f766e; }
+.s-ans .step-hd { background: #0a1a18; color: #5eead4; }
+.s-ans .step-num { background: #0d9488; color: white; }
+
+/* ── Chunk 卡片 ─────────────────────────────────────── */
+.chunk {
+  border: 1px solid #1a2a44;
+  border-radius: 7px;
+  margin-bottom: 0.45rem;
+  overflow: hidden;
+}
+.chunk:last-child { margin-bottom: 0; }
+.chunk-hd {
+  display: flex; align-items: center; gap: 0.4rem;
+  padding: 0.42rem 0.7rem;
+  background: #0c1929;
+  cursor: pointer;
+  flex-wrap: nowrap; min-width: 0;
+}
+.chunk-hd:hover { background: #14243d; }
+.chunk-bd {
+  display: none;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.82rem;
+  color: #c4d0e0;
+  border-top: 1px solid #1a2a44;
+  white-space: pre-wrap;
+  word-break: break-all;
+  line-height: 1.75;
+  background: #0d1b2e;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.chunk.open .chunk-bd { display: block; }
+.chunk.open .caret { transform: rotate(90deg); }
+
+.badge {
+  flex-shrink: 0;
+  font-size: 0.68rem; font-weight: 700;
+  padding: 0.12rem 0.38rem; border-radius: 4px; white-space: nowrap;
+}
+.b-rank-vec  { background: #0c4a6e; color: #7dd3fc; }
+.b-rank-bm25 { background: #14532d; color: #86efac; }
+.b-rank-rrf  { background: #713f12; color: #fcd34d; }
+.b-rank-ctx  { background: #312e81; color: #c4b5fd; }
+.b-score     { background: #1a2a44; color: #7a9ec4; font-family: "Consolas","SF Mono",monospace; }
+.b-src-vec   { background: #0c4a6e; color: #7dd3fc; }
+.b-src-bm25  { background: #14532d; color: #86efac; }
+.b-only      { background: #713f12; color: #fcd34d; }
+
+.chunk-src {
+  font-size: 0.77rem; color: #7a9ec4;
+  flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0;
+}
+.caret { font-size: 0.6rem; color: #3a506e; flex-shrink: 0; transition: transform .18s; }
+
+.answer-text { font-size: 0.975rem; line-height: 1.9; color: #d1dbe8; padding: 0.15rem 0 0.6rem; white-space: pre-wrap; }
+.cits { border-top: 1px solid #134e4a; padding-top: 0.6rem; margin-top: 0.2rem; }
+.cits-title { font-size: 0.72rem; color: #5eead4; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 0.35rem; }
+.cit-item { font-size: 0.78rem; color: #99f6e4; padding: 0.15rem 0; }
+
+.toggle-hint { text-align: center; font-size: 0.72rem; color: #506480; margin-top: 0.4rem; cursor: pointer; }
+.toggle-hint:hover { color: #7a9ec4; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🌊 水下机器人专利 RAG 问答系统</h1>
+  <div class="sub">
+    <span>教学演示 · 可视化检索与生成的每一步</span>
+    <a href="/docs" target="_blank">API 文档 ↗</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="input-card">
+    <h2>输入问题</h2>
+    <textarea id="question" placeholder="用自然语言提问，例如：合成孔径声纳相比传统侧扫声纳有什么优势？（Ctrl+Enter 发送）"></textarea>
+
+    <div class="row">
+      <label>专利权人</label>
+      <input class="filter-input" id="assignee" placeholder="如 Teledyne">
+      <label>专利局</label>
+      <input class="filter-input" id="office" placeholder="如 CNIPA (中国)">
+      <button class="btn-submit" id="btn" onclick="submit()">提问</button>
+    </div>
+
+    <div class="examples">
+      <span class="examples-label">示例：</span>
+      <span class="eg" onclick="fill('AUV在水下导航中除了惯导系统外，最常组合使用的传感器是什么？')">AUV导航传感器</span>
+      <span class="eg" onclick="fill('水下声学通信面临的核心物理层挑战有哪些？')">水下声学通信</span>
+      <span class="eg" onclick="fill('合成孔径声纳相比传统侧扫声纳在海底测绘中有什么优势？')">海底测绘声纳</span>
+      <span class="eg" onclick="fill('磁耦合矢量推进与仿生推进在水下机器人中各有什么优缺点？')">推进系统对比</span>
+      <span class="eg" onclick="fill('大疆和传统海洋机器人公司在专利布局上有什么差异？')">DJI vs 传统厂商</span>
+    </div>
+  </div>
+
+  <div id="hint" class="hint">
+    <p>🌊</p>
+    <p>输入问题后，逐步展示 RAG 流水线每一步的中间结果</p>
+    <p style="margin-top:.4rem;font-size:.78rem">向量检索 → BM25关键词检索 → RRF融合排名 → 上下文组装 → LLM生成答案</p>
+  </div>
+
+  <div id="loading" class="loading hidden">
+    <div class="spinner"></div>
+    <span>正在检索与生成，通常需要 3～8 秒……</span>
+  </div>
+
+  <div id="error" class="error-box hidden"></div>
+
+  <div id="pipeline" class="pipeline hidden">
+    <div class="step s-vec" id="s1">
+      <div class="step-hd" onclick="toggleStep('s1')">
+        <span class="step-num">①</span>
+        <span class="step-name">向量检索</span>
+        <span class="step-tech">text-embedding-v3 → FAISS IndexFlatIP（余弦相似度）</span>
+        <span class="step-stat" id="stat1"></span>
+        <span class="collapse-icon">▼</span>
+      </div>
+      <div class="step-bd" id="bd1"></div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step s-bm25" id="s2">
+      <div class="step-hd" onclick="toggleStep('s2')">
+        <span class="step-num">②</span>
+        <span class="step-name">BM25 关键词检索</span>
+        <span class="step-tech">jieba 分词 → BM25Okapi 打分</span>
+        <span class="step-stat" id="stat2"></span>
+        <span class="collapse-icon">▼</span>
+      </div>
+      <div class="step-bd" id="bd2"></div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step s-rrf" id="s3">
+      <div class="step-hd" onclick="toggleStep('s3')">
+        <span class="step-num">③</span>
+        <span class="step-name">RRF 融合排名</span>
+        <span class="step-tech">score(d) = Σ 1 / (60 + rankᵢ(d))，两路互补</span>
+        <span class="step-stat" id="stat3"></span>
+        <span class="collapse-icon">▼</span>
+      </div>
+      <div class="step-bd" id="bd3"></div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step s-ctx" id="s4">
+      <div class="step-hd" onclick="toggleStep('s4')">
+        <span class="step-num">④</span>
+        <span class="step-name">输入 LLM 的上下文</span>
+        <span class="step-tech">Top-4 chunks 拼接为 Prompt · 以下内容均原文可见</span>
+        <span class="step-stat" id="stat4"></span>
+        <span class="collapse-icon">▼</span>
+      </div>
+      <div class="step-bd" id="bd4"></div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step s-ans" id="s5">
+      <div class="step-hd" onclick="toggleStep('s5')">
+        <span class="step-num">⑤</span>
+        <span class="step-name">LLM 生成答案</span>
+        <span class="step-tech">DashScope qwen-plus · temperature=0.1</span>
+        <span class="step-stat" id="stat5"></span>
+        <span class="collapse-icon">▼</span>
+      </div>
+      <div class="step-bd" id="bd5"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function fill(q) { document.getElementById('question').value = q; }
+function toggleStep(id) { document.getElementById(id).classList.toggle('collapsed'); }
+function toggleChunk(el) { el.closest('.chunk').classList.toggle('open'); }
+
+document.getElementById('question').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) submit();
+});
+
+function chunkCard(badgesHtml, src, contentText, openByDefault=false) {
+  const id = 'c' + Math.random().toString(36).slice(2,8);
+  return `
+    <div class="chunk${openByDefault?' open':''}" id="${id}">
+      <div class="chunk-hd" onclick="toggleChunk(this)">
+        ${badgesHtml}
+        <span class="chunk-src" title="${esc(src)}">${esc(src)}</span>
+        <span class="caret">▶</span>
+      </div>
+      <div class="chunk-bd">${esc(contentText)}</div>
+    </div>`;
+}
+
+function renderVec(items) {
+  document.getElementById('stat1').textContent = `Top ${items.length} · 按余弦相似度排序`;
+  document.getElementById('bd1').innerHTML = items.map(d => {
+    const badges = `<span class="badge b-rank-vec">#${d.rank}</span><span class="badge b-score">cos=${d.vec_score.toFixed(3)}</span>`;
+    return chunkCard(badges, d.source, d.content_preview);
+  }).join('') || '<p style="color:#506480;font-size:.82rem;padding:.2rem 0">无结果</p>';
+}
+
+function renderBM25(items) {
+  document.getElementById('stat2').textContent = `Top ${items.length} · 按 BM25 分数排序`;
+  document.getElementById('bd2').innerHTML = items.map(d => {
+    const badges = `<span class="badge b-rank-bm25">#${d.rank}</span><span class="badge b-score">BM25=${d.bm25_score.toFixed(2)}</span>`;
+    return chunkCard(badges, d.source, d.content_preview);
+  }).join('') || '<p style="color:#506480;font-size:.82rem;padding:.2rem 0">无结果</p>';
+}
+
+function renderRRF(items) {
+  document.getElementById('stat3').textContent = `融合后 Top ${items.length}`;
+  document.getElementById('bd3').innerHTML = items.map(d => {
+    let srcBadges = '';
+    if (d.vec_rank  != null) srcBadges += `<span class="badge b-src-vec">向量#${d.vec_rank}</span>`;
+    if (d.bm25_rank != null) srcBadges += `<span class="badge b-src-bm25">BM25#${d.bm25_rank}</span>`;
+    if (!srcBadges) srcBadges = `<span class="badge b-only">单路</span>`;
+    const badges = `<span class="badge b-rank-rrf">#${d.rank}</span><span class="badge b-score">RRF=${d.rrf_score.toFixed(4)}</span>${srcBadges}`;
+    return chunkCard(badges, d.source, d.content_preview);
+  }).join('') || '<p style="color:#506480;font-size:.82rem;padding:.2rem 0">无融合结果</p>';
+}
+
+function renderCtx(items) {
+  document.getElementById('stat4').textContent = `${items.length} 个 chunk → LLM`;
+  document.getElementById('bd4').innerHTML = items.map(d => {
+    const badges = `<span class="badge b-rank-ctx">[${d.index}]</span>`;
+    return chunkCard(badges, d.source, d.content, true);
+  }).join('');
+}
+
+function renderAnswer(answer, cits) {
+  document.getElementById('stat5').textContent = `引用 ${cits.length} 件专利`;
+  const citHtml = cits.length
+    ? cits.map(c => `<div class="cit-item">${esc(c.source)}</div>`).join('')
+    : '<span style="color:#506480;font-size:.78rem">无引用</span>';
+  document.getElementById('bd5').innerHTML = `
+    <div class="answer-text">${esc(answer)}</div>
+    <div class="cits"><div class="cits-title">引用来源</div>${citHtml}</div>`;
+}
+
+async function submit() {
+  const question = document.getElementById('question').value.trim();
+  if (!question) return;
+
+  const assignee = document.getElementById('assignee').value.trim() || null;
+  const patent_office = document.getElementById('office').value.trim() || null;
+
+  document.getElementById('btn').disabled = true;
+  document.getElementById('hint').classList.add('hidden');
+  document.getElementById('error').classList.add('hidden');
+  document.getElementById('pipeline').classList.add('hidden');
+  document.getElementById('loading').classList.remove('hidden');
+
+  try {
+    const resp = await fetch('/query/debug', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ question, assignee, patent_office }),
+    });
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      throw new Error(err.detail || `HTTP ${resp.status}`);
+    }
+    const data = await resp.json();
+
+    renderVec(data.vec_results);
+    renderBM25(data.bm25_results);
+    renderRRF(data.rrf_results);
+    renderCtx(data.context_chunks);
+    renderAnswer(data.answer, data.citations);
+
+    ['s1','s2','s3','s4','s5'].forEach(id =>
+      document.getElementById(id).classList.remove('collapsed')
+    );
+
+    document.getElementById('pipeline').classList.remove('hidden');
+    document.getElementById('pipeline').scrollIntoView({behavior:'smooth', block:'start'});
+  } catch(e) {
+    const el = document.getElementById('error');
+    el.textContent = '请求失败：' + e.message;
+    el.classList.remove('hidden');
+    document.getElementById('hint').classList.remove('hidden');
+  } finally {
+    document.getElementById('btn').disabled = false;
+    document.getElementById('loading').classList.add('hidden');
+  }
+}
+</script>
+</body>
+</html>

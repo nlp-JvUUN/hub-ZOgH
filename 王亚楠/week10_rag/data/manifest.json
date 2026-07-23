@@ -1,0 +1,992 @@
+[
+  {
+    "stock_code": "600519",
+    "plate": "sh",
+    "company_name": "贵州茅台",
+    "year": "2021",
+    "title": "贵州茅台2021年年度报告",
+    "filename": "600519_2021_贵州茅台_贵州茅台2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-03-31/1212755849.PDF",
+    "announce_id": "1212755849"
+  },
+  {
+    "stock_code": "600519",
+    "plate": "sh",
+    "company_name": "贵州茅台",
+    "year": "2022",
+    "title": "贵州茅台2022年年度报告",
+    "filename": "600519_2022_贵州茅台_贵州茅台2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-03-31/1216281757.PDF",
+    "announce_id": "1216281757"
+  },
+  {
+    "stock_code": "600519",
+    "plate": "sh",
+    "company_name": "贵州茅台",
+    "year": "2023",
+    "title": "贵州茅台2023年年度报告",
+    "filename": "600519_2023_贵州茅台_贵州茅台2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-04-03/1219506510.PDF",
+    "announce_id": "1219506510"
+  },
+  {
+    "stock_code": "600519",
+    "plate": "sh",
+    "company_name": "贵州茅台",
+    "year": "2024",
+    "title": "贵州茅台2024年年度报告",
+    "filename": "600519_2024_贵州茅台_贵州茅台2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+    "announce_id": "1222993920"
+  },
+  {
+    "stock_code": "600519",
+    "plate": "sh",
+    "company_name": "贵州茅台",
+    "year": "2025",
+    "title": "贵州茅台2025年年度报告",
+    "filename": "600519_2025_贵州茅台_贵州茅台2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF",
+    "announce_id": "1225114741"
+  },
+  {
+    "stock_code": "000858",
+    "plate": "sz",
+    "company_name": "五粮液",
+    "year": "2021",
+    "title": "2021年年度报告",
+    "filename": "000858_2021_五粮液_2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-29/1213222211.PDF",
+    "announce_id": "1213222211"
+  },
+  {
+    "stock_code": "000858",
+    "plate": "sz",
+    "company_name": "五粮液",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "000858_2022_五粮液_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-04-29/1216689063.PDF",
+    "announce_id": "1216689063"
+  },
+  {
+    "stock_code": "000858",
+    "plate": "sz",
+    "company_name": "五粮液",
+    "year": "2023",
+    "title": "2023年年度报告",
+    "filename": "000858_2023_五粮液_2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-04-29/1219873658.PDF",
+    "announce_id": "1219873658"
+  },
+  {
+    "stock_code": "000858",
+    "plate": "sz",
+    "company_name": "五粮液",
+    "year": "2024",
+    "title": "2024年年度报告",
+    "filename": "000858_2024_五粮液_2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-26/1223311527.PDF",
+    "announce_id": "1223311527"
+  },
+  {
+    "stock_code": "000858",
+    "plate": "sz",
+    "company_name": "五粮液",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "000858_2025_五粮液_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225273091.PDF",
+    "announce_id": "1225273091"
+  },
+  {
+    "stock_code": "600887",
+    "plate": "sh",
+    "company_name": "伊利股份",
+    "year": "2021",
+    "title": "内蒙古伊利实业集团股份有限公司2021年年度报告",
+    "filename": "600887_2021_伊利股份_内蒙古伊利实业集团股份有限公司2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-28/1213169501.PDF",
+    "announce_id": "1213169501"
+  },
+  {
+    "stock_code": "600887",
+    "plate": "sh",
+    "company_name": "伊利股份",
+    "year": "2022",
+    "title": "内蒙古伊利实业集团股份有限公司2022年年度报告",
+    "filename": "600887_2022_伊利股份_内蒙古伊利实业集团股份有限公司2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-04-28/1216664083.PDF",
+    "announce_id": "1216664083"
+  },
+  {
+    "stock_code": "600887",
+    "plate": "sh",
+    "company_name": "伊利股份",
+    "year": "2023",
+    "title": "内蒙古伊利实业集团股份有限公司2023年年度报告",
+    "filename": "600887_2023_伊利股份_内蒙古伊利实业集团股份有限公司2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-04-30/1219916433.PDF",
+    "announce_id": "1219916433"
+  },
+  {
+    "stock_code": "600887",
+    "plate": "sh",
+    "company_name": "伊利股份",
+    "year": "2024",
+    "title": "内蒙古伊利实业集团股份有限公司2024年年度报告",
+    "filename": "600887_2024_伊利股份_内蒙古伊利实业集团股份有限公司2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-30/1223421123.PDF",
+    "announce_id": "1223421123"
+  },
+  {
+    "stock_code": "600887",
+    "plate": "sh",
+    "company_name": "伊利股份",
+    "year": "2025",
+    "title": "内蒙古伊利实业集团股份有限公司2025年年度报告",
+    "filename": "600887_2025_伊利股份_内蒙古伊利实业集团股份有限公司2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225259562.PDF",
+    "announce_id": "1225259562"
+  },
+  {
+    "stock_code": "601318",
+    "plate": "sh",
+    "company_name": "中国平安",
+    "year": "2021",
+    "title": "中国平安2021年年度报告",
+    "filename": "601318_2021_中国平安_中国平安2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-03-18/1212609975.PDF",
+    "announce_id": "1212609975"
+  },
+  {
+    "stock_code": "601318",
+    "plate": "sh",
+    "company_name": "中国平安",
+    "year": "2022",
+    "title": "中国平安2022年年度报告",
+    "filename": "601318_2022_中国平安_中国平安2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-03-16/1216129433.PDF",
+    "announce_id": "1216129433"
+  },
+  {
+    "stock_code": "601318",
+    "plate": "sh",
+    "company_name": "中国平安",
+    "year": "2023",
+    "title": "中国平安2023年年度报告",
+    "filename": "601318_2023_中国平安_中国平安2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-03-22/1219376072.PDF",
+    "announce_id": "1219376072"
+  },
+  {
+    "stock_code": "601318",
+    "plate": "sh",
+    "company_name": "中国平安",
+    "year": "2024",
+    "title": "中国平安2024年年度报告",
+    "filename": "601318_2024_中国平安_中国平安2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-20/1222847447.PDF",
+    "announce_id": "1222847447"
+  },
+  {
+    "stock_code": "601318",
+    "plate": "sh",
+    "company_name": "中国平安",
+    "year": "2025",
+    "title": "中国平安2025年年度报告",
+    "filename": "601318_2025_中国平安_中国平安2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-27/1225038263.PDF",
+    "announce_id": "1225038263"
+  },
+  {
+    "stock_code": "600036",
+    "plate": "sh",
+    "company_name": "招商银行",
+    "year": "2021",
+    "title": "招商银行股份有限公司2021年度报告",
+    "filename": "600036_2021_招商银行_招商银行股份有限公司2021年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-03-19/1212626208.PDF",
+    "announce_id": "1212626208"
+  },
+  {
+    "stock_code": "600036",
+    "plate": "sh",
+    "company_name": "招商银行",
+    "year": "2022",
+    "title": "招商银行股份有限公司2022年度报告",
+    "filename": "600036_2022_招商银行_招商银行股份有限公司2022年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-03-25/1216221326.PDF",
+    "announce_id": "1216221326"
+  },
+  {
+    "stock_code": "600036",
+    "plate": "sh",
+    "company_name": "招商银行",
+    "year": "2023",
+    "title": "招商银行股份有限公司2023年度报告",
+    "filename": "600036_2023_招商银行_招商银行股份有限公司2023年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-03-26/1219403503.PDF",
+    "announce_id": "1219403503"
+  },
+  {
+    "stock_code": "600036",
+    "plate": "sh",
+    "company_name": "招商银行",
+    "year": "2024",
+    "title": "招商银行股份有限公司2024年度报告",
+    "filename": "600036_2024_招商银行_招商银行股份有限公司2024年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-26/1222895154.PDF",
+    "announce_id": "1222895154"
+  },
+  {
+    "stock_code": "600036",
+    "plate": "sh",
+    "company_name": "招商银行",
+    "year": "2025",
+    "title": "招商银行股份有限公司2025年度报告",
+    "filename": "600036_2025_招商银行_招商银行股份有限公司2025年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225047590.PDF",
+    "announce_id": "1225047590"
+  },
+  {
+    "stock_code": "300750",
+    "plate": "sz",
+    "company_name": "宁德时代",
+    "year": "2021",
+    "title": "2021年年度报告",
+    "filename": "300750_2021_宁德时代_2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-22/1213027750.PDF",
+    "announce_id": "1213027750"
+  },
+  {
+    "stock_code": "300750",
+    "plate": "sz",
+    "company_name": "宁德时代",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "300750_2022_宁德时代_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-03-10/1216084559.PDF",
+    "announce_id": "1216084559"
+  },
+  {
+    "stock_code": "300750",
+    "plate": "sz",
+    "company_name": "宁德时代",
+    "year": "2023",
+    "title": "2023年年度报告",
+    "filename": "300750_2023_宁德时代_2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-03-16/1219313047.PDF",
+    "announce_id": "1219313047"
+  },
+  {
+    "stock_code": "300750",
+    "plate": "sz",
+    "company_name": "宁德时代",
+    "year": "2024",
+    "title": "2024年年度报告",
+    "filename": "300750_2024_宁德时代_2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-15/1222806982.PDF",
+    "announce_id": "1222806982"
+  },
+  {
+    "stock_code": "300750",
+    "plate": "sz",
+    "company_name": "宁德时代",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "300750_2025_宁德时代_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-10/1225002214.PDF",
+    "announce_id": "1225002214"
+  },
+  {
+    "stock_code": "002594",
+    "plate": "sz",
+    "company_name": "比亚迪",
+    "year": "2021",
+    "title": "2021年年度报告",
+    "filename": "002594_2021_比亚迪_2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-03-30/1212730520.PDF",
+    "announce_id": "1212730520"
+  },
+  {
+    "stock_code": "002594",
+    "plate": "sz",
+    "company_name": "比亚迪",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "002594_2022_比亚迪_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-03-29/1216246589.PDF",
+    "announce_id": "1216246589"
+  },
+  {
+    "stock_code": "002594",
+    "plate": "sz",
+    "company_name": "比亚迪",
+    "year": "2023",
+    "title": "2023年年度报告",
+    "filename": "002594_2023_比亚迪_2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-03-27/1219412018.PDF",
+    "announce_id": "1219412018"
+  },
+  {
+    "stock_code": "002594",
+    "plate": "sz",
+    "company_name": "比亚迪",
+    "year": "2024",
+    "title": "2024年年度报告",
+    "filename": "002594_2024_比亚迪_2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-25/1222881496.PDF",
+    "announce_id": "1222881496"
+  },
+  {
+    "stock_code": "002594",
+    "plate": "sz",
+    "company_name": "比亚迪",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "002594_2025_比亚迪_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225045351.PDF",
+    "announce_id": "1225045351"
+  },
+  {
+    "stock_code": "601012",
+    "plate": "sh",
+    "company_name": "隆基绿能",
+    "year": "2021",
+    "title": "隆基股份2021年年度报告",
+    "filename": "601012_2021_隆基绿能_隆基股份2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-28/1213161635.PDF",
+    "announce_id": "1213161635"
+  },
+  {
+    "stock_code": "601012",
+    "plate": "sh",
+    "company_name": "隆基绿能",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "601012_2022_隆基绿能_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-04-28/1216664294.PDF",
+    "announce_id": "1216664294"
+  },
+  {
+    "stock_code": "601012",
+    "plate": "sh",
+    "company_name": "隆基绿能",
+    "year": "2023",
+    "title": "2023年年度报告",
+    "filename": "601012_2023_隆基绿能_2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-04-30/1219925312.PDF",
+    "announce_id": "1219925312"
+  },
+  {
+    "stock_code": "601012",
+    "plate": "sh",
+    "company_name": "隆基绿能",
+    "year": "2024",
+    "title": "2024年年度报告（修订版）",
+    "filename": "601012_2024_隆基绿能_2024年年度报告（修订版）.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-05-07/1223477802.PDF",
+    "announce_id": "1223477802"
+  },
+  {
+    "stock_code": "601012",
+    "plate": "sh",
+    "company_name": "隆基绿能",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "601012_2025_隆基绿能_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-29/1225251647.PDF",
+    "announce_id": "1225251647"
+  },
+  {
+    "stock_code": "002415",
+    "plate": "sz",
+    "company_name": "海康威视",
+    "year": "2021",
+    "title": "2021年年度报告",
+    "filename": "002415_2021_海康威视_2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-16/1212941495.PDF",
+    "announce_id": "1212941495"
+  },
+  {
+    "stock_code": "002415",
+    "plate": "sz",
+    "company_name": "海康威视",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "002415_2022_海康威视_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-04-15/1216417187.PDF",
+    "announce_id": "1216417187"
+  },
+  {
+    "stock_code": "002415",
+    "plate": "sz",
+    "company_name": "海康威视",
+    "year": "2023",
+    "title": "2023年年度报告",
+    "filename": "002415_2023_海康威视_2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-04-20/1219703072.PDF",
+    "announce_id": "1219703072"
+  },
+  {
+    "stock_code": "002415",
+    "plate": "sz",
+    "company_name": "海康威视",
+    "year": "2024",
+    "title": "2024年年度报告",
+    "filename": "002415_2024_海康威视_2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-19/1223153152.PDF",
+    "announce_id": "1223153152"
+  },
+  {
+    "stock_code": "002415",
+    "plate": "sz",
+    "company_name": "海康威视",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "002415_2025_海康威视_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225123062.PDF",
+    "announce_id": "1225123062"
+  },
+  {
+    "stock_code": "000725",
+    "plate": "sz",
+    "company_name": "京东方A",
+    "year": "2021",
+    "title": "2021年年度报告",
+    "filename": "000725_2021_京东方A_2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-03-31/1212750904.PDF",
+    "announce_id": "1212750904"
+  },
+  {
+    "stock_code": "000725",
+    "plate": "sz",
+    "company_name": "京东方A",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "000725_2022_京东方A_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-04-04/1216320138.PDF",
+    "announce_id": "1216320138"
+  },
+  {
+    "stock_code": "000725",
+    "plate": "sz",
+    "company_name": "京东方A",
+    "year": "2023",
+    "title": "2023年年度报告",
+    "filename": "000725_2023_京东方A_2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-04-02/1219494121.PDF",
+    "announce_id": "1219494121"
+  },
+  {
+    "stock_code": "000725",
+    "plate": "sz",
+    "company_name": "京东方A",
+    "year": "2024",
+    "title": "2024年年度报告",
+    "filename": "000725_2024_京东方A_2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-22/1223193313.PDF",
+    "announce_id": "1223193313"
+  },
+  {
+    "stock_code": "000725",
+    "plate": "sz",
+    "company_name": "京东方A",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "000725_2025_京东方A_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-01/1225068510.PDF",
+    "announce_id": "1225068510"
+  },
+  {
+    "stock_code": "000063",
+    "plate": "sz",
+    "company_name": "中兴通讯",
+    "year": "2021",
+    "title": "2021年年度报告",
+    "filename": "000063_2021_中兴通讯_2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-03-09/1212529495.PDF",
+    "announce_id": "1212529495"
+  },
+  {
+    "stock_code": "000063",
+    "plate": "sz",
+    "company_name": "中兴通讯",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "000063_2022_中兴通讯_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-03-11/1216094376.PDF",
+    "announce_id": "1216094376"
+  },
+  {
+    "stock_code": "000063",
+    "plate": "sz",
+    "company_name": "中兴通讯",
+    "year": "2023",
+    "title": "2023年年度报告",
+    "filename": "000063_2023_中兴通讯_2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-03-09/1219266488.PDF",
+    "announce_id": "1219266488"
+  },
+  {
+    "stock_code": "000063",
+    "plate": "sz",
+    "company_name": "中兴通讯",
+    "year": "2024",
+    "title": "2024年年度报告",
+    "filename": "000063_2024_中兴通讯_2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-01/1222675749.PDF",
+    "announce_id": "1222675749"
+  },
+  {
+    "stock_code": "000063",
+    "plate": "sz",
+    "company_name": "中兴通讯",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "000063_2025_中兴通讯_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-07/1225000301.PDF",
+    "announce_id": "1225000301"
+  },
+  {
+    "stock_code": "000333",
+    "plate": "sz",
+    "company_name": "美的集团",
+    "year": "2021",
+    "title": "2021年年度报告",
+    "filename": "000333_2021_美的集团_2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-30/1213264815.PDF",
+    "announce_id": "1213264815"
+  },
+  {
+    "stock_code": "000333",
+    "plate": "sz",
+    "company_name": "美的集团",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "000333_2022_美的集团_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-04-29/1216695045.PDF",
+    "announce_id": "1216695045"
+  },
+  {
+    "stock_code": "000333",
+    "plate": "sz",
+    "company_name": "美的集团",
+    "year": "2023",
+    "title": "2023年年度报告",
+    "filename": "000333_2023_美的集团_2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-03-28/1219429374.PDF",
+    "announce_id": "1219429374"
+  },
+  {
+    "stock_code": "000333",
+    "plate": "sz",
+    "company_name": "美的集团",
+    "year": "2024",
+    "title": "2024年年度报告",
+    "filename": "000333_2024_美的集团_2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-29/1222951181.PDF",
+    "announce_id": "1222951181"
+  },
+  {
+    "stock_code": "000333",
+    "plate": "sz",
+    "company_name": "美的集团",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "000333_2025_美的集团_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225065145.PDF",
+    "announce_id": "1225065145"
+  },
+  {
+    "stock_code": "000651",
+    "plate": "sz",
+    "company_name": "格力电器",
+    "year": "2021",
+    "title": "2021年年度报告",
+    "filename": "000651_2021_格力电器_2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-30/1213262535.PDF",
+    "announce_id": "1213262535"
+  },
+  {
+    "stock_code": "000651",
+    "plate": "sz",
+    "company_name": "格力电器",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "000651_2022_格力电器_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-04-29/1216702261.PDF",
+    "announce_id": "1216702261"
+  },
+  {
+    "stock_code": "000651",
+    "plate": "sz",
+    "company_name": "格力电器",
+    "year": "2023",
+    "title": "2023年年度报告",
+    "filename": "000651_2023_格力电器_2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-04-30/1219928418.PDF",
+    "announce_id": "1219928418"
+  },
+  {
+    "stock_code": "000651",
+    "plate": "sz",
+    "company_name": "格力电器",
+    "year": "2024",
+    "title": "2024年年度报告",
+    "filename": "000651_2024_格力电器_2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-28/1223330631.PDF",
+    "announce_id": "1223330631"
+  },
+  {
+    "stock_code": "000651",
+    "plate": "sz",
+    "company_name": "格力电器",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "000651_2025_格力电器_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-29/1225250396.PDF",
+    "announce_id": "1225250396"
+  },
+  {
+    "stock_code": "600690",
+    "plate": "sh",
+    "company_name": "海尔智家",
+    "year": "2021",
+    "title": "海尔智家股份有限公司2021年年度报告",
+    "filename": "600690_2021_海尔智家_海尔智家股份有限公司2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-03-31/1212752481.PDF",
+    "announce_id": "1212752481"
+  },
+  {
+    "stock_code": "600690",
+    "plate": "sh",
+    "company_name": "海尔智家",
+    "year": "2022",
+    "title": "海尔智家股份有限公司2022年年度报告",
+    "filename": "600690_2022_海尔智家_海尔智家股份有限公司2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-03-31/1216279243.PDF",
+    "announce_id": "1216279243"
+  },
+  {
+    "stock_code": "600690",
+    "plate": "sh",
+    "company_name": "海尔智家",
+    "year": "2023",
+    "title": "海尔智家股份有限公司2023年年度报告",
+    "filename": "600690_2023_海尔智家_海尔智家股份有限公司2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-03-28/1219427279.PDF",
+    "announce_id": "1219427279"
+  },
+  {
+    "stock_code": "600690",
+    "plate": "sh",
+    "company_name": "海尔智家",
+    "year": "2024",
+    "title": "海尔智家股份有限公司2024年年度报告",
+    "filename": "600690_2024_海尔智家_海尔智家股份有限公司2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-28/1222926246.PDF",
+    "announce_id": "1222926246"
+  },
+  {
+    "stock_code": "600690",
+    "plate": "sh",
+    "company_name": "海尔智家",
+    "year": "2025",
+    "title": "海尔智家股份有限公司2025年年度报告",
+    "filename": "600690_2025_海尔智家_海尔智家股份有限公司2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-27/1225038336.PDF",
+    "announce_id": "1225038336"
+  },
+  {
+    "stock_code": "600276",
+    "plate": "sh",
+    "company_name": "恒瑞医药",
+    "year": "2021",
+    "title": "恒瑞医药2021年年度报告",
+    "filename": "600276_2021_恒瑞医药_恒瑞医药2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-23/1213053755.PDF",
+    "announce_id": "1213053755"
+  },
+  {
+    "stock_code": "600276",
+    "plate": "sh",
+    "company_name": "恒瑞医药",
+    "year": "2022",
+    "title": "恒瑞医药2022年年度报告",
+    "filename": "600276_2022_恒瑞医药_恒瑞医药2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-04-22/1216518776.PDF",
+    "announce_id": "1216518776"
+  },
+  {
+    "stock_code": "600276",
+    "plate": "sh",
+    "company_name": "恒瑞医药",
+    "year": "2023",
+    "title": "恒瑞医药2023年年度报告",
+    "filename": "600276_2023_恒瑞医药_恒瑞医药2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-04-18/1219650115.PDF",
+    "announce_id": "1219650115"
+  },
+  {
+    "stock_code": "600276",
+    "plate": "sh",
+    "company_name": "恒瑞医药",
+    "year": "2024",
+    "title": "恒瑞医药2024年年度报告",
+    "filename": "600276_2024_恒瑞医药_恒瑞医药2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-31/1222961962.PDF",
+    "announce_id": "1222961962"
+  },
+  {
+    "stock_code": "600276",
+    "plate": "sh",
+    "company_name": "恒瑞医药",
+    "year": "2025",
+    "title": "恒瑞医药2025年年度报告",
+    "filename": "600276_2025_恒瑞医药_恒瑞医药2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-26/1225032585.PDF",
+    "announce_id": "1225032585"
+  },
+  {
+    "stock_code": "300760",
+    "plate": "sz",
+    "company_name": "迈瑞医疗",
+    "year": "2021",
+    "title": "2021年年度报告",
+    "filename": "300760_2021_迈瑞医疗_2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-20/1212976151.PDF",
+    "announce_id": "1212976151"
+  },
+  {
+    "stock_code": "300760",
+    "plate": "sz",
+    "company_name": "迈瑞医疗",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "300760_2022_迈瑞医疗_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-04-28/1216645583.PDF",
+    "announce_id": "1216645583"
+  },
+  {
+    "stock_code": "300760",
+    "plate": "sz",
+    "company_name": "迈瑞医疗",
+    "year": "2023",
+    "title": "2023年年度报告",
+    "filename": "300760_2023_迈瑞医疗_2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-04-27/1219856065.PDF",
+    "announce_id": "1219856065"
+  },
+  {
+    "stock_code": "300760",
+    "plate": "sz",
+    "company_name": "迈瑞医疗",
+    "year": "2024",
+    "title": "2024年年度报告",
+    "filename": "300760_2024_迈瑞医疗_2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-29/1223371173.PDF",
+    "announce_id": "1223371173"
+  },
+  {
+    "stock_code": "300760",
+    "plate": "sz",
+    "company_name": "迈瑞医疗",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "300760_2025_迈瑞医疗_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225059012.PDF",
+    "announce_id": "1225059012"
+  },
+  {
+    "stock_code": "601888",
+    "plate": "sh",
+    "company_name": "中国中免",
+    "year": "2021",
+    "title": "中国旅游集团中免股份有限公司2021年年度报告",
+    "filename": "601888_2021_中国中免_中国旅游集团中免股份有限公司2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-23/1213052580.PDF",
+    "announce_id": "1213052580"
+  },
+  {
+    "stock_code": "601888",
+    "plate": "sh",
+    "company_name": "中国中免",
+    "year": "2022",
+    "title": "中国旅游集团中免股份有限公司2022年年度报告",
+    "filename": "601888_2022_中国中免_中国旅游集团中免股份有限公司2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-03-31/1216276286.PDF",
+    "announce_id": "1216276286"
+  },
+  {
+    "stock_code": "601888",
+    "plate": "sh",
+    "company_name": "中国中免",
+    "year": "2023",
+    "title": "中国旅游集团中免股份有限公司2023年年度报告",
+    "filename": "601888_2023_中国中免_中国旅游集团中免股份有限公司2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-03-28/1219426653.PDF",
+    "announce_id": "1219426653"
+  },
+  {
+    "stock_code": "601888",
+    "plate": "sh",
+    "company_name": "中国中免",
+    "year": "2024",
+    "title": "中国旅游集团中免股份有限公司2024年年度报告",
+    "filename": "601888_2024_中国中免_中国旅游集团中免股份有限公司2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-29/1222944381.PDF",
+    "announce_id": "1222944381"
+  },
+  {
+    "stock_code": "601888",
+    "plate": "sh",
+    "company_name": "中国中免",
+    "year": "2025",
+    "title": "中国旅游集团中免股份有限公司2025年年度报告",
+    "filename": "601888_2025_中国中免_中国旅游集团中免股份有限公司2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225063442.PDF",
+    "announce_id": "1225063442"
+  },
+  {
+    "stock_code": "002714",
+    "plate": "sz",
+    "company_name": "牧原股份",
+    "year": "2021",
+    "title": "2021年年度报告",
+    "filename": "002714_2021_牧原股份_2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-30/1213254727.PDF",
+    "announce_id": "1213254727"
+  },
+  {
+    "stock_code": "002714",
+    "plate": "sz",
+    "company_name": "牧原股份",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "002714_2022_牧原股份_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-04-28/1216647248.PDF",
+    "announce_id": "1216647248"
+  },
+  {
+    "stock_code": "002714",
+    "plate": "sz",
+    "company_name": "牧原股份",
+    "year": "2023",
+    "title": "2023年年度报告",
+    "filename": "002714_2023_牧原股份_2023年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-04-27/1219861302.PDF",
+    "announce_id": "1219861302"
+  },
+  {
+    "stock_code": "002714",
+    "plate": "sz",
+    "company_name": "牧原股份",
+    "year": "2024",
+    "title": "2024年年度报告",
+    "filename": "002714_2024_牧原股份_2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-20/1222845025.PDF",
+    "announce_id": "1222845025"
+  },
+  {
+    "stock_code": "002714",
+    "plate": "sz",
+    "company_name": "牧原股份",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "002714_2025_牧原股份_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225042507.PDF",
+    "announce_id": "1225042507"
+  },
+  {
+    "stock_code": "000002",
+    "plate": "sz",
+    "company_name": "万科A",
+    "year": "2021",
+    "title": "2021年年度报告",
+    "filename": "000002_2021_万科A_2021年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-03-31/1212750450.PDF",
+    "announce_id": "1212750450"
+  },
+  {
+    "stock_code": "000002",
+    "plate": "sz",
+    "company_name": "万科A",
+    "year": "2022",
+    "title": "2022年年度报告",
+    "filename": "000002_2022_万科A_2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-03-31/1216273938.PDF",
+    "announce_id": "1216273938"
+  },
+  {
+    "stock_code": "000002",
+    "plate": "sz",
+    "company_name": "万科A",
+    "year": "2024",
+    "title": "2024年年度报告",
+    "filename": "000002_2024_万科A_2024年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-01/1222974139.PDF",
+    "announce_id": "1222974139"
+  },
+  {
+    "stock_code": "000002",
+    "plate": "sz",
+    "company_name": "万科A",
+    "year": "2025",
+    "title": "2025年年度报告",
+    "filename": "000002_2025_万科A_2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-01/1225067794.PDF",
+    "announce_id": "1225067794"
+  },
+  {
+    "stock_code": "601857",
+    "plate": "sh",
+    "company_name": "中国石油",
+    "year": "2021",
+    "title": "中国石油天然气股份有限公司2021 年度报告",
+    "filename": "601857_2021_中国石油_中国石油天然气股份有限公司2021 年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2022-04-01/1212769284.PDF",
+    "announce_id": "1212769284"
+  },
+  {
+    "stock_code": "601857",
+    "plate": "sh",
+    "company_name": "中国石油",
+    "year": "2022",
+    "title": "中国海洋石油有限公司2022年年度报告",
+    "filename": "601857_2022_中国石油_中国海洋石油有限公司2022年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2023-03-30/1216259494.PDF",
+    "announce_id": "1216259494"
+  },
+  {
+    "stock_code": "601857",
+    "plate": "sh",
+    "company_name": "中国石油",
+    "year": "2023",
+    "title": "中国石油天然气股份有限公司2023年度报告",
+    "filename": "601857_2023_中国石油_中国石油天然气股份有限公司2023年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2024-03-26/1219405975.PDF",
+    "announce_id": "1219405975"
+  },
+  {
+    "stock_code": "601857",
+    "plate": "sh",
+    "company_name": "中国石油",
+    "year": "2024",
+    "title": "中国石油天然气股份有限公司2024年度报告",
+    "filename": "601857_2024_中国石油_中国石油天然气股份有限公司2024年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-31/1222962164.PDF",
+    "announce_id": "1222962164"
+  },
+  {
+    "stock_code": "601857",
+    "plate": "sh",
+    "company_name": "中国石油",
+    "year": "2025",
+    "title": "中国海洋石油有限公司2025年年度报告",
+    "filename": "601857_2025_中国石油_中国海洋石油有限公司2025年年度报告.pdf",
+    "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-27/1225036017.PDF",
+    "announce_id": "1225036017"
+  }
+]

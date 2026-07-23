@@ -1,0 +1,131 @@
+import torch
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, f1_score
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import Dataset, DataLoader
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, TrainingArguments, Trainer
+from peft import LoraConfig, get_peft_model
+
+# ==============================================
+# 1. 准备数据集（情感分类，自带小数据集）
+# ==============================================
+data = {
+    "text": [
+        "我非常喜欢这个产品，真的很好用", "质量太差了，很失望",
+        "太棒了，值得购买", "不推荐，很差劲",
+        "效果不错，满意", "糟糕透顶",
+        "用起来很方便，好评", "浪费钱，不好用"
+    ],
+    "label": [1, 0, 1, 0, 1, 0, 1, 0]
+}
+df = pd.DataFrame(data)
+train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+
+# ==============================================
+# 方法1：TF-IDF + 逻辑回归
+# ==============================================
+print("\n===== 方法1：TF-IDF + Logistic Regression =====")
+tfidf = TfidfVectorizer(max_features=1000)
+train_X = tfidf.fit_transform(train_df["text"])
+test_X = tfidf.transform(test_df["text"])
+
+lr = LogisticRegression()
+lr.fit(train_X, train_df["label"])
+pred = lr.predict(test_X)
+print(f"准确率: {accuracy_score(test_df['label'], pred):.2f}")
+print(f"F1: {f1_score(test_df['label'], pred):.2f}")
+
+# ==============================================
+# 方法2：LSTM 文本分类
+# ==============================================
+print("\n===== 方法2：LSTM 文本分类 =====")
+class TextDataset(Dataset):
+    def __init__(self, text, label, vocab):
+        self.text = [self.word2idx(t, vocab) for t in text]
+        self.label = label.values
+    def word2idx(self, text, vocab):
+        return [vocab.get(w, 0) for w in text.split()]
+    def __len__(self): return len(self.text)
+    def __getitem__(self, i):
+        return torch.tensor(self.text[i], dtype=torch.long), torch.tensor(self.label[i], dtype=torch.float32)
+
+vocab = {w:i for i,w in enumerate(" ".join(df["text"]).split(), 1)}
+train_dataset = TextDataset(train_df["text"], train_df["label"], vocab)
+test_dataset = TextDataset(test_df["text"], test_df["label"], vocab)
+
+class LSTMModel(nn.Module):
+    def __init__(self, vocab_size):
+        super().__init__()
+        self.emb = nn.Embedding(vocab_size+1, 64)
+        self.lstm = nn.LSTM(64, 32, batch_first=True)
+        self.fc = nn.Linear(32, 1)
+    def forward(self, x):
+        x = self.emb(x)
+        out, _ = self.lstm(x)
+        return self.fc(out[:, -1, :])
+
+def collate_fn(batch):
+    x, y = zip(*batch)
+    x = torch.nn.utils.rnn.pad_sequence(x, batch_first=True)
+    return x, torch.stack(y).unsqueeze(1)
+
+train_loader = DataLoader(train_dataset, batch_size=2, collate_fn=collate_fn)
+model = LSTMModel(len(vocab))
+opt = optim.Adam(model.parameters(), lr=1e-3)
+criterion = nn.BCEWithLogitsLoss()
+
+for e in range(10):
+    for x,y in train_loader:
+        loss = criterion(model(x), y)
+        opt.zero_grad()
+        loss.backward()
+        opt.step()
+
+# ==============================================
+# 方法3：BERT 全量微调
+# ==============================================
+print("\n===== 方法3：BERT 全量微调 =====")
+model_name = "bert-base-chinese"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+def tokenize(x):
+    return tokenizer(x["text"], padding="max_length", truncation=True, max_length=32)
+
+train_enc = train_df.apply(tokenize, axis=1).apply(pd.Series)
+test_enc = test_df.apply(tokenize, axis=1).apply(pd.Series)
+
+class BertDataset(Dataset):
+    def __init__(self, enc, label):
+        self.input_ids = torch.tensor(list(enc["input_ids"]))
+        self.attn = torch.tensor(list(enc["attention_mask"]))
+        self.label = torch.tensor(label.values)
+    def __len__(self): return len(self.label)
+    def __getitem__(self,i):
+        return {"input_ids":self.input_ids[i], "attention_mask":self.attn[i], "label":self.label[i]}
+
+bert_train = BertDataset(train_enc, train_df["label"])
+bert_test = BertDataset(test_enc, test_df["label"])
+
+model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
+args = TrainingArguments(output_dir="./tmp", per_device_train_batch_size=2, num_train_epochs=3, logging_steps=10)
+trainer = Trainer(model=model, args=args, train_dataset=bert_train, eval_dataset=bert_test)
+trainer.train()
+
+# ==============================================
+# 方法4：BERT + LoRA 高效微调（推荐）
+# ==============================================
+print("\n===== 方法4：BERT + LoRA 高效微调 =====")
+lora_config = LoraConfig(r=8, lora_alpha=32, target_modules=["query", "value"], lora_dropout=0.01)
+model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
+model = get_peft_model(model, lora_config)
+model.print_trainable_parameters()
+
+trainer = Trainer(model=model, args=args, train_dataset=bert_train, eval_dataset=bert_test)
+trainer.train()
+
+print("\n✅ 四种方法全部训练完成！")

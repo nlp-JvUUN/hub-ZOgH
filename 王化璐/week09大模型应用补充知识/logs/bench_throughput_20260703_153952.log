@@ -1,0 +1,64 @@
+# script: bench_throughput
+# started: 2026-07-03T15:39:52
+======================================================================
+
+======================================================================
+  Throughput Benchmark  |  50 prompts × max 100 new tokens
+======================================================================
+
+======================================================================
+  加载 transformers Qwen2-0.5B-Instruct
+======================================================================
+
+[A] transformers 串行（一次一条）...
+    进度 10/50
+    进度 20/50
+    进度 30/50
+    进度 40/50
+    进度 50/50
+
+[B] transformers batch=8（手动 padding）...
+    进度 batch 1/7
+    进度 batch 2/7
+    进度 batch 3/7
+    进度 batch 4/7
+    进度 batch 5/7
+    进度 batch 6/7
+    进度 batch 7/7
+
+======================================================================
+  加载 vLLM Qwen2-0.5B-Instruct
+======================================================================
+INFO 07-03 15:40:57 [__init__.py:244] Automatically detected platform cuda.
+INFO 07-03 15:41:05 [config.py:841] This model supports multiple tasks: {'generate', 'embed', 'classify', 'reward'}. Defaulting to 'generate'.
+WARNING 07-03 15:41:05 [config.py:3371] Casting torch.bfloat16 to torch.float16.
+INFO 07-03 15:41:05 [config.py:1472] Using max model len 2048
+INFO 07-03 15:41:06 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=8192.
+WARNING 07-03 15:41:06 [cuda.py:102] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+WARNING 07-03 15:41:06 [__init__.py:2662] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reason: CUDA is initialized
+
+[C] vLLM 批处理（内置 continuous batching）...
+
+======================================================================
+  结果汇总
+======================================================================
+模式                            总耗时         QPS       tokens/s    相对vLLM    
+--------------------------------------------------------------------------------
+[A] transformers 串行          51.17s      0.98         71       0.02×
+[B] transformers batch=8     10.31s      4.85        351       0.08×
+[C] vLLM 批处理                  0.84s     59.82       4116       1.00×
+
+JSON 结果保存：/root/autodl-fs/vllm_deployment/outputs/throughput_results.json
+
+柱状图已保存：/root/autodl-fs/vllm_deployment/outputs/throughput_comparison.png
+
+======================================================================
+  核心结论：
+    vLLM 相对 transformers 串行加速：61.2×
+    vLLM 相对 transformers batch:    12.3×
+    关键机制：PagedAttention + continuous batching
+======================================================================
+
+
+# finished: 2026-07-03T15:41:19
+# status: success

@@ -1,0 +1,321 @@
+结果基于Qwen2-1.5B
+
+python demo_guided_choice.py
+======================================================================
+  Demo: guided_choice（枚举约束）
+  Model: qwen2-1.5B   Choices: ['查股价', '查财报', '查新闻', '对比分析', '其他']
+======================================================================
+
+问题                              真值        裸 prompt 输出         guided 输出      
+------------------------------------------------------------------------------------------
+查一下茅台今天多少钱                      查股价       ? 查股价               ? 查股价
+贵州茅台 2024 年营收多少亿                查财报       ? 查财报               ? 查财报
+最近宁德时代有什么新闻                     查新闻       ~ 对比分析              ? 对比分析
+对比一下招行和平安的净利润                   对比分析      ? 对比分析              ? 对比分析
+今天天气怎么样                         其他        ? 查天气               ? 查新闻
+帮我看看 600000 的收盘价                查股价       ? 查股价               ? 查股价
+招商银行去年的 ROE 是多少                 查财报       ? 查财报               ? 查财报
+宁德时代被限产了吗                       查新闻       ~ 对比分析              ? 对比分析
+比亚迪和特斯拉哪个更强                     对比分析      ? 对比分析              ? 对比分析
+帮我订一张机票                         其他        ? 查机票               ? 查股价
+五粮液现在股价                         查股价       ? 查股价               ? 查股价
+平安保险的净利润增长率                     查财报       ~ 对比分析              ? 对比分析
+------------------------------------------------------------------------------------------
+
+指标                            裸 prompt            guided_choice       
+----------------------------------------------------------------------
+输出合法（在枚举内）                  10/12 (83%)      12/12 (100%)
+预测正确                        7/12 (58%)      7/12 (58%)
+平均延迟（秒）                     0.074           0.347
+
+======================================================================
+  结论：guided_choice 100% 保证输出合法，
+       分类准确率也通常比裸 prompt 高（因为模型不会被错误 token 带偏）
+======================================================================
+
+python demo_guided_regex.py
+======================================================================
+  任务 1：日期标准化 → YYYY-MM-DD
+  正则: \d{4}-\d{2}-\d{2}
+======================================================================
+
+输入                                 裸 prompt                 guided_regex   
+---------------------------------------------------------------------------
+2024年5月12日                         ? 2024-05-12            ? 2024-05-12
+2023/12/1 下午开会                     ? 2023-12-01            ? 2023-12-01
+三月三号我去北京                           ? 2021-03-03            ? 2021-03-03
+2024.11.30 是截止日期                   ? 2024-11-30            ? 2024-11-30
+明天（假设今天是2026-05-11）                ? 2026-05-12            ? 2026-05-12
+2024 年 10 月的第一天                    ? 2024-10-01            ? 2024-10-01
+---------------------------------------------------------------------------
+格式合法率：裸 prompt 6/6 (100%)  |  guided_regex 6/6 (100%)
+
+======================================================================
+  任务 2：A 股代码抽取 → 6 位数字
+  正则: \d{6}
+======================================================================
+
+输入                                 裸 prompt                 guided_regex   
+---------------------------------------------------------------------------
+帮我查 600000 浦发银行                    ? 600000                ? 600000
+code: 000001 平安银行                  ? 000001                ? 000001
+茅台的代码是 600519                      ? 600519                ? 600519
+六零零五一九                             ? 000596                ? 000596
+股票代码：300750（宁德时代）                  ? 300750                ? 300750
+---------------------------------------------------------------------------
+格式合法率：裸 prompt 5/5 (100%)  |  guided_regex 5/5 (100%)
+
+======================================================================
+  结论：guided_regex 保证下游解析器永远能拿到合法输入
+       特别适合日期/电话/代码/邮编等有严格格式的字段
+======================================================================
+
+
+python demo_response_format.py
+===========================================================================
+  Demo: response_format（OpenAI 标准 JSON 模式）
+  Model: qwen2-1.5B
+===========================================================================
+
+▶ 茅台三季度营收创历史新高，净利润同比增长 15%
+  [raw         ] ✓ {
+  "sentiment": "positive",
+  "confidence": 0.9,
+  "keywords": ["营收", "利润", "增长", "茅台"]
+}
+  [json_object ] ✓ {
+  "sentiment": "positive",
+  "confidence": 0.9,
+  "keywords": ["营收", "利润", "增长", "茅台"]
+}
+
+▶ 比亚迪召回 10 万辆电动车，涉及电池安全问题
+  [raw         ] ✓ {
+  "sentiment": "neutral",
+  "confidence": 0.85,
+  "keywords": ["召回", "10 万辆", "电动车", "电池安全问题"]
+}
+  [json_object ] ✓ {
+  "sentiment": "neutral",
+  "confidence": 0.85,
+  "keywords": ["召回", "10 万辆", "电动车", "电池安全问题"]
+}
+
+▶ 央行维持 LPR 利率不变
+  [raw         ] ✓ {
+  "sentiment": "neutral",
+  "confidence": 0.95,
+  "keywords": ["央行", "LPR", "利率"]
+}
+  [json_object ] ✓ {
+  "sentiment": "neutral",
+  "confidence": 0.95,
+  "keywords": ["央行", "LPR", "利率"]
+}
+
+▶ 宁德时代与宝马签订长期供货协议
+  [raw         ] ✓ {
+  "sentiment": "neutral",
+  "confidence": 0.85,
+  "keywords": ["宝马", "长期供货协议"]
+}
+  [json_object ] ✓ {
+  "sentiment": "neutral",
+  "confidence": 0.85,
+  "keywords": ["宝马", "长期供货协议"]
+}
+
+▶ 平安保险高管被调查，股价下跌 8%
+  [raw         ] ✓ {
+  "sentiment": "negative",
+  "confidence": 0.95,
+  "keywords": ["平安保险", "高管", "调查", "股价", "下跌"]
+}
+  [json_object ] ✓ {
+  "sentiment": "negative",
+  "confidence": 0.95,
+  "keywords": ["平安保险", "高管", "调查", "股价", "下跌"]
+}
+
+===========================================================================
+  5 条测试结果
+===========================================================================
+指标                    裸 prompt            response_format     
+------------------------------------------------------------
+合法 JSON             5/5 (100%)      5/5 (100%)      
+有 sentiment 字段      5/5 (100%)      5/5 (100%)      
+sentiment 值合法       5/5 (100%)      5/5 (100%)      
+有 confidence 字段     5/5 (100%)      5/5 (100%)      
+有 keywords 字段       5/5 (100%)      5/5 (100%)      
+
+===========================================================================
+  观察：
+    response_format 显著提升 JSON 合法率，但字段语义仍靠模型自觉
+    若需严格字段 schema，请用 guided_json（见 demo_function_call.py）
+===========================================================================
+
+
+python demo_guided_json.py
+==============================================================================
+  Demo: guided_json（JSON Schema 约束）
+  Model: qwen2-1.5B
+  对比三种模式：裸 prompt / response_format / guided_json
+==============================================================================
+
+▶ 招行 2023 年营收多少
+  [raw             ] ✓  {"company": "招商银行", "year": 2023, "metric": "营收"}
+  [response_format ] ✓  {"company": "招商银行", "year": 2023, "metric": "营收"}
+  [guided_json     ] ✓  {"company": "招商银行", "year": 2023, "metric": "营收"}
+
+▶ 贵州茅台 2022 的净利润
+  [raw             ] ✓  {"company": "贵州茅台", "year": 2022, "metric": "净利润"}
+  [response_format ] ✓  {"company": "贵州茅台", "year": 2022, "metric": "净利润"}
+  [guided_json     ] ✓  {"company": "贵州茅台", "year": 2022, "metric": "净利润"}
+
+▶ 平安银行去年（2024）的 ROE
+  [raw             ] ✓  {"company": "平安银行", "year": 2024, "metric": "ROE"}
+  [response_format ] ✓  {"company": "平安银行", "year": 2024, "metric": "ROE"}
+  [guided_json     ] ✓  {"company": "平安银行", "year": 2024, "metric": "ROE"}
+
+▶ 2021 年五粮液毛利率
+  [raw             ] ✓  {"company": "五粮液", "year": 2021, "metric": "毛利率"}
+  [response_format ] ✓  {"company": "五粮液", "year": 2021, "metric": "毛利率"}
+  [guided_json     ] ✓  {"company": "五粮液", "year": 2021, "metric": "毛利率"}
+
+▶ 2023 宁德时代经营现金流
+  [raw             ] ✗  ```json
+{
+    "company": "宁德时代",
+    "year": 2023,
+    "metric": "经营现金流"
+}
+```
+  [response_format ] ✓  {"company": "宁德时代", "year": 2023, "metric": "经营现金流"}
+  [guided_json     ] ✗  ```json
+{
+    "company": "宁德时代",
+    "year": 2023,
+    "metric": "经营现金流"
+}
+```
+
+▶ 问一下比亚迪 2024 的总资产规模
+  [raw             ] ✓  {"company": "比亚迪", "year": 2024, "metric": "总资产"}
+  [response_format ] ✓  {"company": "比亚迪", "year": 2024, "metric": "总资产"}
+  [guided_json     ] ✓  {"company": "比亚迪", "year": 2024, "metric": "总资产"}
+
+▶ 茅台 2020 年利润情况
+  [raw             ] ✓  {"company": "贵州茅台酒股份有限公司", "year": 2020, "metric": "净利润"}
+  [response_format ] ✓  {"company": "贵州茅台酒股份有限公司", "year": 2020, "metric": "净利润"}
+  [guided_json     ] ✓  {"company": "贵州茅台酒股份有限公司", "year": 2020, "metric": "净利润"}
+
+▶ ICBC 2023 营收
+  [raw             ] ✓  {"company": "中国工商银行", "year": 2023, "metric": "营收"}
+  [response_format ] ✓  {"company": "中国工商银行", "year": 2023, "metric": "营收"}
+  [guided_json     ] ✓  {"company": "中国工商银行", "year": 2023, "metric": "营收"}
+
+▶ 隆基绿能 22 年 roe
+  [raw             ] ✓  {"company": "隆基绿能", "year": 2022, "metric": "ROE"}
+  [response_format ] ✓  {"company": "隆基绿能", "year": 2022, "metric": "ROE"}
+  [guided_json     ] ✓  {"company": "隆基绿能", "year": 2022, "metric": "ROE"}
+
+==============================================================================
+  9 条测试结果汇总
+==============================================================================
+指标                      裸 prompt          response_format     guided_json    
+------------------------------------------------------------------------------
+合法 JSON               8/9 (89%)      9/9 (100%)      8/9 (89%)      
+字段齐全                  8/9 (89%)      9/9 (100%)      8/9 (89%)      
+year 在 2015~2025      8/9 (89%)      9/9 (100%)      8/9 (89%)      
+metric 在枚举内           8/9 (89%)      9/9 (100%)      8/9 (89%)      
+jsonschema 完全通过       8/9 (89%)      9/9 (100%)      8/9 (89%)      
+
+==============================================================================
+  结论：
+    response_format 只保证是 JSON，不保证字段名、类型、枚举正确
+    guided_json     是唯一 100% 保证 schema 合法的方式
+==============================================================================
+
+
+python bench_throughput.py 
+======================================================================
+  Throughput Benchmark  |  50 prompts × max 100 new tokens
+======================================================================
+
+======================================================================
+  加载 transformers Qwen2-1.5B-Instruct
+======================================================================
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+[A] transformers 串行（一次一条）...
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+    进度 10/50
+    进度 20/50
+    进度 30/50
+    进度 40/50
+    进度 50/50
+
+[B] transformers batch=8（手动 padding）...
+    进度 batch 1/7
+    进度 batch 2/7
+    进度 batch 3/7
+    进度 batch 4/7
+    进度 batch 5/7
+    进度 batch 6/7
+    进度 batch 7/7
+
+======================================================================
+  加载 vLLM Qwen2-0.5B-Instruct
+======================================================================
+INFO 07-07 08:53:42 [utils.py:253] non-default args: {'dtype': 'float16', 'max_model_len': 2048, 'gpu_memory_utilization': 0.6, 'disable_log_stats': True, 'enforce_eager': True, 'model': '/root/autodl-tmp/basic-model/Qwen/Qwen2-1.5B'}
+INFO 07-07 08:53:42 [model.py:514] Resolved architecture: Qwen2ForCausalLM
+WARNING 07-07 08:53:42 [model.py:2005] Casting torch.bfloat16 to torch.float16.
+INFO 07-07 08:53:42 [model.py:1661] Using max model len 2048
+INFO 07-07 08:53:42 [scheduler.py:230] Chunked prefill is enabled with max_num_batched_tokens=8192.
+WARNING 07-07 08:53:42 [vllm.py:622] Enforce eager set, overriding optimization level to -O0
+INFO 07-07 08:53:42 [vllm.py:722] Cudagraph is disabled under eager mode
+WARNING 07-07 08:53:42 [system_utils.py:136] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+(EngineCore_DP0 pid=1736) INFO 07-07 08:53:53 [core.py:93] Initializing a V1 LLM engine (v0.13.0) with config: model='/root/autodl-tmp/basic-model/Qwen/Qwen2-1.5B', speculative_config=None, tokenizer='/root/autodl-tmp/basic-model/Qwen/Qwen2-1.5B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=2048, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False), seed=0, served_model_name=/root/autodl-tmp/basic-model/Qwen/Qwen2-1.5B, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'level': None, 'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'splitting_ops': [], 'compile_mm_encoder': False, 'compile_sizes': [], 'compile_ranges_split_points': [8192], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'eliminate_noops': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False}, 'local_cache_dir': None}
+(EngineCore_DP0 pid=1736) INFO 07-07 08:53:54 [parallel_state.py:1203] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.17.0.3:39687 backend=nccl
+(EngineCore_DP0 pid=1736) INFO 07-07 08:53:54 [parallel_state.py:1411] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank 0
+(EngineCore_DP0 pid=1736) INFO 07-07 08:53:55 [gpu_model_runner.py:3562] Starting to load model /root/autodl-tmp/basic-model/Qwen/Qwen2-1.5B...
+(EngineCore_DP0 pid=1736) INFO 07-07 08:54:15 [cuda.py:351] Using FLASH_ATTN attention backend out of potential backends: ('FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION')
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  1.70it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  1.70it/s]
+(EngineCore_DP0 pid=1736) 
+(EngineCore_DP0 pid=1736) INFO 07-07 08:54:16 [default_loader.py:308] Loading weights took 0.71 seconds
+(EngineCore_DP0 pid=1736) INFO 07-07 08:54:17 [gpu_model_runner.py:3659] Model loading took 2.8876 GiB memory and 21.351540 seconds
+(EngineCore_DP0 pid=1736) INFO 07-07 08:54:18 [gpu_worker.py:375] Available KV cache memory: 9.78 GiB
+(EngineCore_DP0 pid=1736) INFO 07-07 08:54:18 [kv_cache_utils.py:1291] GPU KV cache size: 366,144 tokens
+(EngineCore_DP0 pid=1736) INFO 07-07 08:54:18 [kv_cache_utils.py:1296] Maximum concurrency for 2,048 tokens per request: 178.78x
+(EngineCore_DP0 pid=1736) INFO 07-07 08:54:18 [core.py:259] init engine (profile, create kv cache, warmup model) took 1.68 seconds
+(EngineCore_DP0 pid=1736) WARNING 07-07 08:54:19 [vllm.py:629] Inductor compilation was disabled by user settings,Optimizations settings that are only active duringInductor compilation will be ignored.
+(EngineCore_DP0 pid=1736) INFO 07-07 08:54:19 [vllm.py:722] Cudagraph is disabled under eager mode
+INFO 07-07 08:54:19 [llm.py:360] Supported tasks: ['generate']
+
+[C] vLLM 批处理（内置 continuous batching）...
+Adding requests: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:00<00:00, 1881.24it/s]
+Processed prompts: 100%|███████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 35.10it/s, est. speed input: 908.78 toks/s, output: 2493.85 toks/s]
+[rank0]:[W707 08:54:21.486818054 ProcessGroupNCCL.cpp:1524] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+
+======================================================================
+  结果汇总
+======================================================================
+模式                            总耗时         QPS       tokens/s    相对vLLM    
+--------------------------------------------------------------------------------
+[A] transformers 串行          82.67s      0.60         50       0.02×
+[B] transformers batch=8     18.49s      2.70        232       0.08×
+[C] vLLM 批处理                  1.45s     34.39       2442       1.00×
+
+JSON 结果保存：/root/autodl-tmp/week09/src/../outputs/throughput_results.json
+
+柱状图已保存：/root/autodl-tmp/week09/src/../outputs/throughput_comparison.png
+
+======================================================================
+  核心结论：
+    vLLM 相对 transformers 串行加速：56.9×
+    vLLM 相对 transformers batch:    12.7×
+    关键机制：PagedAttention + continuous batching
+======================================================================
+

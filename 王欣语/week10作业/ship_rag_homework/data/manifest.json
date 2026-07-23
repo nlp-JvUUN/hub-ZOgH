@@ -1,0 +1,16 @@
+{
+  "project": "船舶术语RAG训练资料",
+  "total_blocks": 473,
+  "files": [
+    {
+      "filename": "术语类120个随机问题评分.json",
+      "category": "术语类",
+      "blocks": 120
+    },
+    {
+      "filename": "问答对.json",
+      "category": "问答类",
+      "blocks": 353
+    }
+  ]
+}

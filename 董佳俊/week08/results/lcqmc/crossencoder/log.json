@@ -1,0 +1,25 @@
+{
+  "dataset": "lcqmc",
+  "method": "crossencoder",
+  "train_loss": 0.40983792806863784,
+  "train_acc": 0.8044,
+  "val_acc": 0.7548284480799818,
+  "val_f1": 0.7536413318638201,
+  "train_time_s": 5181.126371860504,
+  "train_samples": 20000,
+  "val_samples": 8802,
+  "config": {
+    "num_hidden_layers": 4,
+    "epochs": 1,
+    "batch_size": 32,
+    "max_length_bi": 64,
+    "max_length_cross": 128,
+    "lr": 2e-05,
+    "head_lr_mult": 5.0,
+    "warmup_ratio": 0.1,
+    "grad_accum": 1,
+    "margin": 0.3,
+    "pool": "mean",
+    "num_train": 20000
+  }
+}

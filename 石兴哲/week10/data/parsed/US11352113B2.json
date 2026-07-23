@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "patent_id": "US11352113B2",
+    "title": "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+    "assignee": "Teledyne RESON A/S",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2022-06-07",
+    "inventors": [
+      "David A. Mann",
+      "Peter H. Dahl"
+    ]
+  },
+  "source": "US11352113B2",
+  "blocks": [
+    {
+      "block_type": "title",
+      "content": "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "abstract",
+      "content": "A method for automatic classification of underwater acoustic sources (vessel types, marine mammals, geological events) uses deep convolutional neural networks operating on time-frequency spectrogram representations. The system preprocesses raw hydrophone recordings through an adaptive noise cancelation stage, computes mel-scaled spectrograms with 128 mel bands over 2-second analysis windows, and feeds the spectrograms to a ResNet-50 classifier pretrained on ImageNet and fine-tuned on a curated dataset of labeled underwater acoustic events. The classifier outputs source type (vessel class, cetacean species, seismic event type) with calibrated confidence scores. The system runs in real-time on embedded hardware, processing 10 parallel hydrophone channels simultaneously on an NVIDIA Jetson module consuming under 15 watts.",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "摘要"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Passive acoustic monitoring (PAM) is widely used for marine mammal surveys, vessel traffic monitoring, and underwater surveillance. Traditionally, trained human analysts visually inspect spectrograms to identify sound sources—a time-consuming process that does not scale to the growing volumes of data from long-term autonomous hydrophone deployments. Automated detectors exist for specific call types (e.g., fin whale 20 Hz pulses) but are narrow in scope and fragile to environmental variation.",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "BACKGROUND"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Deep learning has revolutionized acoustic classification in air (speech recognition, music genre classification, urban sound analysis) but has seen limited adoption underwater due to the scarcity of large labeled datasets and the unique acoustic propagation characteristics of the underwater channel.",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "BACKGROUND"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The invention adapts proven image classification architectures (ResNet-50) to the underwater acoustic domain by treating spectrograms as single-channel images. Transfer learning from ImageNet-pretrained weights provides effective initialization despite the domain difference between natural photographs and acoustic spectrograms. A temporal smoothing post-processing stage using Hidden Markov Models leverages the fact that acoustic source type changes slowly relative to the 2-second classification window.",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "SUMMARY"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The system processes hydrophone data in 2-second windows with 50% overlap, computing 128-band mel spectrograms (10 Hz to 48 kHz range) with log-magnitude scaling. Each spectrogram is normalized to zero mean and unit variance per frequency band (cepstral mean normalization) to remove stationary background noise profiles.",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The ResNet-50 classifier was fine-tuned on a composite dataset combining: (1) the DOSITS underwater sound library (2000+ labeled samples across 30+ classes); (2) ship passage recordings from the VENUS and NEPTUNE ocean observatories; (3) the Watkins Marine Mammal Sound Database. Data augmentation during training includes: time stretching (+/- 10%), frequency masking (up to 10% of mel bands), time masking (up to 20% of time steps), and additive background noise from the noise field of representative deployment locations.",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "On a held-out test set, the system achieves 91.3% classification accuracy across 12 classes (5 vessel types, 5 cetacean species, 1 seismic airgun, 1 ice noise), outperforming both a baseline SVM with handcrafted features (78.5%) and a simpler CNN architecture (CaffeNet, 85.2%).",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "claim",
+      "content": "An underwater acoustic classification system comprising: at least one hydrophone producing a time-series acoustic signal; a preprocessing module performing bandpass filtering and adaptive noise cancelation; a spectrogram computation module producing mel-scaled log-magnitude spectrograms at regular time intervals; a convolutional neural network classifier trained to recognize a plurality of underwater acoustic source classes from the spectrograms; and a post-processing module that applies temporal smoothing to classifier outputs to reduce intermittent misclassifications.",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "权利要求"
+      ],
+      "claim_num": 1
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, wherein the adaptive noise cancelation uses a normalized least-mean-square (NLMS) adaptive filter with a reference input from a co-located accelerometer that measures platform self-noise.",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "权利要求"
+      ],
+      "claim_num": 2
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, wherein the mel-scaled spectrograms span the frequency range 10 Hz to 48 kHz with 128 mel bands and a 2-second analysis window with 50% overlap.",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "权利要求"
+      ],
+      "claim_num": 3
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, wherein the classifier outputs calibrated confidence scores using temperature scaling of the softmax logits, with the temperature parameter optimized on a held-out calibration set.",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "权利要求"
+      ],
+      "claim_num": 4
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, wherein the post-processing temporal smoothing employs a hidden Markov model (HMM) with state transition probabilities learned from training data to enforce physically plausible temporal consistency.",
+      "page_num": 0,
+      "section_path": [
+        "Machine Learning-Based Underwater Acoustic Source Classification Using Deep Convolutional Neural Networks on Spectrogram Representations",
+        "权利要求"
+      ],
+      "claim_num": 5
+    }
+  ]
+}

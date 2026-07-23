@@ -1,0 +1,7 @@
+{
+  "dataset": "bq_corpus",
+  "loss": "triplet",
+  "steps": 160,
+  "seconds": 8.968000000000757,
+  "mean_loss": 0.09979115014430136
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "doc_type": "paper",
+    "title": "Attention Is All You Need",
+    "author": "Vaswani et al.",
+    "year": "2017",
+    "topic": "Transformer架构",
+    "filename": "Attention Is All You Need.pdf"
+  },
+  {
+    "doc_type": "paper",
+    "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "author": "Devlin et al.",
+    "year": "2018",
+    "topic": "预训练语言模型",
+    "filename": "BERT.pdf"
+  },
+  {
+    "doc_type": "paper",
+    "title": "GPT-3: Language Models are Few-Shot Learners",
+    "author": "Brown et al.",
+    "year": "2020",
+    "topic": "大语言模型",
+    "filename": "GPT-3.pdf"
+  },
+  {
+    "doc_type": "paper",
+    "title": "InstructGPT: Training Language Models to Follow Instructions with Human Feedback",
+    "author": "Ouyang et al.",
+    "year": "2022",
+    "topic": "指令微调",
+    "filename": "InstructGPT ChatGPT.pdf"
+  },
+  {
+    "doc_type": "paper",
+    "title": "LLaMA: Open and Efficient Foundation Language Models",
+    "author": "Touvron et al.",
+    "year": "2023",
+    "topic": "开源大模型",
+    "filename": "LLaMA.pdf"
+  },
+  {
+    "doc_type": "paper",
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "author": "Lewis et al.",
+    "year": "2020",
+    "topic": "检索增强生成",
+    "filename": "RAG (检索增强生成) 原始论文.pdf"
+  },
+  {
+    "doc_type": "book",
+    "title": "动手学深度学习 (PyTorch版)",
+    "author": "李沐等",
+    "year": "2023",
+    "topic": "深度学习教程",
+    "filename": "动手学深度学习 (PyTorch版).pdf"
+  }
+]

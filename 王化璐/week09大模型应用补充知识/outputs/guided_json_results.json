@@ -1,0 +1,26 @@
+{
+  "n": 9,
+  "counters": {
+    "raw": {
+      "json": 9,
+      "fields": 9,
+      "year": 8,
+      "enum": 9,
+      "valid": 8
+    },
+    "response_format": {
+      "json": 9,
+      "fields": 9,
+      "year": 8,
+      "enum": 9,
+      "valid": 8
+    },
+    "guided_json": {
+      "json": 9,
+      "fields": 9,
+      "year": 9,
+      "enum": 9,
+      "valid": 9
+    }
+  }
+}

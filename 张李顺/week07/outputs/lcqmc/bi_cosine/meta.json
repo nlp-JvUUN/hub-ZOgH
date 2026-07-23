@@ -1,0 +1,7 @@
+{
+  "dataset": "lcqmc",
+  "loss": "cosine",
+  "steps": 160,
+  "seconds": 8.06199999999808,
+  "mean_loss": 0.2126688314601779
+}

@@ -1,0 +1,22 @@
+[Unit]
+Description=TopWAF 本地知识助手（RAG + Chat）
+After=network.target
+
+[Service]
+Type=simple
+User=wyquestion
+Group=wyquestion
+WorkingDirectory=/opt/wyquestion
+# 环境变量文件（不要把真实 key 写在这里）
+EnvironmentFile=/opt/wyquestion/.env
+ExecStart=/usr/bin/python3 /opt/wyquestion/server.py
+Restart=always
+RestartSec=10
+
+# 日志
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=wyquestion
+
+[Install]
+WantedBy=multi-user.target

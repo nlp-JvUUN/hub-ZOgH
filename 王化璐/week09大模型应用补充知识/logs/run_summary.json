@@ -1,0 +1,92 @@
+[
+  {
+    "script": "demo_guided_choice",
+    "status": "success",
+    "started_at": "2026-07-03T15:22:04",
+    "finished_at": "2026-07-03T15:22:07",
+    "duration_sec": 3.71,
+    "log_file": "demo_guided_choice_20260703_152204.log",
+    "error": null
+  },
+  {
+    "script": "demo_guided_regex",
+    "status": "success",
+    "started_at": "2026-07-03T15:22:08",
+    "finished_at": "2026-07-03T15:22:10",
+    "duration_sec": 2.09,
+    "log_file": "demo_guided_regex_20260703_152208.log",
+    "error": null
+  },
+  {
+    "script": "demo_guided_json",
+    "status": "success",
+    "started_at": "2026-07-03T15:22:11",
+    "finished_at": "2026-07-03T15:22:17",
+    "duration_sec": 5.76,
+    "log_file": "demo_guided_json_20260703_152211.log",
+    "error": null
+  },
+  {
+    "script": "demo_response_format",
+    "status": "success",
+    "started_at": "2026-07-03T15:22:18",
+    "finished_at": "2026-07-03T15:22:20",
+    "duration_sec": 2.75,
+    "log_file": "demo_response_format_20260703_152218.log",
+    "error": null
+  },
+  {
+    "script": "demo_function_call",
+    "status": "success",
+    "started_at": "2026-07-03T15:22:21",
+    "finished_at": "2026-07-03T15:24:28",
+    "duration_sec": 127.16,
+    "log_file": "demo_function_call_20260703_152221.log",
+    "error": null
+  },
+  {
+    "script": "bench_throughput",
+    "status": "failed",
+    "started_at": "2026-07-03T15:24:33",
+    "finished_at": "2026-07-03T15:24:36",
+    "duration_sec": 2.97,
+    "log_file": "bench_throughput_20260703_152433.log",
+    "error": "name 'init_empty_weights' is not defined"
+  },
+  {
+    "script": "bench_throughput",
+    "status": "failed",
+    "started_at": "2026-07-03T15:29:10",
+    "finished_at": "2026-07-03T15:30:35",
+    "duration_sec": 85.47,
+    "log_file": "bench_throughput_20260703_152910.log",
+    "error": "Engine core initialization failed. See root cause above. Failed core proc(s): {}"
+  },
+  {
+    "script": "bench_throughput",
+    "status": "failed",
+    "started_at": "2026-07-03T15:35:34",
+    "finished_at": "2026-07-03T15:36:59",
+    "duration_sec": 84.93,
+    "log_file": "bench_throughput_20260703_153534.log",
+    "error": "Engine core initialization failed. See root cause above. Failed core proc(s): {}"
+  },
+  {
+    "script": "bench_throughput",
+    "status": "failed",
+    "started_at": "2026-07-03T15:37:55",
+    "finished_at": "2026-07-03T15:39:18",
+    "duration_sec": 82.89,
+    "log_file": "bench_throughput_20260703_153755.log",
+    "error": "Engine core initialization failed. See root cause above. Failed core proc(s): {}"
+  },
+  {
+    "script": "bench_throughput",
+    "status": "success",
+    "started_at": "2026-07-03T15:39:52",
+    "finished_at": "2026-07-03T15:41:19",
+    "duration_sec": 87.24,
+    "log_file": "bench_throughput_20260703_153952.log",
+    "error": null
+  }
+]

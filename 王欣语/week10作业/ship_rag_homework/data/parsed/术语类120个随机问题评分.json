@@ -1,0 +1,2290 @@
+{
+  "meta": {
+    "category": "术语类",
+    "total_qa_pairs": 120,
+    "source_csv": "术语类120个随机问题评分.csv"
+  },
+  "source": "CSV",
+  "blocks": [
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在中英混用沟通中，若提到“Cathodic Protection”，对应的是哪个术语？\n答案：“Cathodic Protection”对应“阴极防护”。",
+      "page_num": 2,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 2,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "在中英混用沟通中，若提到“Cathodic Protection”，对应的是哪个术语？",
+        "answer": "“Cathodic Protection”对应“阴极防护”。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请用中英混合方式说明 Bulkhead Deck 的定义。\n答案：Bulkhead Deck 指承载横向水密舱壁和船壳的最上面连续甲板。",
+      "page_num": 3,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 3,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "请用中英混合方式说明 Bulkhead Deck 的定义。",
+        "answer": "Bulkhead Deck 指承载横向水密舱壁和船壳的最上面连续甲板。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在中英混用的检验沟通中，如何表达“升降口”？\n答案：可表述为“升降口 / Companion Way”，其定义是：从船舶甲板通至以下处所的水密入口。",
+      "page_num": 4,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 4,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "在中英混用的检验沟通中，如何表达“升降口”？",
+        "answer": "可表述为“升降口 / Companion Way”，其定义是：从船舶甲板通至以下处所的水密入口。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：若某损坏特征描述为“船舶与非船舶发生碰撞后造成的损坏”，应逆向检索到哪个术语？其中英文是什么？\n答案：应逆向检索到的术语是“接触损坏”，英文是“Contact Damage”。",
+      "page_num": 5,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 5,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "若某损坏特征描述为“船舶与非船舶发生碰撞后造成的损坏”，应逆向检索到哪个术语？其中英文是什么？",
+        "answer": "应逆向检索到的术语是“接触损坏”，英文是“Contact Damage”。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“内底边板”的含义，并提供其标准英文名称。\n答案：“内底边板”的英文术语是 Margin Plate。其定义是：内底的舷外列板，当舷底弯折时，内底边板(或纵桁)将构成。",
+      "page_num": 6,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 6,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "请解释船舶专业术语“内底边板”的含义，并提供其标准英文名称。",
+        "answer": "“内底边板”的英文术语是 Margin Plate。其定义是：内底的舷外列板，当舷底弯折时，内底边板(或纵桁)将构成。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在检验沟通中，如何用中英混合方式指代“舱壁结构”？\n答案：可说“舱壁结构 / Bulkhead Structure”，其定义是带有扶强材和桁材的横舱壁或纵舱壁。",
+      "page_num": 7,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 7,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "在检验沟通中，如何用中英混合方式指代“舱壁结构”？",
+        "answer": "可说“舱壁结构 / Bulkhead Structure”，其定义是带有扶强材和桁材的横舱壁或纵舱壁。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在中英混用的检验沟通中，如何表达“凹痕”？\n答案：可直接表达为“凹痕（Indent）”。",
+      "page_num": 8,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 8,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "在中英混用的检验沟通中，如何表达“凹痕”？",
+        "answer": "可直接表达为“凹痕（Indent）”。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在中英混用的检验沟通中，如何把“镀锌”准确表达为英文术语？\n答案：可直接表达为 Galvanizing。",
+      "page_num": 9,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 9,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "在中英混用的检验沟通中，如何把“镀锌”准确表达为英文术语？",
+        "answer": "可直接表达为 Galvanizing。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：如果某结构是“带有扶强材和桁材的横舱壁或纵舱壁”，应检索哪个术语？\n答案：应检索“舱壁结构”，英文为 Bulkhead Structure。",
+      "page_num": 10,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 10,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "如果某结构是“带有扶强材和桁材的横舱壁或纵舱壁”，应检索哪个术语？",
+        "answer": "应检索“舱壁结构”，英文为 Bulkhead Structure。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：“排泄口（Discharges）”与“深舱（Deep Tank）”有什么区别？\n答案：“排泄口（Discharges）”是穿过船侧的管道系统，用于输送舭部污水、循环污水、排水等；“深舱（Deep Tank）”是从船底或内船底向上延伸至或高于最低层甲板的液舱。",
+      "page_num": 11,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 11,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "“排泄口（Discharges）”与“深舱（Deep Tank）”有什么区别？",
+        "answer": "“排泄口（Discharges）”是穿过船侧的管道系统，用于输送舭部污水、循环污水、排水等；“深舱（Deep Tank）”是从船底或内船底向上延伸至或高于最低层甲板的液舱。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“甲板边板（Stringer Plate）”的含义，并提供其标准英文名称。\n答案：“甲板边板”的英文术语是“Stringer Plate”。其定义是：甲板板的外部列板。",
+      "page_num": 12,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 12,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "请解释船舶专业术语“甲板边板（Stringer Plate）”的含义，并提供其标准英文名称。",
+        "answer": "“甲板边板”的英文术语是“Stringer Plate”。其定义是：甲板板的外部列板。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：如果现场描述为“主要出现在水平面和存水的结构处，特别是液舱底部的局部随机”，应检索到哪个术语？\n答案：应检索到的术语是：凹蚀 / Pitting Corrosion。",
+      "page_num": 13,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 13,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "如果现场描述为“主要出现在水平面和存水的结构处，特别是液舱底部的局部随机”，应检索到哪个术语？",
+        "answer": "应检索到的术语是：凹蚀 / Pitting Corrosion。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请精准解释船舶术语“甲板结构”，并给出其标准英文名称。\n答案：“甲板结构”的标准英文名称是 Deck Structure。其定义是：由扶强材、桁材和支柱组成的甲板板。",
+      "page_num": 14,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 14,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "请精准解释船舶术语“甲板结构”，并给出其标准英文名称。",
+        "answer": "“甲板结构”的标准英文名称是 Deck Structure。其定义是：由扶强材、桁材和支柱组成的甲板板。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“应力腐蚀”是什么意思，并给出英文术语。\n答案：“应力腐蚀”的英文术语是 Stress Corrosion。其定义是：腐蚀性环境的拉力应力下区域的先腐蚀，单独的环境不会造。",
+      "page_num": 15,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 15,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "请解释船舶专业术语“应力腐蚀”是什么意思，并给出英文术语。",
+        "answer": "“应力腐蚀”的英文术语是 Stress Corrosion。其定义是：腐蚀性环境的拉力应力下区域的先腐蚀，单独的环境不会造。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：现场沟通中，验船师说：This coating defect is Pinholing。这里的“Pinholing”用中文应如何表达？其定义是什么？\n答案：这里的“Pinholing”中文应表达为“针眼”。其定义是：露出基底的细小的深洞。",
+      "page_num": 16,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 16,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "现场沟通中，验船师说：This coating defect is Pinholing。这里的“Pinholing”用中文应如何表达？其定义是什么？",
+        "answer": "这里的“Pinholing”中文应表达为“针眼”。其定义是：露出基底的细小的深洞。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：船舶专业术语“舱口通道”的含义是什么？其标准英文名称是什么？\n答案：“舱口通道”的英文术语是 Hatch Ways。其定义是：船甲板上提供进入下部舱室通道的形状通常为矩形的开口。",
+      "page_num": 17,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 17,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "船舶专业术语“舱口通道”的含义是什么？其标准英文名称是什么？",
+        "answer": "“舱口通道”的英文术语是 Hatch Ways。其定义是：船甲板上提供进入下部舱室通道的形状通常为矩形的开口。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：如果检验记录描述为“金属表面出现以形状不规则的凹蚀为特征的退化”，应逆向检索到哪个术语？\n答案：应逆向检索到“的液体槽的形成和解体有关的”，因为其定义正是“以形状不规则的凹蚀为特征的金属表面的退化”。",
+      "page_num": 18,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 18,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "如果检验记录描述为“金属表面出现以形状不规则的凹蚀为特征的退化”，应逆向检索到哪个术语？",
+        "answer": "应逆向检索到“的液体槽的形成和解体有关的”，因为其定义正是“以形状不规则的凹蚀为特征的金属表面的退化”。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请对“状况评估计划（CAP）”和“状况检验（Condition Survey）”进行对比。\n答案：“状况评估计划（CAP）”是承租人和船东均可使用的、可在检查时对油船的实际状况给出详细；“状况检验（Condition Survey）”通常为有限范围和时间内的检验，用于确认任何预期的与结。",
+      "page_num": 19,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 19,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "请对“状况评估计划（CAP）”和“状况检验（Condition Survey）”进行对比。",
+        "answer": "“状况评估计划（CAP）”是承租人和船东均可使用的、可在检查时对油船的实际状况给出详细；“状况检验（Condition Survey）”通常为有限范围和时间内的检验，用于确认任何预期的与结。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请精准解释船舶/验船术语“吹净”，并给出其标准英文名称。\n答案：“吹净”的英文术语是 Blasting or Shot-Blasting。其定义是：用研磨微粒喷流对金属表面进行的清洗。",
+      "page_num": 20,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 20,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "请精准解释船舶/验船术语“吹净”，并给出其标准英文名称。",
+        "answer": "“吹净”的英文术语是 Blasting or Shot-Blasting。其定义是：用研磨微粒喷流对金属表面进行的清洗。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在中英混用的检验沟通中，如何表述“列板”？\n答案：可表述为“列板 / Strake”，其定义是一组或一排船壳板、甲板板、舱壁或其他板。",
+      "page_num": 21,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 21,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "在中英混用的检验沟通中，如何表述“列板”？",
+        "answer": "可表述为“列板 / Strake”，其定义是一组或一排船壳板、甲板板、舱壁或其他板。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：现场中英混用沟通时，验船师说：这里不是 Active Corrosion，而是“蚀”。这句话按术语定义应如何理解？\n答案：这句话表示：该处应判定为“蚀”，其定义是“产生疏松的锈皮”；而不是“Active Corrosion”，即“强烈腐蚀”，其定义是“由大气、水气或其他物质引起的对金属逐步的化学或电化腐”。",
+      "page_num": 22,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 22,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "现场中英混用沟通时，验船师说：这里不是 Active Corrosion，而是“蚀”。这句话按术语定义应如何理解？",
+        "answer": "这句话表示：该处应判定为“蚀”，其定义是“产生疏松的锈皮”；而不是“Active Corrosion”，即“强烈腐蚀”，其定义是“由大气、水气或其他物质引起的对金属逐步的化学或电化腐”。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：“水力气动试验 / Hydropneumatic Testing”和“冲水试验 / Hose Testing”有什么区别？\n答案：水力气动试验是水压试验和空气试验的结合试验；冲水试验是“在没有进行结构(水静力)试验或泄漏试验的情况下，为证明结”。",
+      "page_num": 23,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 23,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "“水力气动试验 / Hydropneumatic Testing”和“冲水试验 / Hose Testing”有什么区别？",
+        "answer": "水力气动试验是水压试验和空气试验的结合试验；冲水试验是“在没有进行结构(水静力)试验或泄漏试验的情况下，为证明结”。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在中英混用沟通中，如何表达“防腐系统”？\n答案：可直接说“防腐系统”，英文为 Corrosion Prevention System。",
+      "page_num": 24,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 24,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "在中英混用沟通中，如何表达“防腐系统”？",
+        "answer": "可直接说“防腐系统”，英文为 Corrosion Prevention System。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：“货物区域”和“舷墙（Bulwark）”有什么区别？\n答案：“货物区域”是 Cargo Area 或Cargo Length Area，指包括船舶上的货舱、液货舱/污油水舱及相；“舷墙（Bulwark）”是围绕露天甲板位于船舶侧壁上部边缘正上方的垂直板。",
+      "page_num": 25,
+      "section_path": [
+        "术语类",
+        "82号建议案验船师术语表"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 25,
+        "doc_source": "82号建议案验船师术语表",
+        "question": "“货物区域”和“舷墙（Bulwark）”有什么区别？",
+        "answer": "“货物区域”是 Cargo Area 或Cargo Length Area，指包括船舶上的货舱、液货舱/污油水舱及相；“舷墙（Bulwark）”是围绕露天甲板位于船舶侧壁上部边缘正上方的垂直板。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请准确解释船舶检验术语“舷梯强度试验”，并给出其标准英文名称。\n答案：“舷梯强度试验”的标准英文名称是 proof load test for accommodation ladder。其定义是：舷梯装船后,将试验重量施加在其上以检查其强度、各旋转部分的灵活性以及上下平台有无裂缝和 变形的试验。",
+      "page_num": 26,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 26,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "请准确解释船舶检验术语“舷梯强度试验”，并给出其标准英文名称。",
+        "answer": "“舷梯强度试验”的标准英文名称是 proof load test for accommodation ladder。其定义是：舷梯装船后,将试验重量施加在其上以检查其强度、各旋转部分的灵活性以及上下平台有无裂缝和 变形的试验。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在中英混用的检验沟通中，验船师说：“Please arrange the effectiveness test of low duty compressor for LNG system.” 这里对应的中文术语是什么？该试验主要是做什么的？\n答案：对应的中文术语是“低负荷(LD)压缩机效用试验”。该试验是用于验证LNG 低负荷(LD)压缩机达到设计要求及使用要求的试验，注:包括压缩效率、进气压力、排气压力等。",
+      "page_num": 27,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 27,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "在中英混用的检验沟通中，验船师说：“Please arrange the effectiveness test of low duty compressor for LNG system.” 这里对应的中文术语是什么？该试验主要是做什么的？",
+        "answer": "对应的中文术语是“低负荷(LD)压缩机效用试验”。该试验是用于验证LNG 低负荷(LD)压缩机达到设计要求及使用要求的试验，注:包括压缩效率、进气压力、排气压力等。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请精准解释船舶检验术语“拖曳设备试验”，并给出其标准英文名称。\n答案：“拖曳设备试验”的标准英文名称为 effectiveness test of towing equipment。其定义是：检查拖曳设备放缆、收缆、排缆与拖带能力的试验。",
+      "page_num": 28,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 28,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "请精准解释船舶检验术语“拖曳设备试验”，并给出其标准英文名称。",
+        "answer": "“拖曳设备试验”的标准英文名称为 effectiveness test of towing equipment。其定义是：检查拖曳设备放缆、收缆、排缆与拖带能力的试验。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请精准解释船舶/验船术语“压缩机效用试验”，并给出其标准英文名称。\n答案：“压缩机效用试验”的英文术语是 function test of BOG rotary screw compressor。其定义是：验证蒸发气(BOG)压缩机达到设计要求及使用要求而进行的试验。",
+      "page_num": 29,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 29,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "请精准解释船舶/验船术语“压缩机效用试验”，并给出其标准英文名称。",
+        "answer": "“压缩机效用试验”的英文术语是 function test of BOG rotary screw compressor。其定义是：验证蒸发气(BOG)压缩机达到设计要求及使用要求而进行的试验。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请精准解释船舶检验术语“轴支架投落试验”，并给出其标准英文名称。\n答案：“轴支架投落试验”的标准英文名称是 drop test for shaft bracket。其定义是：为查明轴支架铸件的质量是否符合要求按规定的高度进行自由落体跌落的试验。",
+      "page_num": 30,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 30,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "请精准解释船舶检验术语“轴支架投落试验”，并给出其标准英文名称。",
+        "answer": "“轴支架投落试验”的标准英文名称是 drop test for shaft bracket。其定义是：为查明轴支架铸件的质量是否符合要求按规定的高度进行自由落体跌落的试验。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在中英混用的验船沟通中，若验船师要求开展 inspection of shell expansion，具体是指检查什么？\n答案：inspection of shell expansion 是指“外板展开检验”，即对已展开的船体外壳板几何形状和尺寸的检验。",
+      "page_num": 31,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 31,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "在中英混用的验船沟通中，若验船师要求开展 inspection of shell expansion，具体是指检查什么？",
+        "answer": "inspection of shell expansion 是指“外板展开检验”，即对已展开的船体外壳板几何形状和尺寸的检验。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请精准解释船舶/验船术语“制冷系统气密试验”，并给出其标准英文名称。\n答案：“制冷系统气密试验”的标准英文名称是“airtight test for refrigerant piping systems”。其定义是：制冷系统安装完毕以后,用一定压力的气体检验其气密性的试验。注:试验的介质常为氮气、二氧化碳或干燥的空气。",
+      "page_num": 32,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 32,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "请精准解释船舶/验船术语“制冷系统气密试验”，并给出其标准英文名称。",
+        "answer": "“制冷系统气密试验”的标准英文名称是“airtight test for refrigerant piping systems”。其定义是：制冷系统安装完毕以后,用一定压力的气体检验其气密性的试验。注:试验的介质常为氮气、二氧化碳或干燥的空气。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在中英混用沟通中，船厂想表达“这份交验验收通知书已经提交，请船东和/或验船部门安排检验”，其中“交验验收通知书”应对应哪个英文术语？\n答案：这里“交验验收通知书”应对应 request for inspection。根据定义，它是船舶建造过程中,属于报验范围的某一工序或试验项目经船厂检验部门检验合格,由船厂检验部门 提请船东和/或验船部门检验的申请书。",
+      "page_num": 33,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 33,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "在中英混用沟通中，船厂想表达“这份交验验收通知书已经提交，请船东和/或验船部门安排检验”，其中“交验验收通知书”应对应哪个英文术语？",
+        "answer": "这里“交验验收通知书”应对应 request for inspection。根据定义，它是船舶建造过程中,属于报验范围的某一工序或试验项目经船厂检验部门检验合格,由船厂检验部门 提请船东和/或验船部门检验的申请书。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：如果一项试验是用于测定发电机组瞬态电压变化率，并考核机组在负载突变时的动态电压变化性能，这对应什么术语？\n答案：这对应的术语是“发电机组动态特性试验”，英文为 dynamic characteristic test for generator set。",
+      "page_num": 34,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 34,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "如果一项试验是用于测定发电机组瞬态电压变化率，并考核机组在负载突变时的动态电压变化性能，这对应什么术语？",
+        "answer": "这对应的术语是“发电机组动态特性试验”，英文为 dynamic characteristic test for generator set。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“检验样箱”的含义，并给出其标准英文名称。\n答案：“检验样箱”的英文术语是 mock-ups for inspection。其定义是：校核锚穴、锚链筒等复杂曲板设计与放样作业的工具。",
+      "page_num": 35,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 35,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "请解释船舶专业术语“检验样箱”的含义，并给出其标准英文名称。",
+        "answer": "“检验样箱”的英文术语是 mock-ups for inspection。其定义是：校核锚穴、锚链筒等复杂曲板设计与放样作业的工具。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请精准解释船舶建造检验中的“交验验收通知书”，并给出其标准英文名称。\n答案：“交验验收通知书”的英文术语是 request for inspection。其定义是：船舶建造过程中,属于报验范围的某一工序或试验项目经船厂检验部门检验合格,由船厂检验部门 提请船东和/或验船部门检验的申请书。",
+      "page_num": 36,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 36,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "请精准解释船舶建造检验中的“交验验收通知书”，并给出其标准英文名称。",
+        "answer": "“交验验收通知书”的英文术语是 request for inspection。其定义是：船舶建造过程中,属于报验范围的某一工序或试验项目经船厂检验部门检验合格,由船厂检验部门 提请船东和/或验船部门检验的申请书。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：验船沟通中，船厂说：“We have completed the emergency steering test.” 这里“emergency steering test”对应的中文术语是什么？它具体检查什么？\n答案：“emergency steering test”对应的中文术语是“应急操舵试验”。它是检查在紧急情况下,应急操舵的方便性、可靠性和响应情况的试验。",
+      "page_num": 37,
+      "section_path": [
+        "术语类",
+        "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 37,
+        "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+        "question": "验船沟通中，船厂说：“We have completed the emergency steering test.” 这里“emergency steering test”对应的中文术语是什么？它具体检查什么？",
+        "answer": "“emergency steering test”对应的中文术语是“应急操舵试验”。它是检查在紧急情况下,应急操舵的方便性、可靠性和响应情况的试验。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：有一个量被定义为“相对船舶重心的重量惯性矩与其重量之比的平方根”，请问对应的中文术语和英文术语分别是什么？\n答案：对应的中文术语是“惯性半径”，英文术语是“radius of gyration”。",
+      "page_num": 38,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 38,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "有一个量被定义为“相对船舶重心的重量惯性矩与其重量之比的平方根”，请问对应的中文术语和英文术语分别是什么？",
+        "answer": "对应的中文术语是“惯性半径”，英文术语是“radius of gyration”。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请准确解释船舶/验船术语“包铂阳极”，并给出其标准英文名称。\n答案：“包铂阳极”的英文术语是 platinumcladanode。其定义是：在钛、铌或钽等表面包有铂箔的一种不溶性辅助阳极。",
+      "page_num": 39,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 39,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请准确解释船舶/验船术语“包铂阳极”，并给出其标准英文名称。",
+        "answer": "“包铂阳极”的英文术语是 platinumcladanode。其定义是：在钛、铌或钽等表面包有铂箔的一种不溶性辅助阳极。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：区分“外板（shellplating）”和“舷侧外板（sideplate）”：二者定义有何不同？\n答案：外板（shellplating）是构成船体底部、舭部及船侧外壳的板；舷侧外板（sideplate）是舭部板以上组成船体外壳板舷侧部分的船体外壳板。",
+      "page_num": 40,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 40,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "区分“外板（shellplating）”和“舷侧外板（sideplate）”：二者定义有何不同？",
+        "answer": "外板（shellplating）是构成船体底部、舭部及船侧外壳的板；舷侧外板（sideplate）是舭部板以上组成船体外壳板舷侧部分的船体外壳板。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请区分“单体船”和“单壳体船”这两个术语。\n答案：“单体船”对应英文 mono-hull ship，定义是：只具有一个船体的船。“单壳体船”对应英文 mono-skin ship，定义是：主船体为单层壳体的船。两者分别描述船体数量和主船体壳体层次。",
+      "page_num": 41,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 41,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请区分“单体船”和“单壳体船”这两个术语。",
+        "answer": "“单体船”对应英文 mono-hull ship，定义是：只具有一个船体的船。“单壳体船”对应英文 mono-skin ship，定义是：主船体为单层壳体的船。两者分别描述船体数量和主船体壳体层次。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“舱底水系统”的含义，并给出其英文术语。\n答案：“舱底水系统”的英文术语是 bilgesystem。其定义为：将舱底积水和意外进水排除的系统。注：由泵、附件及管路等组成。",
+      "page_num": 42,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 42,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“舱底水系统”的含义，并给出其英文术语。",
+        "answer": "“舱底水系统”的英文术语是 bilgesystem。其定义为：将舱底积水和意外进水排除的系统。注：由泵、附件及管路等组成。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：如果某术语表示“舵剖面最大厚度与舵宽的比值”，它对应的中文术语和英文术语是什么？\n答案：对应的中文术语是“舵厚度比”，英文术语是 thickness ratio of rudder。",
+      "page_num": 43,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 43,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "如果某术语表示“舵剖面最大厚度与舵宽的比值”，它对应的中文术语和英文术语是什么？",
+        "answer": "对应的中文术语是“舵厚度比”，英文术语是 thickness ratio of rudder。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在中英混用的检验沟通中，如何表述“操舵装置”的标准英文名称及其功能？\n答案：可表述为：steeringgear；它是含舵机驱动装置和转舵机构等,按照操舵控制系统的舵令要求,将电能转换成转舵机械能的一套 装置。",
+      "page_num": 44,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 44,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在中英混用的检验沟通中，如何表述“操舵装置”的标准英文名称及其功能？",
+        "answer": "可表述为：steeringgear；它是含舵机驱动装置和转舵机构等,按照操舵控制系统的舵令要求,将电能转换成转舵机械能的一套 装置。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“外加电流阴极保护”的含义，并提供其标准英文名称。\n答案：“外加电流阴极保护”的英文标准表述为 impressedcurrentcathodicprotection。其专业定义是：由外部电源提供保护电流的阴极保护。",
+      "page_num": 45,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 45,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“外加电流阴极保护”的含义，并提供其标准英文名称。",
+        "answer": "“外加电流阴极保护”的英文标准表述为 impressedcurrentcathodicprotection。其专业定义是：由外部电源提供保护电流的阴极保护。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请区分“电脑桌（computertable）”和“餐桌（dining-table）”。\n答案：电脑桌（computertable）是用以存放电脑的桌子；餐桌（dining-table）是专供吃饭用的桌子。",
+      "page_num": 46,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 46,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请区分“电脑桌（computertable）”和“餐桌（dining-table）”。",
+        "answer": "电脑桌（computertable）是用以存放电脑的桌子；餐桌（dining-table）是专供吃饭用的桌子。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请区分“艏向”和“航迹角”的定义差异。\n答案：艏向（heading）是船舶或船模的艏艉线在水平面上的投影朝向船首的方向；航迹角（track angle）是船舶在水平面内运动时，其重心的瞬时速度矢量与基准方向之间的水平夹角。",
+      "page_num": 47,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 47,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请区分“艏向”和“航迹角”的定义差异。",
+        "answer": "艏向（heading）是船舶或船模的艏艉线在水平面上的投影朝向船首的方向；航迹角（track angle）是船舶在水平面内运动时，其重心的瞬时速度矢量与基准方向之间的水平夹角。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“风暴钩”的含义，并给出其标准英文名称。\n答案：“风暴钩”的英文术语是 stormhook。其定义是：船舶航行时为防止椅、茶几等活动家具的移动和倾倒,在其底板下加装与甲板联固的金属链条和 挂钩。",
+      "page_num": 48,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 48,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“风暴钩”的含义，并给出其标准英文名称。",
+        "answer": "“风暴钩”的英文术语是 stormhook。其定义是：船舶航行时为防止椅、茶几等活动家具的移动和倾倒,在其底板下加装与甲板联固的金属链条和 挂钩。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在海洋环境中，由生物噪声、热噪声、地震噪声等自然噪声与工业噪声等叠加形成的噪声场，对应的中文术语是什么？\n答案：对应的中文术语是海洋噪声场，英文为 ocean acoustic field。",
+      "page_num": 49,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 49,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在海洋环境中，由生物噪声、热噪声、地震噪声等自然噪声与工业噪声等叠加形成的噪声场，对应的中文术语是什么？",
+        "answer": "对应的中文术语是海洋噪声场，英文为 ocean acoustic field。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请精准解释船舶术语“面板”，并给出其标准英文名称。\n答案：“面板”的英文术语是 face plate。其定义为：与腹板自由边正交,沿构件方向延伸的板。",
+      "page_num": 50,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 50,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请精准解释船舶术语“面板”，并给出其标准英文名称。",
+        "answer": "“面板”的英文术语是 face plate。其定义为：与腹板自由边正交,沿构件方向延伸的板。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：哪一种涂装方法是用压缩空气通过喷枪将涂料喷成雾状,涂覆在结构表面的？请写出中文术语和英文术语。\n答案：该方法是“压缩空气喷涂”，英文为 compressedairspraying。",
+      "page_num": 51,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 51,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "哪一种涂装方法是用压缩空气通过喷枪将涂料喷成雾状,涂覆在结构表面的？请写出中文术语和英文术语。",
+        "answer": "该方法是“压缩空气喷涂”，英文为 compressedairspraying。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“压载水系统”的含义，并提供其标准英文名称。\n答案：“压载水系统”的英文标准表述为 waterballastsystem。其定义是：用水作为压载物,可对船舶之吃水、纵倾或横倾进行调整的系统。注:由泵、附件及管路等组成。",
+      "page_num": 52,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 52,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“压载水系统”的含义，并提供其标准英文名称。",
+        "answer": "“压载水系统”的英文标准表述为 waterballastsystem。其定义是：用水作为压载物,可对船舶之吃水、纵倾或横倾进行调整的系统。注:由泵、附件及管路等组成。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“空船重量分布”的含义，并给出其标准英文术语。\n答案：“空船重量分布”的英文术语是 lightweightdistribution。其定义是：空船重量沿船长方向的分布。",
+      "page_num": 53,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 53,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“空船重量分布”的含义，并给出其标准英文术语。",
+        "answer": "“空船重量分布”的英文术语是 lightweightdistribution。其定义是：空船重量沿船长方向的分布。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“船体水平弯曲强度”的含义，并提供其标准英文名称。\n答案：“船体水平弯曲强度”的英文标准表述为 hullhorizontalbendingstrength。其定义是：船体抵抗水平弯曲的能力。",
+      "page_num": 54,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 54,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“船体水平弯曲强度”的含义，并提供其标准英文名称。",
+        "answer": "“船体水平弯曲强度”的英文标准表述为 hullhorizontalbendingstrength。其定义是：船体抵抗水平弯曲的能力。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在船舶检验沟通中，如何用中英双语表述“船用医疗设备”？\n答案：可表述为：船用医疗设备，marinemedicalapparatus。",
+      "page_num": 55,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 55,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在船舶检验沟通中，如何用中英双语表述“船用医疗设备”？",
+        "answer": "可表述为：船用医疗设备，marinemedicalapparatus。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在英文沟通中，如何用术语 seaice 准确表达“海冰”？\n答案：可直接用 seaice 表达“海冰”；其定义为海水温度降低至冻结点以下而固化的晶体结构物或海绵状结构物。",
+      "page_num": 56,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 56,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在英文沟通中，如何用术语 seaice 准确表达“海冰”？",
+        "answer": "可直接用 seaice 表达“海冰”；其定义为海水温度降低至冻结点以下而固化的晶体结构物或海绵状结构物。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：“长艏楼船（long forecastle ship）”与“长艉楼船（long poop ship）”有什么区别？\n答案：长艏楼船（long forecastle ship）是艏楼长度大于0.15倍船长，且不小于艏楼高度6倍的船；长艉楼船（long poop ship）是艉楼长度大于0.15倍船长，且不小于艉楼高度6倍的船。",
+      "page_num": 57,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 57,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "“长艏楼船（long forecastle ship）”与“长艉楼船（long poop ship）”有什么区别？",
+        "answer": "长艏楼船（long forecastle ship）是艏楼长度大于0.15倍船长，且不小于艏楼高度6倍的船；长艉楼船（long poop ship）是艉楼长度大于0.15倍船长，且不小于艉楼高度6倍的船。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“垂直桁”的含义，并提供其标准英文名称。\n答案：“垂直桁”的英文标准表述为 verticalgirder。其专业定义是：用来支持水平布置的扶强材或甲板纵桁的垂向布置的桁材。",
+      "page_num": 58,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 58,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“垂直桁”的含义，并提供其标准英文名称。",
+        "answer": "“垂直桁”的英文标准表述为 verticalgirder。其专业定义是：用来支持水平布置的扶强材或甲板纵桁的垂向布置的桁材。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：“航向自动稳定性”和“航向控制稳定性”有什么区别？\n答案：“航向自动稳定性”是指船舶作直线航行时,受到风浪流等外界小扰动作用而偏离航向,当此扰动力去除后,船舶能够自动 回到原来的航向的性能；“航向控制稳定性”是指船舶作直线航行时,受到风浪流等外界小扰动作用而偏离航向,当此扰动力去除后,船舶通过不断 操舵或自动驾驶能够保持航向的性能。",
+      "page_num": 59,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 59,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "“航向自动稳定性”和“航向控制稳定性”有什么区别？",
+        "answer": "“航向自动稳定性”是指船舶作直线航行时,受到风浪流等外界小扰动作用而偏离航向,当此扰动力去除后,船舶能够自动 回到原来的航向的性能；“航向控制稳定性”是指船舶作直线航行时,受到风浪流等外界小扰动作用而偏离航向,当此扰动力去除后,船舶通过不断 操舵或自动驾驶能够保持航向的性能。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在检验沟通中，若需要表达“艇”，应如何用中英混合方式说明其定义？\n答案：可说：该“艇”对应“boat;craft”，即满载排水量500t及以下的船舶。",
+      "page_num": 60,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 60,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在检验沟通中，若需要表达“艇”，应如何用中英混合方式说明其定义？",
+        "answer": "可说：该“艇”对应“boat;craft”，即满载排水量500t及以下的船舶。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在检验沟通中，若验船师说“这里需要关注 fatiguestrength”，中文应如何准确表达？具体指什么？\n答案：应准确表达为“疲劳强度”。具体指结构在交变载荷作用下不会产生破坏的能力。",
+      "page_num": 61,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 61,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在检验沟通中，若验船师说“这里需要关注 fatiguestrength”，中文应如何准确表达？具体指什么？",
+        "answer": "应准确表达为“疲劳强度”。具体指结构在交变载荷作用下不会产生破坏的能力。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请区分“镜面箱”和“卫生单元”这两个术语。\n答案：“镜面箱”的英文是 toiletcabinet，定义为：安装在卫生间内,箱体或门板外表面装有镜子的箱柜。\"卫生单元”的英文是 sanitaryunit，定义为：具有必要的卫生设备和壁板、天花板等组装而成,能整体安装的卫生舱室。两者区别在于：前者是箱柜，后者是能整体安装的卫生舱室。",
+      "page_num": 62,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 62,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请区分“镜面箱”和“卫生单元”这两个术语。",
+        "answer": "“镜面箱”的英文是 toiletcabinet，定义为：安装在卫生间内,箱体或门板外表面装有镜子的箱柜。\"卫生单元”的英文是 sanitaryunit，定义为：具有必要的卫生设备和壁板、天花板等组装而成,能整体安装的卫生舱室。两者区别在于：前者是箱柜，后者是能整体安装的卫生舱室。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请精准解释船舶术语“安全标志”，并给出其英文术语。\n答案：“安全标志”的英文术语是 safetysigns。其定义是：当船舶发生火警或海损时,指引乘员逃生的指示标志。",
+      "page_num": 63,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 63,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请精准解释船舶术语“安全标志”，并给出其英文术语。",
+        "answer": "“安全标志”的英文术语是 safetysigns。其定义是：当船舶发生火警或海损时,指引乘员逃生的指示标志。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请区分 cantframe 和 webframe。\n答案：cantframe 是斜肋骨，不与船体横剖面平行,而作扇形布置的肋骨；webframe 是强肋骨，用于局部加强或支持船侧纵骨的加大尺寸的肋骨，通常由腹板与面板组成。",
+      "page_num": 64,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 64,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请区分 cantframe 和 webframe。",
+        "answer": "cantframe 是斜肋骨，不与船体横剖面平行,而作扇形布置的肋骨；webframe 是强肋骨，用于局部加强或支持船侧纵骨的加大尺寸的肋骨，通常由腹板与面板组成。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：如果一艘船舶出现船体中部向下垂、艏艉两端上翘的弯曲状态，应对应哪个术语？\n答案：对应术语是中垂，英文为 sagging。",
+      "page_num": 65,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 65,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "如果一艘船舶出现船体中部向下垂、艏艉两端上翘的弯曲状态，应对应哪个术语？",
+        "answer": "对应术语是中垂，英文为 sagging。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请区分“船侧纵骨”和“船侧纵桁”，并说明它们各自的定义。\n答案：“船侧纵骨”的英文是 sidelongitudinal，定义是船侧外板上的纵骨；“船侧纵桁”的英文是 sidestringer，定义是与肋骨相交并连接的,船侧外板上的纵向桁材。",
+      "page_num": 66,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 66,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请区分“船侧纵骨”和“船侧纵桁”，并说明它们各自的定义。",
+        "answer": "“船侧纵骨”的英文是 sidelongitudinal，定义是船侧外板上的纵骨；“船侧纵桁”的英文是 sidestringer，定义是与肋骨相交并连接的,船侧外板上的纵向桁材。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在油船结构中，若某构件位于油船横舱壁之间的甲板下面，且为横向的大型桁材，这个构件最可能对应哪个术语？\n答案：最可能对应“甲板横桁（decktransverse）”。",
+      "page_num": 67,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 67,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在油船结构中，若某构件位于油船横舱壁之间的甲板下面，且为横向的大型桁材，这个构件最可能对应哪个术语？",
+        "answer": "最可能对应“甲板横桁（decktransverse）”。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：哪一种船(艇)是指“用玻璃纤维增强塑料(玻璃钢)作为船体结构主要材料的船(艇)”？\n答案：玻璃钢船(艇)，英文为“fiberglass reinforced plastic ship(boat)”。",
+      "page_num": 68,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 68,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "哪一种船(艇)是指“用玻璃纤维增强塑料(玻璃钢)作为船体结构主要材料的船(艇)”？",
+        "answer": "玻璃钢船(艇)，英文为“fiberglass reinforced plastic ship(boat)”。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：“护舷材”和“舷伸甲板”有什么区别？\n答案：“护舷材”的英文是 fender，定义为装设在船侧满载水线以上,突出于甲板边缘外侧,用以保护船侧的结构；“舷伸甲板”的英文是 sponsondeck，定义为内河客货船在水面以上,伸出船舷以外的甲板。",
+      "page_num": 69,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 69,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "“护舷材”和“舷伸甲板”有什么区别？",
+        "answer": "“护舷材”的英文是 fender，定义为装设在船侧满载水线以上,突出于甲板边缘外侧,用以保护船侧的结构；“舷伸甲板”的英文是 sponsondeck，定义为内河客货船在水面以上,伸出船舷以外的甲板。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在船舶验船语境中，哪个术语指的是“吊杆装置、货物起重机、货物升降机和客用电梯等设备的统称”？\n答案：对应术语是 客货转运系统，英文为 passengerandcargotransfersystem。",
+      "page_num": 70,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 70,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在船舶验船语境中，哪个术语指的是“吊杆装置、货物起重机、货物升降机和客用电梯等设备的统称”？",
+        "answer": "对应术语是 客货转运系统，英文为 passengerandcargotransfersystem。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：如果一项试验是用涂层试板作阴极进行恒电位试验，目的是确定给定电位下开始起泡的时间和程度或涂层不出现起泡、破裂的最负电位，这对应哪个术语？\n答案：对应术语是涂层耐阴极电位试验，英文为 cathodicpotentialresistancetestofcoating。",
+      "page_num": 71,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 71,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "如果一项试验是用涂层试板作阴极进行恒电位试验，目的是确定给定电位下开始起泡的时间和程度或涂层不出现起泡、破裂的最负电位，这对应哪个术语？",
+        "answer": "对应术语是涂层耐阴极电位试验，英文为 cathodicpotentialresistancetestofcoating。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在船舶现场沟通中，如果验船师说“请确认 marinewaterboiler 的用途”，这里所指的中文术语是什么？它的定义是什么？\n答案：这里所指的中文术语是“船用开水器”。其定义是：船上用于烧开水的设备。",
+      "page_num": 72,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 72,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在船舶现场沟通中，如果验船师说“请确认 marinewaterboiler 的用途”，这里所指的中文术语是什么？它的定义是什么？",
+        "answer": "这里所指的中文术语是“船用开水器”。其定义是：船上用于烧开水的设备。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“养殖船”的含义，并提供其标准英文名称。\n答案：“养殖船”的英文术语是 aquaculture ship。其定义是：用于渔业养殖活动的船舶。",
+      "page_num": 73,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 73,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“养殖船”的含义，并提供其标准英文名称。",
+        "answer": "“养殖船”的英文术语是 aquaculture ship。其定义是：用于渔业养殖活动的船舶。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：“喷镀锌”和“喷镀锌-铝合金”有什么区别？\n答案：“喷镀锌”是用喷镀工艺在结构件表面镀覆一层金属锌；“喷镀锌-铝合金”是用喷镀工艺在结构件表面镀覆一层锌-铝合金。",
+      "page_num": 74,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 74,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "“喷镀锌”和“喷镀锌-铝合金”有什么区别？",
+        "answer": "“喷镀锌”是用喷镀工艺在结构件表面镀覆一层金属锌；“喷镀锌-铝合金”是用喷镀工艺在结构件表面镀覆一层锌-铝合金。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：有一项结构处理措施，特点是“针对航行于冰区的船舶”且属于“局部结构加强”，这对应的术语是什么？英文怎么说？\n答案：对应术语是“冰区加强”，英文是 strengthening for navigation in ice。",
+      "page_num": 75,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 75,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "有一项结构处理措施，特点是“针对航行于冰区的船舶”且属于“局部结构加强”，这对应的术语是什么？英文怎么说？",
+        "answer": "对应术语是“冰区加强”，英文是 strengthening for navigation in ice。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在结构布置中，哪一种桁材是“用来支持竖向扶强材的水平布置的桁材”？\n答案：这是水平桁，英文为 horizontalgirder。",
+      "page_num": 76,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 76,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在结构布置中，哪一种桁材是“用来支持竖向扶强材的水平布置的桁材”？",
+        "answer": "这是水平桁，英文为 horizontalgirder。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“撑材”的含义，并提供其标准英文名称。\n答案：“撑材”的英文标准表述为 strut。其专业定义是：连接纵向舱壁或连接纵舱壁和双舷侧结构且用以抵抗静载荷和动载荷的大的横向结构构件。",
+      "page_num": 77,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 77,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“撑材”的含义，并提供其标准英文名称。",
+        "answer": "“撑材”的英文标准表述为 strut。其专业定义是：连接纵向舱壁或连接纵舱壁和双舷侧结构且用以抵抗静载荷和动载荷的大的横向结构构件。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请精准解释船舶专业术语“波浪中平均转矩增值”，并给出其标准英文名称。\n答案：“波浪中平均转矩增值”的英文术语是 mean increase of propeller torque in wave。其定义为：为维持船舶在波浪中与静水中相同的航速,而使螺旋桨转矩增加的平均值。",
+      "page_num": 78,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 78,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请精准解释船舶专业术语“波浪中平均转矩增值”，并给出其标准英文名称。",
+        "answer": "“波浪中平均转矩增值”的英文术语是 mean increase of propeller torque in wave。其定义为：为维持船舶在波浪中与静水中相同的航速,而使螺旋桨转矩增加的平均值。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：有一种船上设备，主要用于垂直运送货物、食品等物资。根据这一定义，应对应哪个术语及其英文名称？\n答案：该术语是“货物升降机”，英文名称是 freightlift。",
+      "page_num": 79,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 79,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "有一种船上设备，主要用于垂直运送货物、食品等物资。根据这一定义，应对应哪个术语及其英文名称？",
+        "answer": "该术语是“货物升降机”，英文名称是 freightlift。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：主操舵装置与应急操舵装置有什么区别？\n答案：主操舵装置是“在正常航行情況下,为驾驶船舶而使舵产生动作所必需的机械、转舵机构、舵机驱动装置(如设有), 以及其附属设备和向舵杆施加转矩的部件”；应急操舵装置是“在主操舵装置失效时,为驾驶船舶所必需的装置”。",
+      "page_num": 80,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 80,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "主操舵装置与应急操舵装置有什么区别？",
+        "answer": "主操舵装置是“在正常航行情況下,为驾驶船舶而使舵产生动作所必需的机械、转舵机构、舵机驱动装置(如设有), 以及其附属设备和向舵杆施加转矩的部件”；应急操舵装置是“在主操舵装置失效时,为驾驶船舶所必需的装置”。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“浴缸”的含义，并提供其标准英文名称。\n答案：“浴缸”的英文术语是 bathtub。其定义是：供船员淋浴或洗浴用的设备。",
+      "page_num": 81,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 81,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“浴缸”的含义，并提供其标准英文名称。",
+        "answer": "“浴缸”的英文术语是 bathtub。其定义是：供船员淋浴或洗浴用的设备。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：“航迹角”和“漂角”有什么区别？\n答案：“航迹角”是船舶在水平面内运动,其重心的瞬时速度矢量与基准方向之间的水平夹角；“漂角”是船舶在水平面内运动,其艏向与重心处的速度矢量间的水平夹角。",
+      "page_num": 82,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 82,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "“航迹角”和“漂角”有什么区别？",
+        "answer": "“航迹角”是船舶在水平面内运动,其重心的瞬时速度矢量与基准方向之间的水平夹角；“漂角”是船舶在水平面内运动,其艏向与重心处的速度矢量间的水平夹角。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“螺旋桨噪声”的含义，并提供其标准英文名称。\n答案：“螺旋桨噪声”的英文标准表述为 noise of propeller。其定义是：当螺旋桨做旋转运动时,在桨叶表面附近形成涡流所产生的噪声。",
+      "page_num": 83,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 83,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“螺旋桨噪声”的含义，并提供其标准英文名称。",
+        "answer": "“螺旋桨噪声”的英文标准表述为 noise of propeller。其定义是：当螺旋桨做旋转运动时,在桨叶表面附近形成涡流所产生的噪声。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请准确解释船舶专业术语“系泊和拖曳系统”，并给出其标准英文名称。\n答案：“系泊和拖曳系统”的标准英文名称是 mooringandtowingsystem。其定义是：用于船舶停靠、固定以及船舶之间或船舶与其他物体之间牵引移动的装置和相关设施的系统。",
+      "page_num": 84,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 84,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请准确解释船舶专业术语“系泊和拖曳系统”，并给出其标准英文名称。",
+        "answer": "“系泊和拖曳系统”的标准英文名称是 mooringandtowingsystem。其定义是：用于船舶停靠、固定以及船舶之间或船舶与其他物体之间牵引移动的装置和相关设施的系统。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：“海水长尺腐蚀试验”与“海水干湿交替腐蚀试验”有什么区别？\n答案：“海水长尺腐蚀试验”英文是 longscalecorrosiontestinseawater，定义为：利用长串电连接材料及构件组成的长尺试验样品,研究多区带海洋环境对其整体腐蚀行为影响的 试验方法。 “海水干湿交替腐蚀试验”英文是 alternatingdryandwettestwithseawater，定义为：材料在海水干湿交替环境下暴露一定时间,以检测其耐蚀性能的试验。 注:海水干湿交替环境包括潮汐区、飞溅区或其他模拟环境。两者区别在于：前者强调利用长串电连接的长尺试验样品，研究多区带海洋环境对整体腐蚀行为的影响；后者强调材料在海水干湿交替环境下暴露一定时间，以检测其耐蚀性能。",
+      "page_num": 85,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 85,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "“海水长尺腐蚀试验”与“海水干湿交替腐蚀试验”有什么区别？",
+        "answer": "“海水长尺腐蚀试验”英文是 longscalecorrosiontestinseawater，定义为：利用长串电连接材料及构件组成的长尺试验样品,研究多区带海洋环境对其整体腐蚀行为影响的 试验方法。 “海水干湿交替腐蚀试验”英文是 alternatingdryandwettestwithseawater，定义为：材料在海水干湿交替环境下暴露一定时间,以检测其耐蚀性能的试验。 注:海水干湿交替环境包括潮汐区、飞溅区或其他模拟环境。两者区别在于：前者强调利用长串电连接的长尺试验样品，研究多区带海洋环境对整体腐蚀行为的影响；后者强调材料在海水干湿交替环境下暴露一定时间，以检测其耐蚀性能。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在验船沟通中，如果需要用中英双语说明“固定在船体上并支撑舵杆的轴承”，应如何表述？\n答案：可表述为：舵承，ruddercarrier。",
+      "page_num": 86,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 86,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在验船沟通中，如果需要用中英双语说明“固定在船体上并支撑舵杆的轴承”，应如何表述？",
+        "answer": "可表述为：舵承，ruddercarrier。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：验船沟通中，现场有人说：“Please confirm the freeboard at midship according to the Load Line rules.” 这里的 freeboard 用中文应如何准确表达？其定义是什么？\n答案：这里的 freeboard 应准确表达为“干舷”。其定义是：按载重线规范,在船长中点处,自该规范的甲板线上边缘量至有关载重水线之间的垂直距离。",
+      "page_num": 87,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 87,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "验船沟通中，现场有人说：“Please confirm the freeboard at midship according to the Load Line rules.” 这里的 freeboard 用中文应如何准确表达？其定义是什么？",
+        "answer": "这里的 freeboard 应准确表达为“干舷”。其定义是：按载重线规范,在船长中点处,自该规范的甲板线上边缘量至有关载重水线之间的垂直距离。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请区分“锅炉鼓风系统”和“锅炉排气系统”的定义差异。\n答案：“锅炉鼓风系统”是供给锅炉然烧用增压空气的系统；“锅炉排气系统”是为船舶锅炉设备排除工作时产生的废气的系统。",
+      "page_num": 88,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 88,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请区分“锅炉鼓风系统”和“锅炉排气系统”的定义差异。",
+        "answer": "“锅炉鼓风系统”是供给锅炉然烧用增压空气的系统；“锅炉排气系统”是为船舶锅炉设备排除工作时产生的废气的系统。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在中英混用的技术沟通中，如何用规范表述说明“X-Y plot carriage”的用途？\n答案：X-Y plot carriage 即“坐标定位拖车”，是由主副拖车组成可调整被拖船模的纵向、横向运动,按规定的平面轨迹运动,以测定作用在其上的 水动力和力矩的船模试验设备。",
+      "page_num": 89,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 89,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在中英混用的技术沟通中，如何用规范表述说明“X-Y plot carriage”的用途？",
+        "answer": "X-Y plot carriage 即“坐标定位拖车”，是由主副拖车组成可调整被拖船模的纵向、横向运动,按规定的平面轨迹运动,以测定作用在其上的 水动力和力矩的船模试验设备。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：在船舶检验沟通中，如何用中英混合方式表达“长峰波”？\n答案：可直接表述为：长峰波（long crested waves）。",
+      "page_num": 90,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 90,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "在船舶检验沟通中，如何用中英混合方式表达“长峰波”？",
+        "answer": "可直接表述为：长峰波（long crested waves）。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请在检验沟通中将“全船供水系统”用英文表达出来：该系统用于船上生活用水的供给。\n答案：可表达为 domesticwatersupplysystem。其含义是船上生活用水的供给系统。",
+      "page_num": 91,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 91,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请在检验沟通中将“全船供水系统”用英文表达出来：该系统用于船上生活用水的供给。",
+        "answer": "可表达为 domesticwatersupplysystem。其含义是船上生活用水的供给系统。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请区分“闭门器”和“门碰柱”的用途。\n答案：“闭门器”是安装于门扇顶上，使门扇在开启后能自动关闭，并有缓冲功能的装置；“门碰柱”是防止门开启时引起碰撞而安装的避碰装置。",
+      "page_num": 92,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 92,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请区分“闭门器”和“门碰柱”的用途。",
+        "answer": "“闭门器”是安装于门扇顶上，使门扇在开启后能自动关闭，并有缓冲功能的装置；“门碰柱”是防止门开启时引起碰撞而安装的避碰装置。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：哪一个术语的定义是“牺牲阳极使用到不足提供被保护结构所必需的电流时,阳极消耗质量与阳极原质量之比”？请给出中文术语和英文术语。\n答案：该术语是“牺牲阳极利用效率”，英文为 utilizationcoefficientforsacrificialanode。",
+      "page_num": 93,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 93,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "哪一个术语的定义是“牺牲阳极使用到不足提供被保护结构所必需的电流时,阳极消耗质量与阳极原质量之比”？请给出中文术语和英文术语。",
+        "answer": "该术语是“牺牲阳极利用效率”，英文为 utilizationcoefficientforsacrificialanode。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：船舶检验沟通中，如何用中英混合方式说明“表面预处理”？\n答案：可表述为：表面预处理（surfacepreparation），即在涂装之前用机械方法或化学方法处理基体表面，以改善涂层与基体间的结合力和防蚀效果。",
+      "page_num": 94,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 94,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "船舶检验沟通中，如何用中英混合方式说明“表面预处理”？",
+        "answer": "可表述为：表面预处理（surfacepreparation），即在涂装之前用机械方法或化学方法处理基体表面，以改善涂层与基体间的结合力和防蚀效果。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：“傅汝德-克雷洛夫假定”和“傅汝德数”有什么区别？请分别说明其定义。\n答案：“傅汝德-克雷洛夫假定”是关于船体的存在,不改变波浪下流体动压力分布特征的假定；“傅汝德数”是表示惯性力与重力量级的比值。",
+      "page_num": 95,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 95,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "“傅汝德-克雷洛夫假定”和“傅汝德数”有什么区别？请分别说明其定义。",
+        "answer": "“傅汝德-克雷洛夫假定”是关于船体的存在,不改变波浪下流体动压力分布特征的假定；“傅汝德数”是表示惯性力与重力量级的比值。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请区分“舭肘板”和“艉肋板”，分别给出它们的英文术语和定义差异。\n答案：“舭肘板”的英文术语是 tanksidebracket;holdframebracket，定义为：连接各种肋板与各种底舱肋骨的舭部大肘板。\"艉肋板”的英文术语是 transomfloor，定义为：船尾的最后一道肋板。斜肋骨和艉柱都与艉肋板连接。二者差异在于：前者是舭部大肘板，用于连接各种肋板与各种底舱肋骨；后者是船尾的最后一道肋板，并与斜肋骨和艉柱连接。",
+      "page_num": 96,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 96,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请区分“舭肘板”和“艉肋板”，分别给出它们的英文术语和定义差异。",
+        "answer": "“舭肘板”的英文术语是 tanksidebracket;holdframebracket，定义为：连接各种肋板与各种底舱肋骨的舭部大肘板。\"艉肋板”的英文术语是 transomfloor，定义为：船尾的最后一道肋板。斜肋骨和艉柱都与艉肋板连接。二者差异在于：前者是舭部大肘板，用于连接各种肋板与各种底舱肋骨；后者是船尾的最后一道肋板，并与斜肋骨和艉柱连接。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：某构件中，骨材穿过强构件板或纵向骨材穿过横向腹板时，对所开洞口采用一块板进行部分或完全封闭。根据这一特征，应识别为哪个术语？\n答案：应识别为“补板”，英文术语是 collar plate。因为其定义就是：用以部分或完全封闭骨材穿过强构件板(如强框、舱壁或平台等)所开洞口的板用以部分或完全闭 合纵向骨材穿过横向腹板所开洞口的补板。",
+      "page_num": 97,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 97,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "某构件中，骨材穿过强构件板或纵向骨材穿过横向腹板时，对所开洞口采用一块板进行部分或完全封闭。根据这一特征，应识别为哪个术语？",
+        "answer": "应识别为“补板”，英文术语是 collar plate。因为其定义就是：用以部分或完全封闭骨材穿过强构件板(如强框、舱壁或平台等)所开洞口的板用以部分或完全闭 合纵向骨材穿过横向腹板所开洞口的补板。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：哪一个术语的定义是“波浪中的压力场与船体存在无关,对船体产生的流体动力。”？请给出中文术语和英文术语。\n答案：中文术语是波浪主干扰力，英文术语是 Froude-Kryloff force。",
+      "page_num": 98,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 98,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "哪一个术语的定义是“波浪中的压力场与船体存在无关,对船体产生的流体动力。”？请给出中文术语和英文术语。",
+        "answer": "中文术语是波浪主干扰力，英文术语是 Froude-Kryloff force。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：请解释船舶专业术语“操纵特性曲线”的含义，并提供其标准英文名称。\n答案：“操纵特性曲线”的英文标准表述为 maneuvering characteristics。其定义是：以舵角为横坐标,船舶稳定回转角速度为纵坐标所标绘成的关系曲线。",
+      "page_num": 99,
+      "section_path": [
+        "术语类",
+        "GBT+7727-2025 船舶通用术语（国标）"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 99,
+        "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+        "question": "请解释船舶专业术语“操纵特性曲线”的含义，并提供其标准英文名称。",
+        "answer": "“操纵特性曲线”的英文标准表述为 maneuvering characteristics。其定义是：以舵角为横坐标,船舶稳定回转角速度为纵坐标所标绘成的关系曲线。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：RNR 是什么意思？\n答案：RNR 指的是罗马尼亚船舶登记局，英文名称是 Romanian Register of Shipping。它是罗马尼亚船舶检验和登记机构，主要提供船舶入级、技术审查、法定检验及相关认证服务，业务对象包括海船、内河船舶、船用设备以及与航运安全相关的技术项目。",
+      "page_num": 100,
+      "section_path": [
+        "术语类",
+        "副本【0521备注版】垂域模型数据集样例.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 100,
+        "doc_source": "副本【0521备注版】垂域模型数据集样例.xlsx",
+        "question": "RNR 是什么意思？",
+        "answer": "RNR 指的是罗马尼亚船舶登记局，英文名称是 Romanian Register of Shipping。它是罗马尼亚船舶检验和登记机构，主要提供船舶入级、技术审查、法定检验及相关认证服务，业务对象包括海船、内河船舶、船用设备以及与航运安全相关的技术项目。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：英文全称 Nippon Kaiji Kyokai 是什么？\n答案：Nippon Kaiji Kyokai 是日本验船协会的英文全称，简称 NK。日本验船协会（ClassNK/NK）是日本主要船级社，总部位于东京。该机构为商船、海工结构物、船用设备和相关工业产品提供入级、法定检验、认证及技术规则服务，在亚洲造船和航运市场应用广泛。",
+      "page_num": 101,
+      "section_path": [
+        "术语类",
+        "副本【0521备注版】垂域模型数据集样例.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 101,
+        "doc_source": "副本【0521备注版】垂域模型数据集样例.xlsx",
+        "question": "英文全称 Nippon Kaiji Kyokai 是什么？",
+        "answer": "Nippon Kaiji Kyokai 是日本验船协会的英文全称，简称 NK。日本验船协会（ClassNK/NK）是日本主要船级社，总部位于东京。该机构为商船、海工结构物、船用设备和相关工业产品提供入级、法定检验、认证及技术规则服务，在亚洲造船和航运市场应用广泛。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：teus_des是什么意思？\n答案：teus_des表示设计集装箱数，属于船舶重量容积。",
+      "page_num": 102,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 102,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "teus_des是什么意思？",
+        "answer": "teus_des表示设计集装箱数，属于船舶重量容积。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：offno是什么意思？\n答案：offno表示注册编号，属于船舶身份识别（包括船型）。",
+      "page_num": 103,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 103,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "offno是什么意思？",
+        "answer": "offno表示注册编号，属于船舶身份识别（包括船型）。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：eec_name属于哪个类别？\n答案：eec_name属于船舶身份识别（包括船型）。",
+      "page_num": 104,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 104,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "eec_name属于哪个类别？",
+        "answer": "eec_name属于船舶身份识别（包括船型）。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：doc_name是什么意思？\n答案：doc_name表示DOC管理公司，属于船舶身份识别（包括船型）。",
+      "page_num": 105,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 105,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "doc_name是什么意思？",
+        "answer": "doc_name表示DOC管理公司，属于船舶身份识别（包括船型）。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：commisioning_d是什么意思？\n答案：commisioning_d表示开工日期，属于营运管理属性。",
+      "page_num": 106,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 106,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "commisioning_d是什么意思？",
+        "answer": "commisioning_d表示开工日期，属于营运管理属性。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：builder_code属于哪个类别？\n答案：builder_code属于船舶身份识别（包括船型）。",
+      "page_num": 107,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 107,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "builder_code属于哪个类别？",
+        "answer": "builder_code属于船舶身份识别（包括船型）。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：原中文名称的代码是啥？\n答案：原中文名称对应字段代码是pcspname。",
+      "page_num": 108,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 108,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "原中文名称的代码是啥？",
+        "answer": "原中文名称对应字段代码是pcspname。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：bnet属于哪个类别？\n答案：bnet属于船舶重量容积。",
+      "page_num": 109,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 109,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "bnet属于哪个类别？",
+        "answer": "bnet属于船舶重量容积。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：注册船东的代码是啥？\n答案：注册船东对应字段代码是owner_name。",
+      "page_num": 110,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 110,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "注册船东的代码是啥？",
+        "answer": "注册船东对应字段代码是owner_name。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：船员人数的代码是啥？\n答案：船员人数对应字段代码是crews。",
+      "page_num": 111,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 111,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "船员人数的代码是啥？",
+        "answer": "船员人数对应字段代码是crews。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：other_classno属于哪个类别？\n答案：other_classno属于船舶身份识别（包括船型）。",
+      "page_num": 112,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 112,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "other_classno属于哪个类别？",
+        "answer": "other_classno属于船舶身份识别（包括船型）。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：doublehull_ct属于哪个类别？\n答案：doublehull_ct属于船舶主尺度。",
+      "page_num": 113,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 113,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "doublehull_ct属于哪个类别？",
+        "answer": "doublehull_ct属于船舶主尺度。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：ISM船型的代码是啥？\n答案：ISM船型对应字段代码是sptype_ism。",
+      "page_num": 114,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 114,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "ISM船型的代码是啥？",
+        "answer": "ISM船型对应字段代码是sptype_ism。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：巴拿马运河净吨的代码是啥？\n答案：巴拿马运河净吨对应字段代码是bnet。",
+      "page_num": 115,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 115,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "巴拿马运河净吨的代码是啥？",
+        "answer": "巴拿马运河净吨对应字段代码是bnet。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：Location of CMSA Electronic ID label的代码是啥？\n答案：Location of CMSA Electronic ID label对应字段代码是dzbqwz。",
+      "page_num": 116,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 116,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "Location of CMSA Electronic ID label的代码是啥？",
+        "answer": "Location of CMSA Electronic ID label对应字段代码是dzbqwz。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：delivery_c属于哪个类别？\n答案：delivery_c属于营运管理属性。",
+      "page_num": 117,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 117,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "delivery_c属于哪个类别？",
+        "answer": "delivery_c属于营运管理属性。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：spname属于哪个类别？\n答案：spname属于船舶身份识别（包括船型）。",
+      "page_num": 118,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 118,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "spname属于哪个类别？",
+        "answer": "spname属于船舶身份识别（包括船型）。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：载重线船长的代码是啥？\n答案：载重线船长对应字段代码是length_ll。",
+      "page_num": 119,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 119,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "载重线船长的代码是啥？",
+        "answer": "载重线船长对应字段代码是length_ll。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：下水日期的代码是啥？\n答案：下水日期对应字段代码是lauch。",
+      "page_num": 120,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 120,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "下水日期的代码是啥？",
+        "answer": "下水日期对应字段代码是lauch。",
+        "score": ""
+      }
+    },
+    {
+      "block_type": "qa_pair",
+      "content": "问题：convertclass是什么意思？\n答案：convertclass表示重大改建船级社，属于营运管理属性。",
+      "page_num": 121,
+      "section_path": [
+        "术语类",
+        "船舶基础信息代码及分类.xlsx"
+      ],
+      "is_ocr": false,
+      "metadata": {
+        "source_file": "术语类120个随机问题评分.csv",
+        "category": "术语类",
+        "row_num": 121,
+        "doc_source": "船舶基础信息代码及分类.xlsx",
+        "question": "convertclass是什么意思？",
+        "answer": "convertclass表示重大改建船级社，属于营运管理属性。",
+        "score": ""
+      }
+    }
+  ]
+}

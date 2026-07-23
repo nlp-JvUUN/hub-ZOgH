@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "patent_id": "US11292562B2",
+    "title": "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+    "assignee": "Woods Hole Oceanographic Institution",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2022-04-05",
+    "inventors": [
+      "Andrew D. Bowen",
+      "Louis L. Whitcomb"
+    ]
+  },
+  "source": "US11292562B2",
+  "blocks": [
+    {
+      "block_type": "title",
+      "content": "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "abstract",
+      "content": "A pressure-tolerant electronics packaging system replaces conventional 1-atmosphere titanium pressure housings with oil-filled composite structures that equalize internal pressure to ambient hydrostatic pressure. Electronics boards are mounted in a 3D-printed lattice frame immersed in dielectric oil (MIDEL 7131), which is separated from seawater by a flexible fluorosilicone bladder that transmits ambient pressure while preventing seawater ingress. The composite outer shell provides mechanical protection and hydrodynamic fairing but does not bear the full hydrostatic pressure differential. The system eliminates the weight and cost of thick-walled titanium housings, reducing an AUV's structural weight by 40% while maintaining reliable operation to 6000-meter depth. Component-level pressure testing identifies and replaces pressure-sensitive components (electrolytic capacitors, crystal oscillators) with pressure-insensitive alternatives.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "摘要"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Traditional deep-sea electronics are housed in 1-atmosphere pressure vessels, typically machined from titanium alloy (Ti-6Al-4V) with wall thicknesses of 15-25 mm for 6000-meter depth rating. These housings are heavy (a typical AUV electronics housing weighs 25-40 kg), expensive (machining costs of $15,000-30,000 per housing), and limit internal volume due to the cubic scaling of wall thickness with diameter. For deep-diving AUVs, the structural weight of pressure housings can exceed 30% of the total vehicle displacement, directly reducing payload and battery capacity.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "BACKGROUND"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Oil-filled pressure-tolerant designs have been used in the offshore industry for decades but have not been widely adopted in AUVs due to concerns about component reliability under sustained high pressure and difficulties in servicing oil-filled assemblies. Recent advances in MEMS-based timing devices (eliminating pressure-sensitive quartz crystals) and multi-layer ceramic capacitors (eliminating electrolytic capacitors) have removed the primary pressure-sensitive component types from modern digital electronics.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "BACKGROUND"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The invention provides a systematic approach to pressure-tolerant electronics packaging for AUVs. The key innovations are: (1) a 3D-printed lattice frame that holds circuit boards in optimal thermal and fluid-flow orientations while being lightweight and customizable for each vehicle configuration; (2) a component-level pressure qualification process; (3) an integrated flexible bladder that maintains pressure equalization while providing a single-serviceable sealing interface.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "SUMMARY"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The lattice frame is 3D-printed from polycarbonate (Ultem 9085) using FDM, designed with a gyroid infill pattern providing 75% open porosity for dielectric oil circulation and natural convection cooling. Circuit boards are mounted in edge-card slots with vibration-damping rubber grommets. The flexible membrane is a 1.5 mm thick fluorosilicone (Dow Corning SILASTIC FL 40) sheet with a Shore A hardness of 40, capable of 200% elongation, clamped to the housing aperture with a stainless steel retaining ring and O-ring seal.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Component pressure qualification is performed in a laboratory pressure vessel at 100 MPa (equivalent to 10,000 m depth). Each component type is tested in groups of 20 samples, powered and monitored for 100 hours. Components showing parametric drift exceeding 1% or any functional failure are rejected and replaced with alternative part numbers that pass the screening.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "claim",
+      "content": "A pressure-tolerant electronics enclosure for deep-sea applications comprising: a rigid outer shell having a hydrodynamic shape and at least one aperture; a flexible membrane sealing the aperture and exposing the interior volume to ambient hydrostatic pressure; a dielectric liquid filling the interior volume and immersing electronic components; and a 3D-printed lattice structure within the interior volume supporting circuit boards in predetermined positions and orientations, the lattice structure having open porosity exceeding 70% to permit free circulation of the dielectric liquid.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "权利要求"
+      ],
+      "claim_num": 1
+    },
+    {
+      "block_type": "claim",
+      "content": "The enclosure of claim 1, wherein the dielectric liquid is a synthetic ester with dielectric strength exceeding 50 kV per 2.5 mm gap and pour point below -40°C.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "权利要求"
+      ],
+      "claim_num": 2
+    },
+    {
+      "block_type": "claim",
+      "content": "The enclosure of claim 1, wherein the outer shell is fabricated from carbon fiber reinforced polymer with wall thickness of 3-6 mm, providing only hydrodynamic and handling protection and not bearing primary pressure differential.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "权利要求"
+      ],
+      "claim_num": 3
+    },
+    {
+      "block_type": "claim",
+      "content": "The enclosure of claim 1, wherein all electronic components within the enclosure are pre-screened for pressure tolerance by individual testing in a pressure vessel at 1.25 times the rated depth pressure.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "权利要求"
+      ],
+      "claim_num": 4
+    },
+    {
+      "block_type": "claim",
+      "content": "The enclosure of claim 4, wherein aluminum electrolytic capacitors are replaced with multilayer ceramic capacitors, and quartz crystal oscillators are replaced with MEMS oscillators that are inherently pressure-insensitive.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "权利要求"
+      ],
+      "claim_num": 5
+    },
+    {
+      "block_type": "claim",
+      "content": "A method of assembling the enclosure of claim 1, comprising: populating circuit boards with pressure-tested components; mounting circuit boards in the lattice structure; inserting the assembly into the outer shell; filling with dielectric liquid under vacuum to eliminate entrapped air bubbles; and sealing the flexible membrane to the outer shell aperture.",
+      "page_num": 0,
+      "section_path": [
+        "Pressure-Tolerant Electronics Packaging for Deep-Sea Autonomous Underwater Vehicles Using Oil-Filled Composite Housings",
+        "权利要求"
+      ],
+      "claim_num": 6
+    }
+  ]
+}

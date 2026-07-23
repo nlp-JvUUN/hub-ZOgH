@@ -1,0 +1,202 @@
+[
+  {
+    "content": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "block_types": [
+        "title"
+      ],
+      "claim_num": 0,
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00000"
+  },
+  {
+    "content": "An adaptive underwater acoustic communication system employs Orthogonal Frequency Division Multiplexing (OFDM) with real-time channel estimation to mitigate multipath interference and Doppler shift characteristic of underwater acoustic channels. A sparse channel estimator identifies dominant multipath arrivals using compressed sensing techniques, enabling the system to allocate power and modulation schemes adaptively across subcarriers. Pilot symbols are spaced non-uniformly in both time and frequency based on the estimated channel coherence time and coherence bandwidth. The system achieves data rates of 15-30 kbps over ranges of 2-5 kilometers in shallow water environments, with automatic fallback to more robust modulation when channel conditions degrade due to surface wave activity or thermocline presence.",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation > 摘要",
+      "block_types": [
+        "abstract"
+      ],
+      "claim_num": 0,
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00001"
+  },
+  {
+    "content": "Underwater acoustic channels are among the most challenging communication channels in existence. They exhibit: (1) severe multipath due to surface and bottom reflections, with delay spreads of 10-100 ms in shallow water; (2) frequency-dependent attenuation limiting usable bandwidth to typically 5-50 kHz for medium-range applications; (3) time-varying Doppler shift due to platform motion and surface waves; and (4) highly variable ambient noise from shipping, marine life, and weather.\n\nTraditional single-carrier acoustic modems with fixed modulation schemes cannot adapt to these rapidly changing conditions, resulting in either unreliable communication or under-utilization of available channel capacity during favorable conditions.",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation > BACKGROUND",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00002"
+  },
+  {
+    "content": "The invention provides an adaptive OFDM acoustic modem that performs real-time channel estimation and prediction, then adjusts subcarrier modulation assignments based on predicted per-subcarrier SNR. A sparse channel estimator using Orthogonal Matching Pursuit exploits the inherent sparsity of underwater acoustic multipath (typically 5-15 significant arrivals) to produce accurate channel estimates from minimal pilot overhead.",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation > SUMMARY",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00003"
+  },
+  {
+    "content": "The system operates in the 15-30 kHz frequency band. The OFDM waveform uses 1024 subcarriers with 15.625 Hz spacing, giving a symbol duration of 64 ms plus a 16 ms cyclic prefix to absorb multipath up to 16 ms. The frame structure includes: one synchronization preamble (linear frequency modulated chirp), two pilot OFDM symbols with non-uniform pilot spacing, and eight data OFDM symbols.",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation > DETAILED DESCRIPTION",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00004"
+  },
+  {
+    "content": "Channel estimation is performed in the delay-Doppler domain due to the underspread nature of the underwater acoustic channel. The OMP algorithm iteratively selects dictionary atoms corresponding to different delay-Doppler combinations, typically converging in 5-15 iterations due to channel sparsity. The Kalman filter CSI predictor tracks the complex gain of each identified multipath component, modeling the temporal evolution as a first-order Gauss-Markov process with correlation coefficient determined by the measured Doppler spread.",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation > DETAILED DESCRIPTION",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00005"
+  },
+  {
+    "content": "An adaptive underwater acoustic communication system comprising: an OFDM transmitter with adaptive subcarrier modulation; a sparse channel estimator using Orthogonal Matching Pursuit (OMP) to identify dominant multipath components from received pilot symbols; a channel state information (CSI) predictor that forecasts channel conditions one transmission frame ahead using an autoregressive model; and a bit-loading controller that assigns modulation orders to subcarriers based on predicted signal-to-noise-ratio per subcarrier.",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 1,
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00006"
+  },
+  {
+    "content": "The system of claim 1, wherein pilot symbols are spaced non-uniformly in the time-frequency grid, with higher pilot density in subcarriers exhibiting larger channel frequency selectivity and in time slots near the predicted channel coherence time boundary.",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 2,
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00007"
+  },
+  {
+    "content": "The system of claim 1, wherein the autoregressive CSI predictor uses a Kalman filter with a state transition matrix derived from measured Doppler spread.",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 3,
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00008"
+  },
+  {
+    "content": "The system of claim 1, wherein the bit-loading controller selects from BPSK, QPSK, 16-QAM, and 64-QAM modulation schemes, and disables subcarriers where the predicted SNR falls below a minimum threshold.",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 4,
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00009"
+  },
+  {
+    "content": "A method for underwater acoustic communication comprising: transmitting an initial sounding packet; receiving the sounding packet and estimating the channel impulse response using OMP; predicting future channel state using the Kalman filter; computing bit-loading assignments for the next transmission frame; and transmitting data using the assigned modulation scheme on each subcarrier.",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 5,
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00010"
+  },
+  {
+    "content": "The system of claim 1, further comprising a Doppler compensation module that resamples the received signal to correct for wideband Doppler shift caused by relative platform motion exceeding 2 m/s.",
+    "metadata": {
+      "section": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 6,
+      "patent_id": "US11824567B2",
+      "title": "Adaptive Multi-Carrier Underwater Acoustic Communication System with Real-Time Channel Estimation",
+      "assignee": "Teledyne Benthos",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11824567B2.json"
+    },
+    "chunk_id": "US11824567B2_00011"
+  }
+]

@@ -1,0 +1,179 @@
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torch.nn.functional as F
+import random
+
+# 1. 生成数据
+"""
+1. 你xxxx (标签1)
+2. x你xxx (标签2)
+3. xx你xx (标签3)
+4. xxx你x (标签4)
+5. xxxx你 (标签5)
+"""
+
+data = []
+labels = []
+
+# 生成训练数据
+for _ in range(1000):
+    for index in range(5):
+        # 创建一个随机样本
+        sent = ["x", "x", "x", "x", "你"]  # 先复制基础模板
+        # 打乱除"你"之外的四个字母位置
+        others = sent[:index] + sent[index+1:]  # 获取其他字符
+        random.shuffle(others)
+        others.insert(index, "你")  # 把"你"插入目标位置
+        
+        data.append(others)
+        labels.append(index + 1)  # 标签1-5
+
+# 2. 词嵌入层
+"""
+建立字符表: {x:0, 你:1}
+"""
+total_words = 2  # "你"和其他所有字符
+max_len = 5  # 固定句子长度为5
+
+# 3. 构建模型
+class TextClassifier(nn.Module):
+    """
+    中文五字多分类模型
+    文本最大长度为5，变量total_words
+    标签0-4,5分类问题,变量num_labels
+    Embedding,RNN,LSTM,Dropout,池化层，归一化层
+    """
+    def __init__(self, vocab_size, embed_dim, hidden_size, num_classes):
+        super(TextClassifier, self).__init__()
+        # TODO: 定义模型组件
+        # 1. embedding layer
+        self.embedding = nn.Embedding(vocab_size, embed_dim)
+        
+        # 2. RNN layer
+        self.rnn = nn.RNN(embed_dim, hidden_size, num_layers=2, dropout=0.3, batch_first=True)
+        
+        # 3. LSTM layer
+        self.lstm = nn.LSTM(hidden_size, hidden_size, dropout=0.3, batch_first=True)
+        
+        # 4. Attention(可选)
+        # self.attention = nn.MultiheadAttention(hidden_size, 4)
+        # self.dropout = nn.Dropout(0.3)
+        
+        # 5. 池化层
+        self.pooling = nn.AdaptiveAvgPool1d(1)
+        
+        # 6. BatchNorm 归一化
+        self.bn = nn.BatchNorm1d(hidden_size)
+        
+        # 7. Dropout 层
+        self.dropout = nn.Dropout(0.5)
+        
+        # 8. 分类层
+        self.fc = nn.Linear(hidden_size, num_classes)
+        self.relu = nn.ReLU()
+
+    def forward(self, x):
+        # TODO: 定义模型前向传播过程
+        # 输入 x [batch_size, seq_len=5]
+        
+        # 1. 通过Embedding层
+        x = self.embedding(x)  # [batch_size, 5, embed_dim]
+        
+        # 2. 通过RNN
+        rnn_out, _ = self.rnn(x)  # [batch_size, 5, hidden_size]
+        
+        # 3. 通过LSTM
+        lstm_out, _ = self.lstm(rnn_out)  # [batch_size, 5, hidden_size]
+        
+        # 4. 池化层
+        x = lstm_out.transpose(1, 2)  # [batch_size, hidden_size, 5]
+        pooled = self.pooling(x)  # [batch_size, hidden_size, 1]
+        pooled = pooled.squeeze(-1)  # [batch_size, hidden_size]
+        
+        # 5. 归一化层
+        x = self.bn(pooled)
+        
+        # 6. 激活函数和Dropout
+        x = self.relu(x)
+        x = self.dropout(x)
+        
+        # 7. 分类层
+        out = self.fc(x)  # [batch_size, num_classes]
+        
+        return out
+
+# 超参数定义
+embed_dim = 50
+hidden_size = 32
+learning_rate = 5e-3
+num_epochs = 100
+batch_size = 8
+
+# TODO: 初始化模型
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model = TextClassifier(vocab_size=total_words, 
+                      embed_dim=embed_dim, 
+                      hidden_size=hidden_size, 
+                      num_classes=5).to(device)
+
+# TODO: 定义损失函数使用交叉熵
+criterion = nn.CrossEntropyLoss()
+
+# TODO: 优化器使用Adam
+optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+
+# 4. 模型训练
+"""
+训练逻辑
+"""
+import torch.utils.data as Data
+# 将数据转换为tensor
+X = torch.zeros((len(data), 5), dtype=torch.long)  # 保存输入的句子
+y = torch.tensor(labels)  # 保存标签
+
+# 将句子转换为0和1的序列
+word_to_idx = {"x": 0, "你": 1}
+for i, sent in enumerate(data):
+    for j, word in enumerate(sent):
+        X[i][j] = word_to_idx[word]
+
+# 制作数据加载器
+dataset = Data.TensorDataset(X, y)
+dataloader = Data.DataLoader(dataset, 
+                             batch_size=batch_size, 
+                             shuffle=True, 
+                             pin_memory=True)
+
+total_step = len(dataloader)
+# 训练模型
+for epoch in range(num_epochs):
+    for i, (texts, labels) in enumerate(dataloader):
+        """
+        texts: [bs, 5]
+        labels: [bs]
+        """
+        model.train()
+        texts = texts.to(device)  # 梯度
+        labels = labels.to(device) - 1  # 原来label是1-5, 减去1变成0-4方便计算
+
+        # 前向传播
+        output = model(texts)  # [bs, 5]
+        loss = criterion(output, labels.long())
+
+        # 反向传播
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+    # 输出训练状态
+    acc_count = 0
+    test_num = 100
+    model.eval()
+    with torch.no_grad():
+        # 测试逻辑和上面76-82行类似
+        print('Epoch [{}/{}], Loss: {:.4f}, acc:{:.2f}%'.format(
+        epoch+1, num_epochs, loss.item(), 
+        acc_count/test_num*100))
+    
+print("模型训练完成!")

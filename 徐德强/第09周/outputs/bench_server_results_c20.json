@@ -1,0 +1,10 @@
+{
+  "n_prompts": 50,
+  "max_new_tokens": 100,
+  "concurrency": 20,
+  "result": {
+    "time": 21.84,
+    "qps": 2.29,
+    "tps": 229.0
+  }
+}

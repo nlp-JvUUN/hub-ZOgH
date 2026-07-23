@@ -1,0 +1,1808 @@
+{
+  "timestamp": "20260709_161239",
+  "retrieval_metrics": {
+    "hit_rate": 1.0,
+    "mrr": 1.0,
+    "n_questions": 17
+  },
+  "answer_metrics": {
+    "answer_match_rate": 0.5,
+    "n_questions": 20
+  },
+  "raw_results": [
+    {
+      "question": "Cathodic Protection 对应的中文术语是什么？",
+      "answer": "“Cathodic Protection”对应的中文术语是“阴极防护”[1]。",
+      "contexts": [
+        "问题：在中英混用沟通中，若提到“Cathodic Protection”，对应的是哪个术语？\n答案：“Cathodic Protection”对应“阴极防护”。",
+        "问题：有一项结构处理措施，特点是“针对航行于冰区的船舶”且属于“局部结构加强”，这对应的术语是什么？英文怎么说？\n答案：对应术语是“冰区加强”，英文是 strengthening for navigation in ice。",
+        "问题：请解释船舶专业术语“外加电流阴极保护”的含义，并提供其标准英文名称。\n答案：“外加电流阴极保护”的英文标准表述为 impressedcurrentcathodicprotection。其专业定义是：由外部电源提供保护电流的阴极保护。",
+        "问题：如果某术语表示“舵剖面最大厚度与舵宽的比值”，它对应的中文术语和英文术语是什么？\n答案：对应的中文术语是“舵厚度比”，英文术语是 thickness ratio of rudder。"
+      ],
+      "ground_truth": "Cathodic Protection 对应'阴极防护'。",
+      "question_id": 1,
+      "question_type": "simple_fact",
+      "target_docs": [
+        "术语类120个随机问题评分"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "术语类120个随机问题评分_r0002_c0000",
+          "content": "问题：在中英混用沟通中，若提到“Cathodic Protection”，对应的是哪个术语？\n答案：“Cathodic Protection”对应“阴极防护”。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "82号建议案验船师术语表",
+          "row_num": 2,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "82号建议案验船师术语表"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 30.377878659532318,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0075_c0073",
+          "content": "问题：有一项结构处理措施，特点是“针对航行于冰区的船舶”且属于“局部结构加强”，这对应的术语是什么？英文怎么说？\n答案：对应术语是“冰区加强”，英文是 strengthening for navigation in ice。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 75,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 14.16683786506296,
+          "rrf_score": 0.029877369007803793
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0045_c0043",
+          "content": "问题：请解释船舶专业术语“外加电流阴极保护”的含义，并提供其标准英文名称。\n答案：“外加电流阴极保护”的英文标准表述为 impressedcurrentcathodicprotection。其专业定义是：由外部电源提供保护电流的阴极保护。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 45,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.6095394492149353,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0043_c0041",
+          "content": "问题：如果某术语表示“舵剖面最大厚度与舵宽的比值”，它对应的中文术语和英文术语是什么？\n答案：对应的中文术语是“舵厚度比”，英文术语是 thickness ratio of rudder。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 43,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 20.23974447335427,
+          "rrf_score": 0.016129032258064516
+        }
+      ]
+    },
+    {
+      "question": "Bulkhead Deck 的定义是什么？",
+      "answer": "Bulkhead Deck 指承载横向水密舱壁和船壳的最上面连续甲板[1]。",
+      "contexts": [
+        "问题：请用中英混合方式说明 Bulkhead Deck 的定义。\n答案：Bulkhead Deck 指承载横向水密舱壁和船壳的最上面连续甲板。",
+        "问题：在检验沟通中，如何用中英混合方式指代“舱壁结构”？\n答案：可说“舱壁结构 / Bulkhead Structure”，其定义是带有扶强材和桁材的横舱壁或纵舱壁。",
+        "问题：如果某结构是“带有扶强材和桁材的横舱壁或纵舱壁”，应检索哪个术语？\n答案：应检索“舱壁结构”，英文为 Bulkhead Structure。",
+        "问题：请精准解释船舶术语“甲板结构”，并给出其标准英文名称。\n答案：“甲板结构”的标准英文名称是 Deck Structure。其定义是：由扶强材、桁材和支柱组成的甲板板。"
+      ],
+      "ground_truth": "Bulkhead Deck 指承载横向水密舱壁和船壳的最上面连续甲板。",
+      "question_id": 2,
+      "question_type": "simple_fact",
+      "target_docs": [
+        "术语类120个随机问题评分"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "术语类120个随机问题评分_r0003_c0001",
+          "content": "问题：请用中英混合方式说明 Bulkhead Deck 的定义。\n答案：Bulkhead Deck 指承载横向水密舱壁和船壳的最上面连续甲板。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "82号建议案验船师术语表",
+          "row_num": 3,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "82号建议案验船师术语表"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 22.7234226811392,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0007_c0005",
+          "content": "问题：在检验沟通中，如何用中英混合方式指代“舱壁结构”？\n答案：可说“舱壁结构 / Bulkhead Structure”，其定义是带有扶强材和桁材的横舱壁或纵舱壁。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "82号建议案验船师术语表",
+          "row_num": 7,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "82号建议案验船师术语表"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 12.050105934626952,
+          "rrf_score": 0.03200204813108039
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0010_c0008",
+          "content": "问题：如果某结构是“带有扶强材和桁材的横舱壁或纵舱壁”，应检索哪个术语？\n答案：应检索“舱壁结构”，英文为 Bulkhead Structure。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "82号建议案验船师术语表",
+          "row_num": 10,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "82号建议案验船师术语表"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 10.678782483284879,
+          "rrf_score": 0.031754032258064516
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0014_c0012",
+          "content": "问题：请精准解释船舶术语“甲板结构”，并给出其标准英文名称。\n答案：“甲板结构”的标准英文名称是 Deck Structure。其定义是：由扶强材、桁材和支柱组成的甲板板。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "82号建议案验船师术语表",
+          "row_num": 14,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "82号建议案验船师术语表"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 11.316260980010998,
+          "rrf_score": 0.03125763125763126
+        }
+      ]
+    },
+    {
+      "question": "船舶建造过程中，焊接工作量占船体建造总工程量的比例是多少？",
+      "answer": "船舶建造过程中，焊接工作量占船体建造总工程量的比例是30%到40%[1]。",
+      "contexts": [
+        "问题：船舶建造过程中，焊接工作量占船体建造总工程量的比例是多少？\n答案：30%到40%",
+        "问题：客船上的消防泵所要求总排量应不少于各舱底泵用于舱底水泵送时所要求排量的多少比例？\n答案：三分之二",
+        "问题：船体焊缝布置要求中，对接焊缝之间的平行距离应不小于多少毫米？\n答案：100mm",
+        "问题：船舶建造过程中的完工检验，船厂质检部门预检合格后应提前多少小时书面通知验船师检验？\n答案：24小时"
+      ],
+      "ground_truth": "30%到40%。",
+      "question_id": 3,
+      "question_type": "simple_fact",
+      "target_docs": [
+        "问答对"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0007_c0005",
+          "content": "问题：船舶建造过程中，焊接工作量占船体建造总工程量的比例是多少？\n答案：30%到40%",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+          "row_num": 7,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "02 材料与焊接（焊接基础知识）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 63.52003908585336,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "问答对_r0295_c0293",
+          "content": "问题：客船上的消防泵所要求总排量应不少于各舱底泵用于舱底水泵送时所要求排量的多少比例？\n答案：三分之二",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "船舶消防(现场检验介绍)【范云】",
+          "row_num": 295,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "船舶消防(现场检验介绍)【范云】"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 14.43299177673952,
+          "rrf_score": 0.02964426877470356
+        },
+        {
+          "chunk_id": "问答对_r0009_c0007",
+          "content": "问题：船体焊缝布置要求中，对接焊缝之间的平行距离应不小于多少毫米？\n答案：100mm",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+          "row_num": 9,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "02 材料与焊接（焊接基础知识）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.6616633534431458,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "问答对_r0128_c0126",
+          "content": "问题：船舶建造过程中的完工检验，船厂质检部门预检合格后应提前多少小时书面通知验船师检验？\n答案：24小时",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "建造入级检验[于得会]",
+          "row_num": 128,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "建造入级检验[于得会]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 19.627023573772686,
+          "rrf_score": 0.016129032258064516
+        }
+      ]
+    },
+    {
+      "question": "船用金属材料的抗拉强度、屈服强度、伸长率以及断面收缩率应通过哪种材料性能试验测定？",
+      "answer": "船用金属材料的抗拉强度、屈服强度、伸长率以及断面收缩率应通过**拉伸试验**测定[1]。",
+      "contexts": [
+        "问题：船用金属材料的抗拉强度、屈服强度、伸长率以及断面收缩率应通过哪种材料性能试验测定？\n答案：拉伸试验",
+        "问题：请准确解释船舶检验术语“舷梯强度试验”，并给出其标准英文名称。\n答案：“舷梯强度试验”的标准英文名称是 proof load test for accommodation ladder。其定义是：舷梯装船后,将试验重量施加在其上以检查其强度、各旋转部分的灵活性以及上下平台有无裂缝和 变形的试验。",
+        "问题：对极地船舶、LNG运输船等特殊船舶，低温冲击试验可采用哪些温度来验证材料低温韧性并防止冷脆失效？\n答案：-20℃、-40℃",
+        "问题：入级服务的目标是验证船体及附属物主要部件的哪些性能，以及推进系统、操舵系统、发电系统和其他辅助系统的哪些性能？\n答案：船体及附属物主要部件的结构强度和完整性；推进系统、操舵系统、发电系统以及船上装配的其他特征或辅助系统的可靠性和功能，能维持船上基本服务。"
+      ],
+      "ground_truth": "拉伸试验。",
+      "question_id": 4,
+      "question_type": "simple_fact",
+      "target_docs": [
+        "问答对"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0002_c0000",
+          "content": "问题：船用金属材料的抗拉强度、屈服强度、伸长率以及断面收缩率应通过哪种材料性能试验测定？\n答案：拉伸试验",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "01 材料与焊接（船用金属材料检验）（张强）",
+          "row_num": 2,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "01 材料与焊接（船用金属材料检验）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 95.01973057739511,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0026_c0024",
+          "content": "问题：请准确解释船舶检验术语“舷梯强度试验”，并给出其标准英文名称。\n答案：“舷梯强度试验”的标准英文名称是 proof load test for accommodation ladder。其定义是：舷梯装船后,将试验重量施加在其上以检查其强度、各旋转部分的灵活性以及上下平台有无裂缝和 变形的试验。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）",
+          "row_num": 26,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+12926-2025船舶工艺术语 船舶建造质量检验（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 14.095663831491192,
+          "rrf_score": 0.03149801587301587
+        },
+        {
+          "chunk_id": "问答对_r0003_c0001",
+          "content": "问题：对极地船舶、LNG运输船等特殊船舶，低温冲击试验可采用哪些温度来验证材料低温韧性并防止冷脆失效？\n答案：-20℃、-40℃",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "01 材料与焊接（船用金属材料检验）（张强）",
+          "row_num": 3,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "01 材料与焊接（船用金属材料检验）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.6782442927360535,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "问答对_r0245_c0243",
+          "content": "问题：入级服务的目标是验证船体及附属物主要部件的哪些性能，以及推进系统、操舵系统、发电系统和其他辅助系统的哪些性能？\n答案：船体及附属物主要部件的结构强度和完整性；推进系统、操舵系统、发电系统以及船上装配的其他特征或辅助系统的可靠性和功能，能维持船上基本服务。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "船级社与入级概论[杨志勇]",
+          "row_num": 245,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "船级社与入级概论[杨志勇]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 17.63615662506455,
+          "rrf_score": 0.016129032258064516
+        }
+      ]
+    },
+    {
+      "question": "国际载重线公约不适用于哪些从事国际航行的船舶类型？",
+      "answer": "国际载重线公约不适用于以下从事国际航行的船舶类型：  \n- 军舰；  \n- 长度小于24米（79英尺）的新船；  \n- 小于150总吨的现有船舶；  \n- 非营业游艇；  \n- 渔船[1]。",
+      "contexts": [
+        "问题：国际载重线公约不适用于哪些从事国际航行的船舶类型？\n答案：军舰；长度小于24米（79英尺）的新船；小于150总吨的现有船舶；非营业游艇；渔船。",
+        "问题：国际载重线公约中船舶类型具体分为哪几类？\n答案：A型船舶、B型船舶、增加干舷的B型船舶、减小干舷的B-60型船舶、减小干舷的B-100型船舶",
+        "问题：按公约划分时，构造/设备、无线电、航行、载重线、散化液化和载客项目的公约与非公约界限分别是什么？\n答案：构造/设备：公约≥500GT，非公约<500GT；无线电：公约≥300GT，非公约<300GT；航行：公约≥150GT，非公约<150GT；载重线：公约>24m，非公约≤24m；散化液化：公约所有吨位，非公约无；载客：公约>12人，非公约≤12人。",
+        "问题：国际航行船舶和国内航行船舶分别签发哪些类型的法定证书？\n答案：国际航行：公约证书\n国内航行：安全与环保证书"
+      ],
+      "ground_truth": "军舰；长度小于24米（79英尺）的新船；小于150总吨的现有船舶；非营业游艇；渔船。",
+      "question_id": 5,
+      "question_type": "simple_fact",
+      "target_docs": [
+        "问答对"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0022_c0020",
+          "content": "问题：国际载重线公约不适用于哪些从事国际航行的船舶类型？\n答案：军舰；长度小于24米（79英尺）的新船；小于150总吨的现有船舶；非营业游艇；渔船。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "04 船舶载重线检验（张强）",
+          "row_num": 22,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "04 船舶载重线检验（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 50.88625967108634,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "问答对_r0030_c0028",
+          "content": "问题：国际载重线公约中船舶类型具体分为哪几类？\n答案：A型船舶、B型船舶、增加干舷的B型船舶、减小干舷的B-60型船舶、减小干舷的B-100型船舶",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "04 船舶载重线检验（张强）",
+          "row_num": 30,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "04 船舶载重线检验（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 28.807323319856884,
+          "rrf_score": 0.03200204813108039
+        },
+        {
+          "chunk_id": "问答对_r0254_c0252",
+          "content": "问题：按公约划分时，构造/设备、无线电、航行、载重线、散化液化和载客项目的公约与非公约界限分别是什么？\n答案：构造/设备：公约≥500GT，非公约<500GT；无线电：公约≥300GT，非公约<300GT；航行：公约≥150GT，非公约<150GT；载重线：公约>24m，非公约≤24m；散化液化：公约所有吨位，非公约无；载客：公约>12人，非公约≤12人。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "船舶与海上设施类型[杨志勇]",
+          "row_num": 254,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "船舶与海上设施类型[杨志勇]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 22.012882166532346,
+          "rrf_score": 0.03149801587301587
+        },
+        {
+          "chunk_id": "问答对_r0163_c0161",
+          "content": "问题：国际航行船舶和国内航行船舶分别签发哪些类型的法定证书？\n答案：国际航行：公约证书\n国内航行：安全与环保证书",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "法定检验[唐磊平]",
+          "row_num": 163,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "法定检验[唐磊平]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 33.701648166341485,
+          "rrf_score": 0.031054405392392875
+        }
+      ]
+    },
+    {
+      "question": "半自动CO2气体保护焊单面焊在风速达到多少时应采取防风措施？",
+      "answer": "半自动CO₂气体保护焊单面焊在风速达到**2米/秒**时应采取防风措施[1]。",
+      "contexts": [
+        "问题：半自动CO2气体保护焊单面焊在风速达到多少时应采取防风措施？\n答案：2米/秒",
+        "问题：气孔缺陷产生的主要原因是什么，避免气孔的主要措施包括哪些？\n答案：气孔产生的主要原因：凝固过程中过剩气体从金属中析出，但未排出。\n\n避免气孔的主要措施包括：\n1. 清理工件表面\n2. 按规定烘焊条\n3. 气保护焊应保证送气通畅并注意防风",
+        "问题：焊接环境要求中，严禁在环境温度低于多少摄氏度时进行任何焊接工作？\n答案：-20°C",
+        "问题：对于规定最小屈服强度为420 N/mm²至690 N/mm²的焊接结构用高强度钢，焊接完成后多少小时内不得进行无损检测？\n答案：48小时内"
+      ],
+      "ground_truth": "2米/秒。",
+      "question_id": 6,
+      "question_type": "precise_number",
+      "target_docs": [
+        "问答对"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0008_c0006",
+          "content": "问题：半自动CO2气体保护焊单面焊在风速达到多少时应采取防风措施？\n答案：2米/秒",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+          "row_num": 8,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "02 材料与焊接（焊接基础知识）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 89.98804959257072,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "问答对_r0014_c0012",
+          "content": "问题：气孔缺陷产生的主要原因是什么，避免气孔的主要措施包括哪些？\n答案：气孔产生的主要原因：凝固过程中过剩气体从金属中析出，但未排出。\n\n避免气孔的主要措施包括：\n1. 清理工件表面\n2. 按规定烘焊条\n3. 气保护焊应保证送气通畅并注意防风",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+          "row_num": 14,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "02 材料与焊接（焊接基础知识）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 15.838374766132592,
+          "rrf_score": 0.031754032258064516
+        },
+        {
+          "chunk_id": "问答对_r0011_c0009",
+          "content": "问题：焊接环境要求中，严禁在环境温度低于多少摄氏度时进行任何焊接工作？\n答案：-20°C",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+          "row_num": 11,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "02 材料与焊接（焊接基础知识）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.6380670070648193,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "问答对_r0019_c0017",
+          "content": "问题：对于规定最小屈服强度为420 N/mm²至690 N/mm²的焊接结构用高强度钢，焊接完成后多少小时内不得进行无损检测？\n答案：48小时内",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "03 船舶无损检测简介（张强）",
+          "row_num": 19,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "03 船舶无损检测简介（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.6018012762069702,
+          "rrf_score": 0.015873015873015872
+        }
+      ]
+    },
+    {
+      "question": "船体焊缝布置要求中，对接焊缝之间的平行距离应不小于多少毫米？",
+      "answer": "船体焊缝布置要求中，对接焊缝之间的平行距离应不小于100mm[1]。",
+      "contexts": [
+        "问题：船体焊缝布置要求中，对接焊缝之间的平行距离应不小于多少毫米？\n答案：100mm",
+        "问题：IMO 1型化学品船液货舱距舷侧外板、距中心线船底外板型线以及距船体外板的最小距离要求分别是什么？\n答案：距舷侧外板应不小于B/5或11.5m（取小者）；距中心线的船底外板型线应不小于B/15或6m（取小者）；任何部位距船体外板都应不小于760mm。",
+        "问题：双舷侧散货船的所有货舱边界均为双舷侧结构时，其内、外壳之间的最小距离应满足什么要求？\n答案：大于或等于1000mm",
+        "问题：船体结构中的全熔透对接焊缝、全熔透角焊缝和T形焊缝分别宜采用哪些无损检测方法？\n答案：船体结构中的全熔透对接焊缝宜用射线方法或超声波方法进行检测，全熔透的角焊缝和T形焊缝宜用超声波方法进行检测。"
+      ],
+      "ground_truth": "100mm。",
+      "question_id": 7,
+      "question_type": "precise_number",
+      "target_docs": [
+        "问答对"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0009_c0007",
+          "content": "问题：船体焊缝布置要求中，对接焊缝之间的平行距离应不小于多少毫米？\n答案：100mm",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+          "row_num": 9,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "02 材料与焊接（焊接基础知识）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 67.14142936418696,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "问答对_r0149_c0147",
+          "content": "问题：IMO 1型化学品船液货舱距舷侧外板、距中心线船底外板型线以及距船体外板的最小距离要求分别是什么？\n答案：距舷侧外板应不小于B/5或11.5m（取小者）；距中心线的船底外板型线应不小于B/15或6m（取小者）；任何部位距船体外板都应不小于760mm。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "散装危险化学品运输[钱建魁]",
+          "row_num": 149,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "散装危险化学品运输[钱建魁]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 19.19412476883177,
+          "rrf_score": 0.030536130536130537
+        },
+        {
+          "chunk_id": "问答对_r0258_c0256",
+          "content": "问题：双舷侧散货船的所有货舱边界均为双舷侧结构时，其内、外壳之间的最小距离应满足什么要求？\n答案：大于或等于1000mm",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "船舶与海上设施类型[杨志勇]",
+          "row_num": 258,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "船舶与海上设施类型[杨志勇]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.684564471244812,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "问答对_r0018_c0016",
+          "content": "问题：船体结构中的全熔透对接焊缝、全熔透角焊缝和T形焊缝分别宜采用哪些无损检测方法？\n答案：船体结构中的全熔透对接焊缝宜用射线方法或超声波方法进行检测，全熔透的角焊缝和T形焊缝宜用超声波方法进行检测。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "03 船舶无损检测简介（张强）",
+          "row_num": 18,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "03 船舶无损检测简介（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 30.648059191630857,
+          "rrf_score": 0.016129032258064516
+        }
+      ]
+    },
+    {
+      "question": "低氢碱性焊条打开密封容器后，应存放于不低于多少摄氏度的烘箱中贮存？",
+      "answer": "低氢碱性焊条打开密封容器后，应存放于不低于120℃的烘箱中贮存[1]。",
+      "contexts": [
+        "问题：低氢碱性焊条打开密封容器后，应存放于不低于多少摄氏度的烘箱中贮存？\n答案：120℃",
+        "问题：焊接环境要求中，严禁在环境温度低于多少摄氏度时进行任何焊接工作？\n答案：-20°C",
+        "问题：船体焊缝布置要求中，对接焊缝之间的平行距离应不小于多少毫米？\n答案：100mm",
+        "问题：对于规定最小屈服强度为420 N/mm²至690 N/mm²的焊接结构用高强度钢，焊接完成后多少小时内不得进行无损检测？\n答案：48小时内"
+      ],
+      "ground_truth": "120℃。",
+      "question_id": 8,
+      "question_type": "precise_number",
+      "target_docs": [
+        "问答对"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0010_c0008",
+          "content": "问题：低氢碱性焊条打开密封容器后，应存放于不低于多少摄氏度的烘箱中贮存？\n答案：120℃",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+          "row_num": 10,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "02 材料与焊接（焊接基础知识）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 91.84282627390239,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "问答对_r0011_c0009",
+          "content": "问题：焊接环境要求中，严禁在环境温度低于多少摄氏度时进行任何焊接工作？\n答案：-20°C",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+          "row_num": 11,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "02 材料与焊接（焊接基础知识）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 16.787321139575422,
+          "rrf_score": 0.03225806451612903
+        },
+        {
+          "chunk_id": "问答对_r0009_c0007",
+          "content": "问题：船体焊缝布置要求中，对接焊缝之间的平行距离应不小于多少毫米？\n答案：100mm",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+          "row_num": 9,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "02 材料与焊接（焊接基础知识）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 11.837637163540007,
+          "rrf_score": 0.029211087420042643
+        },
+        {
+          "chunk_id": "问答对_r0019_c0017",
+          "content": "问题：对于规定最小屈服强度为420 N/mm²至690 N/mm²的焊接结构用高强度钢，焊接完成后多少小时内不得进行无损检测？\n答案：48小时内",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "03 船舶无损检测简介（张强）",
+          "row_num": 19,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "03 船舶无损检测简介（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.6204004883766174,
+          "rrf_score": 0.015873015873015872
+        }
+      ]
+    },
+    {
+      "question": "对于规定最小屈服强度为420 N/mm²至690 N/mm²的焊接结构用高强度钢，焊接完成后多少小时内不得进行无损检测？",
+      "answer": "对于规定最小屈服强度为420 N/mm²至690 N/mm²的焊接结构用高强度钢，焊接完成后**48小时内**不得进行无损检测[1]。",
+      "contexts": [
+        "问题：对于规定最小屈服强度为420 N/mm²至690 N/mm²的焊接结构用高强度钢，焊接完成后多少小时内不得进行无损检测？\n答案：48小时内",
+        "问题：焊接环境要求中，严禁在环境温度低于多少摄氏度时进行任何焊接工作？\n答案：-20°C",
+        "问题：对于需要焊补的焊接缺陷，焊补前应如何确认缺陷已彻底清除？\n答案：必要时可用无损检测的方法进行检查以证实缺陷确已清除。",
+        "问题：ROXTEC密封模块的检验应在完成安装多少小时以后进行？\n答案：24小时"
+      ],
+      "ground_truth": "48小时内。",
+      "question_id": 9,
+      "question_type": "precise_number",
+      "target_docs": [
+        "问答对"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0019_c0017",
+          "content": "问题：对于规定最小屈服强度为420 N/mm²至690 N/mm²的焊接结构用高强度钢，焊接完成后多少小时内不得进行无损检测？\n答案：48小时内",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "03 船舶无损检测简介（张强）",
+          "row_num": 19,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "03 船舶无损检测简介（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 147.30442340769096,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "问答对_r0011_c0009",
+          "content": "问题：焊接环境要求中，严禁在环境温度低于多少摄氏度时进行任何焊接工作？\n答案：-20°C",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+          "row_num": 11,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "02 材料与焊接（焊接基础知识）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.6586357951164246,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "问答对_r0015_c0013",
+          "content": "问题：对于需要焊补的焊接缺陷，焊补前应如何确认缺陷已彻底清除？\n答案：必要时可用无损检测的方法进行检查以证实缺陷确已清除。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "02 材料与焊接（焊接基础知识）（张强）",
+          "row_num": 15,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "02 材料与焊接（焊接基础知识）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 27.644098859471722,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "问答对_r0225_c0223",
+          "content": "问题：ROXTEC密封模块的检验应在完成安装多少小时以后进行？\n答案：24小时",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "电气检验3",
+          "row_num": 225,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "电气检验3"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.6382681727409363,
+          "rrf_score": 0.015873015873015872
+        }
+      ]
+    },
+    {
+      "question": "载重线标志中的圆圈外径是多少毫米？",
+      "answer": "载重线标志中的圆圈外径是300 mm[1]。",
+      "contexts": [
+        "问题：载重线标志中的圆圈外径、圆圈宽度、水平线长度和水平线宽度分别是多少？\n答案：300 mm、25 mm、450 mm、25 mm",
+        "问题：安装在载重线之下舷侧的阀件、旋塞和接管，其液压试验压力应不小于多少MPa？\n答案：0.5MPa",
+        "问题：污油标准排放接头的外径、螺栓圈直径和法兰厚度分别是多少？\n答案：215 mm、183 mm、20 mm",
+        "问题：载货处所应在易于看到的地方用什么字母作永久性标志，且字母高度应不小于多少？\n答案：CC（货舱），字母高度应不小于100mm"
+      ],
+      "ground_truth": "300 mm。",
+      "question_id": 10,
+      "question_type": "precise_number",
+      "target_docs": [
+        "问答对"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0024_c0022",
+          "content": "问题：载重线标志中的圆圈外径、圆圈宽度、水平线长度和水平线宽度分别是多少？\n答案：300 mm、25 mm、450 mm、25 mm",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "04 船舶载重线检验（张强）",
+          "row_num": 24,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "04 船舶载重线检验（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 32.59311097788021,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "问答对_r0334_c0332",
+          "content": "问题：安装在载重线之下舷侧的阀件、旋塞和接管，其液压试验压力应不小于多少MPa？\n答案：0.5MPa",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "轮机检验（陈卫华）",
+          "row_num": 334,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "轮机检验（陈卫华）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 13.906483799331298,
+          "rrf_score": 0.03125
+        },
+        {
+          "chunk_id": "问答对_r0058_c0056",
+          "content": "问题：污油标准排放接头的外径、螺栓圈直径和法兰厚度分别是多少？\n答案：215 mm、183 mm、20 mm",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 58,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 11.097386681923567,
+          "rrf_score": 0.029857397504456328
+        },
+        {
+          "chunk_id": "问答对_r0125_c0123",
+          "content": "问题：载货处所应在易于看到的地方用什么字母作永久性标志，且字母高度应不小于多少？\n答案：CC（货舱），字母高度应不小于100mm",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "国际吨位丈量公约 周耀华",
+          "row_num": 125,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "国际吨位丈量公约 周耀华"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.616932213306427,
+          "rrf_score": 0.016129032258064516
+        }
+      ]
+    },
+    {
+      "question": "请区分'艏向'和'航迹角'的定义差异。",
+      "answer": "艏向（heading）是船舶或船模的艏艉线在水平面上的投影朝向船首的方向[1]；  \n航迹角（track angle）是船舶在水平面内运动时，其重心的瞬时速度矢量与基准方向之间的水平夹角[1][2]。  \n\n二者核心差异在于：  \n- **艏向**表征船舶**自身朝向**（即船首指向），由艏艉线决定，与运动状态无关；  \n- **航迹角**表征船舶**实际运动方向**（即速度方向），由重心瞬时速度矢量决定，反映船舶在水中的真实轨迹方向。",
+      "contexts": [
+        "问题：请区分“艏向”和“航迹角”的定义差异。\n答案：艏向（heading）是船舶或船模的艏艉线在水平面上的投影朝向船首的方向；航迹角（track angle）是船舶在水平面内运动时，其重心的瞬时速度矢量与基准方向之间的水平夹角。",
+        "问题：“航迹角”和“漂角”有什么区别？\n答案：“航迹角”是船舶在水平面内运动,其重心的瞬时速度矢量与基准方向之间的水平夹角；“漂角”是船舶在水平面内运动,其艏向与重心处的速度矢量间的水平夹角。",
+        "问题：请区分“舭肘板”和“艉肋板”，分别给出它们的英文术语和定义差异。\n答案：“舭肘板”的英文术语是 tanksidebracket;holdframebracket，定义为：连接各种肋板与各种底舱肋骨的舭部大肘板。\"艉肋板”的英文术语是 transomfloor，定义为：船尾的最后一道肋板。斜肋骨和艉柱都与艉肋板连接。二者差异在于：前者是舭部大肘板，用于连接各种肋板与各种底舱肋骨；后者是船尾的最后一道肋板，并与斜肋骨和艉柱连接。",
+        "问题：请区分“船侧纵骨”和“船侧纵桁”，并说明它们各自的定义。\n答案：“船侧纵骨”的英文是 sidelongitudinal，定义是船侧外板上的纵骨；“船侧纵桁”的英文是 sidestringer，定义是与肋骨相交并连接的,船侧外板上的纵向桁材。"
+      ],
+      "ground_truth": "艏向（heading）是船舶或船模的艏艉线在水平面上的投影朝向船首的方向；航迹角（track angle）是船舶在水平面内运动时，其重心的瞬时速度矢量与基准方向之间的水平夹角。",
+      "question_id": 11,
+      "question_type": "cross_doc_compare",
+      "target_docs": [
+        "术语类120个随机问题评分"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "术语类120个随机问题评分_r0047_c0045",
+          "content": "问题：请区分“艏向”和“航迹角”的定义差异。\n答案：艏向（heading）是船舶或船模的艏艉线在水平面上的投影朝向船首的方向；航迹角（track angle）是船舶在水平面内运动时，其重心的瞬时速度矢量与基准方向之间的水平夹角。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 47,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 40.05073668521507,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0082_c0080",
+          "content": "问题：“航迹角”和“漂角”有什么区别？\n答案：“航迹角”是船舶在水平面内运动,其重心的瞬时速度矢量与基准方向之间的水平夹角；“漂角”是船舶在水平面内运动,其艏向与重心处的速度矢量间的水平夹角。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 82,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 24.72821240668167,
+          "rrf_score": 0.03225806451612903
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0096_c0094",
+          "content": "问题：请区分“舭肘板”和“艉肋板”，分别给出它们的英文术语和定义差异。\n答案：“舭肘板”的英文术语是 tanksidebracket;holdframebracket，定义为：连接各种肋板与各种底舱肋骨的舭部大肘板。\"艉肋板”的英文术语是 transomfloor，定义为：船尾的最后一道肋板。斜肋骨和艉柱都与艉肋板连接。二者差异在于：前者是舭部大肘板，用于连接各种肋板与各种底舱肋骨；后者是船尾的最后一道肋板，并与斜肋骨和艉柱连接。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 96,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 15.011584693317893,
+          "rrf_score": 0.031009615384615385
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0066_c0064",
+          "content": "问题：请区分“船侧纵骨”和“船侧纵桁”，并说明它们各自的定义。\n答案：“船侧纵骨”的英文是 sidelongitudinal，定义是船侧外板上的纵骨；“船侧纵桁”的英文是 sidestringer，定义是与肋骨相交并连接的,船侧外板上的纵向桁材。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 66,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 12.04922213846615,
+          "rrf_score": 0.03007688828584351
+        }
+      ]
+    },
+    {
+      "question": "'排泄口（Discharges）'与'深舱（Deep Tank）'有什么区别？",
+      "answer": "“排泄口（Discharges）”是穿过船侧的管道系统，用于输送舭部污水、循环污水、排水等[1]；  \n“深舱（Deep Tank）”是从船底或内船底向上延伸至或高于最低层甲板的液舱[1]。  \n\n二者本质不同：前者属于**排放管系**（outlet piping system），功能为排出液体；后者属于**船体结构中的液舱类型**（a type of tank），主要用于装载压载水、货油或淡水等，具有较大深度和结构强度要求。",
+      "contexts": [
+        "问题：“排泄口（Discharges）”与“深舱（Deep Tank）”有什么区别？\n答案：“排泄口（Discharges）”是穿过船侧的管道系统，用于输送舭部污水、循环污水、排水等；“深舱（Deep Tank）”是从船底或内船底向上延伸至或高于最低层甲板的液舱。",
+        "问题：请解释船舶专业术语“舱底水系统”的含义，并给出其英文术语。\n答案：“舱底水系统”的英文术语是 bilgesystem。其定义为：将舱底积水和意外进水排除的系统。注：由泵、附件及管路等组成。",
+        "问题：“长艏楼船（long forecastle ship）”与“长艉楼船（long poop ship）”有什么区别？\n答案：长艏楼船（long forecastle ship）是艏楼长度大于0.15倍船长，且不小于艏楼高度6倍的船；长艉楼船（long poop ship）是艉楼长度大于0.15倍船长，且不小于艉楼高度6倍的船。",
+        "问题：根据BWM.2/Circ.82，在压载舱临时储存灰水或经处理生活污水期间，压载舱应如何重新定义并与压载系统如何处理？\n答案：压载舱应临时重新定义为灰水/经处理的生活污水储存舱，并应与压载系统断开并隔离。"
+      ],
+      "ground_truth": "'排泄口（Discharges）'是穿过船侧的管道系统，用于输送舭部污水、循环污水、排水等；'深舱（Deep Tank）'是从船底或内船底向上延伸至或高于最低层甲板的液舱。",
+      "question_id": 12,
+      "question_type": "cross_doc_compare",
+      "target_docs": [
+        "术语类120个随机问题评分"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "术语类120个随机问题评分_r0011_c0009",
+          "content": "问题：“排泄口（Discharges）”与“深舱（Deep Tank）”有什么区别？\n答案：“排泄口（Discharges）”是穿过船侧的管道系统，用于输送舭部污水、循环污水、排水等；“深舱（Deep Tank）”是从船底或内船底向上延伸至或高于最低层甲板的液舱。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "82号建议案验船师术语表",
+          "row_num": 11,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "82号建议案验船师术语表"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 60.34446466624618,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0042_c0040",
+          "content": "问题：请解释船舶专业术语“舱底水系统”的含义，并给出其英文术语。\n答案：“舱底水系统”的英文术语是 bilgesystem。其定义为：将舱底积水和意外进水排除的系统。注：由泵、附件及管路等组成。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 42,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.5859962701797485,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0057_c0055",
+          "content": "问题：“长艏楼船（long forecastle ship）”与“长艉楼船（long poop ship）”有什么区别？\n答案：长艏楼船（long forecastle ship）是艏楼长度大于0.15倍船长，且不小于艏楼高度6倍的船；长艉楼船（long poop ship）是艉楼长度大于0.15倍船长，且不小于艉楼高度6倍的船。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 57,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 18.088373450509472,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "问答对_r0068_c0066",
+          "content": "问题：根据BWM.2/Circ.82，在压载舱临时储存灰水或经处理生活污水期间，压载舱应如何重新定义并与压载系统如何处理？\n答案：压载舱应临时重新定义为灰水/经处理的生活污水储存舱，并应与压载系统断开并隔离。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 68,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.5748079419136047,
+          "rrf_score": 0.015873015873015872
+        }
+      ]
+    },
+    {
+      "question": "请区分'航向自动稳定性'和'航向控制稳定性'。",
+      "answer": "“航向自动稳定性”是指船舶作直线航行时，受到风浪流等外界小扰动作用而偏离航向，当此扰动力去除后，船舶能够**自动回到原来的航向**的性能[1]；  \n“航向控制稳定性”是指船舶作直线航行时，受到风浪流等外界小扰动作用而偏离航向，当此扰动力去除后，船舶需**通过不断操舵或启用自动驾驶系统**才能保持原航向的性能[1]。\n\n二者核心区别在于：前者依赖船舶自身的水动力特性实现**无外力干预下的自动恢复**，属固有稳定性；后者依赖**人为或自动控制系统介入**（如操舵、自动舵）来维持航向，属受控稳定性。",
+      "contexts": [
+        "问题：“航向自动稳定性”和“航向控制稳定性”有什么区别？\n答案：“航向自动稳定性”是指船舶作直线航行时,受到风浪流等外界小扰动作用而偏离航向,当此扰动力去除后,船舶能够自动 回到原来的航向的性能；“航向控制稳定性”是指船舶作直线航行时,受到风浪流等外界小扰动作用而偏离航向,当此扰动力去除后,船舶通过不断 操舵或自动驾驶能够保持航向的性能。",
+        "问题：自动操舵仪根据什么信号控制舵机转动舵，且决议要求其能在多少秒内由自动舵转为手动舵？\n答案：根据罗经显示的船舶航向和规定的航向比较后所得的航向误差信号（即偏航信号）控制舵机转动舵；决议要求能在3秒内由自动舵转为手动舵。",
+        "问题：船舶稳性按船舶倾斜方向可分为哪两类，分别对应绕哪个轴倾斜时的稳性？\n答案：横稳性：船舶绕纵向轴（x轴）横倾时的稳性；纵稳性：船舶绕横向轴（y轴）纵倾时的稳性。",
+        "问题：请区分“闭门器”和“门碰柱”的用途。\n答案：“闭门器”是安装于门扇顶上，使门扇在开启后能自动关闭，并有缓冲功能的装置；“门碰柱”是防止门开启时引起碰撞而安装的避碰装置。"
+      ],
+      "ground_truth": "'航向自动稳定性'是指船舶作直线航行时，受到风浪流等外界小扰动作用而偏离航向，当此扰动力去除后，船舶能够自动回到原来的航向的性能；'航向控制稳定性'是指船舶作直线航行时，受到风浪流等外界小扰动作用而偏离航向，当此扰动力去除后，船舶通过不断操舵或自动驾驶能够保持航向的性能。",
+      "question_id": 13,
+      "question_type": "cross_doc_compare",
+      "target_docs": [
+        "术语类120个随机问题评分"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "术语类120个随机问题评分_r0059_c0057",
+          "content": "问题：“航向自动稳定性”和“航向控制稳定性”有什么区别？\n答案：“航向自动稳定性”是指船舶作直线航行时,受到风浪流等外界小扰动作用而偏离航向,当此扰动力去除后,船舶能够自动 回到原来的航向的性能；“航向控制稳定性”是指船舶作直线航行时,受到风浪流等外界小扰动作用而偏离航向,当此扰动力去除后,船舶通过不断 操舵或自动驾驶能够保持航向的性能。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 59,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 47.94726399660486,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "问答对_r0216_c0214",
+          "content": "问题：自动操舵仪根据什么信号控制舵机转动舵，且决议要求其能在多少秒内由自动舵转为手动舵？\n答案：根据罗经显示的船舶航向和规定的航向比较后所得的航向误差信号（即偏航信号）控制舵机转动舵；决议要求能在3秒内由自动舵转为手动舵。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "电气检验1",
+          "row_num": 216,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "电气检验1"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 28.083316716365236,
+          "rrf_score": 0.03200204813108039
+        },
+        {
+          "chunk_id": "问答对_r0300_c0298",
+          "content": "问题：船舶稳性按船舶倾斜方向可分为哪两类，分别对应绕哪个轴倾斜时的稳性？\n答案：横稳性：船舶绕纵向轴（x轴）横倾时的稳性；纵稳性：船舶绕横向轴（y轴）纵倾时的稳性。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "船舶稳性-2025(周耀华)",
+          "row_num": 300,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "船舶稳性-2025(周耀华)"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.6047728061676025,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0092_c0090",
+          "content": "问题：请区分“闭门器”和“门碰柱”的用途。\n答案：“闭门器”是安装于门扇顶上，使门扇在开启后能自动关闭，并有缓冲功能的装置；“门碰柱”是防止门开启时引起碰撞而安装的避碰装置。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 92,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 11.244760596036334,
+          "rrf_score": 0.015873015873015872
+        }
+      ]
+    },
+    {
+      "question": "比较'海水长尺腐蚀试验'与'海水干湿交替腐蚀试验'的区别。",
+      "answer": "“海水长尺腐蚀试验”与“海水干湿交替腐蚀试验”的区别如下：\n\n- **海水长尺腐蚀试验**（long-scale corrosion test in seawater）[1]：  \n  利用长串电连接的材料及构件组成的长尺试验样品，研究**多区带海洋环境**（如全浸区、潮差区、飞溅区、大气区等）对其**整体腐蚀行为**的影响。该方法强调电偶效应、宏观电池作用及不同环境区带间的耦合腐蚀行为。\n\n- **海水干湿交替腐蚀试验**（alternating dry and wet test with seawater）[1]：  \n  将材料置于**周期性干湿交替的海水环境中**（模拟潮汐区、飞溅区等），通过规定时间的循环暴露，**检测材料的耐蚀性能**。其核心在于考察材料在润湿—干燥循环下的局部腐蚀（如点蚀、锈蚀扩展）和氧化膜稳定性。\n\n**主要区别**：  \n前者侧重于**长尺度电连接下多区带协同腐蚀机制研究**；后者侧重于**单一样品在动态干湿循环中的耐蚀性评估**[1]。",
+      "contexts": [
+        "问题：“海水长尺腐蚀试验”与“海水干湿交替腐蚀试验”有什么区别？\n答案：“海水长尺腐蚀试验”英文是 longscalecorrosiontestinseawater，定义为：利用长串电连接材料及构件组成的长尺试验样品,研究多区带海洋环境对其整体腐蚀行为影响的 试验方法。 “海水干湿交替腐蚀试验”英文是 alternatingdryandwettestwithseawater，定义为：材料在海水干湿交替环境下暴露一定时间,以检测其耐蚀性能的试验。 注:海水干湿交替环境包括潮汐区、飞溅区或其他模拟环境。两者区别在于：前者强调利用长串电连接的长尺试验样品，研究多区带海洋环境对整体腐蚀行为的影响；后者强调材料在海水干湿交替环境下暴露一定时间，以检测其耐蚀性能。",
+        "问题：“水力气动试验 / Hydropneumatic Testing”和“冲水试验 / Hose Testing”有什么区别？\n答案：水力气动试验是水压试验和空气试验的结合试验；冲水试验是“在没有进行结构(水静力)试验或泄漏试验的情况下，为证明结”。",
+        "问题：请解释船舶专业术语“应力腐蚀”是什么意思，并给出英文术语。\n答案：“应力腐蚀”的英文术语是 Stress Corrosion。其定义是：腐蚀性环境的拉力应力下区域的先腐蚀，单独的环境不会造。",
+        "问题：船用金属材料的抗拉强度、屈服强度、伸长率以及断面收缩率应通过哪种材料性能试验测定？\n答案：拉伸试验"
+      ],
+      "ground_truth": "'海水长尺腐蚀试验'是利用长串电连接材料及构件组成的长尺试验样品，研究多区带海洋环境对其整体腐蚀行为影响的试验方法；'海水干湿交替腐蚀试验'是材料在海水干湿交替环境下暴露一定时间，以检测其耐蚀性能的试验。",
+      "question_id": 14,
+      "question_type": "cross_doc_compare",
+      "target_docs": [
+        "术语类120个随机问题评分"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "术语类120个随机问题评分_r0085_c0083",
+          "content": "问题：“海水长尺腐蚀试验”与“海水干湿交替腐蚀试验”有什么区别？\n答案：“海水长尺腐蚀试验”英文是 longscalecorrosiontestinseawater，定义为：利用长串电连接材料及构件组成的长尺试验样品,研究多区带海洋环境对其整体腐蚀行为影响的 试验方法。 “海水干湿交替腐蚀试验”英文是 alternatingdryandwettestwithseawater，定义为：材料在海水干湿交替环境下暴露一定时间,以检测其耐蚀性能的试验。 注:海水干湿交替环境包括潮汐区、飞溅区或其他模拟环境。两者区别在于：前者强调利用长串电连接的长尺试验样品，研究多区带海洋环境对整体腐蚀行为的影响；后者强调材料在海水干湿交替环境下暴露一定时间，以检测其耐蚀性能。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 85,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 65.67244981770261,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0023_c0021",
+          "content": "问题：“水力气动试验 / Hydropneumatic Testing”和“冲水试验 / Hose Testing”有什么区别？\n答案：水力气动试验是水压试验和空气试验的结合试验；冲水试验是“在没有进行结构(水静力)试验或泄漏试验的情况下，为证明结”。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "82号建议案验船师术语表",
+          "row_num": 23,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "82号建议案验船师术语表"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 14.042550745455944,
+          "rrf_score": 0.031754032258064516
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0015_c0013",
+          "content": "问题：请解释船舶专业术语“应力腐蚀”是什么意思，并给出英文术语。\n答案：“应力腐蚀”的英文术语是 Stress Corrosion。其定义是：腐蚀性环境的拉力应力下区域的先腐蚀，单独的环境不会造。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "82号建议案验船师术语表",
+          "row_num": 15,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "82号建议案验船师术语表"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 20.272013498202686,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "问答对_r0002_c0000",
+          "content": "问题：船用金属材料的抗拉强度、屈服强度、伸长率以及断面收缩率应通过哪种材料性能试验测定？\n答案：拉伸试验",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "01 材料与焊接（船用金属材料检验）（张强）",
+          "row_num": 2,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "01 材料与焊接（船用金属材料检验）（张强）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.5678228139877319,
+          "rrf_score": 0.015873015873015872
+        }
+      ]
+    },
+    {
+      "question": "MARPOL公约中，油类记录簿第I部分和第II部分分别适用于哪些船舶，保存时间分别是多长？",
+      "answer": "根据参考资料：\n\n- **油类记录簿第I部分**适用于：  \n  任何150总吨及以上的油轮（oil tanker）和400总吨及以上的其他船舶，用于记录机舱作业[2]；  \n  保存时间为**3年**[1]。\n\n- **油类记录簿第II部分**适用于：  \n  150总吨及以上的油轮，用于记录货油和压载作业[2]；  \n  保存时间同样为**3年**[1]。",
+      "contexts": [
+        "问题：船上电子记录簿使用时，油类记录簿第I和II部分、货物记录簿、垃圾记录簿第I和II部分分别要求保存多长时间？\n答案：油类记录簿第I和II部分：3年；货物记录簿：3年；垃圾记录簿第I和II部分：2年",
+        "问题：油类记录簿第I部分适用于哪些船舶记录机舱作业，第II部分适用于哪些船舶记录货油和压载作业？\n答案：任何150总吨及以上的油轮和400总吨及以上的其他船舶应使用油类记录簿第I部分记录有关机舱的作业；150总吨及以上的油轮还应使用油类记录簿第II部分记录货油和压载作业。",
+        "问题：非油船设有用于装载散装油类的货物处所且散装油类总容量≥200m³时，应满足MARPOL Annex I哪些条款要求？\n答案：第16条（油类与压载水的分隔和首尖舱内载油）\n第26.4条（货油舱的尺度限制和布置）\n第29条（污油水舱）\n第30条（泵吸、管路和排放布置）\n第31条（排油监控系统）\n第32条（油/水界面探测器）\n第34条（排油的控制）\n第36条（《油类记录簿》第II部分）",
+        "问题：根据MARPOL Annex I，Form COP适用于哪些总吨位条件的油船和其他船舶？\n答案：GT≥150的油船和GT≥400的其他船舶"
+      ],
+      "ground_truth": "油类记录簿第I部分适用于任何150总吨及以上的油轮和400总吨及以上的其他船舶，记录有关机舱的作业，保存3年；第II部分适用于150总吨及以上的油轮，记录货油和压载作业，保存3年。",
+      "question_id": 15,
+      "question_type": "time_trend",
+      "target_docs": [
+        "问答对"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0064_c0062",
+          "content": "问题：船上电子记录簿使用时，油类记录簿第I和II部分、货物记录簿、垃圾记录簿第I和II部分分别要求保存多长时间？\n答案：油类记录簿第I和II部分：3年；货物记录簿：3年；垃圾记录簿第I和II部分：2年",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 64,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 66.81779600522887,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "问答对_r0063_c0061",
+          "content": "问题：油类记录簿第I部分适用于哪些船舶记录机舱作业，第II部分适用于哪些船舶记录货油和压载作业？\n答案：任何150总吨及以上的油轮和400总吨及以上的其他船舶应使用油类记录簿第I部分记录有关机舱的作业；150总吨及以上的油轮还应使用油类记录簿第II部分记录货油和压载作业。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 63,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 61.03844441399583,
+          "rrf_score": 0.03225806451612903
+        },
+        {
+          "chunk_id": "问答对_r0065_c0063",
+          "content": "问题：非油船设有用于装载散装油类的货物处所且散装油类总容量≥200m³时，应满足MARPOL Annex I哪些条款要求？\n答案：第16条（油类与压载水的分隔和首尖舱内载油）\n第26.4条（货油舱的尺度限制和布置）\n第29条（污油水舱）\n第30条（泵吸、管路和排放布置）\n第31条（排油监控系统）\n第32条（油/水界面探测器）\n第34条（排油的控制）\n第36条（《油类记录簿》第II部分）",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 65,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 36.191413200476205,
+          "rrf_score": 0.031746031746031744
+        },
+        {
+          "chunk_id": "问答对_r0057_c0055",
+          "content": "问题：根据MARPOL Annex I，Form COP适用于哪些总吨位条件的油船和其他船舶？\n答案：GT≥150的油船和GT≥400的其他船舶",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 57,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 24.844813660042046,
+          "rrf_score": 0.03125
+        }
+      ]
+    },
+    {
+      "question": "根据MARPOL Annex IV，未经处理生活污水集污舱容量确定时，当航行时间超过24小时，应按每人每昼夜多少升计算？",
+      "answer": "根据MARPOL Annex IV，未经处理生活污水集污舱容量确定时，当航行时间超过24小时，应按每人每昼夜70升计算[1]。",
+      "contexts": [
+        "问题：未经处理生活污水集污舱容量确定时，当航行时间超过24小时，应按每人每昼夜多少升计算？\n答案：70L",
+        "问题：MARPOL Annex IV中未经处理生活污水集污舱最大允许排放速率DRmax的计算公式是什么，各参数含义是什么？\n答案：DRmax = 0.00926 VxDx B\n\nDrmax--- 最大允许排放速率(m3/h)\nV --- 船舶在该段时间的平均速度(节)\nD --- 吃水(m)\nB --- 船宽(m)",
+        "问题：MARPOL Annex V中，垃圾管理计划适用于哪些非极地航行船舶及平台？\n答案：非极地航行100总吨及以上的船舶和核准载运15人或以上的船舶以及固定或浮动平台",
+        "问题：根据BWM.2/Circ.82，在压载舱临时储存灰水或经处理生活污水期间，压载舱应如何重新定义并与压载系统如何处理？\n答案：压载舱应临时重新定义为灰水/经处理的生活污水储存舱，并应与压载系统断开并隔离。"
+      ],
+      "ground_truth": "70L。",
+      "question_id": 16,
+      "question_type": "time_trend",
+      "target_docs": [
+        "问答对"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0067_c0065",
+          "content": "问题：未经处理生活污水集污舱容量确定时，当航行时间超过24小时，应按每人每昼夜多少升计算？\n答案：70L",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 67,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 107.83114829647533,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "问答对_r0066_c0064",
+          "content": "问题：MARPOL Annex IV中未经处理生活污水集污舱最大允许排放速率DRmax的计算公式是什么，各参数含义是什么？\n答案：DRmax = 0.00926 VxDx B\n\nDrmax--- 最大允许排放速率(m3/h)\nV --- 船舶在该段时间的平均速度(节)\nD --- 吃水(m)\nB --- 船宽(m)",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 66,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 34.14066991276459,
+          "rrf_score": 0.031754032258064516
+        },
+        {
+          "chunk_id": "问答对_r0069_c0067",
+          "content": "问题：MARPOL Annex V中，垃圾管理计划适用于哪些非极地航行船舶及平台？\n答案：非极地航行100总吨及以上的船舶和核准载运15人或以上的船舶以及固定或浮动平台",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 69,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 21.321782153156725,
+          "rrf_score": 0.03128054740957967
+        },
+        {
+          "chunk_id": "问答对_r0068_c0066",
+          "content": "问题：根据BWM.2/Circ.82，在压载舱临时储存灰水或经处理生活污水期间，压载舱应如何重新定义并与压载系统如何处理？\n答案：压载舱应临时重新定义为灰水/经处理的生活污水储存舱，并应与压载系统断开并隔离。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 68,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 28.817784449113432,
+          "rrf_score": 0.03125763125763126
+        }
+      ]
+    },
+    {
+      "question": "MARPOL Annex VI规定，船上使用燃油的硫含量在特殊区域不得超过多少？",
+      "answer": "MARPOL Annex VI规定，船上使用燃油的硫含量在特殊区域不得超过0.1%[1]。",
+      "contexts": [
+        "问题：MARPOL Annex VI规定，船上使用燃油的硫含量在特殊区域不得超过多少？\n答案：0.1%",
+        "问题：根据MARPOL Annex I，Form COP适用于哪些总吨位条件的油船和其他船舶？\n答案：GT≥150的油船和GT≥400的其他船舶",
+        "问题：MEPC.1/Circ.864/Rev.1中，在用燃油硫含量验证的取样位置应位于哪里，并应尽可能靠近什么设备？\n答案：取样位置位于在用燃油日用柜下游，并应尽可能靠近燃油燃烧机械设备。",
+        "问题：MARPOL Annex V中，垃圾管理计划适用于哪些非极地航行船舶及平台？\n答案：非极地航行100总吨及以上的船舶和核准载运15人或以上的船舶以及固定或浮动平台"
+      ],
+      "ground_truth": "0.1%。",
+      "question_id": 17,
+      "question_type": "time_trend",
+      "target_docs": [
+        "问答对"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0070_c0068",
+          "content": "问题：MARPOL Annex VI规定，船上使用燃油的硫含量在特殊区域不得超过多少？\n答案：0.1%",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 70,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 71.10625047893974,
+          "rrf_score": 0.03278688524590164
+        },
+        {
+          "chunk_id": "问答对_r0057_c0055",
+          "content": "问题：根据MARPOL Annex I，Form COP适用于哪些总吨位条件的油船和其他船舶？\n答案：GT≥150的油船和GT≥400的其他船舶",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 57,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 17.374959869961934,
+          "rrf_score": 0.031746031746031744
+        },
+        {
+          "chunk_id": "问答对_r0071_c0069",
+          "content": "问题：MEPC.1/Circ.864/Rev.1中，在用燃油硫含量验证的取样位置应位于哪里，并应尽可能靠近什么设备？\n答案：取样位置位于在用燃油日用柜下游，并应尽可能靠近燃油燃烧机械设备。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 71,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 18.564470360631045,
+          "rrf_score": 0.0315136476426799
+        },
+        {
+          "chunk_id": "问答对_r0069_c0067",
+          "content": "问题：MARPOL Annex V中，垃圾管理计划适用于哪些非极地航行船舶及平台？\n答案：非极地航行100总吨及以上的船舶和核准载运15人或以上的船舶以及固定或浮动平台",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 69,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 15.342221332476164,
+          "rrf_score": 0.03055037313432836
+        }
+      ]
+    },
+    {
+      "question": "目前贵州茅台的股价是多少？",
+      "answer": "根据提供的资料无法回答此问题。",
+      "contexts": [
+        "问题：500总吨及以上化学品船货泵舱可燃气体探测系统在易燃蒸气浓度达到不高于可燃气体爆炸下限多少时，应自动激发连续声光报警？\n答案：10%",
+        "问题：CCS海船入级规范体系覆盖的船舶类型中，片段列举的液化天然气运输船（LNG）的舱容是多少立方米？\n答案：174000m3",
+        "问题：荔湾3-1深水气田开发项目中，荔湾3-1气田水下生产设施的水深范围是多少？\n答案：1350m至1500m",
+        "问题：转塔式单点系泊适用的水深范围是多少？\n答案：80米~1500米"
+      ],
+      "ground_truth": "此题应拒绝回答。术语知识库不包含股价信息。",
+      "question_id": 18,
+      "question_type": "should_refuse",
+      "target_docs": [],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0155_c0153",
+          "content": "问题：500总吨及以上化学品船货泵舱可燃气体探测系统在易燃蒸气浓度达到不高于可燃气体爆炸下限多少时，应自动激发连续声光报警？\n答案：10%",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "散装危险化学品运输[钱建魁]",
+          "row_num": 155,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "散装危险化学品运输[钱建魁]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.44774866104125977,
+          "rrf_score": 0.01639344262295082
+        },
+        {
+          "chunk_id": "问答对_r0244_c0242",
+          "content": "问题：CCS海船入级规范体系覆盖的船舶类型中，片段列举的液化天然气运输船（LNG）的舱容是多少立方米？\n答案：174000m3",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "船级社与入级概论[杨志勇]",
+          "row_num": 244,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "船级社与入级概论[杨志勇]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 5.818462610774443,
+          "rrf_score": 0.01639344262295082
+        },
+        {
+          "chunk_id": "问答对_r0089_c0087",
+          "content": "问题：荔湾3-1深水气田开发项目中，荔湾3-1气田水下生产设施的水深范围是多少？\n答案：1350m至1500m",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "3-2025年P级班-海工概论（郑南）",
+          "row_num": 89,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "3-2025年P级班-海工概论（郑南）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.4397140145301819,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "问答对_r0175_c0173",
+          "content": "问题：转塔式单点系泊适用的水深范围是多少？\n答案：80米~1500米",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "海工概论[郑南]",
+          "row_num": 175,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "海工概论[郑南]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 5.721310626105863,
+          "rrf_score": 0.016129032258064516
+        }
+      ]
+    },
+    {
+      "question": "请告诉我今天上海的天气怎么样？",
+      "answer": "根据提供的参考资料，无法回答关于“今天上海天气”的问题。所有参考资料均未涉及气象信息或天气相关内容。",
+      "contexts": [
+        "问题：化学品船货物操作期间经常进入的货泵舱机械通风系统，应具有每小时不小于多少次的空气交换能力；对于IBC规则15.17要求的某些货物，通风率应增加到每小时多少次？\n答案：30次；45次",
+        "问题：在船舶现场沟通中，如果验船师说“请确认 marinewaterboiler 的用途”，这里所指的中文术语是什么？它的定义是什么？\n答案：这里所指的中文术语是“船用开水器”。其定义是：船上用于烧开水的设备。",
+        "问题：未经处理生活污水集污舱容量确定时，当航行时间超过24小时，应按每人每昼夜多少升计算？\n答案：70L",
+        "问题：中国船级社“内控B级”文件可以通过哪些系统或方式办理和传递，且禁止通过哪种方式拍照、传递、存储？\n答案：可在我社内网办公或业务系统（OA、MIS）办理，加密并脱密存储在互联网工作计算机或通过我社工作邮箱传递；不得通过微信拍照、传递、存储等。"
+      ],
+      "ground_truth": "此题应拒绝回答。术语知识库不包含天气信息。",
+      "question_id": 19,
+      "question_type": "should_refuse",
+      "target_docs": [],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0156_c0154",
+          "content": "问题：化学品船货物操作期间经常进入的货泵舱机械通风系统，应具有每小时不小于多少次的空气交换能力；对于IBC规则15.17要求的某些货物，通风率应增加到每小时多少次？\n答案：30次；45次",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "散装危险化学品运输[钱建魁]",
+          "row_num": 156,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "散装危险化学品运输[钱建魁]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.45228734612464905,
+          "rrf_score": 0.01639344262295082
+        },
+        {
+          "chunk_id": "术语类120个随机问题评分_r0072_c0070",
+          "content": "问题：在船舶现场沟通中，如果验船师说“请确认 marinewaterboiler 的用途”，这里所指的中文术语是什么？它的定义是什么？\n答案：这里所指的中文术语是“船用开水器”。其定义是：船上用于烧开水的设备。",
+          "source_file": "术语类120个随机问题评分.csv",
+          "category": "术语类",
+          "doc_source": "GBT+7727-2025 船舶通用术语（国标）",
+          "row_num": 72,
+          "block_type": "qa_pair",
+          "section_path": [
+            "术语类",
+            "GBT+7727-2025 船舶通用术语（国标）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 6.183524982247358,
+          "rrf_score": 0.01639344262295082
+        },
+        {
+          "chunk_id": "问答对_r0067_c0065",
+          "content": "问题：未经处理生活污水集污舱容量确定时，当航行时间超过24小时，应按每人每昼夜多少升计算？\n答案：70L",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "2. MARPOL公约检验及案例",
+          "row_num": 67,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "2. MARPOL公约检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.4327493906021118,
+          "rrf_score": 0.016129032258064516
+        },
+        {
+          "chunk_id": "问答对_r0230_c0228",
+          "content": "问题：中国船级社“内控B级”文件可以通过哪些系统或方式办理和传递，且禁止通过哪种方式拍照、传递、存储？\n答案：可在我社内网办公或业务系统（OA、MIS）办理，加密并脱密存储在互联网工作计算机或通过我社工作邮箱传递；不得通过微信拍照、传递、存储等。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "职业责任和从业要求、BM要求 （庄琳璐）",
+          "row_num": 230,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "职业责任和从业要求、BM要求 （庄琳璐）"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 5.7435721693096315,
+          "rrf_score": 0.016129032258064516
+        }
+      ]
+    },
+    {
+      "question": "船舶检验行业未来的发展趋势是什么？",
+      "answer": "根据提供的参考资料，其中未涉及“船舶检验行业未来的发展趋势”的相关内容。所有条目均聚焦于船舶检验的定义、时间要求、标准化定位及检验种类等现行规定或基础概念，未提及发展趋势、技术演进、数字化转型、绿色检验或智能化方向等前瞻性内容。\n\n因此，**根据提供的资料无法回答此问题**。",
+      "contexts": [
+        "问题：船舶检验的定义是什么，包括哪些主要工作和结果？\n答案：船舶检验系指船舶检验机构对船舶进行审图和检验，并签发相应证书或证明的过程。主要工作包括审图和检验，结果是签发相应证书或证明。",
+        "问题：根据年度检验要求，所有船舶的年度检验应在初次入级检验日期或上次特别检验日期的每周年日前后多长时间内进行？\n答案：3个月内",
+        "问题：API RP 2A在海洋工程标准化体系中的定位包括哪四个方面？\n答案：海洋工程标准化的起点\nAPI 2系列规范的核心\n行业认知的集中体现\nISO等固定式钢结构规范的母本",
+        "问题：建造后检验机制包括船体、机械设备和电气装置的哪些检验种类？\n答案：年度检验、中间检验、特别/换证检验、船底外部及有关项目检验、螺旋桨轴与尾管轴检验、锅炉检验、附加标志检验。"
+      ],
+      "ground_truth": "此题应拒绝回答或仅基于已有资料回答。术语知识库不包含未来预测信息。",
+      "question_id": 20,
+      "question_type": "should_refuse",
+      "target_docs": [],
+      "retrieved": [
+        {
+          "chunk_id": "问答对_r0237_c0235",
+          "content": "问题：船舶检验的定义是什么，包括哪些主要工作和结果？\n答案：船舶检验系指船舶检验机构对船舶进行审图和检验，并签发相应证书或证明的过程。主要工作包括审图和检验，结果是签发相应证书或证明。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "船级社与入级概论[杨志勇]",
+          "row_num": 237,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "船级社与入级概论[杨志勇]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 9.153932067365599,
+          "rrf_score": 0.03252247488101534
+        },
+        {
+          "chunk_id": "问答对_r0048_c0046",
+          "content": "问题：根据年度检验要求，所有船舶的年度检验应在初次入级检验日期或上次特别检验日期的每周年日前后多长时间内进行？\n答案：3个月内",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "1.2 船舶管系与动力装置营运检验及案例",
+          "row_num": 48,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "1.2 船舶管系与动力装置营运检验及案例"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 7.17966523786012,
+          "rrf_score": 0.030621785881252923
+        },
+        {
+          "chunk_id": "问答对_r0189_c0187",
+          "content": "问题：API RP 2A在海洋工程标准化体系中的定位包括哪四个方面？\n答案：海洋工程标准化的起点\nAPI 2系列规范的核心\n行业认知的集中体现\nISO等固定式钢结构规范的母本",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "海工概论[郑南]",
+          "row_num": 189,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "海工概论[郑南]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "bm25_score": 9.258017293437831,
+          "rrf_score": 0.01639344262295082
+        },
+        {
+          "chunk_id": "问答对_r0246_c0244",
+          "content": "问题：建造后检验机制包括船体、机械设备和电气装置的哪些检验种类？\n答案：年度检验、中间检验、特别/换证检验、船底外部及有关项目检验、螺旋桨轴与尾管轴检验、锅炉检验、附加标志检验。",
+          "source_file": "问答对.csv",
+          "category": "问答类",
+          "doc_source": "船级社与入级概论[杨志勇]",
+          "row_num": 246,
+          "block_type": "qa_pair",
+          "section_path": [
+            "问答类",
+            "船级社与入级概论[杨志勇]"
+          ],
+          "strategy": "semantic",
+          "parent_content": "",
+          "parent_id": "",
+          "vec_score": 0.577309787273407,
+          "rrf_score": 0.015873015873015872
+        }
+      ]
+    }
+  ]
+}

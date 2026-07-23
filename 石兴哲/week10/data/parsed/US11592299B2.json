@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "patent_id": "US11592299B2",
+    "title": "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+    "assignee": "Woods Hole Oceanographic Institution",
+    "patent_office": "USPTO (美国)",
+    "publication_date": "2023-06-15",
+    "inventors": [
+      "James C. Kinsey",
+      "Dana R. Yoerger",
+      "Michael V. Jakuba"
+    ]
+  },
+  "source": "US11592299B2",
+  "blocks": [
+    {
+      "block_type": "title",
+      "content": "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "abstract",
+      "content": "An underwater navigation system for autonomous underwater vehicles (AUVs) that integrates Doppler Velocity Log (DVL) measurements with an inertial navigation system (INS) to provide continuous dead-reckoning position estimates. An acoustic positioning system provides periodic absolute position corrections via a Long Baseline (LBL) array. A Kalman filter fuses the three sensor streams, applying adaptive noise covariance estimation based on water current variability and seafloor terrain roughness detected by the DVL bottom-tracking mode. The system automatically switches between bottom-track and water-track DVL modes depending on vehicle altitude, and falls back to pure inertial navigation during DVL dropout events.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "摘要"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Autonomous Underwater Vehicles (AUVs) operate in GPS-denied environments where traditional satellite-based navigation is unavailable. The primary navigation method for AUVs is dead-reckoning using an Inertial Navigation System (INS) combined with a Doppler Velocity Log (DVL). However, INS systems accumulate drift errors over time—a typical navigation-grade INS may drift 0.1-0.5 nautical miles per hour. DVL bottom-tracking provides velocity relative to the seafloor, correcting part of this drift, but DVL lock can be lost when the vehicle operates at high altitude or over soft sediments that absorb acoustic energy.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "BACKGROUND OF THE INVENTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "Acoustic positioning systems such as Long Baseline (LBL) and Ultra-Short Baseline (USBL) provide absolute position fixes independent of INS drift, but they require pre-deployed infrastructure (LBL) or a surface vessel (USBL). The combination of INS, DVL, and acoustic positioning in a principled sensor fusion framework remains an active area of research and development.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "BACKGROUND OF THE INVENTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The present invention provides an underwater navigation system that integrates INS, DVL, and LBL acoustic positioning using an adaptive Kalman filter. The key innovation is the automatic adaptation of sensor noise models based on real-time environmental conditions: DVL bottom-track quality, seafloor roughness, acoustic channel conditions, and water current variability. This adaptive approach significantly outperforms fixed-covariance Kalman filters, particularly in challenging environments such as sloping terrain, thermocline crossings, and areas of high acoustic multipath.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "SUMMARY OF THE INVENTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The system consists of four primary components: (1) a navigation-grade fiber optic gyroscope (FOG) IMU providing 200 Hz acceleration and angular rate measurements; (2) a phased-array DVL operating at 300 kHz with bottom-track range up to 200 meters; (3) an LBL acoustic receiver with precision timing synchronized to a chip-scale atomic clock; and (4) an embedded processor running the adaptive Kalman filter at 10 Hz update rate.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The adaptive Kalman filter maintains a 15-element state vector including position, velocity, attitude, IMU biases, and water current estimates. The process model uses standard INS mechanization equations. Measurement updates arrive asynchronously: IMU at 200 Hz, DVL at 5 Hz, LBL position fixes at 0.1-0.5 Hz depending on range. The filter handles these asynchronous updates through sequential measurement processing, where each observation is processed in the order it arrives without time-alignment interpolation.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "The adaptive covariance mechanism monitors DVL correlation magnitude as an indicator of bottom-track quality. When correlation falls below a threshold of 0.6, the DVL measurement noise covariance is inflated by a factor proportional to (1 - correlation). Seafloor roughness is estimated from the spatial variance of DVL bottom-track range measurements over a sliding window. Acoustic ranging uncertainty is modeled as a function of estimated slant range and signal-to-noise ratio (SNR).",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "text",
+      "content": "During DVL dropout events (e.g., when the vehicle flies over a submarine canyon exceeding the DVL bottom-track range), the filter transitions to a water-track DVL mode if available, or falls back to pure INS propagation with proportionally growing covariance. When an LBL position fix arrives, the covariance is sharply reduced, bounding the accumulated dead-reckoning error.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "DETAILED DESCRIPTION"
+      ],
+      "claim_num": 0
+    },
+    {
+      "block_type": "claim",
+      "content": "An underwater navigation system comprising: an inertial measurement unit (IMU) configured to measure linear acceleration and angular velocity; a Doppler Velocity Log (DVL) configured to measure vehicle velocity relative to a seafloor in bottom-track mode and relative to a water column in water-track mode; an acoustic positioning receiver configured to receive signals from a seabed-deployed Long Baseline (LBL) array; and a Kalman filter processor configured to fuse IMU, DVL, and LBL measurements using an adaptive noise covariance matrix that varies based on DVL bottom-track quality indicators and acoustic ranging uncertainty estimates.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "权利要求"
+      ],
+      "claim_num": 1
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, wherein the Kalman filter processor automatically increases IMU measurement covariance when DVL bottom-track lock is lost, and decreases IMU measurement covariance when LBL position fixes are received.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "权利要求"
+      ],
+      "claim_num": 2
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, further comprising a water current estimation module that computes a water current vector by subtracting DVL bottom-track velocity from DVL water-track velocity.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "权利要求"
+      ],
+      "claim_num": 3
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, wherein the adaptive noise covariance matrix incorporates a seafloor roughness metric derived from DVL bottom-track intensity returns.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "权利要求"
+      ],
+      "claim_num": 4
+    },
+    {
+      "block_type": "claim",
+      "content": "A method for underwater navigation using the system of claim 1, comprising: initializing a position estimate using GPS at the surface; transitioning to dead-reckoning using IMU-DVL fusion upon submergence; applying LBL position corrections when available; and outputting a continuous position estimate with associated uncertainty bounds.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "权利要求"
+      ],
+      "claim_num": 5
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, further comprising a terrain-aided navigation (TAN) module that compares DVL-measured bathymetry against a preloaded digital elevation model to provide additional position constraints.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "权利要求"
+      ],
+      "claim_num": 6
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 6, wherein the TAN module is activated when the vehicle operates below 100 meters altitude and the seafloor exhibits bathymetric variation exceeding 2 meters RMS.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "权利要求"
+      ],
+      "claim_num": 7
+    },
+    {
+      "block_type": "claim",
+      "content": "The system of claim 1, wherein the DVL operates at a frequency of 300 kHz for shallow water operations and 75 kHz for deep water operations beyond 2000 meters depth.",
+      "page_num": 0,
+      "section_path": [
+        "Underwater Navigation System Integrating Doppler Velocity Log and Inertial Navigation with Acoustic Positioning Correction",
+        "权利要求"
+      ],
+      "claim_num": 8
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+[
+  {
+    "content": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "block_types": [
+        "title"
+      ],
+      "claim_num": 0,
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00000"
+  },
+  {
+    "content": "A subsea electric manipulator arm with series elastic actuators (SEA) in each joint provides inherent compliance for autonomous underwater manipulation tasks such as valve turning, connector mating, and sample collection. Each SEA incorporates a custom rotary spring element instrumented with strain gauges, enabling direct torque measurement and closed-loop impedance control at 1 kHz. A six-degree-of-freedom anthropomorphic arm configuration with a three-fingered underactuated gripper allows the system to adapt to positioning uncertainty without excessive contact forces. The entire manipulator is oil-compensated and rated for 6000-meter depth, with all electronics housed in a single 1-atmosphere canister integrated into the shoulder joint.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > 摘要",
+      "block_types": [
+        "abstract"
+      ],
+      "claim_num": 0,
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00001"
+  },
+  {
+    "content": "Most existing underwater manipulators are hydraulically actuated, which provides high force density but poor force control fidelity, oil leakage risks, and the requirement for a hydraulic power unit (HPU) that consumes significant vehicle payload and energy. Electrically actuated manipulators have recently become viable but typically rely on motor current as a proxy for torque sensing, which is inaccurate due to gear train friction. Autonomous underwater intervention—where the manipulator operates without real-time human teleoperation—requires precise force sensing and compliant behavior to safely interact with unknown environments without damaging equipment or the manipulator itself.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > BACKGROUND",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00002"
+  },
+  {
+    "content": "The present invention provides an all-electric underwater manipulator with series elastic actuators in every joint. The SEA architecture places a calibrated elastic element between the gear reducer output and the link, with torque computed directly from measured deflection via strain gauges. This enables closed-loop impedance control, where the manipulator can be commanded to behave as a programmable spring-damper system—soft and compliant for approach and contact, stiff and precise for valve turning or connector insertion.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > SUMMARY",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00003"
+  },
+  {
+    "content": "Each joint module contains a Maxon EC-i 40 motor with a 100:1 Harmonic Drive CSD-20-100 reducer, followed by a custom torsion spring machined from a single billet of Ti-6Al-4V ELI (Extra Low Interstitial) titanium alloy using wire EDM. The spring features an outer diameter of 68 mm, a length of 25 mm, and a stiffness of 280 Nm/rad. Four temperature-compensated semiconductor strain gauges are bonded to the spring flexures in a full Wheatstone bridge configuration, providing torque measurements with 0.01 Nm resolution at 1 kHz bandwidth after anti-aliasing filtering.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > DETAILED DESCRIPTION",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00004"
+  },
+  {
+    "content": "The impedance control algorithm runs on a real-time microcontroller (TI TMS320F28379D) with a 1 kHz servo loop. The controller implements a Cartesian impedance control law where the desired end-effector dynamics are specified as a mass-spring-damper system. Target stiffness can be modulated from 100 N/m (soft exploration) to 5000 N/m (stiff positioning). Contact forces are limited to 100 N through a virtual force threshold that triggers a protective reflexive behavior.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > DETAILED DESCRIPTION",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00005"
+  },
+  {
+    "content": "The entire arm is filled with MIDEL 7131 dielectric synthetic ester fluid and pressure-compensated to ambient via a rolling diaphragm bladder. This eliminates the need for heavy pressure housings around each joint and provides natural cooling and lubrication. All power and signal electronics reside in a single 1-atmosphere titanium canister (OD 140 mm, length 300 mm) rated to 6000 m, connected to the joints via oil-filled cables with wet-mateable connectors.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > DETAILED DESCRIPTION",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00006"
+  },
+  {
+    "content": "An underwater manipulator comprising: a base structure adapted for mounting to an underwater vehicle; a serial chain of at least five rotary joints connecting the base to an end effector, each rotary joint comprising a brushless DC motor driving through a harmonic drive reducer to a series elastic element, the elastic element comprising a machined titanium alloy torsion spring with integrated semiconductor strain gauges for torque sensing; and an impedance controller that modulates joint torque based on the difference between commanded and actual joint positions and velocities to achieve a desired mechanical impedance at the end effector.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 1,
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00007"
+  },
+  {
+    "content": "The manipulator of claim 1, wherein the impedance controller implements the control law: τ = K(q_d - q) + D(qdot_d - qdot) + τ_ff, where K and D are stiffness and damping matrices, q_d and q are desired and actual joint positions, and τ_ff is a feedforward torque for gravity and buoyancy compensation.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 2,
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00008"
+  },
+  {
+    "content": "The manipulator of claim 1, wherein the titanium alloy torsion spring has a stiffness of 200-400 Nm/rad and a maximum deflection of +/- 15 degrees.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 3,
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00009"
+  },
+  {
+    "content": "The manipulator of claim 1, wherein all joints and the end effector are pressure-compensated using a dielectric oil fill with a flexible bladder volume compensator, enabling operation at depths up to 6000 meters.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 4,
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00010"
+  },
+  {
+    "content": "The manipulator of claim 1, further comprising a three-fingered underactuated gripper having two degrees of actuation driving three fingers through a differential linkage mechanism, enabling the gripper to passively conform to objects of varying geometry.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 5,
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00011"
+  },
+  {
+    "content": "An autonomous intervention method comprising: positioning the underwater vehicle within reach of a target object; acquiring a point cloud of the target object using a scanning sonar; planning a grasp pose based on the point cloud; executing a guarded move approach under impedance control at reduced stiffness; detecting contact via joint torque threshold crossing; and executing a grasp while maintaining contact force below a predefined safety limit through active compliance.",
+    "metadata": {
+      "section": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 6,
+      "patent_id": "US11407115B2",
+      "title": "Compliant Underwater Manipulator with Series Elastic Actuators for Autonomous Intervention",
+      "assignee": "Oceaneering International Inc.",
+      "patent_office": "USPTO (美国)",
+      "strategy": "semantic",
+      "source_file": "US11407115B2.json"
+    },
+    "chunk_id": "US11407115B2_00012"
+  }
+]

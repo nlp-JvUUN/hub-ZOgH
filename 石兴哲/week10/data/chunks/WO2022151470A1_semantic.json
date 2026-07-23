@@ -1,0 +1,219 @@
+[
+  {
+    "content": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "block_types": [
+        "title"
+      ],
+      "claim_num": 0,
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00000"
+  },
+  {
+    "content": "An amphibious unmanned vehicle capable of operating both in air (as a quadrotor) and underwater (as a remotely operated submersible) with rapid transition between media. The vehicle features four independently tiltable rotor arms that fold from a horizontal flight configuration to a vertical underwater propulsion configuration in less than two seconds. Waterproof brushless motors drive dual-purpose propeller-impeller blades designed through CFD optimization to provide acceptable efficiency in both air (800 g/cm² disc loading) and water (20x higher density). A ballast tank system rapidly adjusts vehicle buoyancy during water entry and exit transitions. The vehicle body is constructed from injection-molded glass-fiber-reinforced polycarbonate with double O-ring seals at all joints, rated for 100-meter water depth.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > 摘要",
+      "block_types": [
+        "abstract"
+      ],
+      "claim_num": 0,
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00001"
+  },
+  {
+    "content": "There are scenarios where an unmanned vehicle benefits from operating in both air and underwater domains: inspecting the underwater portion of bridge piers and then flying to the next pier; surveying a coastline from the air and then diving to inspect a specific underwater feature; or deploying from a ship, flying to a target area, submerging to collect data, and then flying back. Existing solutions require two separate vehicles (aerial drone + underwater ROV) with an operator manually transferring between them. No practical amphibious drone exists due to the fundamental engineering conflicts: aerial propellers are large-diameter, low-pitch, high-RPM devices while underwater thrusters are small-diameter, high-pitch, low-RPM devices; aerial vehicles must be lightweight while underwater vehicles need ballast and pressure-resistant structures.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > BACKGROUND",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00002"
+  },
+  {
+    "content": "The present invention resolves these conflicts through four key innovations: (1) dual-medium propeller-impeller blades designed through multi-objective CFD optimization; (2) a rapid arm-folding mechanism that repurposes aerial lift motors as underwater thrusters by changing thrust vector orientation; (3) an active ballast system for buoyancy management during transitions; and (4) a lightweight waterproof body using glass-fiber-reinforced injection-molded thermoplastics instead of machined metal.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > SUMMARY",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00003"
+  },
+  {
+    "content": "The propellers are 228 mm (9 inch) diameter with a blended airfoil section that transitions from the NACA 4412 near the hub to a cavitation-resistant profile at the 75% radial station. In air, they operate at 5000-8000 RPM producing 1.2 kg thrust each. Underwater, RPM is limited to 800-1200 RPM through electronic speed controller reconfiguration, producing 0.15 kg thrust each. The lower thrust is compensated by the much higher drag of water—vehicle speed is 1.5 m/s in water vs 15 m/s in air.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > DETAILED DESCRIPTION",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00004"
+  },
+  {
+    "content": "The arm folding mechanism uses a nitinol (NiTi) shape memory alloy wire actuator. When heated by passing an electrical current (12V, 3A), the wire contracts by 4%, pulling a lever mechanism that rotates the arm from horizontal (0° tilt) to the underwater position (75° downward tilt). The transition completes in approximately 1.5 seconds. Cooling is passive; the arms lock in position via a spring-loaded detent mechanism that does not require continuous power.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > DETAILED DESCRIPTION",
+      "block_types": [
+        "text"
+      ],
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00005"
+  },
+  {
+    "content": "An amphibious unmanned vehicle comprising: a central waterproof body; four rotor arms pivotably attached to the body, each arm housing an electric motor driving a dual-medium propeller; an arm folding mechanism that rotates the arms between a horizontal configuration for aerial flight and downward-angled configuration for underwater propulsion; a buoyancy control system comprising a ballast tank with a water pump; and a flight controller that executes autonomous transition sequences between aerial and underwater operating modes.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 1,
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00006"
+  },
+  {
+    "content": "The vehicle of claim 1, wherein the dual-medium propeller blades have a cross-section characterized by a NACA 4412 profile for aerial efficiency and a modified NACA 66-206 profile at the tip region for underwater cavitation resistance.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 2,
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00007"
+  },
+  {
+    "content": "The vehicle of claim 1, wherein the arm folding mechanism uses a shape memory alloy actuator that completes the full transition from aerial to underwater configuration in under 2 seconds.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 3,
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00008"
+  },
+  {
+    "content": "The vehicle of claim 1, wherein the ballast tank has a volume of 500-800 mL and the water pump achieves full flooding or evacuation in under 5 seconds.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 4,
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00009"
+  },
+  {
+    "content": "The vehicle of claim 1, further comprising a surface detection sensor using an upward-facing time-of-flight optical sensor that detects the water-air interface during emergence.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 5,
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00010"
+  },
+  {
+    "content": "A transition method for the vehicle of claim 1, comprising: during water landing, detecting imminent water contact via the downward-facing time-of-flight sensor; reducing rotor speed to idle; flooding the ballast tank; folding arms from horizontal to underwater configuration; and activating underwater propulsion mode.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 6,
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00011"
+  },
+  {
+    "content": "The method of claim 6, further comprising during water exit: ascending to the surface using underwater propulsion; detecting the water-air interface; evacuating the ballast tank; unfolding arms to horizontal configuration; and activating aerial flight mode.",
+    "metadata": {
+      "section": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition > 权利要求",
+      "block_types": [
+        "claim"
+      ],
+      "claim_num": 7,
+      "patent_id": "WO2022151470A1",
+      "title": "Foldable Underwater Unmanned Aerial Vehicle with Amphibious Operation Capability and Rapid Water-Air Transition",
+      "assignee": "SZ DJI Technology Co., Ltd.",
+      "patent_office": "WIPO (PCT)",
+      "strategy": "semantic",
+      "source_file": "WO2022151470A1.json"
+    },
+    "chunk_id": "WO2022151470A1_00012"
+  }
+]

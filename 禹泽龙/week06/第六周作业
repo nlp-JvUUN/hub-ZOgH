@@ -1,0 +1,42 @@
+============================================================
+文本分类多路对比结果
+============================================================
+方法                          准确率        正确/总数       无法解析       耗时
+----------------------------------------------------------------------
+BERT cls                 0.5685   5685/10000          0    62.1s
+BERT mean                0.5660   5660/10000          0    65.0s
+BERT max                 0.5575   5575/10000          0    61.8s
+LLM zero-shot            0.3340   3340/10000       2671   611.7s
+LLM SFT LoRA             0.5733   5733/10000         60   593.1s
+LLM SFT Full           （SFT-Full checkpoint invalid）            -          -        -
+----------------------------------------------------------------------
+
+生成混淆矩阵...
+  混淆矩阵 → D:\badou_AI\AI\TEST\LLM\text_classification项目\outputs\features_all\confusion_matrix_BERT_cls.png
+  混淆矩阵 → D:\badou_AI\AI\TEST\LLM\text_classification项目\outputs\features_all\confusion_matrix_BERT_mean.png
+  混淆矩阵 → D:\badou_AI\AI\TEST\LLM\text_classification项目\outputs\features_all\confusion_matrix_BERT_max.png
+  混淆矩阵 → D:\badou_AI\AI\TEST\LLM\text_classification项目\outputs\features_all\confusion_matrix_LLM_zero-shot.png
+  混淆矩阵 → D:\badou_AI\AI\TEST\LLM\text_classification项目\outputs\features_all\confusion_matrix_LLM_SFT_LoRA.png
+
+结论：
+  最佳：LLM SFT LoRA（准确率 0.5733）
+  最差：LLM zero-shot（准确率 0.3340）
+  BERT cls 相比 zero-shot 提升：+0.2345（70.2%）
+  BERT mean 相比 zero-shot 提升：+0.2320（69.5%）
+  BERT max 相比 zero-shot 提升：+0.2235（66.9%）
+  LLM SFT LoRA 相比 zero-shot 提升：+0.2393（71.6%）
+
+
+
+============================================================
+Few-shot vs Zero-shot 对比结果
+============================================================
+  Zero-shot: 0.3340 (3340/10000)
+  Few-shot (2 shot): 0.3217 (3217/10000)
+  差值: -0.0123 (-3.7%)
+为什么 few-shot 没显著提升？
+模型已经很强：Qwen2-0.5B 在预训练中见过大量中文新闻，类别名本身已经够用
+示例质量有限：随机抽的30条示例可能引入噪声而非知识
+短标题信息少：新闻标题本身很短（10-20字），示例帮助有限
+prompt 变长反而增加解析难度：模型要从 1100 字里忽略无关内容专注分类
+真正有效的 few-shot 需要精心挑选最具代表性的示例，而不是随机抽。

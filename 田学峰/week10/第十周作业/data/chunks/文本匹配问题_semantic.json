@@ -1,0 +1,1982 @@
+[
+  {
+    "content": "| 文本匹配（Text Matching） 意图识别 · 语义检索 · 问答匹配 · 大模型应用 Part 1 业务场景 1.1 什么是文本匹配 定义：给定文本对 (A, B)，计算其语义相似度或判断相关性，输出相似分数或类别标签。 示例： 文本 A：\"今天天气不错\" 文本 B：\"天气真好啊\" 匹配模型输出：相似度 0.92 核心问题：语义是否等价 / 相关 / 蕴含？ 输出形式：相似分数（0~1）或分类标签（相似/不相似/矛盾） 核心地位：搜索、推荐、问答、对话系统的基础组件 新手解释 - \"蕴含\"：在自然语言推理（NLI）中，\"蕴含\"指文本A的语义可以推导出文本B的语义。 例如 A=\"他正在跑步\" 蕴含 B=\"他在运动\"，但 A 不蕴含 B=\"他在跑步机上跑\"。 1.2 主流业务场景 场景 文本 A 文本 B 示例 意图识别 用户输入 意图模板 \"帮我订机票\" → 订票意图 FAQ问答检索 用户提问 知识库问题 \"怎么退款\" → 退款FAQ 语义搜索 查询词 文档标题/正文 \"Python入门\" → 相关教程 NLI自然语言推理 前提句 假设句 \"猫在垫子上\" vs \"动物在休息\" 文本去重/聚类 文本 A 文本 B 新闻去重、评论聚类、相似问去重 新手解释 - 文本去重/聚类：当你有大量文本需要\"合并相同意思的\"时，就是文本去重。例如搜索 引擎中，用户问\"怎么退款\"和\"如何退钱\"本质是同一个问题，应该合并为一个FAQ条目而不是分别 回答。文本去重本质上也是两两做文本匹配，再根据相似度决定是否合并。 新手解释 - NLI（Natural Language Inference，自然语言推理）：判断两个句子之间的逻辑关 系，分为三类： 蕴含（Entailment）：A为真时B一定为真。例：A=\"小明在吃饭\" → B=\"小明在吃东西\" 矛盾（Contradiction）：A为真时B一定为假。例：A=\"小明在吃饭\" → B=\"小明在睡觉\" 中立（Neutral）：A为真时B可能真也可能假。例：A=\"小明在吃饭\" → B=\"小明在吃面条\" |\n| --- |\n|  |",
+    "metadata": {
+      "page_num": 1,
+      "section": "",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00000"
+  },
+  {
+    "content": "| 场景 | 文本 A | 文本 B | 示例 |\n| --- | --- | --- | --- |\n| 意图识别 | 用户输入 | 意图模板 | \"帮我订机票\" → 订票意图 |\n| FAQ问答检索 | 用户提问 | 知识库问题 | \"怎么退款\" → 退款FAQ |\n| 语义搜索 | 查询词 | 文档标题/正文 | \"Python入门\" → 相关教程 |\n| NLI自然语言推理 | 前提句 | 假设句 | \"猫在垫子上\" vs \"动物在休息\" |\n| 文本去重/聚类 | 文本 A | 文本 B | 新闻去重、评论聚类、相似问去重 |",
+    "metadata": {
+      "page_num": 1,
+      "section": "",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00001"
+  },
+  {
+    "content": "新手解释 - 文本去重/聚类：当你有大量文本需要\"合并相同意思的\"时，就是文本去重。例如搜索\n\n引擎中，用户问\"怎么退款\"和\"如何退钱\"本质是同一个问题，应该合并为一个FAQ条目而不是分别\n回答。文本去重本质上也是两两做文本匹配，再根据相似度决定是否合并。\n新手解释 - NLI（Natural Language Inference，自然语言推理）：判断两个句子之间的逻辑关\n系，分为三类：",
+    "metadata": {
+      "page_num": 1,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - 文本去重/聚类：当你有大量文本需要\"合并相同意思的\"时，就是文本去重。例如搜索",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00002"
+  },
+  {
+    "content": "蕴含（Entailment）：A为真时B一定为真。例：A=\"小明在吃饭\" → B=\"小明在吃东西\"\n\n矛盾（Contradiction）：A为真时B一定为假。例：A=\"小明在吃饭\" → B=\"小明在睡觉\"",
+    "metadata": {
+      "page_num": 1,
+      "section": "场景 > 文本 A > 文本 B > 蕴含（Entailment）：A为真时B一定为真。例：A=\"小明在吃饭\" → B=\"小明在吃东西\"",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00003"
+  },
+  {
+    "content": "| 候选集规模 | 典型场景 | 推荐方法 | 为什么 |\n| --- | --- | --- | --- |\n| 百级（<500） | 意图分类、小规 模FAQ | CrossEncoder 直接 精排 | 延迟可接受，精度优先 |\n| 千级（500~5,000） | 中等FAQ、文档 检索 | BiEncoder + CrossEncoder | 先粗排缩小范围再精排 |\n| 万级 （5,000~100,000） | 大FAQ、商品搜 索 | BiEncoder + FAISS （ANN） | 必须用向量检索，无法 逐对比较 |\n| 百万~亿级 | 搜索引擎、推荐 系统 | BiEncoder + FAISS + 精排 | 两阶段流水线是唯一可 行方案 |",
+    "metadata": {
+      "page_num": 2,
+      "section": "场景 > 文本 A > 文本 B > 中立（Neutral）：A为真时B可能真也可能假。例：A=\"小明在吃饭\" → B=\"小明在吃面条\"",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00004"
+  },
+  {
+    "content": "| 候选集大小 | 总耗时 | 能否接受 |\n| --- | --- | --- |\n| 100 | 1 秒 | 勉强 |\n| 1,000 | 10 秒 | 不可接受 |\n| 10,000 | 100 秒 | 完全不可接受 |\n| 1,000,000 | ~3 小时 | 不可能 |",
+    "metadata": {
+      "page_num": 2,
+      "section": "场景 > 文本 A > 文本 B > 中立（Neutral）：A为真时B可能真也可能假。例：A=\"小明在吃饭\" → B=\"小明在吃面条\"",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00005"
+  },
+  {
+    "content": "候选集就是在文本匹配任务中，需要与查询文本进行比对的所有目标文本的集合。简单说，就\n\n是\"你有一堆文本，用户来了一个查询，你要从这堆文本里找到最匹配的\"——这堆文本就是候选\n集。\n举例：假设你开发了一个智能客服FAQ系统，知识库里有 10,000 个标准问题。用户输入\"怎么退款\"，你",
+    "metadata": {
+      "page_num": 2,
+      "section": "场景 > 文本 A > 文本 B > 候选集就是在文本匹配任务中，需要与查询文本进行比对的所有目标文本的集合。简单说，就",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00006"
+  },
+  {
+    "content": "为什么候选集规模这么重要？\n\n假设单次 CrossEncoder 推理耗时 10ms：\n这就是为什么候选集越大，越需要 BiEncoder 做粗召回——先用向量检索把候选集从百万级缩小到百\n级，再用 CrossEncoder 精排。",
+    "metadata": {
+      "page_num": 2,
+      "section": "场景 > 文本 A > 文本 B > 为什么候选集规模这么重要？",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00007"
+  },
+  {
+    "content": "新手解释：编辑距离衡量的是两个字符串在\"字面\"上的差异，不理解语义。比如\"高兴\"和\"伤心\"编\n\n辑距离很小（只改一个字），但语义完全相反；而\"开心\"和\"高兴\"编辑距离大，但语义相同。因此\n编辑距离只适合拼写纠错等字面匹配场景。",
+    "metadata": {
+      "page_num": 3,
+      "section": "场景 > 文本 A > 文本 B > 新手解释：编辑距离衡量的是两个字符串在\"字面\"上的差异，不理解语义。比如\"高兴\"和\"伤心\"编",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00008"
+  },
+  {
+    "content": "逐步计算示例：\n\n假设有3篇文档：\nD1: \"深度学习 与 机器 学习\"（4个词）\nD2: \"深度学习 图像 识别\"（3个词）\nD3: \"统计 学习 理论\"（3个词）\n查询词：\"深度学习\"\n│  + FAISS      │   将候选集缩小到 100~200 条\n└──────┬───────┘\n│  候选集现在变成 100 条\n┌──────────────┐\n│ CrossEncoder  │ ← 精排：对 100 条候选逐一打分\n│               │   选出最终 Top-10\n└──────┬───────┘\n最终结果（Top-10）",
+    "metadata": {
+      "page_num": 3,
+      "section": "场景 > 文本 A > 文本 B > 逐步计算示例：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00009"
+  },
+  {
+    "content": "| 文档 | TF | df | IDF = log(3/df) | TF-IDF |\n| --- | --- | --- | --- | --- |\n| D1 | 1/4 = 0.25 | 2 | log(3/2) = 0.41 | 0.10 |\n| D2 | 1/3 ≈ 0.33 | 2 | log(3/2) = 0.41 | 0.14 |\n| D3 | 0/3 = 0.00 | — | — | 0.00 |",
+    "metadata": {
+      "page_num": 4,
+      "section": "场景 > 文本 A > 文本 B > 逐步计算示例：",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00010"
+  },
+  {
+    "content": "TF-IDF\n\nD1\n1/4 = 0.25\nlog(3/2) = 0.41\n0.10\nD2\n1/3 ≈ 0.33\nlog(3/2) = 0.41\n0.14\nD3\n0/3 = 0.00\n0.00\n对比词：\"统计\"（仅出现在D3）\nTF(D3) = 1/3 ≈ 0.33, df=1, IDF = log(3/1) = 1.10\nTF-IDF = 0.33 × 1.10 = 0.36（远高于\"深度学习\"！）",
+    "metadata": {
+      "page_num": 4,
+      "section": "场景 > 文本 A > 文本 B > TF-IDF",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00011"
+  },
+  {
+    "content": "参数含义：\n\nf(qi, d)：词qi在文档d中的词频\n|d| / avgdl：文档长度 / 语料平均长度\nk1 ∈ [1.2, 2.0]：TF饱和速度（推荐1.5）\nb ∈ [0, 1]：长度归一化强度（推荐0.75）",
+    "metadata": {
+      "page_num": 4,
+      "section": "场景 > 文本 A > 文本 B > 参数含义：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00012"
+  },
+  {
+    "content": "代码示例：\n\nfrom sklearn.feature_extraction.text import TfidfVectorizer\ndocs = [\"深度学习 与 机器 学习\", \"深度学习 图像 识别\", \"统计 学习 理论\"]\nvectorizer = TfidfVectorizer()\ntfidf_matrix = vectorizer.fit_transform(docs)\n# 计算两两余弦相似度\nfrom sklearn.metrics.pairwise import cosine_similarity\nsim = cosine_similarity(tfidf_matrix)\n# sim[i][j] = 文档i与文档j的TF-IDF余弦相似度\nBM25(q, d) = Σ IDF(qi) × [f(qi,d) × (k1+1)] / [f(qi,d) + k1 × (1-b + b ×\n|d|/avgdl)]",
+    "metadata": {
+      "page_num": 4,
+      "section": "场景 > 文本 A > 文本 B > 代码示例：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00013"
+  },
+  {
+    "content": "| 词 | 向量 |\n| --- | --- |\n| 今天 | [0.2, 0.5, 0.1] |\n| 天气 | [0.8, 0.3, 0.6] |\n| 不错 | [0.4, 0.7, 0.2] |",
+    "metadata": {
+      "page_num": 5,
+      "section": "场景 > 文本 A > 文本 B > 代码示例：",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00014"
+  },
+  {
+    "content": "2.1.4 Word2Vec / GloVe 均值向量\n\n将每个词映射为向量，然后对句子中所有词向量取平均，用余弦相似度比较。\n新手解释 - Word2Vec：Word2Vec 是一种将词语转化为数值向量的方法。核心思想：上下文相似",
+    "metadata": {
+      "page_num": 5,
+      "section": "场景 > 文本 A > 文本 B > 2.1.4 Word2Vec / GloVe 均值向量",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00015"
+  },
+  {
+    "content": "的词，语义也相似。例如\"国王\"和\"女王\"的向量很接近，因为它们经常出现在相似的上下文中。\n\n新手解释 - GloVe：GloVe（Global Vectors）是另一种词向量方法，基于全局词共现统计。与\nWord2Vec 从局部上下文窗口学习不同，GloVe 利用整个语料库中词与词共同出现的频率矩阵来\n学习。",
+    "metadata": {
+      "page_num": 5,
+      "section": "场景 > 文本 A > 文本 B > 的词，语义也相似。例如\"国王\"和\"女王\"的向量很接近，因为它们经常出现在相似的上下文中。",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00016"
+  },
+  {
+    "content": "Step 3：用余弦相似度比较两个句子\n\nfrom rank_bm25 import BM25Okapi\ncorpus = [doc.split() for doc in docs]  # 每条文档分词后的列表\nbm25 = BM25Okapi(corpus)\nscores = bm25.get_scores(query.split())  # 返回每条文档的相关性得分\n[0.2, 0.5, 0.1]\n[0.8, 0.3, 0.6]\n[0.4, 0.7, 0.2]\n─────────────────\n[1.4, 1.5, 0.9]   ← 逐位相加\n[1.4/3, 1.5/3, 0.9/3] = [0.47, 0.50, 0.30]",
+    "metadata": {
+      "page_num": 5,
+      "section": "场景 > 文本 A > 文本 B > Step 3：用余弦相似度比较两个句子",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00017"
+  },
+  {
+    "content": "| 方法 | 原理 | 优点 | 缺点 |\n| --- | --- | --- | --- |\n| 编辑距离 | 字符操作次数 | 简单快速 | 只看字面，不懂语义 |\n| TF-IDF | 词频×逆文档频率 | 考虑词的重要性 | 无语义理解 |\n| BM25 | 改进的TF-IDF | 搜索引擎标配 | 无语义理解 |\n| 词向量均值 | 词向量平均+余弦相似度 | 有一定语义能力 | 丢失词序信息 |",
+    "metadata": {
+      "page_num": 6,
+      "section": "场景 > 文本 A > 文本 B > Step 3：用余弦相似度比较两个句子",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00018"
+  },
+  {
+    "content": "| 词 | 上下文 | 含义 | Word2Vec 的问题 |\n| --- | --- | --- | --- |\n| \"苹果\" | \"我喜欢吃苹果\" | 水果 | 同一个向量，无法区分 |\n| \"苹果\" | \"苹果发布了新手机\" | 科技公司 | 同一个向量，无法区分 |\n| \"银行\" | \"我去银行取钱\" | 金融机构 | 同一个向量，无法区分 |\n| \"银行\" | \"河边的银行\" | 河岸 | 同一个向量，无法区分 |",
+    "metadata": {
+      "page_num": 6,
+      "section": "场景 > 文本 A > 文本 B > Step 3：用余弦相似度比较两个句子",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00019"
+  },
+  {
+    "content": "缺点\n\n编辑距离\n字符操作次数\n简单快速\n只看字面，不懂语义\nTF-IDF\n词频×逆文档频率\n考虑词的重要性\n无语义理解\nBM25\n改进的TF-IDF\n搜索引擎标配\n无语义理解\n词向量均值\n词向量平均+余弦相似度\n有一定语义能力\n丢失词序信息",
+    "metadata": {
+      "page_num": 6,
+      "section": "场景 > 文本 A > 文本 B > 缺点",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00020"
+  },
+  {
+    "content": "Word2Vec 的问题\n\n\"苹果\"\n\"我喜欢吃苹果\"\n水果\n同一个向量，无法区分\n\"苹果\"\n\"苹果发布了新手机\"\n科技公司\n同一个向量，无法区分\n\"银行\"\n\"我去银行取钱\"\n金融机构\n同一个向量，无法区分\n\"银行\"\n\"河边的银行\"\n河岸\n同一个向量，无法区分",
+    "metadata": {
+      "page_num": 6,
+      "section": "场景 > 文本 A > 文本 B > Word2Vec 的问题",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00021"
+  },
+  {
+    "content": "局限一：一词一义（无法处理多义词）\n\nWord2Vec 给每个词分配一个固定的向量，但在真实语言中，同一个词在不同上下文里意思完全不同：\n这就是 BERT 引入上下文相关编码的原因——同一个\"苹果\"，在不同句子里会得到不同的向量。\n句子A向量 = [0.47, 0.50, 0.30]\n句子B向量 = [0.52, 0.45, 0.35]\n余弦相似度 = (0.47×0.52 + 0.50×0.45 + 0.30×0.35)\n/ (√(0.47²+0.50²+0.30²) × √(0.52²+0.45²+0.35²))\n= 0.5744 / (0.745 × 0.771)\n= 0.5744 / 0.574\n≈ 0.999  ← 非常相似\nimport numpy as np\nfrom gensim.models import Word2Vec\ndef sent_vec(tokens, model):\n\"\"\"将句子所有词向量取平均，得到句子向量\"\"\"\nvecs = [model.wv[w] for w in tokens if w in model.wv]\nreturn np.mean(vecs, axis=0)  # axis=0 表示按列（每个维度）取平均\n# 示例\ntokens = [\"今天\", \"天气\", \"不错\"]\nsentence_vector = sent_vec(tokens, model)  # 形状: (300,) 即300维向量",
+    "metadata": {
+      "page_num": 6,
+      "section": "场景 > 文本 A > 文本 B > 局限一：一词一义（无法处理多义词）",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00022"
+  },
+  {
+    "content": "| 场景 | 输入 | OOV 词 | 后果 |\n| --- | --- | --- | --- |\n| 智能客 服 | \"我的 AirPods Pro 2 连不上\" | AirPods, Pro | 产品名全丢，无法匹配 FAQ |\n| 法律检 索 | \"《个人信息保护法》第13条\" | 个人信息保护法 | 法规名丢失，检索失败 |\n| 医疗问 答 | \"布洛芬和阿莫西林能一起吃 吗\" | 布洛芬, 阿莫西 林 | 药名全部 OOV，匹配无意 义 |\n| 金融风 控 | \"ETH 合约地址 ox7a25...\" | ETH, ox7a25... | 地址信息完全丢失 |",
+    "metadata": {
+      "page_num": 7,
+      "section": "场景 > 文本 A > 文本 B > 局限一：一词一义（无法处理多义词）",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00023"
+  },
+  {
+    "content": "| 方案 | 原理 | 例子 | 优缺点 |\n| --- | --- | --- | --- |\n| WordPiece / BPE （BERT 使用） | 拆成子 词 | Transformer → Transform + ##er | 无限词表，子词有语义 |\n| 字符级编码（ELMo 的 CNN） | 拆成字 母 | ChatGPT → C,h,a,t,G,P,T | 永远不 OOV，但语义弱 |\n| FastText（Word2Vec 改进版） | n-gram 子词 | apple → <ap,app,ppl,ple,le> | 可处理拼写错误，但仍 是静态向量 |",
+    "metadata": {
+      "page_num": 7,
+      "section": "场景 > 文本 A > 文本 B > 局限一：一词一义（无法处理多义词）",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00024"
+  },
+  {
+    "content": "后果\n\n智能客\n\"我的 AirPods Pro 2 连不上\"\nAirPods, Pro\n产品名全丢，无法匹配 FAQ\n法律检\n\"《个人信息保护法》第13条\"\n个人信息保护法\n法规名丢失，检索失败\n医疗问\n\"布洛芬和阿莫西林能一起吃\n吗\"\n布洛芬, 阿莫西\n药名全部 OOV，匹配无意\n金融风\n\"ETH 合约地址 ox7a25...\"\nETH, ox7a25...\n地址信息完全丢失",
+    "metadata": {
+      "page_num": 7,
+      "section": "场景 > 文本 A > 文本 B > 后果",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00025"
+  },
+  {
+    "content": "局限三：均值池化丢失词序和语义结构\n\n把句子所有词向量平均，等于把词序信息彻底丢弃：\n词表（训练时见过）          │  词表外（OOV）\n─────────────────────────  │  ─────────────\n我、你、苹果、银行、...     │  ChatGPT\n深度学习、自然语言、...     │  Transformer\n（共计 100 万个词）         │  元宇宙、NFT、Web3...\n│  拼写错误: recieve（应为receive）\n│  专有名词: 张三丰、特拉法尔加广场\n│  新造词: 躺平、内卷（旧词新义也算）",
+    "metadata": {
+      "page_num": 7,
+      "section": "场景 > 文本 A > 文本 B > 局限三：均值池化丢失词序和语义结构",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00026"
+  },
+  {
+    "content": "| 问题 | 说明 |\n| --- | --- |\n| 领域漂 移 | 用新闻语料训练的 Word2Vec，\"卷积\"理解为数学运算，但在医疗文本中表示\"卷积神 经网络\" |\n| 语料规 模 | 小规模语料训练的向量质量差，稀有词向量不可靠 |\n| 语言差 异 | 中文需要分词预处理，分词错误会导致向量质量下降 |",
+    "metadata": {
+      "page_num": 8,
+      "section": "场景 > 文本 A > 文本 B > 局限三：均值池化丢失词序和语义结构",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00027"
+  },
+  {
+    "content": "说明\n\n领域漂\n用新闻语料训练的 Word2Vec，\"卷积\"理解为数学运算，但在医疗文本中表示\"卷积神\n经网络\"\n语料规\n小规模语料训练的向量质量差，稀有词向量不可靠\n语言差\n中文需要分词预处理，分词错误会导致向量质量下降\n三个语义完全不同的句子，向量几乎一样。这就是为什么文本匹配需要更强大的模型。",
+    "metadata": {
+      "page_num": 8,
+      "section": "场景 > 文本 A > 文本 B > 说明",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00028"
+  },
+  {
+    "content": "总结：Word2Vec → BERT 的演进逻辑\n\n给新手的建议：理解 Word2Vec 的局限，才能真正理解为什么 BERT 是革命性的。Word2Vec 教\n会了机器\"词是什么\"，BERT 教会了机器\"在这个语境里这个词是什么意思\"。",
+    "metadata": {
+      "page_num": 8,
+      "section": "场景 > 文本 A > 文本 B > 总结：Word2Vec → BERT 的演进逻辑",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00029"
+  },
+  {
+    "content": "新手解释 - BiEncoder：想象两个人分别阅读两篇文章后各自写一个摘要，然后比较两个摘要的相\n\n似度。优点是两个编码器独立工作，向量可以预先计算并缓存，适合大规模检索。缺点是两篇文章\n在编码时\"互不知道对方的存在\"，无法捕捉细粒度的交互特征。",
+    "metadata": {
+      "page_num": 8,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - BiEncoder：想象两个人分别阅读两篇文章后各自写一个摘要，然后比较两个摘要的相",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00030"
+  },
+  {
+    "content": "的条目。它不要求精挑细选，只要求\"别漏掉重要的\"。\n\n句子A: \"我 爱 你\"     → mean([我, 爱, 你])     = v1\n句子B: \"你 爱 我\"     → mean([你, 爱, 我])     = v1  (完全相同!)\n句子C: \"我 不 爱 你\"  → mean([我, 不, 爱, 你]) ≈ v1  (非常接近!)\nWord2Vec 时代          BERT 时代\n─────────────────     ─────────────────\n一词一向量     ──→    一词多向量（上下文相关）\nOOV 崩溃       ──→    WordPiece 子词拆分\n词序丢失       ──→    Transformer 自注意力\n静态特征       ──→    动态特征（12层隐状态）\n文本A → [Encoder] → 向量a ─┐\n├→ cosine(a, b) → 相似度\n文本B → [Encoder] → 向量b ─┘",
+    "metadata": {
+      "page_num": 8,
+      "section": "场景 > 文本 A > 文本 B > 的条目。它不要求精挑细选，只要求\"别漏掉重要的\"。",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00031"
+  },
+  {
+    "content": "|  | 召回 | 精排 |\n| --- | --- | --- |\n| 目标 | 宁可多捞，不能漏掉 | 精准排序，优中选优 |\n| 候选规模 | 百万~亿级 | 百~千级 |\n| 速度要求 | 毫秒级 | 可接受几十毫秒 |\n| 精度要求 | 召回率优先（查全） | 准确率优先（查准） |\n| 典型方法 | BiEncoder + FAISS | CrossEncoder |",
+    "metadata": {
+      "page_num": 9,
+      "section": "场景 > 文本 A > 文本 B > 的条目。它不要求精挑细选，只要求\"别漏掉重要的\"。",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00032"
+  },
+  {
+    "content": "精排\n\n目标\n宁可多捞，不能漏掉\n精准排序，优中选优\n候选规模\n百万~亿级\n百~千级\n速度要求\n毫秒级\n可接受几十毫秒\n精度要求\n召回率优先（查全）\n准确率优先（查准）\n典型方法\nBiEncoder + FAISS\nCrossEncoder\n类比：你要从 100 万人的图书馆里找到喜欢读科幻小说的人——",
+    "metadata": {
+      "page_num": 9,
+      "section": "场景 > 文本 A > 文本 B > 精排",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00033"
+  },
+  {
+    "content": "2.2.2 CrossEncoder（交叉编码器 / 交互型模型）\n\n将文本 A 和文本 B 拼接后一起输入编码器，在编码过程中进行深度交互。\n新手解释 - CrossEncoder：想象两个人一起阅读两篇文章，边读边讨论异同点。因为两篇文章同\n时输入模型，每个词都可以\"看到\"另一篇文章的所有词，交互更充分，精度更高。但代价是每次只\n能处理一对文本，无法预计算向量，速度慢，不适合大规模检索。",
+    "metadata": {
+      "page_num": 9,
+      "section": "场景 > 文本 A > 文本 B > 2.2.2 CrossEncoder（交叉编码器 / 交互型模型）",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00034"
+  },
+  {
+    "content": "2.2.3 BiEncoder vs CrossEncoder 对比\n\n全量候选集（100 万）──→ 召回（粗筛）──→ 1,000 条 ──→ 精排 ──→ Top 10\n↑                      ↑                    ↑\n大海捞针              BiEncoder            CrossEncoder\n（算向量，比相似度）    （逐对精细打分）\n[CLS] 文本A [SEP] 文本B [SEP] → [Encoder] → 分类/分数\nfrom sentence_transformers import CrossEncoder\nce = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')\npairs = [['文本A', '文本B']]\nscores = ce.predict(pairs)  # 输出相关性分数",
+    "metadata": {
+      "page_num": 9,
+      "section": "场景 > 文本 A > 文本 B > 2.2.3 BiEncoder vs CrossEncoder 对比",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00035"
+  },
+  {
+    "content": "| 维度 | BiEncoder | CrossEncoder |\n| --- | --- | --- |\n| 交互方式 | 编码后交互（晚期交互） | 编码中交互（早期交互） |\n| 精度 | 中高 | 高 |\n| 速度 | 快（向量可缓存） | 慢（每对都要算） |\n| 适用场景 | 大规模召回 | 小候选集精排 |\n| 典型应用 | 语义搜索、FAQ检索 | 重排序、NLI判断 |",
+    "metadata": {
+      "page_num": 10,
+      "section": "场景 > 文本 A > 文本 B > 2.2.3 BiEncoder vs CrossEncoder 对比",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00036"
+  },
+  {
+    "content": "CrossEncoder\n\n交互方式\n编码后交互（晚期交互）\n编码中交互（早期交互）\n精度\n中高\n速度\n快（向量可缓存）\n慢（每对都要算）\n适用场景\n大规模召回\n小候选集精排\n典型应用\n语义搜索、FAQ检索\n重排序、NLI判断",
+    "metadata": {
+      "page_num": 10,
+      "section": "场景 > 文本 A > 文本 B > CrossEncoder",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00037"
+  },
+  {
+    "content": "新手解释 - 为什么需要两阶段？ 这就像招聘流程：第一步HR快速筛选简历（BiEncoder粗召\n\n回），从上万份简历中选出100份；第二步面试官深度评估（CrossEncoder精排），从100人中选\n出最终人选。如果直接让面试官看上万份简历，效率太低；如果只让HR做最终决定，精度不够。",
+    "metadata": {
+      "page_num": 10,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - 为什么需要两阶段？ 这就像招聘流程：第一步HR快速筛选简历（BiEncoder粗召",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00038"
+  },
+  {
+    "content": "SBERT 是对 BERT 的改进，专门用于生成高质量的句子向量。它使用 Siamese/Triplet 网络结构微调\nBERT，使其输出的句子向量在语义空间中有意义。\n新手解释 - SBERT：原始 BERT 直接取句子向量效果很差（任意两句话的余弦相似度都很高），因\n为 BERT 预训练的目标不是生成好的句子表示。SBERT 通过对比学习/分类任务微调 BERT，让语\n义相似的句子向量靠近、不相似的远离，从而得到有意义的句子嵌入。\n用户查询\n┌──────────┐     ┌──────────────┐\n│ BiEncoder │────→│ 向量库(FAISS) │ ──→ Top-K 候选\n│  粗召回    │     │  百万~亿级    │     （~100条）\n└──────────┘     └──────────────┘\n┌──────────────┐\n│ CrossEncoder  │ ──→ 精排结果\n│   精排        │     （Top-10）\n└──────────────┘\n# Stage 1: BiEncoder 粗召回\nquery_vec = bi_model.encode(query)          # 编码查询\ntop_k = faiss_index.search(query_vec, k=100)  # ANN 检索 Top-100\n# Stage 2: CrossEncoder 精排\npairs = [[query, docs[i]] for i in top_k]   # 构造句对\nscores = cross_model.predict(pairs)          # 逐对打分\nfinal_results = argsort(scores)[:10]         # 取 Top-10\n文本A → [BERT + Pooling] → 向量a ─┐\n├→ cosine(a, b) → 相似度\n文本B → [BERT + Pooling] → 向量b ─┘",
+    "metadata": {
+      "page_num": 10,
+      "section": "场景 > 文本 A > 文本 B > 2.2.5 SBERT（Sentence-BERT）",
+      "block_types": [
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00039"
+  },
+  {
+    "content": "示例：A=\"苹果手机价格\"，B=\"iPhone多少钱\"\n\n\"苹果\" 最匹配 \"iPhone\"（相似度0.9）\n\"手机\" 最匹配 \"iPhone\"（相似度0.7）\n\"价格\" 最匹配 \"多少钱\"（相似度0.85）\nColBERT得分 = (0.9+0.7+0.85)/3 = 0.82",
+    "metadata": {
+      "page_num": 11,
+      "section": "场景 > 文本 A > 文本 B > 示例：A=\"苹果手机价格\"，B=\"iPhone多少钱\"",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00040"
+  },
+  {
+    "content": "三种架构对比：\n\nfrom sentence_transformers import SentenceTransformer\nfrom sklearn.metrics.pairwise import cosine_similarity\nmodel = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')\nu = model.encode('今天天气不错')\nv = model.encode('天气真好啊')\nsim = cosine_similarity([u], [v])[0][0]  # 约 0.92\n文本A → [Encoder] → [a1, a2, ..., an] ─┐\n├→ MaxSim → 相似度\n文本B → [Encoder] → [b1, b2, ..., bm] ─┘",
+    "metadata": {
+      "page_num": 11,
+      "section": "场景 > 文本 A > 文本 B > 三种架构对比：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00041"
+  },
+  {
+    "content": "| 维度 | BiEncoder | ColBERT | CrossEncoder |\n| --- | --- | --- | --- |\n| 交互粒度 | 句子级 | Token级（晚期） | Token级（早期） |\n| 精度 | 中 | 中高 | 高 |\n| 速度 | 快 | 中 | 慢 |\n| 可预计算 | 完全可以 | 部分可以 | 不可以 |\n| 存储开销 | 小 | 大（每词一个向量） | 无需存储 |",
+    "metadata": {
+      "page_num": 12,
+      "section": "场景 > 文本 A > 文本 B > 三种架构对比：",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00042"
+  },
+  {
+    "content": "新手解释 - 对比学习：想象你在学习认识猫和狗。方法是：看到一只猫，再看到另一只猫，你知道\n\n它们\"相似\"应该归为一类；看到一只猫和一条狗，你知道它们\"不相似\"应该分开。对比学习就是让\n模型学会这种\"同类靠近、异类远离\"的能力。",
+    "metadata": {
+      "page_num": 12,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - 对比学习：想象你在学习认识猫和狗。方法是：看到一只猫，再看到另一只猫，你知道",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00043"
+  },
+  {
+    "content": "无监督SimCSE：对同一个句子做两次不同的Dropout，生成两个\"正例\"，其他句子作为负例。\n\n新手解释 - Dropout：Dropout 是神经网络训练时的一种正则化技术，随机\"关闭\"一部分神经元\n（置为0）。在SimCSE中，同一个句子经过两次不同的Dropout，相当于给模型加了不同的\"噪\n声\"，产生两个略有差异的向量表示。这两个向量就是正例对——因为它们来自同一个句子，语义\n相同但表示略有不同。",
+    "metadata": {
+      "page_num": 12,
+      "section": "场景 > 文本 A > 文本 B > 无监督SimCSE：对同一个句子做两次不同的Dropout，生成两个\"正例\"，其他句子作为负例。",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00044"
+  },
+  {
+    "content": "有监督：正例 = NLI中的蕴含句对（如\"他在跑步\"→\"他在运动\"），负例 = NLI中的矛盾句对\n\n（如\"他在跑步\"→\"他在睡觉\"）。正例\"质量\"高，效果更好，但需要标注数据\n实践中，有监督SimCSE效果明显优于无监督版本，推荐优先使用。",
+    "metadata": {
+      "page_num": 12,
+      "section": "场景 > 文本 A > 文本 B > 有监督：正例 = NLI中的蕴含句对（如\"他在跑步\"→\"他在运动\"），负例 = NLI中的矛盾句对",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00045"
+  },
+  {
+    "content": "现状说明：对比学习已被大量吸收进大模型预训练阶段（如 text-embedding 系列模型），在\n\nfine-tuning 阶段单独使用对比学习已不算主流，但理解其原理有助于理解现代 embedding 模型\n的训练范式。\n输入: \"今天天气不错\"\n├── Dropout 1 → 向量 v1  ─┐\n│                          ├→ 正例对 (v1, v2)\n└── Dropout 2 → 向量 v2  ─┘\n其他句子: \"明天要下雨\" → 向量 v3 → 负例 (v1, v3)",
+    "metadata": {
+      "page_num": 12,
+      "section": "场景 > 文本 A > 文本 B > 现状说明：对比学习已被大量吸收进大模型预训练阶段（如 text-embedding 系列模型），在",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00046"
+  },
+  {
+    "content": "| 负例对 | cos(u, v) | Loss = max(0, cos - 0.3) | 说明 |\n| --- | --- | --- | --- |\n| \"订机票\" vs \"做红烧 肉\" | -0.5 | max(0, -0.5-0.3) = 0 | 已经足够远，无需优化 |\n| \"订机票\" vs \"看天 气\" | 0.1 | max(0, 0.1-0.3) = 0 | 低于 margin，无需优化 |\n| \"订机票\" vs \"退机 票\" | 0.6 | max(0, 0.6-0.3) = 0.3 | 太近了！产生 loss，需要 推远 |",
+    "metadata": {
+      "page_num": 13,
+      "section": "场景 > 文本 A > 文本 B > 现状说明：对比学习已被大量吸收进大模型预训练阶段（如 text-embedding 系列模型），在",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00047"
+  },
+  {
+    "content": "新手解释 - 为什么 Batch Size 很重要？\n\n对比学习的效果高度依赖负例数量。在 InfoNCE 损失中，一个 batch 内的其他样本都是负例：\nBatch Size = 32 → 每个样本有 31 个负例\nBatch Size = 4096 → 每个样本有 4095 个负例\n负例越多，模型越能学到细粒度的区分能力。这就是为什么 SimCSE 论文使用 512~4096 的大\nbatch。",
+    "metadata": {
+      "page_num": 13,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - 为什么 Batch Size 很重要？",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00048"
+  },
+  {
+    "content": "CosineEmbeddingLoss：直接优化两个向量的余弦相似度，正例拉近，负例推远。\n\n正例对 (label=+1)：Loss = 1 - cos(u, v)，目标：cos(u, v) → 1\n负例对 (label=-1)：Loss = max(0, cos(u, v) - margin)，目标：cos(u, v) < margin",
+    "metadata": {
+      "page_num": 13,
+      "section": "场景 > 文本 A > 文本 B > CosineEmbeddingLoss：直接优化两个向量的余弦相似度，正例拉近，负例推远。",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00049"
+  },
+  {
+    "content": "新手解释 - margin 是什么？\n\nmargin 是负例的\"安全边界\"。它告诉模型：负例对的余弦相似度只要低于 margin 就够了，不需\n要无限推远。\n以 margin=0.3 为例，看三个负例对的情况：",
+    "metadata": {
+      "page_num": 13,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - margin 是什么？",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00050"
+  },
+  {
+    "content": "margin 选多大？\n\n余弦相似度范围: -1 ──────────────────────── 0 ────── margin ────── +1\n↑                          ↑         ↑              ↑\n理想负例区                   已满足     边界线        正例目标区\n(cos < 0)                   (cos < 0.3)  (0.3)        (cos → 1)\n负例在这个区域内 → Loss = 0（已经够远了，不惩罚）\n负例在 margin 右边  → Loss > 0（太近了，需要推远）",
+    "metadata": {
+      "page_num": 13,
+      "section": "场景 > 文本 A > 文本 B > margin 选多大？",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00051"
+  },
+  {
+    "content": "| 数据来源 | 正例 | 负例 |\n| --- | --- | --- |\n| STS数据集 | 分数≥4 | 分数≤1 |\n| NLI | 蕴含对 | 矛盾对 |\n| FAQ业务数据 | 同问题变体 | 不同问题 |",
+    "metadata": {
+      "page_num": 14,
+      "section": "场景 > 文本 A > 文本 B > margin 选多大？",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00052"
+  },
+  {
+    "content": "负例\n\nSTS数据集\n分数≥4\n分数≤1\nNLI\n蕴含对\n矛盾对\nFAQ业务数据\n同问题变体\n不同问题\nmargin=0 ：最严格，要求负例 cos<0（正交即可），适用于简单任务\nmargin=0.3 ：常用默认值，适合大多数场景\nmargin=0.5 ：更宽松，允许负例有较高相似度，适用于难区分场景",
+    "metadata": {
+      "page_num": 14,
+      "section": "场景 > 文本 A > 文本 B > 负例",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00053"
+  },
+  {
+    "content": "InfoNCE / NT-Xent：对比学习中最常用的损失函数。\n\n新手解释 - InfoNCE（Information Noise Contrastive Estimation）：\n想象一个\"认人游戏\"：在一群人中找到你的朋友。InfoNCE就是让模型从一堆\"干扰项\"（负例）中\n正确识别出\"目标\"（正例）。\nNT-Xent（Normalized Temperature-scaled Cross Entropy）：InfoNCE的改进版，加入了\n温度参数τ（temperature）：\nloss_fn = nn.CosineEmbeddingLoss(margin=0.3)\n# label: +1（正例）或 -1（负例）\nloss = loss_fn(emb_a, emb_b, label)\nAnchor ──── Positive\n\\              ↑\n\\    d(a,p)   │\n\\            │\nd(a,n)  ←─ 目标：d(a,p) < d(a,n) - margin\n\\          │\n\\         │\nNegative\nloss_fn = nn.TripletMarginLoss(margin=0.5, p=2)\nloss = loss_fn(anchor_vec, positive_vec, negative_vec)",
+    "metadata": {
+      "page_num": 14,
+      "section": "场景 > 文本 A > 文本 B > InfoNCE / NT-Xent：对比学习中最常用的损失函数。",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00054"
+  },
+  {
+    "content": "| 指标 | 含义 | 适用场景 |\n| --- | --- | --- |\n| Accuracy | 预测正确的比例 | 正负样本均衡时 |\n| Precision | 预测为正的样本中，真正为正的比例 | 关注\"预测对的占多少\" |\n| Recall | 真正为正的样本中，被预测为正的比例 | 关注\"漏掉了多少\" |\n| F1 Score | Precision 和 Recall 的调和平均 | 正负样本不均衡时 |\n| AUC | ROC曲线下面积，衡量排序能力 | 不依赖阈值的整体评估 |",
+    "metadata": {
+      "page_num": 15,
+      "section": "场景 > 文本 A > 文本 B > InfoNCE / NT-Xent：对比学习中最常用的损失函数。",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00055"
+  },
+  {
+    "content": "| 指标 | 含义 | 适用场景 |\n| --- | --- | --- |\n| MRR | 第一个正确结果的排名倒数均值 | 只关心第一个正确结果 |\n| MAP | 各查询的AP平均值，AP是Precision-Recall曲线 下面积 | 关心所有正确结果的排 序 |\n| NDCG@K | 考虑位置权重的增益，前K个结果的排序质量 | 相关性有程度差异 |\n| Hit@K / Recall@K | 前K个结果中是否命中 / 命中比例 | 召回效果评估 |",
+    "metadata": {
+      "page_num": 15,
+      "section": "场景 > 文本 A > 文本 B > InfoNCE / NT-Xent：对比学习中最常用的损失函数。",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00056"
+  },
+  {
+    "content": "新手解释 - Precision vs Recall：\n\n假设有100条查询，其中20条是\"订票\"意图：\n模型预测了15条为\"订票\"，其中12条预测对了 → Precision = 12/15 = 80%\n实际20条\"订票\"中，模型只找出了12条 → Recall = 12/20 = 60%",
+    "metadata": {
+      "page_num": 15,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - Precision vs Recall：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00057"
+  },
+  {
+    "content": "Recall 回答：\"真正是的，我找出了多少？\"\n\n新手解释 - F1 Score：Precision 和 Recall 的平衡指标。F1 = 2×P×R/(P+R)。当 P=80%, R=60%\n时，F1 = 2×0.8×0.6/(0.8+0.6) ≈ 68.6%。\n新手解释 - AUC：AUC 衡量模型\"把正例排在负例前面\"的能力。AUC=0.5 表示随机猜，AUC=1.0\n表示完美排序。AUC 不受阈值和样本比例影响，是不均衡数据下最可靠的指标。",
+    "metadata": {
+      "page_num": 15,
+      "section": "场景 > 文本 A > 文本 B > Recall 回答：\"真正是的，我找出了多少？\"",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00058"
+  },
+  {
+    "content": "新手解释 - MRR（Mean Reciprocal Rank）：\n\n对于每个查询，找到第一个正确结果的排名 r，得分 = 1/r。所有查询取平均。\n查询1：正确结果排第1位 → 1/1 = 1.0\n查询2：正确结果排第3位 → 1/3 = 0.33\n查询3：正确结果排第2位 → 1/2 = 0.5",
+    "metadata": {
+      "page_num": 15,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - MRR（Mean Reciprocal Rank）：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00059"
+  },
+  {
+    "content": "| 指标 | 含义 |\n| --- | --- |\n| Spearman相关系数 | 预测分数与真实分数的排序相关性 |\n| Pearson相关系数 | 预测分数与真实分数的线性相关性 |",
+    "metadata": {
+      "page_num": 16,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - MRR（Mean Reciprocal Rank）：",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00060"
+  },
+  {
+    "content": "| 方式 | 公式 | 特点 |\n| --- | --- | --- |\n| 余弦相似度 | cos(a,b) = (a·b) / (|a||b|) | 只看方向，不看大小，范围[-1,1] |\n| 点积（内积） | a·b = Σ(aᵢ×bᵢ) | 方向+大小都考虑 |\n| 欧氏距离 | d(a,b) = √Σ(aᵢ-bᵢ)² | 绝对距离，值越小越相似 |",
+    "metadata": {
+      "page_num": 16,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - MRR（Mean Reciprocal Rank）：",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00061"
+  },
+  {
+    "content": "欧氏距离\n\nd(a,b) = √Σ(aᵢ-bᵢ)²\n绝对距离，值越小越相似\nMRR = (1.0+0.33+0.5)/3 = 0.61\n新手解释 - NDCG（Normalized Discounted Cumulative Gain）：",
+    "metadata": {
+      "page_num": 16,
+      "section": "场景 > 文本 A > 文本 B > 欧氏距离",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00062"
+  },
+  {
+    "content": "核心思想：排在前面的结果更重要，位置越靠后折扣越大\n\n\"Discounted\"：排名越靠后，贡献打折越多（如第1位权重=1，第2位=1/2，第3位=1/3...）\n\"Normalized\"：除以理想排序的得分，使结果在0~1之间\nNDCG@10 = 0.9 表示前10个结果的排序质量达到了理想排序的90%",
+    "metadata": {
+      "page_num": 16,
+      "section": "场景 > 文本 A > 文本 B > 核心思想：排在前面的结果更重要，位置越靠后折扣越大",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00063"
+  },
+  {
+    "content": "新手解释 - Hit@K / Recall@K：\n\nHit@K：前K个结果中是否至少有一个正确的。Hit@10=0.8 表示80%的查询在前10个结果中\n找到了正确答案\nRecall@K：前K个结果中找到了多少正确答案。如果有5个正确答案，Recall@10=0.6 表示\n在前10个中找到了3个",
+    "metadata": {
+      "page_num": 16,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - Hit@K / Recall@K：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00064"
+  },
+  {
+    "content": "新手解释：STS任务中，每对文本有一个0~5的相似度评分。Spearman衡量\"模型打分的高低顺序\n\n是否和人工一致\"，Pearson衡量\"模型打分的线性关系\"。实践中 Spearman 更常用，因为它对异\n常值更鲁棒。",
+    "metadata": {
+      "page_num": 16,
+      "section": "场景 > 文本 A > 文本 B > 新手解释：STS任务中，每对文本有一个0~5的相似度评分。Spearman衡量\"模型打分的高低顺序",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00065"
+  },
+  {
+    "content": "| 场景 | 推荐方式 | 原因 |\n| --- | --- | --- |\n| 语义相似度 | 余弦相似度 | 只关心方向，文本长度不影响 |\n| 向量检索（FAISS） | 归一化 + 点积 | 等价余弦且计算更快 |\n| 聚类分析 | 欧氏距离 | 保留绝对距离信息 |",
+    "metadata": {
+      "page_num": 17,
+      "section": "场景 > 文本 A > 文本 B > 欧氏距离：两个箭头尖端的直线距离。值越小越相似",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00066"
+  },
+  {
+    "content": "解决思路：\n\nBM25 检索的 Top-K 作为难负例（字面相似但语义不同的样本）\n模型预测高分但标注为负的样本（模型最容易犯错的样本）\nIn-batch negatives 提供中难度负例\n新手解释 - In-batch negatives：在一个训练batch中，每个样本的正例是它自己对应的配对，而\nbatch中其他所有样本自动作为负例。这样不需要额外构造负例，训练效率高。",
+    "metadata": {
+      "page_num": 17,
+      "section": "场景 > 文本 A > 文本 B > 解决思路：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00067"
+  },
+  {
+    "content": "解决思路：\n\n过采样正例 / 下采样负例\nNLI、STS 公开数据弱监督预训练\nFocal Loss 等对难样本加权\n新手解释 - Focal Loss：普通损失函数对所有样本一视同仁，Focal Loss 则让模型更关注\"难分\n类\"的样本。就像老师让成绩差的学生多做练习，而不是让全班做一样多的题。",
+    "metadata": {
+      "page_num": 17,
+      "section": "场景 > 文本 A > 文本 B > 解决思路：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00068"
+  },
+  {
+    "content": "| 方法 | 说明 | 示例 |\n| --- | --- | --- |\n| 同义词替换 | 随机替换部分词为同义词 | \"帮我订机票\" → \"帮我预订机票\" |\n| 回译（Back Translation） | 翻译成另一种语言再翻回 来 | \"今天天气好\" → (英) \"Good weather today\" → \"今天天气不错\" |\n| 随机删除 | 随机删除部分非关键词 | \"我想订一张去北京的机票\" → \"我想订去北 京的机票\" |\n| 随机交换 | 交换相邻词的位置 | \"订机票帮我\" → \"帮我订机票\" |\n| Dropout增强 | SimCSE的方式，同一句子 两次Dropout | 无监督对比学习的正例构造 |\n| LLM生成 | 用大模型生成同义句 | Prompt: \"请改写以下句子: 帮我订机票\" |",
+    "metadata": {
+      "page_num": 18,
+      "section": "场景 > 文本 A > 文本 B > 解决思路：",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00069"
+  },
+  {
+    "content": "问题描述：通用预训练 BERT 与业务文本分布差距大，法律/医疗/金融等垂直领域效果差。\n\n新手解释 - 领域偏移（Domain Shift）：通用BERT是在维基百科等通用语料上训练的，它理解日\n常语言，但不理解专业术语。比如在医疗领域，\"预后\"是一个专业术语（指对疾病发展趋势的预\n测），但通用模型可能不理解。",
+    "metadata": {
+      "page_num": 18,
+      "section": "场景 > 文本 A > 文本 B > 问题描述：通用预训练 BERT 与业务文本分布差距大，法律/医疗/金融等垂直领域效果差。",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00070"
+  },
+  {
+    "content": "解决思路：\n\n领域内无监督继续预训练（MLM）\n少量有监督微调（10~100条标注）\n利用 LLM 生成业务领域伪标签数据\n新手解释 - MLM（Masked Language Model）：BERT的预训练方式，随机遮住句子中15%的\n词，让模型预测被遮住的词。例如\"今天[MASK]气不错\"→预测\"天\"。在领域数据上继续做MLM，\n可以让模型学会领域内的语言模式。",
+    "metadata": {
+      "page_num": 18,
+      "section": "场景 > 文本 A > 文本 B > 解决思路：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00071"
+  },
+  {
+    "content": "数据增强方法：\n\n新手解释 - 回译（Back Translation）：这是机器翻译时代留下的经典数据增强方法。把中文翻\n译成英文，再翻译回中文，得到的句子语义相同但表达不同，天然构成正例对。例如：\n原句：\"这个产品质量很好\"\n回译：\"这款商品的品质相当不错\"",
+    "metadata": {
+      "page_num": 18,
+      "section": "场景 > 文本 A > 文本 B > 数据增强方法：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00072"
+  },
+  {
+    "content": "| 索引类型 | 原理 | 速度 | 精度 | 内存 | 适用规模 |\n| --- | --- | --- | --- | --- | --- |\n| Flat | 暴力搜索，逐一比较 | 最慢 | 完美 | 大 | <10万 |\n| IVF | 先聚类再搜索相关桶 | 快 | 较高 | 中 | 10万~千万 |\n| IVF+PQ | IVF + 乘积量化压缩 | 很快 | 中 | 小 | 千万~亿 |\n| HNSW | 多层图结构导航 | 快 | 高 | 大 | 百万~千万 |\n| IVF+HNSW | IVF内用HNSW做桶内搜索 | 很快 | 高 | 大 | 千万级 |",
+    "metadata": {
+      "page_num": 19,
+      "section": "场景 > 文本 A > 文本 B > 3.2 推理与部署常见问题",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00073"
+  },
+  {
+    "content": "新手解释 - FAISS：Facebook开发的向量相似度搜索库，支持亿级向量高效检索。\n\n新手解释 - HNSW：Hierarchical Navigable Small World，一种图索引算法。想象一个多层地\n图：上层是\"高速公路\"（粗略连接），下层是\"小路\"（精细连接），搜索时先走高速再走小路，快\n速定位目标。",
+    "metadata": {
+      "page_num": 19,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - FAISS：Facebook开发的向量相似度搜索库，支持亿级向量高效检索。",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00074"
+  },
+  {
+    "content": "新手解释 - nprobe / ef：这两个参数控制搜索的\"仔细程度\"：\n\nnprobe（IVF索引）：搜索多少个聚类桶，值越大越精确但越慢\nef（HNSW索引）：搜索多少个邻居节点，值越大越精确但越慢",
+    "metadata": {
+      "page_num": 19,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - nprobe / ef：这两个参数控制搜索的\"仔细程度\"：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00075"
+  },
+  {
+    "content": "新手解释 - 乘积量化（PQ, Product Quantization）：\n\n将高维向量切分成多个子段，每段独立聚类编码。例如768维向量切成12段64维，每段用256个聚\n类中心表示，只需1字节存储。原始768维float需3072字节，PQ压缩后只需12字节，压缩256倍！\n代价是精度有损失，但通常可接受。",
+    "metadata": {
+      "page_num": 19,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - 乘积量化（PQ, Product Quantization）：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00076"
+  },
+  {
+    "content": "新手解释 - IVF（Inverted File Index）：\n\n先对所有向量做K-Means聚类（如分成1000个桶），搜索时只在与查询最近的nprobe个桶内搜\n索，跳过大部分无关向量。nprobe越大越精确，但越慢。",
+    "metadata": {
+      "page_num": 19,
+      "section": "场景 > 文本 A > 文本 B > 新手解释 - IVF（Inverted File Index）：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00077"
+  },
+  {
+    "content": "| 数据集 | 任务类型 | 规模 | 说明 |\n| --- | --- | --- | --- |\n| SNLI | NLI（蕴含/矛盾/中立） | 57万 | 斯坦福自然语言推理，最经典的NLI数据集 |\n| MNLI | NLI | 43万 | 多领域NLI，覆盖新闻、小说、演讲等 |\n| STS-B | 语义相似度评分（0~5） | 8600对 | Semantic Textual Similarity Benchmark |\n| QQP | 问题对相似度（二分类） | 40万对 | Quora问题对，判断两个问题是否等价 |\n| Qnli | 问答NLI | 10万+ | 判断答案是否回答了问题 |",
+    "metadata": {
+      "page_num": 20,
+      "section": "场景 > 文本 A > 文本 B > 千万~亿级：IVF+PQ，必要时分片",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00078"
+  },
+  {
+    "content": "解决思路：\n\n知识蒸馏：用 CrossEncoder 打分训练 MiniLM\n控制精排候选集大小（<100）\n模型量化（INT8）\n新手解释 - 知识蒸馏（Knowledge Distillation）：让大模型（教师）的输出作为小模型（学\n生）的训练目标。就像老师把复杂的知识\"提炼\"成简单易懂的形式教给学生，学生虽然不如老师博\n学，但反应更快。\n新手解释 - 模型量化（Quantization）：将模型参数从高精度（如FP32，32位浮点数）压缩为低\n精度（如INT8，8位整数），模型变小变快，精度损失通常很小。就像把高清图片压缩为标清，文\n件小了很多但看起来差不多。",
+    "metadata": {
+      "page_num": 20,
+      "section": "场景 > 文本 A > 文本 B > 解决思路：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00079"
+  },
+  {
+    "content": "解决思路：\n\n用 LLM 生成 (query, 正例, 负例) 三元组\n再用这批伪标签训练/微调小模型\n少量人工校验提升质量\n工程经验：部署时建议先 BiEncoder ANN 召回 + 蒸馏后的小型 CrossEncoder 精排，是目前延迟/精度\n最优的组合方案。",
+    "metadata": {
+      "page_num": 20,
+      "section": "场景 > 文本 A > 文本 B > 解决思路：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00080"
+  },
+  {
+    "content": "| 数据集 | 任务类型 | 规模 | 说明 |\n| --- | --- | --- | --- |\n| LCQMC | 问题对相似度 | 26万对 | 哈工大大规模中文问题匹配 |\n| BQ Corpus | 问题对相似度 | 12万对 | 银行领域问题匹配 |\n| ATEC | 问题对相似度 | 10万对 | 蚂蚁金服语义相似度 |\n| PAWS-X（中文） | 释义识别 | 1万+ | 含大量\"字面相似但语义不同\"的难例 |\n| ChineseSTS | 语义相似度评分 | ~5000对 | 中文语义相似度评分数据 |",
+    "metadata": {
+      "page_num": 21,
+      "section": "场景 > 文本 A > 文本 B > 3.3.1 英文数据集",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00081"
+  },
+  {
+    "content": "3.4.2 常用预训练模型\n\n# 安装\n# pip install sentence-transformers\nfrom sentence_transformers import SentenceTransformer\n# 加载预训练模型\nmodel = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')\n# 编码句子为向量\nsentences = [\"帮我订机票\", \"我要买飞机票\", \"今天天气怎么样\"]\nembeddings = model.encode(sentences)\n# 计算相似度\nfrom sentence_transformers import util\nsimilarities = util.cos_sim(embeddings[0], embeddings[1:])\n# \"帮我订机票\" vs \"我要买飞机票\" → ~0.92\n# \"帮我订机票\" vs \"今天天气怎么样\" → ~0.15",
+    "metadata": {
+      "page_num": 21,
+      "section": "场景 > 文本 A > 文本 B > 3.4.2 常用预训练模型",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00082"
+  },
+  {
+    "content": "| 模型名 | 语言 | 维度 | 特点 |\n| --- | --- | --- | --- |\n| all-MiniLM-L6-v2 | 英文 | 384 | 轻量快速，英文基线首选 |\n| all-mpnet-base-v2 | 英文 | 768 | 英文效果最佳 |\n| paraphrase-multilingual-MiniLM-L12-v2 | 多语言 | 384 | 支持中文，轻量 |\n| shibing624/text2vec-base-chinese | 中文 | 768 | 中文专用，效果较好 |",
+    "metadata": {
+      "page_num": 22,
+      "section": "场景 > 文本 A > 文本 B > 3.4.2 常用预训练模型",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00083"
+  },
+  {
+    "content": "特点\n\nall-MiniLM-L6-v2\n英文\n轻量快速，英文基线首选\nall-mpnet-base-v2\n英文\n英文效果最佳\nparaphrase-multilingual-MiniLM-L12-v2\n多语言\n支持中文，轻量\nshibing624/text2vec-base-chinese\n中文\n中文专用，效果较好",
+    "metadata": {
+      "page_num": 22,
+      "section": "场景 > 文本 A > 文本 B > 特点",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00084"
+  },
+  {
+    "content": "模板 A：输出相似度分数\n\nfrom sentence_transformers import SentenceTransformer, InputExample, losses\nmodel = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')\n# 准备训练数据\ntrain_examples = [\nInputExample(texts=[\"帮我订机票\", \"我要买飞机票\"], label=1.0),   # 正例\nInputExample(texts=[\"帮我订机票\", \"今天天气怎么样\"], label=0.0),  # 负例\n# 选择损失函数\ntrain_dataloader = ...\ntrain_loss = losses.CosineSimilarityLoss(model)\n# 训练\nmodel.fit(\ntrain_objectives=[(train_dataloader, train_loss)],\nepochs=3,\nwarmup_steps=100\n请判断以下两段文本的语义相似度。\n输出 0~1 的浮点数，1 表示完全相同。\n文本A: {text_a}\n文本B: {text_b}\n相似度分数：",
+    "metadata": {
+      "page_num": 22,
+      "section": "场景 > 文本 A > 文本 B > 模板 A：输出相似度分数",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00085"
+  },
+  {
+    "content": "| 维度 | 内容 |\n| --- | --- |\n| 优势 | 零标注成本，冷启动首选；借助 LLM 强大的语言理解能力；灵活应对多样的匹配标准； 快速 POC 验证业务可行性 |\n| 局限 | 推理慢（秒级），成本高；不适合大规模在线检索；输出格式不稳定，需后处理；效果 依赖 Prompt 质量和 LLM 能力 |\n| 适用 场景 | 标注数据为零的冷启动；低频/离线评测任务；对延迟不敏感的人工辅助决策；需求快速 变化 |",
+    "metadata": {
+      "page_num": 23,
+      "section": "场景 > 文本 A > 文本 B > 模板 A：输出相似度分数",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00086"
+  },
+  {
+    "content": "零样本方式的特点：\n\n新手解释 - POC（Proof of Concept）：概念验证，用最小成本验证一个想法是否可行。在NLP\n项目中，先用LLM零样本方式快速验证\"文本匹配能否解决我的业务问题\"，确认可行后再投入资源\n训练专用模型。",
+    "metadata": {
+      "page_num": 23,
+      "section": "场景 > 文本 A > 文本 B > 零样本方式的特点：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00087"
+  },
+  {
+    "content": "Few-shot Prompt 示例：\n\n判断以下两句话是否表达相同意思。\n只输出\"相同\"或\"不同\"，不解释。\n句子1: {text_a}\n句子2: {text_b}\n答案：\n你是一个意图匹配专家。判断用户输入\n是否与意图描述匹配（是/否）。\n示例1:\n输入: \"帮我订明天去上海的机票\"\n意图: \"航班预订\"\n答案: 是\n示例2:\n输入: \"查一下明天天气\"\n意图: \"航班预订\"\n答案: 否\n现在请判断:\n输入: \"{query}\"\n意图: \"{intent}\"\n答案:",
+    "metadata": {
+      "page_num": 23,
+      "section": "场景 > 文本 A > 文本 B > Few-shot Prompt 示例：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00088"
+  },
+  {
+    "content": "| 原因 | 解释 |\n| --- | --- |\n| 校准匹配标准 | 业务对\"相似\"的定义往往和通用理解不同，示例帮助LLM对齐 |\n| 减少歧义 | 边界样本（正例中的难例/负例中的易例）明确判断边界 |\n| 格式稳定性 | 示例统一了输出格式，减少后处理的不确定性 |",
+    "metadata": {
+      "page_num": 24,
+      "section": "场景 > 文本 A > 文本 B > Few-shot Prompt 示例：",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00089"
+  },
+  {
+    "content": "| 场景 | 应用 | 是否推荐 |\n| --- | --- | --- |\n| 冷启动 | 无标注数据，快速上线 | 推荐 |\n| 长尾需求 | 小类目/罕见意图数据稀缺 | 推荐 |\n| 评测基准 | 用LLM打分作为指标参考 | 推荐 |\n| 实时检索 | 大规模在线召回 | 不推荐 |\n| 高并发 | QPS > 100 的生产接口 | 不推荐 |",
+    "metadata": {
+      "page_num": 24,
+      "section": "场景 > 文本 A > 文本 B > Few-shot Prompt 示例：",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00090"
+  },
+  {
+    "content": "是否推荐\n\n冷启动\n无标注数据，快速上线\n推荐\n长尾需求\n小类目/罕见意图数据稀缺\n推荐\n评测基准\n用LLM打分作为指标参考\n推荐\n实时检索\n大规模在线召回\n不推荐\n高并发\nQPS > 100 的生产接口\n不推荐",
+    "metadata": {
+      "page_num": 24,
+      "section": "场景 > 文本 A > 文本 B > 是否推荐",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00091"
+  },
+  {
+    "content": "LLM方式的定位：\n\n新手解释 - QPS（Queries Per Second）：每秒查询数，衡量系统吞吐量。QPS > 100 意味着每\n秒要处理100+个请求，LLM推理通常需要几秒，无法满足。",
+    "metadata": {
+      "page_num": 24,
+      "section": "场景 > 文本 A > 文本 B > LLM方式的定位：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00092"
+  },
+  {
+    "content": "LLM 数据生成 + 蒸馏小模型：\n\n新手解释 - 伪标签（Pseudo Label）：不是人工标注的真实标签，而是由模型（这里是LLM）自\n动生成的标签。虽然可能有噪声，但数量大、成本低，可以作为训练数据使用。",
+    "metadata": {
+      "page_num": 24,
+      "section": "场景 > 文本 A > 文本 B > LLM 数据生成 + 蒸馏小模型：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00093"
+  },
+  {
+    "content": "| 方法 | 精度 | 速度 | 数据量 | 规模 |\n| --- | --- | --- | --- | --- |\n| 编辑距离/词向量 | 低 | 极快 | 无 | 任意 |\n| BiEncoder | 中高 | 快 | 中量 | 百万级 |\n| CrossEncoder | 高 | 慢 | 中量 | 百~千 |\n| LLM Prompt | 高 | 极慢 | 极少 | 小规模 |",
+    "metadata": {
+      "page_num": 25,
+      "section": "场景 > 文本 A > 文本 B > 3. 小模型具备 LLM 的业务理解，推理快 100x",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00094"
+  },
+  {
+    "content": "| 场景 | 推荐方案 |\n| --- | --- |\n| 无数据冷启动 | LLM Zero/Few-shot |\n| 大规模召回 | BiEncoder + FAISS |\n| 高精度小候选集 | CrossEncoder 精排 |\n| 数据少+精度要求高 | LLM 生成数据 → 蒸馏 |\n| 生产级大规模高精度 | Bi + Cross 两阶段 |",
+    "metadata": {
+      "page_num": 25,
+      "section": "场景 > 文本 A > 文本 B > 3. 小模型具备 LLM 的业务理解，推理快 100x",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00095"
+  },
+  {
+    "content": "附录：专业术语速查表\n\n传统方法 → 词向量时代 → 预训练时代 → LLM时代\n编辑距离    Word2Vec     BiEncoder    Prompt/Few-shot\nTF-IDF      GloVe均值    CrossEncoder  蒸馏\nBM25                     SimCSE       Embedding模型\nLLM打标 → BiEncoder预训练 → 难负例挖掘 → Bi+Cross上线",
+    "metadata": {
+      "page_num": 25,
+      "section": "场景 > 文本 A > 文本 B > 附录：专业术语速查表",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00096"
+  },
+  {
+    "content": "| 术语 | 英文 | 简要解释 |\n| --- | --- | --- |\n| 文本匹配 | Text Matching | 判断两段文本语义是否相似/相关 |\n| 编辑距离 | Levenshtein Distance | 将一个字符串变成另一个的最少操作次 数 |\n| TF-IDF | Term Frequency-Inverse Document Frequency | 词频×逆文档频率，衡量词的重要性 |\n| BM25 | Best Matching 25 | 改进的TF-IDF，搜索引擎标准排序算法 |\n| Word2Vec | Word to Vector | 将词映射为向量的方法，上下文相似的 词向量接近 |\n| GloVe | Global Vectors | 基于全局共现统计的词向量方法 |\n| BiEncoder | Bi-Encoder | 双塔模型，两个编码器独立编码后比较 |\n| CrossEncoder | Cross-Encoder | 交叉编码器，拼接后一起编码，交互更 充分 |\n| 对比学习 | Contrastive Learning | 拉近相似样本、推远不相似样本的学习 方法 |\n| SimCSE | Simple Contrastive Learning of Sentence Embeddings | 利用Dropout做数据增强的句子嵌入对 比学习 |\n| Dropout | Dropout | 训练时随机丢弃部分神经元，防止过拟 合 |\n| 余弦相似度 | Cosine Similarity | 两个向量夹角的余弦值，衡量方向相似 性 |\n| NLI | Natural Language Inference | 自然语言推理，判断句子间的蕴含/矛 盾/中立关系 |\n| MLM | Masked Language Model | 遮住部分词让模型预测，BERT的预训 练方式 |\n| FAISS | Facebook AI Similarity Search | Facebook开发的向量相似度搜索库 |\n| HNSW | Hierarchical Navigable Small World | 分层可导航小世界图，一种近似最近邻 索引 |\n| ANN | Approximate Nearest Neighbor | 近似最近邻搜索，牺牲少量精度换取速 度 |\n| 知识蒸馏 | Knowledge Distillation | 用大模型指导小模型训练，让小模型继 承大模型能力 |\n| 模型量化 | Quantization | 将模型参数从高精度压缩为低精度，减 少存储和加速推理 |\n| Focal Loss | Focal Loss | 对难分类样本加权的损失函数 |\n| TripletLoss | Triplet Loss | 三元组损失，要求正例比负例更接近锚 点 |",
+    "metadata": {
+      "page_num": 26,
+      "section": "场景 > 文本 A > 文本 B > 附录：专业术语速查表",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00097"
+  },
+  {
+    "content": "|  |  |  |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 26,
+      "section": "场景 > 文本 A > 文本 B > 附录：专业术语速查表",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00098"
+  },
+  {
+    "content": "文本匹配\nText Matching\n判断两段文本语义是否相似/相关\n编辑距离\nLevenshtein Distance\n将一个字符串变成另一个的最少操作次\nTF-IDF\nTerm Frequency-Inverse\nDocument Frequency\n词频×逆文档频率，衡量词的重要性\nBM25\nBest Matching 25\n改进的TF-IDF，搜索引擎标准排序算法\nWord2Vec\nWord to Vector\n将词映射为向量的方法，上下文相似的\n词向量接近\nGloVe\nGlobal Vectors\n基于全局共现统计的词向量方法\nBiEncoder\nBi-Encoder\n双塔模型，两个编码器独立编码后比较\nCrossEncoder\nCross-Encoder\n交叉编码器，拼接后一起编码，交互更\n充分\n对比学习\nContrastive Learning\n拉近相似样本、推远不相似样本的学习\n方法\nSimCSE\nSimple Contrastive Learning of\nSentence Embeddings\n利用Dropout做数据增强的句子嵌入对\n比学习\nDropout\nDropout\n训练时随机丢弃部分神经元，防止过拟\n余弦相似度\nCosine Similarity\n两个向量夹角的余弦值，衡量方向相似\nNLI\nNatural Language Inference\n自然语言推理，判断句子间的蕴含/矛\n盾/中立关系\nMLM\nMasked Language Model\n遮住部分词让模型预测，BERT的预训\n练方式\nFAISS\nFacebook AI Similarity Search\nFacebook开发的向量相似度搜索库\nHNSW\nHierarchical Navigable Small\nWorld\n分层可导航小世界图，一种近似最近邻\n索引\nANN\nApproximate Nearest Neighbor\n近似最近邻搜索，牺牲少量精度换取速\n知识蒸馏\nKnowledge Distillation\n用大模型指导小模型训练，让小模型继\n承大模型能力\n模型量化\nQuantization\n将模型参数从高精度压缩为低精度，减\n少存储和加速推理\nFocal Loss\nFocal Loss\n对难分类样本加权的损失函数\nTripletLoss\nTriplet Loss\n三元组损失，要求正例比负例更接近锚",
+    "metadata": {
+      "page_num": 26,
+      "section": "场景 > 文本 A > 文本 B > 简要解释",
+      "block_types": [
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00099"
+  },
+  {
+    "content": "| 术语 | 英文 | 简要解释 |\n| --- | --- | --- |\n| InfoNCE | InfoNCE | 对比学习常用损失，从干扰项中识别正 例 |\n| NT-Xent | Normalized Temperature-scaled Cross Entropy | 带温度参数的对比损失函数 |\n| 难负例 | Hard Negative | 与锚点表面相似但语义不同的负例 |\n| In-batch negatives | In-batch Negatives | 同一batch中其他样本自动作为负例 |\n| 伪标签 | Pseudo Label | 由模型自动生成而非人工标注的标签 |\n| POC | Proof of Concept | 概念验证，用最小成本验证想法可行性 |\n| QPS | Queries Per Second | 每秒查询数，衡量系统吞吐量 |\n| Zero-shot | Zero-shot Learning | 零样本学习，不给示例直接让模型判断 |\n| Few-shot | Few-shot Learning | 少样本学习，给少量示例让模型学习 |\n| 领域偏移 | Domain Shift | 训练数据与实际应用数据的分布差异 |\n| 过采样/下采样 | Over-sampling / Under-sampling | 增加少数类/减少多数类样本以平衡数 据 |\n| 弱监督 | Weak Supervision | 使用不完美（有噪声）的标签进行训练 |\n| nprobe | nprobe | IVF索引的搜索参数，控制搜索的聚类 桶数量 |\n| ef | ef | HNSW索引的搜索参数，控制搜索的邻 居节点数量 |\n| 温度参数 | Temperature (τ) | 控制模型输出分布的平滑程度，τ越小 越尖锐 |\n| margin | Margin | 三元组损失中的安全间距，确保正负例 之间有足够间隔 |\n| SBERT | Sentence-BERT | 基于BERT微调的句子嵌入模型，生成 高质量句子向量 |\n| ColBERT | Contextualized Late Interaction over BERT | 晚期交互模型，保留token级向量用 MaxSim计算相似度 |\n| MaxSim | Max-Similarity | ColBERT中的操作，对每个查询词找文 档中最匹配词的相似度 |\n| Pooling | Pooling | 将token向量合并为句子向量的方法 （CLS/平均/最大池化） |\n| 向量归一化 | L2 Normalization | 向量除以其长度，使余弦相似度等价于 点积 |\n| 点积 | Dot Product / Inner Product | 两向量对应位相乘再求和，归一化后等 价余弦相似度 |",
+    "metadata": {
+      "page_num": 27,
+      "section": "场景 > 文本 A > 文本 B > 简要解释",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00100"
+  },
+  {
+    "content": "|  |  |  |\n| --- | --- | --- |",
+    "metadata": {
+      "page_num": 27,
+      "section": "场景 > 文本 A > 文本 B > 简要解释",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00101"
+  },
+  {
+    "content": "InfoNCE\nInfoNCE\n对比学习常用损失，从干扰项中识别正\nNT-Xent\nNormalized Temperature-scaled\nCross Entropy\n带温度参数的对比损失函数\n难负例\nHard Negative\n与锚点表面相似但语义不同的负例\nIn-batch\nnegatives\nIn-batch Negatives\n同一batch中其他样本自动作为负例\n伪标签\nPseudo Label\n由模型自动生成而非人工标注的标签\nPOC\nProof of Concept\n概念验证，用最小成本验证想法可行性\nQPS\nQueries Per Second\n每秒查询数，衡量系统吞吐量\nZero-shot\nZero-shot Learning\n零样本学习，不给示例直接让模型判断\nFew-shot\nFew-shot Learning\n少样本学习，给少量示例让模型学习\n领域偏移\nDomain Shift\n训练数据与实际应用数据的分布差异\n过采样/下采样\nOver-sampling / Under-sampling\n增加少数类/减少多数类样本以平衡数\n弱监督\nWeak Supervision\n使用不完美（有噪声）的标签进行训练\nnprobe\nnprobe\nIVF索引的搜索参数，控制搜索的聚类\n桶数量\nef\nef\nHNSW索引的搜索参数，控制搜索的邻\n居节点数量\n温度参数\nTemperature (τ)\n控制模型输出分布的平滑程度，τ越小\n越尖锐\nmargin\nMargin\n三元组损失中的安全间距，确保正负例\n之间有足够间隔\nSBERT\nSentence-BERT\n基于BERT微调的句子嵌入模型，生成\n高质量句子向量\nColBERT\nContextualized Late Interaction\nover BERT\n晚期交互模型，保留token级向量用\nMaxSim计算相似度\nMaxSim\nMax-Similarity\nColBERT中的操作，对每个查询词找文\n档中最匹配词的相似度\nPooling\nPooling\n将token向量合并为句子向量的方法\n（CLS/平均/最大池化）\n向量归一化\nL2 Normalization\n向量除以其长度，使余弦相似度等价于\n点积\n点积\nDot Product / Inner Product\n两向量对应位相乘再求和，归一化后等\n价余弦相似度",
+    "metadata": {
+      "page_num": 27,
+      "section": "场景 > 文本 A > 文本 B > 简要解释",
+      "block_types": [
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00102"
+  },
+  {
+    "content": "| 术语 | 英文 | 简要解释 |\n| --- | --- | --- |\n| 欧氏距离 | Euclidean Distance | 两向量间的直线距离，值越小越相似 |\n| MRR | Mean Reciprocal Rank | 第一个正确结果排名倒数的均值 |\n| MAP | Mean Average Precision | 各查询平均精度的均值，评估排序质量 |\n| NDCG | Normalized Discounted Cumulative Gain | 考虑位置权重的排序质量指标 |\n| Hit@K | Hit at K | 前K个结果中是否命中正确答案 |\n| Recall@K | Recall at K | 前K个结果中正确答案被找到的比例 |\n| AUC | Area Under ROC Curve | ROC曲线下面积，衡量排序能力 |\n| Spearman | Spearman Correlation | 排序相关性，衡量预测顺序与真实顺序 的一致性 |\n| 乘积量化 | Product Quantization (PQ) | 将高维向量分段量化压缩，大幅减少存 储 |\n| IVF | Inverted File Index | 倒排索引，先聚类再搜索相关桶 |\n| 回译 | Back Translation | 翻译成另一语言再翻回来，用于数据增 强 |\n| 梯度累积 | Gradient Accumulation | 多个小batch梯度累加后更新，等效大 batch训练 |\n| Sentence Transformers | Sentence Transformers | 最流行的句子嵌入工具库，封装SBERT 等模型训练推理 |\n| LCQMC | Large-scale Chinese Question Matching Corpus | 哈工大中文问题匹配数据集 |\n| SNLI | Stanford Natural Language Inference | 斯坦福自然语言推理数据集 |\n| STS-B | Semantic Textual Similarity Benchmark | 语义文本相似度基准数据集 |\n| 向量维度 | Embedding Dimension | 向量的维度数，常见384/768，越高信 息越丰富但开销越大 |",
+    "metadata": {
+      "page_num": 28,
+      "section": "场景 > 文本 A > 文本 B > 简要解释",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00103"
+  },
+  {
+    "content": "欧氏距离\nEuclidean Distance\n两向量间的直线距离，值越小越相似\nMRR\nMean Reciprocal Rank\n第一个正确结果排名倒数的均值\nMAP\nMean Average Precision\n各查询平均精度的均值，评估排序质量\nNDCG\nNormalized Discounted\nCumulative Gain\n考虑位置权重的排序质量指标\nHit@K\nHit at K\n前K个结果中是否命中正确答案\nRecall@K\nRecall at K\n前K个结果中正确答案被找到的比例\nAUC\nArea Under ROC Curve\nROC曲线下面积，衡量排序能力\nSpearman\nSpearman Correlation\n排序相关性，衡量预测顺序与真实顺序\n的一致性\n乘积量化\nProduct Quantization (PQ)\n将高维向量分段量化压缩，大幅减少存\nIVF\nInverted File Index\n倒排索引，先聚类再搜索相关桶\n回译\nBack Translation\n翻译成另一语言再翻回来，用于数据增\n梯度累积\nGradient Accumulation\n多个小batch梯度累加后更新，等效大\nbatch训练\nSentence\nTransformers\nSentence Transformers\n最流行的句子嵌入工具库，封装SBERT\n等模型训练推理\nLCQMC\nLarge-scale Chinese Question\nMatching Corpus\n哈工大中文问题匹配数据集\nSNLI\nStanford Natural Language\nInference\n斯坦福自然语言推理数据集\nSTS-B\nSemantic Textual Similarity\nBenchmark\n语义文本相似度基准数据集\n向量维度\nEmbedding Dimension\n向量的维度数，常见384/768，越高信\n息越丰富但开销越大",
+    "metadata": {
+      "page_num": 28,
+      "section": "场景 > 文本 A > 文本 B > 简要解释",
+      "block_types": [
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00104"
+  },
+  {
+    "content": "目标读者：新手 NLP 算法工程师，已阅读前面理论部分，准备动手实践。\n\n学习目标：通过一个完整的中文语义匹配项目，掌握 BiEncoder、CrossEncoder 和 LLM 三种方\n法从数据到评估的全流程。",
+    "metadata": {
+      "page_num": 28,
+      "section": "场景 > 文本 A > 文本 B > 目标读者：新手 NLP 算法工程师，已阅读前面理论部分，准备动手实践。",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00105"
+  },
+  {
+    "content": "| 阶段 | 任务 | 对应文件 |\n| --- | --- | --- |\n| 数据探索 | 统计分布、长度分析、标签比例 | src/explore_data.py |\n| 表示型训 练 | BiEncoder + CosineEmbeddingLoss / TripletLoss | src/train_biencoder.py |\n| 交互型训 练 | CrossEncoder + CrossEntropyLoss | src/train_crossencoder.py |\n| 模型评估 | 阈值搜索、F1/AUC、相似度分布 | src/evaluate.py |\n| 方法对比 | BiEncoder vs CrossEncoder vs LLM | src/compare_methods.py |\n| LLM零样 本 | DashScope API 直接判断 | src_llm/llm_compare.py |\n| LLM微调 | LoRA 指令微调（SFT） | src_llm/train_sft.py |",
+    "metadata": {
+      "page_num": 29,
+      "section": "场景 > 文本 A > 文本 B > 目标读者：新手 NLP 算法工程师，已阅读前面理论部分，准备动手实践。",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00106"
+  },
+  {
+    "content": "对应文件\n\n数据探索\n统计分布、长度分析、标签比例\nsrc/explore_data.py\n表示型训\nBiEncoder + CosineEmbeddingLoss /\nTripletLoss\nsrc/train_biencoder.py\n交互型训\nCrossEncoder + CrossEntropyLoss\nsrc/train_crossencoder.py\n模型评估\n阈值搜索、F1/AUC、相似度分布\nsrc/evaluate.py\n方法对比\nBiEncoder vs CrossEncoder vs LLM\nsrc/compare_methods.py\nLLM零样\nDashScope API 直接判断\nsrc_llm/llm_compare.py\nLLM微调\nLoRA 指令微调（SFT）\nsrc_llm/train_sft.py",
+    "metadata": {
+      "page_num": 29,
+      "section": "场景 > 文本 A > 文本 B > 对应文件",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00107"
+  },
+  {
+    "content": "新手要点：看到标签不均衡（31% vs 69%），意味着模型可能倾向于预测\"不相似\"。后续评估时\n\n不能只看准确率，要关注 F1 和 AUC。\n# 1. 安装依赖\npip install torch transformers scikit-learn tqdm matplotlib\npip install sentence-transformers rank-bm25\n# 2. 下载中文BERT预训练模型\n# 放到 pretrain_models/bert-base-chinese 目录\n# 或使用 HuggingFace 路径: google-bert/bert-base-chinese\n# 3. 下载数据集（AFQMC）\npython src/download_data.py\n# 运行数据探索\npython src/explore_data.py",
+    "metadata": {
+      "page_num": 29,
+      "section": "场景 > 文本 A > 文本 B > 新手要点：看到标签不均衡（31% vs 69%），意味着模型可能倾向于预测\"不相似\"。后续评估时",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00108"
+  },
+  {
+    "content": "方式一：CosineEmbeddingLoss（推荐入门）\n\n输入：(句子A, 句子B, 标签) 三元组\nlabel=1（正例）→ 拉近到 cos≈1\nlabel=0（负例）→ 推远到 cos<margin（默认0.3）",
+    "metadata": {
+      "page_num": 30,
+      "section": "场景 > 文本 A > 文本 B > 方式一：CosineEmbeddingLoss（推荐入门）",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00109"
+  },
+  {
+    "content": "新手要点：BiEncoder 训练时输出的是相似度分数（0~1），评估时需要阈值搜索来找最优分类阈\n\n值。这不同于普通分类任务直接取 argmax。\n# 核心代码（见 src/model.py）\nclass BiEncoder(nn.Module):\ndef encode(self, input_ids, attention_mask, token_type_ids):\nout = self.bert(input_ids, attention_mask, token_type_ids)\nvec = self._pool(out.last_hidden_state, attention_mask)  # 池化\nvec = self.dropout(vec)\nreturn F.normalize(vec, p=2, dim=-1)  # L2归一化\ndef forward(self, batch_a, batch_b):\nemb_a = self.encode(**batch_a)  # 编码句子A\nemb_b = self.encode(**batch_b)  # 编码句子B\nreturn emb_a, emb_b\npython src/train_biencoder.py --loss cosine\npython src/train_biencoder.py --loss triplet",
+    "metadata": {
+      "page_num": 30,
+      "section": "场景 > 文本 A > 文本 B > 新手要点：BiEncoder 训练时输出的是相似度分数（0~1），评估时需要阈值搜索来找最优分类阈",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00110"
+  },
+  {
+    "content": "| 维度 | BiEncoder | CrossEncoder | LLM（零样本） |\n| --- | --- | --- | --- |\n| 训练数据 | 需要 | 需要 | 不需要 |\n| 推理速度 | 毫秒级 | 数十毫秒 | 秒级 |\n| 可预计算 | 是 | 否 | 否 |\n| 适用规模 | 百万级 | 百~千级 | 小规模 |\n| F1（AFQMC） | ~0.68 | ~0.68 | ~0.56 |",
+    "metadata": {
+      "page_num": 31,
+      "section": "场景 > 文本 A > 文本 B > 新手要点：BiEncoder 训练时输出的是相似度分数（0~1），评估时需要阈值搜索来找最优分类阈",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00111"
+  },
+  {
+    "content": "核心区别：\n\nBiEncoder：两句分别编码 → 向量相似度\nCrossEncoder：[CLS] 句子A [SEP] 句子B [SEP] → 全层交互 → 分类\n训练结果：AFQMC 验证集 F1 约 0.68（4层BERT），与 BiEncoder 接近但使用场景不同。\n新手要点：CrossEncoder 评估直接 argmax 即可，不需要阈值搜索。但它无法预计算向量，不适\n合大规模检索。",
+    "metadata": {
+      "page_num": 31,
+      "section": "场景 > 文本 A > 文本 B > 核心区别：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00112"
+  },
+  {
+    "content": "对比维度：\n\n新手要点：为什么 CrossEncoder 和 BiEncoder 的 F1 差不多？因为 AFQMC 是短文本简单匹配任\n务，4层BERT的交互优势不明显。在长文本或难区分场景下，CrossEncoder 的优势会更显著。",
+    "metadata": {
+      "page_num": 31,
+      "section": "场景 > 文本 A > 文本 B > 对比维度：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00113"
+  },
+  {
+    "content": "Prompt 模板：\n\npython src/train_crossencoder.py\n# 核心代码（见 src/model.py）\nclass CrossEncoder(nn.Module):\ndef forward(self, input_ids, attention_mask, token_type_ids):\nout = self.bert(input_ids, attention_mask, token_type_ids)\ncls_vec = self.dropout(out.last_hidden_state[:, 0, :])\nlogits = self.classifier(cls_vec)  # [B, 2] → 相似/不相似\nreturn logits\n# 运行完整对比\npython src/compare_methods.py\npython src_llm/llm_compare.py",
+    "metadata": {
+      "page_num": 31,
+      "section": "场景 > 文本 A > 文本 B > Prompt 模板：",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00114"
+  },
+  {
+    "content": "Q1：为什么我的模型 F1 很低？\n\n检查清单：\n数据预览：标签分布正常吗？正负样本均衡吗？\n最大长度设置：max_length=64 覆盖了 99.9% 的句子吗？\n学习率：2e-5 对于 BERT 微调通常合适\n训练轮数：3~5 个 epoch 通常足够，过拟合会掉点\n阈值搜索：BiEncoder 的评估是否做了阈值搜索？",
+    "metadata": {
+      "page_num": 32,
+      "section": "场景 > 文本 A > 文本 B > Q1：为什么我的模型 F1 很低？",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00115"
+  },
+  {
+    "content": "Q2：BiEncoder vs CrossEncoder 怎么选？\n\n判断以下两句话是否表达相同意思。\n只输出\"相似\"或\"不相似\"，不解释。\n句子1: {text_a}\n句子2: {text_b}\n答案：",
+    "metadata": {
+      "page_num": 32,
+      "section": "场景 > 文本 A > 文本 B > Q2：BiEncoder vs CrossEncoder 怎么选？",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00116"
+  },
+  {
+    "content": "2. 基线实验\n\n├── BiEncoder + CosineEmbeddingLoss\n├── BiEncoder + TripletLoss\n└── CrossEncoder + CrossEntropyLoss",
+    "metadata": {
+      "page_num": 32,
+      "section": "场景 > 文本 A > 文本 B > 2. 基线实验",
+      "block_types": [
+        "title",
+        "text"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00117"
+  },
+  {
+    "content": "| 你的场景 | 选择 |\n| --- | --- |\n| 需要从百万文档中检索 Top-K | BiEncoder |\n| 已有 Top-100 候选，需要精排 | CrossEncoder |\n| 两者都需要 | 两阶段流水线 |\n| 没数据，要快速验证 | LLM 零样本 |",
+    "metadata": {
+      "page_num": 33,
+      "section": "场景 > 文本 A > 文本 B > 5. 上线部署",
+      "block_types": [
+        "table"
+      ],
+      "is_ocr": false,
+      "title": "文本匹配问题",
+      "topic": "文本匹配",
+      "strategy": "semantic",
+      "source_file": "文本匹配问题.json"
+    },
+    "chunk_id": "文本匹配问题_00118"
+  }
+]

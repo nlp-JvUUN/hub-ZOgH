@@ -1,0 +1,15 @@
+{
+  "dataset": "cluener",
+  "model": "BERT+Linear",
+  "split": "validation",
+  "precision": 0.729858,
+  "recall": 0.802083,
+  "f1": 0.764268,
+  "entity_f1": 0.764268,
+  "illegal_stats": {
+    "illegal_start": 1,
+    "illegal_transition": 220,
+    "total_seqs": 1343,
+    "total_illegal": 221
+  }
+}

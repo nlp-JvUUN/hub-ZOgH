@@ -1,0 +1,14 @@
+# BERT NER（src/）
+torch>=2.0.0
+transformers>=4.40.0
+seqeval>=1.2.2
+torchcrf>=1.1.0
+tqdm>=4.66.0
+matplotlib>=3.8.0
+
+# LLM SFT（src_llm/）
+peft>=0.14.0
+accelerate>=0.27.0
+
+# LLM API 对比（src_llm/llm_ner.py）
+openai>=1.0.0

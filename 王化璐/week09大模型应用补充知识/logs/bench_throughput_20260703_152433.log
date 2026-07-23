@@ -1,0 +1,39 @@
+# script: bench_throughput
+# started: 2026-07-03T15:24:33
+======================================================================
+
+======================================================================
+  Throughput Benchmark  |  50 prompts × max 100 new tokens
+======================================================================
+
+======================================================================
+  加载 transformers Qwen2-0.5B-Instruct
+======================================================================
+
+
+# finished: 2026-07-03T15:24:36
+# status: failed
+Traceback (most recent call last):
+  File "/root/src/run_logger.py", line 57, in capture_run_log
+    yield log_path
+  File "/root/src/run_logger.py", line 96, in run_with_log
+    main_fn()
+  File "/root/src/bench_throughput.py", line 249, in main
+    tf = bench_transformers(PROMPTS)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/src/bench_throughput.py", line 84, in bench_transformers
+    model = AutoModelForCausalLM.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 571, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/modeling_utils.py", line 279, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/modeling_utils.py", line 4333, in from_pretrained
+    model_init_context = cls.get_init_context(is_quantized, _is_ds_init_called)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/modeling_utils.py", line 3736, in get_init_context
+    init_contexts = [no_init_weights(), init_empty_weights()]
+                                        ^^^^^^^^^^^^^^^^^^
+NameError: name 'init_empty_weights' is not defined

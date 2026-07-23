@@ -1,0 +1,189 @@
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import Dataset, DataLoader
+import numpy as np
+import math
+
+# 设备配置：GPU优先 为什么GPU优先？
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(f"使用设备: {device}")
+# 词汇库 用来干嘛 构建词汇表
+corpus = """you are funny
+long time no see
+you can you up no can no bb
+I love three dawn dusk you 
+you are dawn dawn dusk dusk
+sun moon star are not than you best
+"""
+
+# 2. 构建词汇表  用来干嘛
+tokens = list(set(corpus.split()))  # 分词（按空格） 有啥用
+tokens.sort()
+vocab_size = len(tokens)
+# 词<->索引 映射
+word2idx = {word: i for i, word in enumerate(tokens)}
+idx2word = {i: word for i, word in enumerate(tokens)}
+
+# 3. 构建数据集：输入序列 = 前n个词，目标序列 = 后n个词
+seq_len = 5  # 序列长度
+data = []
+words = corpus.split()
+for i in range(len(words) - seq_len):
+    x = words[i:i+seq_len]
+    y = words[i+1:i+seq_len+1]
+    data.append(([word2idx[w] for w in x], [word2idx[w] for w in y]))
+
+# 4. 自定义Dataset
+class TextDataset(Dataset):
+    def __init__(self, data):
+        self.data = data
+    def __len__(self):
+        return len(self.data)
+    def __getitem__(self, idx):
+        return torch.tensor(self.data[idx][0], dtype=torch.long), \
+               torch.tensor(self.data[idx][1], dtype=torch.long)
+
+# 数据加载器
+dataset = TextDataset(data)
+dataloader = DataLoader(dataset, batch_size=2, shuffle=True)
+
+# 1. 位置编码（Transformer无时序信息，必须添加）
+class PositionalEncoding(nn.Module):
+    def __init__(self, d_model, max_len=5000):
+        super().__init__()
+        pe = torch.zeros(max_len, d_model)
+        position = torch.arange(0, max_len, dtype=torch.float).unsqueeze(1)
+        div_term = torch.exp(torch.arange(0, d_model, 2) * (-math.log(10000.0) / d_model))
+        pe[:, 0::2] = torch.sin(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term)
+        pe = pe.unsqueeze(0)
+        self.register_buffer('pe', pe)
+
+    def forward(self, x):
+        # x: [batch_size, seq_len, d_model]
+        x = x + self.pe[:, :x.size(1), :]
+        return x
+
+# 2. 单向掩码生成（核心：屏蔽未来token）
+def generate_square_mask(seq_len):
+    mask = torch.triu(torch.ones(seq_len, seq_len), diagonal=1)
+    mask = mask.masked_fill(mask == 1, float('-inf'))
+    return mask
+
+# 3. 单向Transformer语言模型
+class TransformerLM(nn.Module):
+    def __init__(self, vocab_size, d_model=128, nhead=8, num_layers=2):
+        super().__init__()
+        self.d_model = d_model
+        # 词嵌入
+        self.embedding = nn.Embedding(vocab_size, d_model)
+        # 位置编码
+        self.pos_encoder = PositionalEncoding(d_model)
+        # Transformer解码器（单向核心）
+        decoder_layer = nn.TransformerDecoderLayer(
+            d_model=d_model, nhead=nhead, dim_feedforward=256,
+            dropout=0.1, batch_first=True
+        )
+        self.transformer_decoder = nn.TransformerDecoder(decoder_layer, num_layers=num_layers)
+        # 输出层：映射到词汇表概率
+        self.fc = nn.Linear(d_model, vocab_size)
+
+    def forward(self, x, tgt_mask):
+        # 词嵌入 + 缩放
+        x = self.embedding(x) * math.sqrt(self.d_model)
+        # 位置编码
+        x = self.pos_encoder(x)
+        # 解码器前向传播
+        output = self.transformer_decoder(x, x, tgt_mask=tgt_mask)
+        # 分类输出
+        output = self.fc(output)
+        return output
+
+
+# 超参数
+d_model = 128
+epochs = 100
+lr = 1e-3
+
+# 初始化模型、优化器、损失函数
+model = TransformerLM(vocab_size, d_model).to(device)
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=lr)
+
+# 训练循环
+model.train()
+print("开始训练...")
+for epoch in range(epochs):
+    total_loss = 0
+    for batch_x, batch_y in dataloader:
+        batch_x = batch_x.to(device)
+        batch_y = batch_y.to(device)
+
+        # 生成掩码
+        seq_len = batch_x.size(1)
+        tgt_mask = generate_square_mask(seq_len).to(device)
+
+        # 前向传播
+        outputs = model(batch_x, tgt_mask)
+
+        # 损失计算（reshape适配交叉熵）
+        loss = criterion(outputs.reshape(-1, vocab_size), batch_y.reshape(-1))
+
+        # 反向传播
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        total_loss += loss.item()
+
+    if (epoch + 1) % 10 == 0:
+        print(f'Epoch [{epoch + 1}/{epochs}], Loss: {total_loss / len(dataloader):.4f}')
+print("训练完成！")
+
+   #综合文本
+def generate_text(model, start_text, generate_len=10, seq_len=5):
+    model.eval()
+    words = start_text.split()
+    with torch.no_grad():
+        for _ in range(generate_len):
+            # 取最后seq_len个词作为输入
+            input_words = words[-seq_len:]
+            # 转换为索引
+            input_idx = [word2idx[w] for w in input_words]
+            input_tensor = torch.tensor([input_idx], dtype=torch.long).to(device)
+
+            # 生成掩码
+            tgt_mask = generate_square_mask(seq_len).to(device)
+
+            # 预测
+            output = model(input_tensor, tgt_mask)
+            # 取最后一个token的预测结果
+            next_token_logits = output[0, -1, :]
+            next_token_idx = torch.argmax(next_token_logits).item()
+            next_word = idx2word[next_token_idx]
+
+            # 拼接到文本中
+            words.append(next_word)
+
+    return ' '.join(words)
+
+# 测试文本生成
+start_text = "sun moon star are not"
+#尝试补足文本，缺点不能自动缩减补足的文本数量（或者说我不知道），有重复现象如何解决？
+"""
+补足长度4 结果：#末尾多了than
+起始文本: sun moon star are not
+生成文本: sun moon star are not than you best than
+
+补足长度3（对于测试样本刚好）# 重复，不稳定，不可再次重现
+起始文本: sun moon star are not
+生成文本: sun moon star are not not not not
+
+起始文本: sun moon star are not
+生成文本: sun moon star are not not not than
+想法1：中文怎么弄进去？
+"""
+generated_text = generate_text(model, start_text, generate_len=4)
+print(f"起始文本: {start_text}")
+print(f"生成文本: {generated_text}")

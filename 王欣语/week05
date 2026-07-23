@@ -1,0 +1,430 @@
+"""
+字符级单向 Transformer 语言模型训练脚本，含 PPL 计算与文本生成。
+用法:
+    python language_model.py --epochs 20
+    python language_model.py --epochs 20 --generate --prompt "今天天气"
+"""
+
+import math
+import argparse
+import glob
+import random
+import torch
+import torch.nn as nn
+from torch.utils.data import Dataset, DataLoader
+
+
+
+# ─────────────────────────── 数据 ───────────────────────────
+# 【未修改】数据加载、词表构建、Dataset 定义保持与原 RNN 版本一致
+
+def load_corpus(pattern="*.txt"):
+    texts = []
+    for path in glob.glob(pattern):
+        with open(path, encoding="utf-8", errors="ignore") as f:
+            texts.append(f.read())
+    return "".join(texts)
+
+
+def build_vocab(text):
+    chars = sorted(set(text))
+    char2idx = {c: i for i, c in enumerate(chars)}
+    idx2char = {i: c for c, i in char2idx.items()}
+    return char2idx, idx2char
+
+
+class CharDataset(Dataset):
+    def __init__(self, text, char2idx, seq_len):
+        self.seq_len = seq_len
+        ids = [char2idx[c] for c in text if c in char2idx]
+        self.data = torch.tensor(ids, dtype=torch.long)
+
+    def __len__(self):
+        return max(0, len(self.data) - self.seq_len)
+
+    def __getitem__(self, idx):
+        x = self.data[idx: idx + self.seq_len]
+        y = self.data[idx + 1: idx + self.seq_len + 1]
+        return x, y
+
+
+# ─────────────────────────── 模型 ───────────────────────────
+# 以下模型定义为 Transformer 架构
+
+class CausalSelfAttention(nn.Module):
+    """
+    【新增】单向（因果）自注意力层。
+
+    为什么新增：
+        Transformer 的核心机制是自注意力，它可以让模型同时看到整个序列并学习
+        字符间的长距离依赖关系。而 RNN/LSTM 是逐步传递隐藏状态，长距离依赖较弱。
+
+    为什么是"因果"（Causal）：
+        语言模型是单向的——预测下一个字时只能看当前及之前的字，不能看后面的字。
+        通过下三角掩码（mask）实现：将未来位置的概率设为 -inf，softmax 后变为 0。
+    """
+
+    def __init__(self, embed_dim, num_heads, dropout, max_len):
+        super().__init__()
+        assert embed_dim % num_heads == 0, "embed_dim 必须能被 num_heads 整除"
+        self.num_heads = num_heads
+        self.head_dim = embed_dim // num_heads
+        self.scale = self.head_dim ** -0.5
+
+        # 用一个 Linear 同时生成 Q、K、V（比三个独立 Linear 更高效）
+        self.qkv = nn.Linear(embed_dim, embed_dim * 3)
+        self.proj = nn.Linear(embed_dim, embed_dim)
+        self.attn_drop = nn.Dropout(dropout)
+        self.proj_drop = nn.Dropout(dropout)
+
+        # 【关键】注册因果掩码 (1, 1, max_len, max_len)
+        # 使用 register_buffer 而不是 nn.Parameter，因为掩码不需要梯度
+        # torch.tril 生成下三角矩阵，确保位置 i 只能 attend 到位置 ≤ i
+        self.register_buffer(
+            "mask",
+            torch.tril(torch.ones(max_len, max_len)).view(1, 1, max_len, max_len)
+        )
+
+    def forward(self, x):
+        B, T, C = x.size()
+
+        # 计算 Q、K、V
+        # self.qkv(x) 输出形状: (B, T, 3*C)
+        # 其中 C = embed_dim = num_heads * head_dim
+        qkv = self.qkv(x)
+        # 拆分为 Q, K, V 三组，每组形状 (B, T, C)
+        q, k, v = qkv.chunk(3, dim=-1)
+
+        # 将 Q, K, V  reshape 为多头格式
+        # (B, T, C) → (B, T, num_heads, head_dim) → (B, num_heads, T, head_dim)
+        q = q.view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+        k = k.view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+        v = v.view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+        # 现在 q, k, v 都是 (B, num_heads, T, head_dim)
+
+        # 计算注意力分数：Q @ K^T / sqrt(d_k)
+        attn = (q @ k.transpose(-2, -1)) * self.scale  # (B, num_heads, T, T)
+        # 【关键】应用因果掩码：将未来位置设为 -inf，softmax 后变为 0
+        attn = attn.masked_fill(self.mask[:, :, :T, :T] == 0, float("-inf"))
+        attn = torch.softmax(attn, dim=-1)
+        attn = self.attn_drop(attn)
+
+        # 加权求和：注意力权重 @ V
+        out = attn @ v  # (B, num_heads, T, head_dim)
+        # 合并多头：(B, num_heads, T, head_dim) → (B, T, num_heads, head_dim) → (B, T, C)
+        out = out.transpose(1, 2).contiguous().view(B, T, C)
+        out = self.proj_drop(self.proj(out))
+        return out
+
+
+class TransformerBlock(nn.Module):
+    """
+    【新增】Transformer Decoder 块。
+
+    结构（Pre-LN）：
+        x = x + Attention(LayerNorm(x))   # 残差连接 1
+        x = x + FFN(LayerNorm(x))          # 残差连接 2
+
+    为什么用 Pre-LN（先 LayerNorm 再计算）：
+        相比 Post-LN（原始 Transformer 论文），Pre-LN 训练更稳定，
+        梯度不会随着层数加深而爆炸/消失，适合深层模型。
+    """
+
+    def __init__(self, embed_dim, num_heads, ff_dim, dropout, max_len):
+        super().__init__()
+        self.ln1 = nn.LayerNorm(embed_dim)
+        self.attn = CausalSelfAttention(embed_dim, num_heads, dropout, max_len)
+        self.ln2 = nn.LayerNorm(embed_dim)
+        # 前馈网络（FFN）：先升维再降维，增加模型表达能力
+        self.ff = nn.Sequential(
+            nn.Linear(embed_dim, ff_dim),
+            nn.GELU(),  # GELU 激活函数，比 ReLU 更平滑，Transformer 标准选择
+            nn.Dropout(dropout),
+            nn.Linear(ff_dim, embed_dim),
+            nn.Dropout(dropout),
+        )
+
+    def forward(self, x):
+        # 残差连接：缓解梯度消失，允许训练深层网络
+        x = x + self.attn(self.ln1(x))
+        x = x + self.ff(self.ln2(x))
+        return x
+
+
+class LM(nn.Module):
+    """
+    【修改】字符级单向 Transformer 语言模型。
+
+    为什么从 RNN/LSTM 改为 Transformer：
+        1. 长距离依赖：RNN 信息需逐步传递，长序列易遗忘；
+           Transformer 通过自注意力直接连接任意两个位置。
+        2. 并行计算：RNN 必须按时间步顺序计算；
+           Transformer 整个序列可并行处理，训练更快。
+        3. 表达能力：多头注意力可从不同角度捕捉字符关系。
+    """
+
+    def __init__(
+        self,
+        vocab_size,
+        embed_dim=256,      # 【修改】原 RNN 默认 128，Transformer 需要更大维度发挥注意力优势
+        num_layers=4,       # 【修改】原 RNN 默认 2 层，Transformer 通常更深
+        num_heads=8,        # 【新增】注意力头数，必须整除 embed_dim
+        ff_dim=1024,        # 【新增】FFN 中间层维度，通常 = 4 * embed_dim
+        max_len=512,        # 【修改】原 RNN 无显式长度限制，Transformer 需要（用于位置编码和掩码）
+        dropout=0.1,        # 【修改】原 RNN 默认 0.3，Transformer 通常更低（0.1）
+    ):
+        super().__init__()
+        self.max_len = max_len
+        # 【修改】Token 嵌入 + 【新增】位置嵌入
+        # 位置嵌入让模型知道每个字符在序列中的位置（注意力本身是无序的）
+        self.token_embed = nn.Embedding(vocab_size, embed_dim)
+        self.pos_embed = nn.Embedding(max_len, embed_dim)
+        self.drop = nn.Dropout(dropout)
+
+        # 【新增】堆叠多个 Transformer Block
+        self.blocks = nn.ModuleList([
+            TransformerBlock(embed_dim, num_heads, ff_dim, dropout, max_len)
+            for _ in range(num_layers)
+        ])
+
+        # 【新增】最终 LayerNorm + 输出投影
+        self.ln_f = nn.LayerNorm(embed_dim)
+        self.head = nn.Linear(embed_dim, vocab_size, bias=False)
+
+        # 【新增】权重初始化（标准正态分布，std=0.02）
+        # 好的初始化对 Transformer 训练稳定性很重要
+        self.apply(self._init_weights)
+
+    def _init_weights(self, module):
+        if isinstance(module, nn.Linear):
+            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
+            if module.bias is not None:
+                torch.nn.init.zeros_(module.bias)
+        elif isinstance(module, nn.Embedding):
+            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
+
+    def forward(self, x):
+        B, T = x.size()
+        assert T <= self.max_len, f"序列长度 {T} 超过最大长度 {self.max_len}"
+
+        # Token 嵌入 + 位置嵌入
+        tok_emb = self.token_embed(x)  # (B, T, embed_dim)
+        pos = torch.arange(0, T, dtype=torch.long, device=x.device).unsqueeze(0)  # (1, T)
+        pos_emb = self.pos_embed(pos)  # (1, T, embed_dim)
+        x = self.drop(tok_emb + pos_emb)
+
+        # 逐层通过 Transformer Blocks
+        for block in self.blocks:
+            x = block(x)
+
+        x = self.ln_f(x)
+        logits = self.head(x)  # (B, T, vocab_size)
+        return logits
+
+
+# ─────────────────────────── 训练 / 评估 ───────────────────────────
+
+def run_epoch(model, loader, criterion, optimizer, device, train=True):
+    model.train(train)
+    total_loss = 0.0
+    total_tokens = 0
+
+    for x, y in loader:
+        x, y = x.to(device), y.to(device)
+        logits = model(x)
+        loss = criterion(logits.reshape(-1, logits.size(-1)), y.reshape(-1))
+
+        if train:
+            optimizer.zero_grad()
+            loss.backward()
+            # 【新增】梯度裁剪，防止 Transformer 训练不稳定
+            # 原因：Transformer 深层 + 注意力机制容易产生梯度爆炸
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+            optimizer.step()
+
+        total_loss += loss.item() * y.numel()
+        total_tokens += y.numel()
+
+    avg_loss = total_loss / total_tokens
+    ppl = math.exp(avg_loss)
+    return avg_loss, ppl
+
+
+# ─────────────────────────── 文本生成 ───────────────────────────
+# 【新增】整个 generate 函数都是新增的，原 RNN 版本没有文本生成功能
+
+@torch.no_grad()
+def generate(model, char2idx, idx2char, prompt, max_new_tokens=200, temperature=1.0, top_k=None, device="cpu"):
+    """
+    【新增】基于 prompt 自回归生成文本。
+
+    生成原理：
+        1. 将 prompt 编码为 token IDs
+        2. 每次用模型预测下一个字符的概率分布
+        3. 用 temperature 和 top_k 控制采样策略
+        4. 将采样结果拼接到输入，重复直到生成足够长度
+
+    参数:
+        prompt        : 提示文本，作为生成的起始上下文
+        max_new_tokens: 最大生成字符数
+        temperature   : 采样温度
+            - < 1（如 0.8）：概率分布更"尖锐"，倾向于选择高概率字符，生成更保守、连贯
+            - > 1（如 1.2）：概率分布更"平坦"，增加随机性，生成更多样但可能不连贯
+            - = 1：原始概率分布
+        top_k         : 只从概率最高的 top_k 个 token 中采样
+            - 例如 top_k=40：只考虑概率最高的 40 个字符，其余概率设为 0
+            - None：不限制，考虑所有字符
+            - 作用：防止选中极低概率的"奇怪"字符，提高生成质量
+    """
+    model.eval()
+    ids = [char2idx.get(c, 0) for c in prompt]
+    input_ids = torch.tensor([ids], dtype=torch.long, device=device)
+
+    for _ in range(max_new_tokens):
+        # 【关键】截断到最大长度，防止超过模型处理能力
+        if input_ids.size(1) > model.max_len:
+            input_ids = input_ids[:, -model.max_len:]
+
+        logits = model(input_ids)  # (1, T, vocab_size)
+        next_logits = logits[0, -1, :] / temperature  # 取最后一个时间步，应用温度
+
+        # Top-K 截断：只保留概率最高的 k 个候选
+        if top_k is not None:
+            v, _ = torch.topk(next_logits, min(top_k, next_logits.size(-1)))
+            next_logits[next_logits < v[-1]] = float("-inf")
+
+        # 将 logits 转为概率分布，然后采样
+        probs = torch.softmax(next_logits, dim=-1)
+        next_id = torch.multinomial(probs, num_samples=1)
+        input_ids = torch.cat([input_ids, next_id.unsqueeze(0)], dim=1)
+
+    generated_ids = input_ids[0].tolist()
+    return "".join(idx2char.get(i, "") for i in generated_ids)
+
+
+# ─────────────────────────── 主函数 ───────────────────────────
+
+def main():
+    parser = argparse.ArgumentParser()
+    # 【修改】移除了 --model 参数（不再需要 rnn/lstm 切换）
+    parser.add_argument("--epochs",     type=int,   default=20)
+    parser.add_argument("--seq_len",    type=int,   default=128)   # 【修改】原 64，Transformer 需要更长上下文
+    parser.add_argument("--batch_size", type=int,   default=64)    # 【修改】原 128，Transformer 显存占用更大
+    parser.add_argument("--embed_dim",  type=int,   default=256)   # 【修改】原 128
+    parser.add_argument("--num_layers", type=int,   default=4)     # 【修改】原 2
+    parser.add_argument("--num_heads",  type=int,   default=8)     # 【新增】注意力头数
+    parser.add_argument("--ff_dim",     type=int,   default=1024)  # 【新增】FFN 中间维度
+    parser.add_argument("--dropout",    type=float, default=0.1)   # 【修改】原 0.3
+    parser.add_argument("--lr",         type=float, default=3e-4)  # 【修改】原 1e-3，Transformer 通常用更小学习率
+    parser.add_argument("--val_ratio",  type=float, default=0.05)
+    parser.add_argument("--corpus",     default="*.txt")
+    parser.add_argument("--save",       default="best_model.pt")
+
+    # 【新增】生成相关参数
+    parser.add_argument("--generate",   action="store_true", help="训练完成后进行文本生成")
+    parser.add_argument("--prompt",     default="",          help="生成提示文本")
+    parser.add_argument("--gen_len",    type=int,   default=200,  help="生成最大长度")
+    parser.add_argument("--temperature",type=float, default=0.8,  help="采样温度")
+    parser.add_argument("--top_k",      type=int,   default=40,   help="Top-K 采样")
+    args = parser.parse_args()
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"device: {device}  model: Transformer")
+
+    # 数据准备（未修改）
+    text = load_corpus(args.corpus)
+    if not text:
+        raise FileNotFoundError("未找到任何 .txt 文件，请确认路径正确。")
+    print(f"语料字符数: {len(text):,}")
+
+    char2idx, idx2char = build_vocab(text)
+    vocab_size = len(char2idx)
+    print(f"词表大小: {vocab_size}")
+
+    lines = text.splitlines()
+    random.shuffle(lines)
+    split = int(len(lines) * (1 - args.val_ratio))
+    train_text = "\n".join(lines[:split])
+    val_text   = "\n".join(lines[split:])
+
+    train_ds = CharDataset(train_text, char2idx, args.seq_len)
+    val_ds   = CharDataset(val_text,   char2idx, args.seq_len)
+
+    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, drop_last=True)
+    val_loader   = DataLoader(val_ds,   batch_size=args.batch_size, shuffle=True, drop_last=True)
+
+    # 【修改】模型初始化参数更新为 Transformer 参数
+    model = LM(
+        vocab_size=vocab_size,
+        embed_dim=args.embed_dim,
+        num_layers=args.num_layers,
+        num_heads=args.num_heads,
+        ff_dim=args.ff_dim,
+        max_len=args.seq_len,
+        dropout=args.dropout,
+    ).to(device)
+
+    total_params = sum(p.numel() for p in model.parameters())
+    print(f"模型参数量: {total_params:,}")
+
+    criterion = nn.CrossEntropyLoss()
+    # 【修改】AdamW 替代 Adam
+    # AdamW 将权重衰减（weight decay）与 L2 正则化解耦，对 Transformer 更友好
+    optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
+
+    best_val_ppl = float("inf")
+
+    print(f"\n{'Epoch':>6}  {'Train Loss':>10}  {'Train PPL':>10}  {'Val Loss':>10}  {'Val PPL':>10}")
+    print("-" * 56)
+
+    for epoch in range(1, args.epochs + 1):
+        tr_loss, tr_ppl = run_epoch(model, train_loader, criterion, optimizer, device, train=True)
+        with torch.no_grad():
+            va_loss, va_ppl = run_epoch(model, val_loader, criterion, optimizer, device, train=False)
+
+        marker = "  *" if va_ppl < best_val_ppl else ""
+        if va_ppl < best_val_ppl:
+            best_val_ppl = va_ppl
+            torch.save({
+                "model_state": model.state_dict(),
+                "char2idx": char2idx,
+                "idx2char": idx2char,
+                "args": vars(args),
+            }, args.save)
+
+        print(f"{epoch:>6}  {tr_loss:>10.4f}  {tr_ppl:>10.2f}  {va_loss:>10.4f}  {va_ppl:>10.2f}{marker}")
+
+    print(f"\n训练完成。最佳验证 PPL: {best_val_ppl:.2f}  已保存至 {args.save}")
+
+    # 【新增】文本生成模块
+    if args.generate:
+        print("\n" + "=" * 52)
+        print("文本生成")
+        print("=" * 52)
+        # 重新加载最佳模型
+        ckpt = torch.load(args.save, map_location=device)
+        model.load_state_dict(ckpt["model_state"])
+        model.eval()
+
+        prompt = args.prompt
+        if not prompt:
+            # 随机从验证集取一个 prompt
+            val_ids = val_ds.data.tolist()
+            start = random.randint(0, max(0, len(val_ids) - args.seq_len))
+            prompt = "".join(idx2char[i] for i in val_ids[start:start + 20])
+            print(f"随机 prompt: 「{prompt}」")
+
+        # 【新增】调用 generate 函数进行文本生成
+        generated = generate(
+            model, char2idx, idx2char,
+            prompt=prompt,
+            max_new_tokens=args.gen_len,
+            temperature=args.temperature,
+            top_k=args.top_k,
+            device=device,
+        )
+        print(f"\n生成结果:\n{generated}")
+
+
+if __name__ == "__main__":
+    main()
