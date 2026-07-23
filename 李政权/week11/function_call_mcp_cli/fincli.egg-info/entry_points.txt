@@ -1,2 +1,0 @@
-[console_scripts]
-fincli = mode_cli.cli.main:main
