@@ -1,0 +1,6 @@
+# 运行时生成物（不提交）
+state/
+journal/
+__pycache__/
+*.pyc
+.pytest_cache/
