@@ -1,0 +1,42 @@
+python src/probe_baseline.py --model outputs/grpo_ckpt --out outputs/post_train_probe.json --seed 42
+====================================================================
+[环境检查] 2026-08-28 02:06:15  tag=probe
+  主机: autodl-container-73914f9bf9-f49ccd61   系统: Linux 6.2.0-26-generic (x86_64)   CPU 核心: 224
+  Python: 3.12.3   torch: 2.8.0+cu128
+  CUDA available: True   CUDA 版本: 12.8
+  GPU: NVIDIA GeForce RTX 4090（23.53 GB, bf16=True）
+  依赖: transformers=5.15.1  trl=0.21.0  peft=未安装  accelerate=1.14.0  datasets=5.0.1  numpy=2.3.2
+====================================================================
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 290/290 [00:00<00:00, 1094.65it/s]
+L1_add_1digit        greedy_loose=1.00 fmt=0.26 loose_acc=0.99 loose_pass@8=1.00 loose_informative=0.08 (1.8s)
+L2_addsub_2digit     greedy_loose=1.00 fmt=0.36 loose_acc=0.94 loose_pass@8=1.00 loose_informative=0.30 (1.5s)
+L3_addsub_3digit     greedy_loose=0.82 fmt=0.44 loose_acc=0.79 loose_pass@8=0.98 loose_informative=0.50 (2.5s)
+L4_mul_1digit        greedy_loose=1.00 fmt=0.00 loose_acc=0.97 loose_pass@8=1.00 loose_informative=0.18 (1.0s)
+L5_mul_2x1digit      greedy_loose=0.90 fmt=0.26 loose_acc=0.81 loose_pass@8=0.96 loose_informative=0.46 (1.5s)
+L6_mul_2x2digit      greedy_loose=0.22 fmt=0.44 loose_acc=0.16 loose_pass@8=0.32 loose_informative=0.26 (2.0s)
+
+结果已保存：outputs/post_train_probe.json
+GPU 峰值显存：1.54 GB
+
+
+
+
+python src/probe_baseline.py --model outputs/grpo_lora_ckpt --out outputs/post_train_probe_lora.json --seed 42
+====================================================================
+[环境检查] 2026-08-28 02:15:25  tag=probe
+  主机: autodl-container-73914f9bf9-f49ccd61   系统: Linux 6.2.0-26-generic (x86_64)   CPU 核心: 224
+  Python: 3.12.3   torch: 2.8.0+cu128
+  CUDA available: True   CUDA 版本: 12.8
+  GPU: NVIDIA GeForce RTX 4090（23.53 GB, bf16=True）
+  依赖: transformers=5.15.1  trl=0.21.0  peft=0.20.0  accelerate=1.14.0  datasets=5.0.1  numpy=2.3.2
+====================================================================
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 290/290 [00:00<00:00, 805.50it/s]
+L1_add_1digit        greedy_loose=1.00 fmt=1.00 loose_acc=1.00 loose_pass@8=1.00 loose_informative=0.00 (3.1s)
+L2_addsub_2digit     greedy_loose=0.94 fmt=1.00 loose_acc=0.93 loose_pass@8=0.98 loose_informative=0.10 (2.1s)
+L3_addsub_3digit     greedy_loose=0.84 fmt=1.00 loose_acc=0.84 loose_pass@8=0.92 loose_informative=0.20 (2.8s)
+L4_mul_1digit        greedy_loose=1.00 fmt=1.00 loose_acc=1.00 loose_pass@8=1.00 loose_informative=0.00 (2.7s)
+L5_mul_2x1digit      greedy_loose=0.96 fmt=1.00 loose_acc=0.96 loose_pass@8=1.00 loose_informative=0.12 (2.0s)
+L6_mul_2x2digit      greedy_loose=0.28 fmt=0.98 loose_acc=0.23 loose_pass@8=0.38 loose_informative=0.26 (2.3s)
+
+结果已保存：outputs/post_train_probe_lora.json
+GPU 峰值显存：1.48 GB
