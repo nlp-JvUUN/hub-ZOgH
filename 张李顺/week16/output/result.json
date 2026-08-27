@@ -1,0 +1,13 @@
+{
+  "total": 60,
+  "before": {
+    "numeric_correct": 21,
+    "format_correct": 45,
+    "strict_correct": 17
+  },
+  "after": {
+    "numeric_correct": 35,
+    "format_correct": 60,
+    "strict_correct": 35
+  }
+}
