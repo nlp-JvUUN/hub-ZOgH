@@ -1,0 +1,529 @@
+# Week 17 作业：基于GRPO的强化学习提升模型数学能力
+
+## 作业概述
+
+本作业实现了基于 **GRPO (Group Relative Policy Optimization)** 的强化学习方法，用于提升语言模型在数学问题求解方面的能力。
+
+### 什么是GRPO？
+
+GRPO是一种改进的强化学习算法，相比传统的PPO (Proximal Policy Optimization)，它具有以下特点：
+
+1. **组相对优化**：对每个问题生成多个回答（一组），基于组内的相对质量进行优化
+2. **相对奖励**：使用组内标准化的相对优势，而不是绝对奖励值
+3. **更稳定的训练**：通过组内比较减少奖励的方差，提高训练稳定性
+
+### 核心算法流程
+
+```
+对于每个问题 q：
+  1. 使用策略模型π生成G个回答：{r₁, r₂, ..., rG}
+  2. 计算每个回答的奖励：R(rᵢ) ∈ {1.0(正确), -0.5(错误)}
+  3. 计算组内相对优势：Aᵢ = (Rᵢ - mean(R)) / std(R)
+  4. 更新策略：最大化 Aᵢ * log π(rᵢ|q)，同时约束KL散度
+```
+
+## 项目结构
+
+```
+week17/
+├── config.py              # 训练配置
+├── math_dataset.py        # 数学数据集处理
+├── grpo_trainer.py        # GRPO训练器核心实现
+├── train.py               # 训练主程序
+├── inference.py           # 推理脚本
+├── requirements.txt       # 依赖包
+├── readme                 # 本文档
+```
+
+## 核心实现详解
+
+### 1. 配置文件 (config.py)
+
+定义了所有训练相关的超参数：
+
+- **模型配置**：基础模型选择（Qwen2.5-0.5B-Instruct）
+- **训练参数**：批次大小、学习率、训练轮数等
+- **GRPO参数**：
+  - `group_size=4`：每个问题生成4个回答
+  - `kl_coef=0.1`：KL散度惩罚系数
+  - `gamma=1.0`：折扣因子
+- **奖励配置**：
+  - `correct_reward=1.0`：正确答案奖励
+  - `incorrect_reward=-0.5`：错误答案惩罚
+
+### 2. 数据集处理 (math_dataset.py)
+
+**功能**：
+- 加载GSM8K数学问题数据集
+- 提取和解析数学答案
+- 答案正确性验证
+
+**关键函数**：
+```python
+# 提取答案
+extract_answer(answer_text: str) -> str
+
+# 检查答案正确性
+check_answer(predicted: str, ground_truth: str) -> bool
+
+# 格式化提示词
+format_prompt(question: str) -> str
+
+# 解析模型输出
+parse_model_output(output: str) -> str
+```
+
+### 3. GRPO训练器 (grpo_trainer.py)
+
+**核心类**: `GRPOTrainer`
+
+**主要方法**：
+
+#### 3.1 生成回答
+```python
+generate_responses(questions, num_responses) -> (responses, log_probs, ref_log_probs)
+```
+- 为每个问题生成多个回答
+- 同时计算策略模型和参考模型的对数概率
+- 参考模型保持冻结，用于KL散度计算
+
+#### 3.2 计算奖励
+```python
+compute_rewards(responses, ground_truths) -> rewards
+```
+- 解析每个回答的最终答案
+- 与真实答案对比
+- 分配奖励值（正确/错误）
+
+#### 3.3 GRPO损失计算
+```python
+compute_grpo_loss(log_probs, ref_log_probs, rewards) -> loss
+```
+
+**损失函数组成**：
+```
+L = -E[A(r) * log π(r|q)] + β * KL(π||πref)
+
+其中：
+- A(r): 组内相对优势 = (R(r) - mean_group(R)) / std_group(R)
+- π: 策略模型（待训练）
+- πref: 参考模型（冻结）
+- β: KL系数 (kl_coef)
+```
+
+**算法优势**：
+1. 组内标准化减少奖励方差
+2. 相对比较而非绝对值，更稳定
+3. KL约束防止过度偏离原始模型
+
+#### 3.4 训练循环
+```python
+train() -> None
+```
+- 训练前评估基线性能
+- 逐轮训练（多个epoch）
+- 每个step：生成 → 计算奖励 → 计算损失 → 更新
+- 定期评估和保存检查点
+- 训练后最终评估
+
+### 4. 训练主程序 (train.py)
+
+提供命令行接口：
+```bash
+python train.py \
+  --model_name Qwen/Qwen2.5-0.5B-Instruct \
+  --batch_size 4 \
+  --num_epochs 3 \
+  --learning_rate 1e-5 \
+  --group_size 4 \
+  --output_dir ./grpo_math_model
+```
+
+### 5. 推理脚本 (inference.py)
+
+使用训练好的模型进行推理：
+
+**单问题模式**：
+```bash
+python inference.py \
+  --model_path ./grpo_math_model/final \
+  --question "Janet's ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?"
+```
+
+**交互模式**：
+```bash
+python inference.py --model_path ./grpo_math_model/final
+```
+
+## 使用指南
+
+### 环境安装
+
+```bash
+# 安装依赖
+pip install -r requirements.txt
+
+# 如果使用GPU，确保安装正确的PyTorch版本
+# CUDA 11.8:
+pip install torch --index-url https://download.pytorch.org/whl/cu118
+
+# CUDA 12.1:
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+```
+
+### 训练模型
+
+#### 快速开始（默认配置）
+```bash
+python train.py
+```
+
+#### 自定义配置
+```bash
+python train.py \
+  --model_name Qwen/Qwen2.5-0.5B-Instruct \
+  --batch_size 2 \
+  --num_epochs 5 \
+  --learning_rate 5e-6 \
+  --group_size 8 \
+  --kl_coef 0.1 \
+  --dataset_split "train[:2000]" \
+  --val_split "test[:200]" \
+  --output_dir ./my_grpo_model \
+  --device cuda
+```
+
+#### 仅CPU训练
+```bash
+python train.py --device cpu --batch_size 1 --dataset_split "train[:100]"
+```
+
+### 使用训练好的模型
+
+#### 单个问题求解
+```bash
+python inference.py \
+  --model_path ./grpo_math_model/final \
+  --question "If John has 5 apples and buys 3 more, how many does he have?"
+```
+
+#### 交互式求解
+```bash
+python inference.py --model_path ./grpo_math_model/final
+# 然后输入问题，输入 quit 退出
+```
+
+## 训练输出说明
+
+### 训练过程输出
+
+```
+============================================================
+Starting GRPO Training
+============================================================
+
+Loading model: Qwen/Qwen2.5-0.5B-Instruct
+Using device: cuda
+Loading datasets...
+Loaded 1000 examples
+
+Initial evaluation...
+Evaluating: 100%|██████████| 25/25
+Initial accuracy: 0.3500
+
+============================================================
+Epoch 1/3
+============================================================
+
+Training Epoch 1: 100%|██████████| 250/250 [10:23<00:00, loss=0.7234, reward=0.15]
+Evaluating epoch 1...
+Epoch 1 accuracy: 0.4200
+
+...
+```
+
+### 模型保存结构
+
+```
+grpo_math_model/
+├── checkpoint-100/          # 每100步保存
+├── checkpoint-200/
+├── epoch-1/                 # 每轮结束保存
+├── epoch-2/
+├── epoch-3/
+├── final/                   # 最终模型
+│   ├── config.json
+│   ├── generation_config.json
+│   ├── model.safetensors
+│   ├── tokenizer_config.json
+│   └── ...
+├── training_stats.json      # 训练统计
+└── optimizer.pt             # 优化器状态
+```
+
+### 训练统计 (training_stats.json)
+
+```json
+[
+  {
+    "step": 10,
+    "loss": 0.8234,
+    "avg_reward": 0.125,
+    "max_reward": 1.0
+  },
+  ...
+]
+```
+
+## 性能优化建议
+
+### 内存优化
+
+1. **减小批次大小**：
+```python
+--batch_size 2  # 或 1
+```
+
+2. **使用梯度累积**：
+```python
+--gradient_accumulation_steps 4
+```
+
+3. **减少group_size**：
+```python
+--group_size 2  # 默认是4
+```
+
+### 训练速度优化
+
+1. **使用混合精度**：默认已启用（fp16）
+
+2. **减少最大长度**：
+```python
+# 在config.py中修改
+max_length: int = 256  # 默认512
+```
+
+3. **使用更小的数据集**：
+```python
+--dataset_split "train[:500]"
+```
+
+### 效果优化
+
+1. **增加训练数据**：
+```python
+--dataset_split "train[:5000]"  # 或 "train" 使用全部
+```
+
+2. **调整奖励权重**：
+```python
+# 在config.py中
+correct_reward: float = 2.0      # 增加正确奖励
+incorrect_reward: float = -1.0   # 增加错误惩罚
+```
+
+3. **调整KL系数**：
+```python
+--kl_coef 0.05  # 减小以允许更大的策略变化
+--kl_coef 0.2   # 增大以更保守地更新
+```
+
+4. **增加训练轮数**：
+```python
+--num_epochs 5
+```
+
+## 实验结果分析
+
+### 预期效果
+
+基于GSM8K数据集：
+- **初始准确率**：30-40%（未训练的基础模型）
+- **训练后准确率**：45-55%（训练1000样本，3轮）
+- **完整训练**：60-70%（训练全部数据，更多轮次）
+
+### 评估指标
+
+1. **准确率 (Accuracy)**：正确回答的问题比例
+2. **平均奖励 (Average Reward)**：训练过程中的平均奖励值
+3. **损失 (Loss)**：GRPO损失值，应该逐渐下降
+
+### 观察要点
+
+1. **奖励曲线**：
+   - 应该逐渐上升
+   - 如果震荡很大，考虑减小学习率
+
+2. **损失曲线**：
+   - 应该逐渐下降
+   - 如果不下降，检查超参数
+
+3. **准确率提升**：
+   - 每轮应该有明显提升
+   - 如果停滞，考虑调整配置
+
+## 技术要点总结
+
+### GRPO vs PPO
+
+| 特性 | PPO | GRPO |
+|------|-----|------|
+| 优势计算 | 绝对值 | 组内相对 |
+| 奖励方差 | 较大 | 较小 |
+| 训练稳定性 | 中等 | 较好 |
+| 计算效率 | 高 | 中等（需要多次采样） |
+
+### 关键技术点
+
+1. **双模型设计**：
+   - 策略模型：不断更新
+   - 参考模型：保持冻结，用于KL约束
+
+2. **组内标准化**：
+   - 减少不同问题难度的影响
+   - 使训练更关注相对质量
+
+3. **KL散度约束**：
+   - 防止过度偏离原始模型
+   - 保持模型的通用能力
+
+4. **奖励设计**：
+   - 正确答案给予正奖励
+   - 错误答案给予负奖励
+   - 可以扩展为更细粒度的奖励
+
+## 扩展方向
+
+### 1. 改进奖励函数
+
+```python
+def compute_advanced_rewards(response, ground_truth):
+    # 部分正确奖励
+    if has_correct_intermediate_steps(response):
+        reward += 0.5
+    
+    # 推理链条奖励
+    if shows_clear_reasoning(response):
+        reward += 0.3
+    
+    # 最终答案奖励
+    if is_correct(response, ground_truth):
+        reward += 1.0
+    
+    return reward
+```
+
+### 2. 多任务学习
+
+- 同时训练多种数学问题类型
+- 代数、几何、概率等
+
+### 3. 课程学习
+
+- 从简单问题开始
+- 逐步增加难度
+
+### 4. 分布式训练
+
+```python
+# 使用多GPU训练
+python -m torch.distributed.launch \
+  --nproc_per_node=4 \
+  train.py --use_distributed
+```
+
+### 5. 模型融合
+
+- 训练多个GRPO模型
+- 投票或平均预测结果
+
+## 常见问题
+
+### Q1: CUDA内存不足怎么办？
+
+**解决方案**：
+```bash
+# 1. 减小批次
+--batch_size 1
+
+# 2. 减小group_size
+--group_size 2
+
+# 3. 使用CPU
+--device cpu
+
+# 4. 使用更小的模型
+--model_name Qwen/Qwen2.5-0.5B-Instruct  # 已经是最小的
+```
+
+### Q2: 训练很慢怎么办？
+
+**解决方案**：
+```bash
+# 1. 减少数据量
+--dataset_split "train[:200]"
+
+# 2. 减少group_size
+--group_size 2
+
+# 3. 减少max_new_tokens（在代码中修改）
+```
+
+### Q3: 准确率不提升怎么办？
+
+**排查步骤**：
+1. 检查奖励是否正确计算
+2. 查看training_stats.json中的avg_reward
+3. 尝试调整学习率
+4. 增加训练数据和轮数
+
+### Q4: 如何使用自己的数学数据集？
+
+**修改方法**：
+在 `math_dataset.py` 中修改 `MathDataset` 类：
+```python
+def __init__(self, split: str, dataset_name: str):
+    if dataset_name == "my_dataset":
+        # 加载你的数据集
+        self.dataset = load_dataset("path/to/your/dataset", split=split)
+    ...
+```
+
+## 参考资料
+
+1. **GRPO论文**：Group Relative Policy Optimization
+2. **PPO论文**：Proximal Policy Optimization Algorithms
+3. **GSM8K数据集**：Training Verifiers to Solve Math Word Problems
+4. **强化学习基础**：Reinforcement Learning: An Introduction
+
+## 作业完成检查清单
+
+- [x] 实现GRPO核心算法
+- [x] 实现数学数据集加载和处理
+- [x] 实现答案验证逻辑
+- [x] 实现训练主程序
+- [x] 实现推理脚本
+- [x] 添加完整的配置系统
+- [x] 编写详细的文档
+- [x] 提供使用示例
+
+## 总结
+
+本作业完整实现了基于GRPO的强化学习方法用于提升语言模型的数学能力。通过组相对优化和KL约束，GRPO能够更稳定地训练出在数学问题求解上表现更好的模型。
+
+**核心创新点**：
+1. 使用组内相对优势代替绝对奖励
+2. 双模型设计（策略+参考）
+3. KL散度约束保持稳定性
+
+**实验价值**：
+- 理解强化学习在NLP中的应用
+- 掌握GRPO算法原理和实现
+- 学习如何设计奖励函数
+- 实践模型训练和评估流程
+
+---
+
+**作者**：林书勤  
+**课程**：第17周作业 - GRPO强化学习
