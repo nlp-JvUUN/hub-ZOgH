@@ -1,0 +1,32 @@
+{
+  "model": "../outputs/grpo_ckpt/grpo.pt",
+  "seed": 42,
+  "L1": {
+    "n": 300,
+    "greedy_acc": 0.9933333333333333,
+    "greedy_format": 0.0,
+    "pass@8_acc": 1.0,
+    "informative_rate": 0.30333333333333334
+  },
+  "L2": {
+    "n": 300,
+    "greedy_acc": 0.9166666666666666,
+    "greedy_format": 0.0,
+    "pass@8_acc": 0.97,
+    "informative_rate": 0.7
+  },
+  "L3": {
+    "n": 300,
+    "greedy_acc": 0.9566666666666667,
+    "greedy_format": 0.0,
+    "pass@8_acc": 0.9966666666666667,
+    "informative_rate": 0.61
+  },
+  "L4": {
+    "n": 300,
+    "greedy_acc": 0.0033333333333333335,
+    "greedy_format": 0.0,
+    "pass@8_acc": 0.01,
+    "informative_rate": 0.01
+  }
+}

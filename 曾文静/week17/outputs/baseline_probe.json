@@ -1,0 +1,32 @@
+{
+  "model": "../outputs/sft_ckpt/sft.pt",
+  "seed": 42,
+  "L1": {
+    "n": 300,
+    "greedy_acc": 0.9733333333333334,
+    "greedy_format": 0.0,
+    "pass@8_acc": 0.9966666666666667,
+    "informative_rate": 0.31666666666666665
+  },
+  "L2": {
+    "n": 300,
+    "greedy_acc": 0.7733333333333333,
+    "greedy_format": 0.0,
+    "pass@8_acc": 0.9033333333333333,
+    "informative_rate": 0.6333333333333333
+  },
+  "L3": {
+    "n": 300,
+    "greedy_acc": 0.8666666666666667,
+    "greedy_format": 0.0,
+    "pass@8_acc": 0.96,
+    "informative_rate": 0.53
+  },
+  "L4": {
+    "n": 300,
+    "greedy_acc": 0.0033333333333333335,
+    "greedy_format": 0.0,
+    "pass@8_acc": 0.006666666666666667,
+    "informative_rate": 0.006666666666666667
+  }
+}

@@ -1,0 +1,106 @@
+
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+venv/
+env/
+.venv/
+.env
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+*.ipynb_checkpoints
+
+# Data files (大文件，防止再推送上不去)
+*.csv
+*.xlsx
+*.xls
+*.json
+*.pickle
+*.pkl
+*.h5
+*.hdf5
+*.parquet
+*.feather
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.bak
+*.tmp
+*.temp
+
+# Images / Videos (如果项目里有大图片视频)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.mp4
+*.avi
+*.mov
+*.mp3
+*.wav
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Model files (机器学习模型)
+*.pt
+*.pth
+*.onnx
+*.pb
+*.tflite
+*.joblib
+*.model
+
+# Output directories
+outputs/
+results/
+logs/
+data/
+dataset/
+checkpoints/
+runs/
+wandb/
+tensorboard/
+
+# 其他
+*.tmp
+*.cache
+*.lock
+*.pid
+*.seed
+*.pid.lock
+EOF
