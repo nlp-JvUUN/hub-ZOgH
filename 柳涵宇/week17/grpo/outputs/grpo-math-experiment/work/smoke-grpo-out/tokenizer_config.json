@@ -1,0 +1,15 @@
+{
+  "add_prefix_space": false,
+  "backend": "tokenizers",
+  "bos_token": "<|endoftext|>",
+  "eos_token": "<|endoftext|>",
+  "errors": "replace",
+  "is_local": false,
+  "local_files_only": false,
+  "model_max_length": 1024,
+  "pad_token": "<|endoftext|>",
+  "padding_side": "left",
+  "tokenizer_class": "GPT2Tokenizer",
+  "truncation_side": "left",
+  "unk_token": "<|endoftext|>"
+}
