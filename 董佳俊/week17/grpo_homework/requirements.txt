@@ -1,0 +1,3 @@
+torch>=2.0
+transformers>=4.40
+matplotlib   # 可选：训练曲线绘图（analyze.py 不可用时会自动降级为文本表）

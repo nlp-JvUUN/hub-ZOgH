@@ -1,0 +1,188 @@
+{
+  "L1_add_1digit": {
+    "n": 6,
+    "k": 8,
+    "greedy_format_rate": 1.0,
+    "greedy_strict_acc": 1.0,
+    "greedy_loose_acc": 1.0,
+    "sample_strict_acc": 0.4792,
+    "sample_loose_acc": 0.5208,
+    "pass@8": 1.0,
+    "loose_pass@8": 1.0,
+    "informative_group_rate": 1.0,
+    "loose_informative_group_rate": 1.0,
+    "elapsed_sec": 56.0,
+    "examples": [
+      {
+        "expr": "2 + 1",
+        "answer": 3,
+        "greedy_output": "<answer>3</answer>"
+      },
+      {
+        "expr": "5 + 4",
+        "answer": 9,
+        "greedy_output": "<answer>9</answer>"
+      },
+      {
+        "expr": "4 + 3",
+        "answer": 7,
+        "greedy_output": "<answer>7</answer>"
+      }
+    ]
+  },
+  "L2_addsub_2digit": {
+    "n": 6,
+    "k": 8,
+    "greedy_format_rate": 1.0,
+    "greedy_strict_acc": 1.0,
+    "greedy_loose_acc": 1.0,
+    "sample_strict_acc": 0.5208,
+    "sample_loose_acc": 0.5625,
+    "pass@8": 1.0,
+    "loose_pass@8": 1.0,
+    "informative_group_rate": 1.0,
+    "loose_informative_group_rate": 1.0,
+    "elapsed_sec": 58.8,
+    "examples": [
+      {
+        "expr": "21 + 37",
+        "answer": 58,
+        "greedy_output": "<answer>58</answer>"
+      },
+      {
+        "expr": "87 - 13",
+        "answer": 74,
+        "greedy_output": "<answer>74</answer>"
+      },
+      {
+        "expr": "99 - 93",
+        "answer": 6,
+        "greedy_output": "<answer>6</answer>"
+      }
+    ]
+  },
+  "L3_addsub_3digit": {
+    "n": 6,
+    "k": 8,
+    "greedy_format_rate": 1.0,
+    "greedy_strict_acc": 0.6667,
+    "greedy_loose_acc": 0.6667,
+    "sample_strict_acc": 0.5625,
+    "sample_loose_acc": 0.6458,
+    "pass@8": 0.8333,
+    "loose_pass@8": 1.0,
+    "informative_group_rate": 0.8333,
+    "loose_informative_group_rate": 0.8333,
+    "elapsed_sec": 69.0,
+    "examples": [
+      {
+        "expr": "881 + 444",
+        "answer": 1325,
+        "greedy_output": "<answer>1325</answer>"
+      },
+      {
+        "expr": "489 + 199",
+        "answer": 688,
+        "greedy_output": "<answer>688</answer>"
+      },
+      {
+        "expr": "452 + 718",
+        "answer": 1170,
+        "greedy_output": "<answer>1160</answer>"
+      }
+    ]
+  },
+  "L4_mul_1digit": {
+    "n": 6,
+    "k": 8,
+    "greedy_format_rate": 1.0,
+    "greedy_strict_acc": 1.0,
+    "greedy_loose_acc": 1.0,
+    "sample_strict_acc": 0.6667,
+    "sample_loose_acc": 0.75,
+    "pass@8": 1.0,
+    "loose_pass@8": 1.0,
+    "informative_group_rate": 1.0,
+    "loose_informative_group_rate": 0.8333,
+    "elapsed_sec": 59.1,
+    "examples": [
+      {
+        "expr": "7 × 5",
+        "answer": 35,
+        "greedy_output": "<answer>35</answer>"
+      },
+      {
+        "expr": "3 × 2",
+        "answer": 6,
+        "greedy_output": "<answer>6</answer>"
+      },
+      {
+        "expr": "5 × 6",
+        "answer": 30,
+        "greedy_output": "<answer>30</answer>"
+      }
+    ]
+  },
+  "L5_mul_2x1digit": {
+    "n": 6,
+    "k": 8,
+    "greedy_format_rate": 1.0,
+    "greedy_strict_acc": 0.8333,
+    "greedy_loose_acc": 0.8333,
+    "sample_strict_acc": 0.3958,
+    "sample_loose_acc": 0.4583,
+    "pass@8": 0.8333,
+    "loose_pass@8": 0.8333,
+    "informative_group_rate": 0.8333,
+    "loose_informative_group_rate": 0.8333,
+    "elapsed_sec": 80.6,
+    "examples": [
+      {
+        "expr": "91 × 9",
+        "answer": 819,
+        "greedy_output": "<answer>829</answer>"
+      },
+      {
+        "expr": "56 × 4",
+        "answer": 224,
+        "greedy_output": "<answer>224</answer>"
+      },
+      {
+        "expr": "57 × 5",
+        "answer": 285,
+        "greedy_output": "<answer>285</answer>"
+      }
+    ]
+  },
+  "L6_mul_2x2digit": {
+    "n": 6,
+    "k": 8,
+    "greedy_format_rate": 1.0,
+    "greedy_strict_acc": 0.0,
+    "greedy_loose_acc": 0.0,
+    "sample_strict_acc": 0.0,
+    "sample_loose_acc": 0.0,
+    "pass@8": 0.0,
+    "loose_pass@8": 0.0,
+    "informative_group_rate": 0.0,
+    "loose_informative_group_rate": 0.0,
+    "elapsed_sec": 82.7,
+    "examples": [
+      {
+        "expr": "19 × 87",
+        "answer": 1653,
+        "greedy_output": "<answer>1533</answer>"
+      },
+      {
+        "expr": "91 × 31",
+        "answer": 2821,
+        "greedy_output": "<answer>2781</answer>"
+      },
+      {
+        "expr": "78 × 41",
+        "answer": 3198,
+        "greedy_output": "<answer>3068</answer>"
+      }
+    ]
+  }
+}
