@@ -1,0 +1,362 @@
+[
+  {
+    "question": "779 - 235",
+    "target": "<hahaha>544<gagaga>",
+    "response": "<hahaha>546>",
+    "correct": false
+  },
+  {
+    "question": "99 * 83",
+    "target": "<hahaha>8217<gagaga>",
+    "response": "<hahaha>7641>",
+    "correct": false
+  },
+  {
+    "question": "952 - 627",
+    "target": "<hahaha>325<gagaga>",
+    "response": "<hahaha>325>",
+    "correct": false
+  },
+  {
+    "question": "44 * 55",
+    "target": "<hahaha>2420<gagaga>",
+    "response": "<hahaha>220<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "161 - 791",
+    "target": "<hahaha>-630<gagaga>",
+    "response": "<hahaha>84<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "105 + 831",
+    "target": "<hahaha>936<gagaga>",
+    "response": "<hahaha>936<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "397 + 416",
+    "target": "<hahaha>813<gagaga>",
+    "response": "<hahaha>803<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "738 - 970",
+    "target": "<hahaha>-232<gagaga>",
+    "response": "<hahaha>641>",
+    "correct": false
+  },
+  {
+    "question": "47 * 11",
+    "target": "<hahaha>517<gagaga>",
+    "response": "<hahaha>5<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "39 + 414",
+    "target": "<hahaha>453<gagaga>",
+    "response": "<hahaha>703<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "84 * 28",
+    "target": "<hahaha>2352<gagaga>",
+    "response": "<hahaha>2176<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "17 * 65",
+    "target": "<hahaha>1105<gagaga>",
+    "response": "<hahaha>1090<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "182 + 596",
+    "target": "<hahaha>778<gagaga>",
+    "response": "<hahaha>778>",
+    "correct": false
+  },
+  {
+    "question": "65 * 47",
+    "target": "<hahaha>3055<gagaga>",
+    "response": "<hahaha>2890<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "54 * 13",
+    "target": "<hahaha>702<gagaga>",
+    "response": "<hahaha>690<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "78 * 63",
+    "target": "<hahaha>4914<gagaga>",
+    "response": "<hahaha>4914<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "472 - 80",
+    "target": "<hahaha>392<gagaga>",
+    "response": "<hahaha>392<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "747 + 477",
+    "target": "<hahaha>1224<gagaga>",
+    "response": "<hahaha>121<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "39 + 60",
+    "target": "<hahaha>99<gagaga>",
+    "response": "<hahaha>91<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "957 - 91",
+    "target": "<hahaha>866<gagaga>",
+    "response": "<hahaha>846>",
+    "correct": false
+  },
+  {
+    "question": "55 * 17",
+    "target": "<hahaha>935<gagaga>",
+    "response": "<hahaha>945<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "707 - 120",
+    "target": "<hahaha>587<gagaga>",
+    "response": "<hahaha>684>",
+    "correct": false
+  },
+  {
+    "question": "210 - 427",
+    "target": "<hahaha>-217<gagaga>",
+    "response": "<hahaha>693<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "743 - 798",
+    "target": "<hahaha>-55<gagaga>",
+    "response": "<hahaha>15<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "471 + 266",
+    "target": "<hahaha>737<gagaga>",
+    "response": "<hahaha>737<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "947 + 990",
+    "target": "<hahaha>1937<gagaga>",
+    "response": "<hahaha>1837<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "475 + 904",
+    "target": "<hahaha>1379<gagaga>",
+    "response": "<hahaha>1379>",
+    "correct": false
+  },
+  {
+    "question": "202 + 437",
+    "target": "<hahaha>639<gagaga>",
+    "response": "<hahaha>639<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "362 - 117",
+    "target": "<hahaha>245<gagaga>",
+    "response": "<hahaha>245<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "221 + 116",
+    "target": "<hahaha>337<gagaga>",
+    "response": "<hahaha>337<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "11 + 244",
+    "target": "<hahaha>255<gagaga>",
+    "response": "<hahaha>359<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "79 * 27",
+    "target": "<hahaha>2133<gagaga>",
+    "response": "<hahaha>1806>",
+    "correct": false
+  },
+  {
+    "question": "261 + 245",
+    "target": "<hahaha>506<gagaga>",
+    "response": "<hahaha>406<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "38 - 190",
+    "target": "<hahaha>-152<gagaga>",
+    "response": "<hahaha>20gagaga>",
+    "correct": false
+  },
+  {
+    "question": "34 * 89",
+    "target": "<hahaha>3026<gagaga>",
+    "response": "<hahaha>3160<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "106 + 656",
+    "target": "<hahaha>762<gagaga>",
+    "response": "<hahaha>762<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "41 * 22",
+    "target": "<hahaha>902<gagaga>",
+    "response": "<hahaha>860<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "580 - 446",
+    "target": "<hahaha>134<gagaga>",
+    "response": "<hahaha>134<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "99 * 20",
+    "target": "<hahaha>1980<gagaga>",
+    "response": "<hahaha>1980<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "587 - 154",
+    "target": "<hahaha>433<gagaga>",
+    "response": "<hahaha>433<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "4 * 2",
+    "target": "<hahaha>8<gagaga>",
+    "response": "4 * 2 = 8",
+    "correct": false
+  },
+  {
+    "question": "51 * 96",
+    "target": "<hahaha>4896<gagaga>",
+    "response": "<hahaha>4704<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "705 - 776",
+    "target": "<hahaha>-71<gagaga>",
+    "response": "<hahaha>171>",
+    "correct": false
+  },
+  {
+    "question": "904 - 33",
+    "target": "<hahaha>871<gagaga>",
+    "response": "<hahaha>581>",
+    "correct": false
+  },
+  {
+    "question": "30 * 86",
+    "target": "<hahaha>2580<gagaga>",
+    "response": "<hahaha>2460<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "92 - 186",
+    "target": "<hahaha>-94<gagaga>",
+    "response": "<hahaha>74<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "25 * 24",
+    "target": "<hahaha>600<gagaga>",
+    "response": "<hahaha>600<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "941 + 118",
+    "target": "<hahaha>1059<gagaga>",
+    "response": "<hahaha>1069<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "99 - 159",
+    "target": "<hahaha>-60<gagaga>",
+    "response": "<hahaha>44<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "156 - 695",
+    "target": "<hahaha>-539<gagaga>",
+    "response": "<hahaha>401<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "10 * 92",
+    "target": "<hahaha>920<gagaga>",
+    "response": "1820",
+    "correct": false
+  },
+  {
+    "question": "683 + 261",
+    "target": "<hahaha>944<gagaga>",
+    "response": "<hahaha>944<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "20 * 5",
+    "target": "<hahaha>100<gagaga>",
+    "response": "<hahaha>100<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "514 + 393",
+    "target": "<hahaha>907<gagaga>",
+    "response": "<hahaha>807<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "150 + 274",
+    "target": "<hahaha>424<gagaga>",
+    "response": "<hahaha>421>",
+    "correct": false
+  },
+  {
+    "question": "352 - 208",
+    "target": "<hahaha>144<gagaga>",
+    "response": "<hahaha>144<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "31 + 724",
+    "target": "<hahaha>755<gagaga>",
+    "response": "<hahaha>895<gagaga>",
+    "correct": false
+  },
+  {
+    "question": "50 * 32",
+    "target": "<hahaha>1600<gagaga>",
+    "response": "<hahaha>1600<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "538 + 250",
+    "target": "<hahaha>788<gagaga>",
+    "response": "<hahaha>788<gagaga>",
+    "correct": true
+  },
+  {
+    "question": "43 - 770",
+    "target": "<hahaha>-727<gagaga>",
+    "response": "<hahaha>1649<gagaga>",
+    "correct": false
+  }
+]
